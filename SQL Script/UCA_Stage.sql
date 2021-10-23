@@ -1,22 +1,22 @@
---CREATE DATABASE UCA_LSET_CET
---GO
---USE UCA_LSET_CET
---go
+CREATE DATABASE UCA_LSET_CET
+GO
+USE UCA_LSET_CET
+go
 
---CREATE TABLE LSET_CET
---(
---	ID INT IDENTITY(1,1) PRIMARY KEY,
---	LSET DATETIME,
---	CET DATETIME
---)
+CREATE TABLE LSET_CET
+(
+	ID INT IDENTITY(1,1) PRIMARY KEY,
+	LSET DATETIME,
+	CET DATETIME
+)
 
---INSERT INTO LSET_CET(LSET) VALUES('2012-12-31')
+INSERT INTO LSET_CET(LSET) VALUES('2012-12-31')
 
---SELECT * 
---FROM LSET_CET
+SELECT * 
+FROM LSET_CET
 
 
---CREATE DATABASE [UCA_STAGE]
+CREATE DATABASE [UCA_STAGE]
 -- DROP DATABASE [UCA_STAGE]
 USE [UCA_STAGE]
 GO
@@ -30,20 +30,20 @@ GO
 
 CREATE TABLE [dbo].[Accidents_Stage](
     [Accident_Index] varchar(50),
-    [Accident_Severity] varchar(50),
-    [Number_of_Vehicles] varchar(50),
-    [Number_of_Casualties] varchar(50),
-    [Date] varchar(50),
-    [Day_of_Week] varchar(50),
-    [Time] varchar(50),
-    [Local_Authority_(District)] varchar(50),
+    [Accident_Severity] int,
+    [Number_of_Vehicles] int,
+    [Number_of_Casualties] int,
+    [Date] datetime,
+    [Day_of_Week] int,
+    [Time] datetime,
+    [Local_Authority_(District)] int,
     [Local_Authority_(Highway)] varchar(50),
-    [Road_Type] varchar(50),
-    [Speed_limit] varchar(50),
-    [Road_Surface_Conditions] varchar(50),
-    [Special_Conditions_at_Site] varchar(50),
-    [Carriageway_Hazards] varchar(50),
-    [Urban_or_Rural_Area] varchar(50),
+    [Road_Type] int,
+    [Speed_limit] int,
+    [Road_Surface_Conditions] int,
+    [Special_Conditions_at_Site] int,
+    [Carriageway_Hazards] int,
+    [Urban_or_Rural_Area] int,
     [LSOA_of_Accident_Location] varchar(50),
 ) ON [PRIMARY]
 GO
