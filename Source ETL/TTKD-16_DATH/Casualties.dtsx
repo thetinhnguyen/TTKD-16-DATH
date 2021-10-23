@@ -1,25 +1,25 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="10/21/2021 10:52:55 AM"
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="DESKTOP-5243EHL"
   DTS:CreatorName="DESKTOP-5243EHL\ADMIN"
-  DTS:DTSID="{D08A0B26-64F6-4E06-8007-F709ED1BC4F6}"
+  DTS:DTSID="{3E989CCA-D4A8-4FFF-B995-9304D3C94AF6}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="15.0.2000.170"
   DTS:LocaleID="1033"
-  DTS:ObjectName="Vehicles"
+  DTS:ObjectName="Casualties"
   DTS:PackageType="5"
-  DTS:VersionBuild="12"
-  DTS:VersionGUID="{A842C493-CC31-4739-A7E7-55079850DF0C}">
+  DTS:VersionBuild="15"
+  DTS:VersionGUID="{F19806A6-BB90-46A3-8362-FF3306A9CBCF}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[Accidents File csv]"
       DTS:CreationName="FLATFILE"
-      DTS:DTSID="{0CA66D3B-02EC-442C-A56A-B44ABD3B7356}"
+      DTS:DTSID="{1E2D80B8-780F-4B9B-B19C-86E33B5078B8}"
       DTS:ObjectName="Accidents File csv">
       <DTS:ObjectData>
         <DTS:ConnectionManager
@@ -39,7 +39,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Accident_Index"
-              DTS:DTSID="{5DDCCA5F-5D9C-42B7-90D0-1DC41F5CE19E}"
+              DTS:DTSID="{ED257BCD-84CB-4EC1-9C1E-A8AE44EBEFB6}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -48,7 +48,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Location_Easting_OSGR"
-              DTS:DTSID="{73B52E78-9469-47CA-AF0E-F8A987D16A8F}"
+              DTS:DTSID="{8CDF6906-E6A4-445F-B944-4C732DE77F2D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -57,7 +57,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Location_Northing_OSGR"
-              DTS:DTSID="{F8371C0F-90D8-4A38-BF8D-DFF4260CF51B}"
+              DTS:DTSID="{1105A9D7-4E90-44E5-8EB6-4CE71D4DB944}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -66,7 +66,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Longitude"
-              DTS:DTSID="{51BB5CEF-EAA0-4083-BF59-6C68D41DBE5F}"
+              DTS:DTSID="{5532F203-7D53-45AB-A0C8-A0FB060AA380}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -75,7 +75,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Latitude"
-              DTS:DTSID="{3284811F-AD9A-4FDA-93A5-C2399D456944}"
+              DTS:DTSID="{0ACA8615-57A5-49F9-A662-ADC82860E077}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -84,7 +84,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Police_Force"
-              DTS:DTSID="{FB34B221-0415-4F1F-87DA-4220B7887C16}"
+              DTS:DTSID="{6E613DBE-D0AF-44BA-B3F8-66DA585D3167}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -93,7 +93,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Accident_Severity"
-              DTS:DTSID="{E723513D-3918-4816-A23F-732350703169}"
+              DTS:DTSID="{97A92782-8970-4D5C-AD38-15674F247EB6}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -102,7 +102,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Number_of_Vehicles"
-              DTS:DTSID="{531CC792-40BB-47BC-A735-9AB240D51C77}"
+              DTS:DTSID="{7201781C-9496-42F0-8623-9529C788F237}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -111,7 +111,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Number_of_Casualties"
-              DTS:DTSID="{4FAFD9DF-3330-4229-ABDA-4497EB96B01C}"
+              DTS:DTSID="{F612A1E9-6950-42DB-A605-3C512B46777C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -120,7 +120,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Date"
-              DTS:DTSID="{1630E803-1734-4AA8-9CEF-41279E335100}"
+              DTS:DTSID="{0EA4F1CE-EE0E-408A-8EAB-3CE5B5D7DF08}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -129,7 +129,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Day_of_Week"
-              DTS:DTSID="{2601B020-6C58-4864-957F-AABC40BDB960}"
+              DTS:DTSID="{FC23D260-0C27-4059-9BA2-889B6751642A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -138,7 +138,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Time"
-              DTS:DTSID="{640CB9BF-0E1C-485F-9452-369C23D9292C}"
+              DTS:DTSID="{9BA8B02F-6075-419F-84D7-A4BD460E6CAF}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -147,7 +147,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Local_Authority_(District)"
-              DTS:DTSID="{00E5EBF1-268F-4D97-ADCF-D96E8B0B6569}"
+              DTS:DTSID="{E771881B-132E-4DB4-87A9-AFBEF777B1E4}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -156,7 +156,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Local_Authority_(Highway)"
-              DTS:DTSID="{98AA0536-B6AD-40C7-85E1-08AD7F9569EE}"
+              DTS:DTSID="{A58F7579-299C-47C8-87AE-E86B8E7920B6}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -165,7 +165,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="1st_Road_Class"
-              DTS:DTSID="{F5931D99-59F5-4B43-8376-36FA13E70121}"
+              DTS:DTSID="{7B0C5435-135B-4264-A31E-B38854B663E9}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -174,7 +174,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="1st_Road_Number"
-              DTS:DTSID="{E28FD6B1-3858-44B0-8B8F-F818BE2D3FC8}"
+              DTS:DTSID="{E78C2959-FB7B-42C6-A6AB-D1E43A306B95}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -183,7 +183,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Road_Type"
-              DTS:DTSID="{A03C1397-4478-4F47-B250-44D6A249C493}"
+              DTS:DTSID="{524614C5-456A-47B6-804A-5496B352E43E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -192,7 +192,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Speed_limit"
-              DTS:DTSID="{34CFD4E8-5291-4FFF-9B17-CBD5E3188D34}"
+              DTS:DTSID="{7676E495-3E24-45D6-8652-69CFC050D951}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -201,7 +201,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Junction_Detail"
-              DTS:DTSID="{51EB8BF6-A028-42BF-AF31-F89FD02975F0}"
+              DTS:DTSID="{B07CBA51-6C07-47DC-8EAB-8059FD8F06DE}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -210,7 +210,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Junction_Control"
-              DTS:DTSID="{368BC351-08C7-4F44-8942-3752ACAF0FC3}"
+              DTS:DTSID="{3238F6E2-F3D0-4CC9-9B61-AD8E0F86B96C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -219,7 +219,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="2nd_Road_Class"
-              DTS:DTSID="{4FC9687F-3795-4104-95A4-28A237DBC3A5}"
+              DTS:DTSID="{98DAB57F-582B-43D8-AA4B-7AFC05C774DB}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -228,7 +228,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="2nd_Road_Number"
-              DTS:DTSID="{C338B69D-9469-4340-BB56-AC8D397773E1}"
+              DTS:DTSID="{836C9639-4054-4943-9881-BC32D889A0F6}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -237,7 +237,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Pedestrian_Crossing-Human_Control"
-              DTS:DTSID="{E19D1F0A-2304-4766-B4DD-2F1F9F677667}"
+              DTS:DTSID="{2326F1DE-5FEB-4BE8-B14E-B008059ED9B9}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -246,7 +246,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Pedestrian_Crossing-Physical_Facilities"
-              DTS:DTSID="{82AB138E-3926-4F8C-AD22-0BDE3ED395CA}"
+              DTS:DTSID="{8D6548B9-47C4-443D-897F-D400EA32A2F4}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -255,7 +255,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Light_Conditions"
-              DTS:DTSID="{68E0FFFA-59C2-4063-AB18-731533A66CBA}"
+              DTS:DTSID="{1464B197-81B8-4F88-9D65-D1A5000DF4B6}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -264,7 +264,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Weather_Conditions"
-              DTS:DTSID="{F6DBCACC-3158-490A-8A58-C4134FD2C4D9}"
+              DTS:DTSID="{0B9FA13C-B2F8-402A-892B-FBCD89C4277C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -273,7 +273,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Road_Surface_Conditions"
-              DTS:DTSID="{D746720F-B229-40F4-8B18-C9E7ABC62568}"
+              DTS:DTSID="{54C0EC17-6033-4F83-AF26-81F96F14C47F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -282,7 +282,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Special_Conditions_at_Site"
-              DTS:DTSID="{9F982AD0-801F-4F47-958F-3F3C9011CB66}"
+              DTS:DTSID="{AC54F7BB-D6AD-4158-A137-447BB3AE81F8}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -291,7 +291,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Carriageway_Hazards"
-              DTS:DTSID="{E160C698-D8AF-427A-9E85-E897F9574D54}"
+              DTS:DTSID="{04A2C996-888F-4FF4-9DD4-AF186C724BB0}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -300,7 +300,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Urban_or_Rural_Area"
-              DTS:DTSID="{1953E878-D61E-48DE-9F63-958AEF3AD17D}"
+              DTS:DTSID="{C01D9604-45DD-44B0-84F5-A2E3FDB58F74}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -309,7 +309,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Did_Police_Officer_Attend_Scene_of_Accident"
-              DTS:DTSID="{1126FC42-973E-4C1E-89B7-F665D3E81B49}"
+              DTS:DTSID="{9C12934B-30D3-4126-B874-FACB635B976D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -318,17 +318,17 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="LSOA_of_Accident_Location"
-              DTS:DTSID="{9965C1FF-1367-4D49-9EBD-552BAA9C57E9}"
+              DTS:DTSID="{F485FA63-6E18-42F5-A3C0-9926C93EAFE1}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:refId="Package.ConnectionManagers[Casualties File csv]"
       DTS:CreationName="FLATFILE"
-      DTS:DTSID="{01602F71-A0AD-4211-99A7-939124CFD389}"
-      DTS:ObjectName="Flat File Connection Manager">
+      DTS:DTSID="{1194BB64-8C75-4E0F-81F7-E6A630B9B941}"
+      DTS:ObjectName="Casualties File csv">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:Format="Delimited"
@@ -338,7 +338,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="D:\DATH BI 2021\Đồ án thực hành\Data\Vehicles1114.csv">
+          DTS:ConnectionString="D:\DATH BI 2021\Đồ án thực hành\Data\Casualties1114.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -347,7 +347,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Accident_Index"
-              DTS:DTSID="{6B18579C-FC45-45B1-B7FA-403D0B384860}"
+              DTS:DTSID="{1BF240D7-EAE8-4414-B39D-1CDA044A9B41}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -356,7 +356,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Vehicle_Reference"
-              DTS:DTSID="{D2F12689-ABEB-4115-996A-C7CF94B7117B}"
+              DTS:DTSID="{AB9CE93D-65A4-4645-B888-AFBDBEBD84E4}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -364,8 +364,8 @@
               DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
-              DTS:ObjectName="Vehicle_Type"
-              DTS:DTSID="{AD471E14-7401-47D8-B687-36FE715FD539}"
+              DTS:ObjectName="Casualty_Reference"
+              DTS:DTSID="{3C830BB2-B51D-458D-AD47-0CF2AAE90F28}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -373,8 +373,8 @@
               DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
-              DTS:ObjectName="Towing_and_Articulation"
-              DTS:DTSID="{5EA8E782-FAD9-46F0-A918-F82A5894753F}"
+              DTS:ObjectName="Casualty_Class"
+              DTS:DTSID="{A3D57750-9E58-40B1-940D-19575F71F781}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -382,8 +382,8 @@
               DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
-              DTS:ObjectName="Vehicle_Manoeuvre"
-              DTS:DTSID="{8B65EAFE-9777-4CCE-92B3-3193F2DDF65D}"
+              DTS:ObjectName="Sex_of_Casualty"
+              DTS:DTSID="{C90F6EBD-26AE-4F80-8765-523FDF22D166}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -391,8 +391,8 @@
               DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
-              DTS:ObjectName="Vehicle_Location-Restricted_Lane"
-              DTS:DTSID="{C19101DD-4ADC-4F1E-ABBF-B16976ABEB7F}"
+              DTS:ObjectName="Age_of_Casualty"
+              DTS:DTSID="{EA815EE1-EB09-4381-BDAB-248130C536BE}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -400,8 +400,8 @@
               DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
-              DTS:ObjectName="Junction_Location"
-              DTS:DTSID="{CA7BAD52-5CB8-4BEC-9B72-A7A842BDF247}"
+              DTS:ObjectName="Age_Band_of_Casualty"
+              DTS:DTSID="{3575F400-E801-4F0E-9C62-A26C09D32E56}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -409,8 +409,8 @@
               DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
-              DTS:ObjectName="Skidding_and_Overturning"
-              DTS:DTSID="{7FD00B0C-E493-4EFF-A760-02474D767A8E}"
+              DTS:ObjectName="Casualty_Severity"
+              DTS:DTSID="{E0B427D0-E854-404B-979A-FDADA5D3554C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -418,8 +418,8 @@
               DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
-              DTS:ObjectName="Hit_Object_in_Carriageway"
-              DTS:DTSID="{76A88766-AF21-4066-8FD7-52C121864652}"
+              DTS:ObjectName="Pedestrian_Location"
+              DTS:DTSID="{D72B7002-B262-495B-8C45-0B03E9FCC1E3}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -427,8 +427,8 @@
               DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
-              DTS:ObjectName="Vehicle_Leaving_Carriageway"
-              DTS:DTSID="{487A81D0-93D3-488F-A933-8FAA3B8AD0B4}"
+              DTS:ObjectName="Pedestrian_Movement"
+              DTS:DTSID="{C1A37932-5769-4536-BF20-A2627B7560C4}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -436,8 +436,8 @@
               DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
-              DTS:ObjectName="Hit_Object_off_Carriageway"
-              DTS:DTSID="{BEE8CCFC-1FC4-4F41-93F2-936BEC67F953}"
+              DTS:ObjectName="Car_Passenger"
+              DTS:DTSID="{A8B5DA14-9046-48D4-A3F8-1B0E2ACF2EFD}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -445,8 +445,8 @@
               DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
-              DTS:ObjectName="1st_Point_of_Impact"
-              DTS:DTSID="{781FE748-2275-4162-92F8-F7BC65F1D16C}"
+              DTS:ObjectName="Bus_or_Coach_Passenger"
+              DTS:DTSID="{25663E4C-1F9A-41F5-9C4E-57F5859F2D1E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -454,8 +454,8 @@
               DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
-              DTS:ObjectName="Was_Vehicle_Left_Hand_Drive?"
-              DTS:DTSID="{29A8B591-A37A-46E0-B89C-96C540769344}"
+              DTS:ObjectName="Pedestrian_Road_Maintenance_Worker"
+              DTS:DTSID="{A3593669-BE15-4D7A-A88B-D22F98E46B08}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -463,71 +463,8 @@
               DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
-              DTS:ObjectName="Journey_Purpose_of_Driver"
-              DTS:DTSID="{00E53CE9-1A2A-40D8-826D-2D8CACE7E974}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Sex_of_Driver"
-              DTS:DTSID="{BE0CA0DD-0DCE-458B-A622-A2ED3F87B85B}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Age_of_Driver"
-              DTS:DTSID="{45BF8F55-EF9E-43F0-89E7-B02F8B0DC6BE}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Age_Band_of_Driver"
-              DTS:DTSID="{75C387F3-7969-48E6-9E00-63D866C89DC2}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Engine_Capacity_(CC)"
-              DTS:DTSID="{3AA1F2D5-386D-4755-A050-B8D9A93DE3AD}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Propulsion_Code"
-              DTS:DTSID="{9E1B16EE-8763-47E1-8517-39C7608E00CD}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Age_of_Vehicle"
-              DTS:DTSID="{BCB368AE-783C-439F-97C2-56A5583ED373}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Driver_IMD_Decile"
-              DTS:DTSID="{DC8B32AD-D2B3-4336-8CD7-53FFFAB92ED8}"
+              DTS:ObjectName="Casualty_Type"
+              DTS:DTSID="{2A16D703-5016-4518-86AB-723826AA8762}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -535,8 +472,8 @@
               DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
-              DTS:ObjectName="Driver_Home_Area_Type"
-              DTS:DTSID="{A6D3FD46-47E3-42DD-AF57-1DBB9A2164E6}"
+              DTS:ObjectName="Casualty_Home_Area_Type"
+              DTS:DTSID="{E30E6E0D-7466-4CD7-B0B9-9493E6FA529B}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -545,7 +482,7 @@
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[LocalHost.UCA_LSET_CET]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{405B1D67-239E-43FF-9FA5-5FD238F2500F}"
+      DTS:DTSID="{DB6D8185-6ADC-4F12-BC08-4D4812654EC8}"
       DTS:ObjectName="LocalHost.UCA_LSET_CET">
       <DTS:ObjectData>
         <DTS:ConnectionManager
@@ -557,7 +494,7 @@
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[LocalHost.UCA_STAGE]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{478CDD65-2D07-4706-928C-02C35269FDF0}"
+      DTS:DTSID="{20D41374-4B0C-4CDA-8D81-FD3FF87A6A37}"
       DTS:ObjectName="LocalHost.UCA_STAGE">
       <DTS:ObjectData>
         <DTS:ConnectionManager
@@ -566,229 +503,11 @@
           DTS:ConnectionString="Data Source=.;Initial Catalog=UCA_STAGE;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[Vehicles File csv]"
-      DTS:CreationName="FLATFILE"
-      DTS:DTSID="{DAC8A2BE-C40C-4B7D-8B93-20145D9F0BF5}"
-      DTS:ObjectName="Vehicles File csv">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:Format="Delimited"
-          DTS:LocaleID="1033"
-          DTS:HeaderRowDelimiter="_x000D__x000A_"
-          DTS:ColumnNamesInFirstDataRow="True"
-          DTS:RowDelimiter=""
-          DTS:TextQualifier="_x003C_none_x003E_"
-          DTS:CodePage="1252"
-          DTS:ConnectionString="D:\DATH BI 2021\Đồ án thực hành\Data\Vehicles1114.csv">
-          <DTS:FlatFileColumns>
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Accident_Index"
-              DTS:DTSID="{CAFB1F8F-C6C8-485E-A781-53DA13E8AA04}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Vehicle_Reference"
-              DTS:DTSID="{6292A789-D9EB-4900-9D55-4D7819306515}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Vehicle_Type"
-              DTS:DTSID="{F45B7822-D2E1-4654-8349-31708779ED9F}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Towing_and_Articulation"
-              DTS:DTSID="{47053A7B-E493-4940-8F06-B4D45998EE42}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Vehicle_Manoeuvre"
-              DTS:DTSID="{3FE90C67-E80C-4529-8CDC-F1FAFF90DCB6}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Vehicle_Location-Restricted_Lane"
-              DTS:DTSID="{7CADB91C-CBAF-4CAB-8146-D50EE95C7BF3}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Junction_Location"
-              DTS:DTSID="{E4A973A2-35D9-4532-81D1-939C5AF2F9B4}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Skidding_and_Overturning"
-              DTS:DTSID="{5A26086B-AA19-44E9-85D0-B4DBB9FB6AB4}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Hit_Object_in_Carriageway"
-              DTS:DTSID="{8463BAAF-7A25-4C2B-93C8-C109CA86C49A}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Vehicle_Leaving_Carriageway"
-              DTS:DTSID="{57B63736-27E5-4890-9630-12FE35134F98}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Hit_Object_off_Carriageway"
-              DTS:DTSID="{27F3BDC3-AA2A-4B8B-A050-D6206D5314B3}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="1st_Point_of_Impact"
-              DTS:DTSID="{92954DF5-8198-4B21-AB36-289B52BC0B8E}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Was_Vehicle_Left_Hand_Drive?"
-              DTS:DTSID="{810475A2-F409-4EDA-A3AA-0F00EC6A3348}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Journey_Purpose_of_Driver"
-              DTS:DTSID="{5AEEFB2D-99C7-4BFE-B682-06ADC1BF79CE}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Sex_of_Driver"
-              DTS:DTSID="{78188050-B863-4EC2-8168-846A9F9DCDF8}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Age_of_Driver"
-              DTS:DTSID="{AFC76CA8-88FF-4288-AF23-D41CBB5C5CB2}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Age_Band_of_Driver"
-              DTS:DTSID="{E52D93C2-689D-4D7C-9578-83E266A25DE2}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Engine_Capacity_(CC)"
-              DTS:DTSID="{4417083F-B818-4104-9D5F-16A56585161E}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Propulsion_Code"
-              DTS:DTSID="{5BF59493-B58F-4F25-865F-544CEB4D1D5A}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Age_of_Vehicle"
-              DTS:DTSID="{310FE814-FAC6-426F-914D-41DEC303054C}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Driver_IMD_Decile"
-              DTS:DTSID="{CAE9F0BD-44FF-400E-AE35-AEE3A1D222EB}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x000D__x000A_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Driver_Home_Area_Type"
-              DTS:DTSID="{39F4F836-1DF1-45E8-A7FF-64C3D922F80B}"
-              DTS:CreationName="" />
-          </DTS:FlatFileColumns>
-        </DTS:ConnectionManager>
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
   <DTS:Variables>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{CC17FD2C-5713-4828-8A18-6F341EA023A3}"
+      DTS:DTSID="{DDC395A2-AAF8-4C3A-B0AE-3D7A8F8FCDD4}"
       DTS:IncludeInDebugDump="6789"
       DTS:Namespace="User"
       DTS:ObjectName="CETResult">
@@ -797,7 +516,7 @@
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{23C0380F-066D-4102-AC30-8F4AA2CD4D65}"
+      DTS:DTSID="{E12879FF-6B34-46E3-9641-A50D3C70AE13}"
       DTS:IncludeInDebugDump="6789"
       DTS:Namespace="User"
       DTS:ObjectName="CET_Result">
@@ -806,7 +525,7 @@
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{A1EA6FDB-B42B-45E5-B4A0-7AC67036234E}"
+      DTS:DTSID="{A43183DA-137A-4403-BD94-28D7F92D0F22}"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="LSETResult">
@@ -816,7 +535,7 @@
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{BF8B1B4D-59B2-4FE2-B531-68497AC32D81}"
+      DTS:DTSID="{C1B43C9F-7B38-4DC7-A7BB-6C90019096BB}"
       DTS:IncludeInDebugDump="6789"
       DTS:Namespace="User"
       DTS:ObjectName="LSETResult1">
@@ -825,7 +544,7 @@
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{86ADBAD6-17F5-43D7-9761-685857DF945F}"
+      DTS:DTSID="{A583D3E6-6E0F-455F-8526-B1A6E8B85782}"
       DTS:IncludeInDebugDump="6789"
       DTS:Namespace="User"
       DTS:ObjectName="LSET_Result">
@@ -834,7 +553,7 @@
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{237D8F86-B035-49FB-B50E-1719AA0CBEEF}"
+      DTS:DTSID="{D87327C1-5227-4A4F-A892-35154449CC9D}"
       DTS:IncludeInDebugDump="6789"
       DTS:Namespace="CETResult"
       DTS:ObjectName="Variable">
@@ -847,7 +566,7 @@
       DTS:refId="Package\GET LSET,CET"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
-      DTS:DTSID="{2204DD1F-54F4-4B90-8ED5-37DD5B61270B}"
+      DTS:DTSID="{F7303B7C-2A80-4F8C-9550-A60BD8D0A4CB}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="GET LSET,CET"
@@ -856,7 +575,7 @@
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{405B1D67-239E-43FF-9FA5-5FD238F2500F}"
+          SQLTask:Connection="{DB6D8185-6ADC-4F12-BC08-4D4812654EC8}"
           SQLTask:SqlStatementSource="UPDATE LSET_CET&#xA;SET CET = GETDATE()&#xA;&#xA;SELECT LSET,CET&#xA;FROM LSET_CET"
           SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
           <SQLTask:ResultBinding
@@ -869,13 +588,13 @@
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
-      DTS:refId="Package\Load Data Vehicles"
+      DTS:refId="Package\Load Data Casualties"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:DTSID="{AAD6F558-3327-4C9B-A894-B8E6598DB230}"
+      DTS:DTSID="{91F5AE04-2008-4CEB-AE1F-6CF4FA7F7BAF}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Load Data Vehicles"
+      DTS:ObjectName="Load Data Casualties"
       DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
       <DTS:Variables />
       <DTS:ObjectData>
@@ -883,91 +602,12 @@
           version="1">
           <components>
             <component
-              refId="Package\Load Data Vehicles\Data Conversion"
-              componentClassID="Microsoft.DataConvert"
-              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
-              description="Data Conversion"
-              name="Data Conversion"
-              usesDispositions="true">
-              <inputs>
-                <input
-                  refId="Package\Load Data Vehicles\Data Conversion.Inputs[Data Conversion Input]"
-                  name="Data Conversion Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Load Data Vehicles\Data Conversion.Inputs[Data Conversion Input].Columns[Accident_Index]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Accident_Index"
-                      lineageId="Package\Load Data Vehicles\Vehicles File csv.Outputs[Flat File Source Output].Columns[Accident_Index]" />
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Load Data Vehicles\Data Conversion.Outputs[Data Conversion Output]"
-                  exclusionGroup="1"
-                  name="Data Conversion Output"
-                  synchronousInputId="Package\Load Data Vehicles\Data Conversion.Inputs[Data Conversion Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Load Data Vehicles\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Accident_Index]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="50"
-                      lineageId="Package\Load Data Vehicles\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Accident_Index]"
-                      name="Copy of Accident_Index"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Load Data Vehicles\Vehicles File csv.Outputs[Flat File Source Output].Columns[Accident_Index]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Load Data Vehicles\Data Conversion.Outputs[Data Conversion Error Output]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="Data Conversion Error Output"
-                  synchronousInputId="Package\Load Data Vehicles\Data Conversion.Inputs[Data Conversion Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Load Data Vehicles\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Load Data Vehicles\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Load Data Vehicles\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Load Data Vehicles\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Load Data Vehicles\Vehicles File csv"
+              refId="Package\Load Data Casualties\Casualties File csv"
               componentClassID="Microsoft.FlatFileSource"
               contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
               description="Flat File Source"
               localeId="1033"
-              name="Vehicles File csv"
+              name="Casualties File csv"
               usesDispositions="true"
               version="1">
               <properties>
@@ -982,25 +622,25 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Load Data Vehicles\Vehicles File csv.Connections[FlatFileConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Vehicles File csv]"
-                  connectionManagerRefId="Package.ConnectionManagers[Vehicles File csv]"
+                  refId="Package\Load Data Casualties\Casualties File csv.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Casualties File csv]"
+                  connectionManagerRefId="Package.ConnectionManagers[Casualties File csv]"
                   name="FlatFileConnection" />
               </connections>
               <outputs>
                 <output
-                  refId="Package\Load Data Vehicles\Vehicles File csv.Outputs[Flat File Source Output]"
+                  refId="Package\Load Data Casualties\Casualties File csv.Outputs[Flat File Source Output]"
                   name="Flat File Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Load Data Vehicles\Vehicles File csv.Outputs[Flat File Source Output].Columns[Accident_Index]"
+                      refId="Package\Load Data Casualties\Casualties File csv.Outputs[Flat File Source Output].Columns[Accident_Index]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load Data Vehicles\Vehicles File csv.Outputs[Flat File Source Output].ExternalColumns[Accident_Index]"
+                      externalMetadataColumnId="Package\Load Data Casualties\Casualties File csv.Outputs[Flat File Source Output].ExternalColumns[Accident_Index]"
                       length="50"
-                      lineageId="Package\Load Data Vehicles\Vehicles File csv.Outputs[Flat File Source Output].Columns[Accident_Index]"
+                      lineageId="Package\Load Data Casualties\Casualties File csv.Outputs[Flat File Source Output].Columns[Accident_Index]"
                       name="Accident_Index"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -1015,15 +655,15 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Load Data Vehicles\Vehicles File csv.Outputs[Flat File Source Output].Columns[Vehicle_Type]"
+                      refId="Package\Load Data Casualties\Casualties File csv.Outputs[Flat File Source Output].Columns[Sex_of_Casualty]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load Data Vehicles\Vehicles File csv.Outputs[Flat File Source Output].ExternalColumns[Vehicle_Type]"
+                      externalMetadataColumnId="Package\Load Data Casualties\Casualties File csv.Outputs[Flat File Source Output].ExternalColumns[Sex_of_Casualty]"
                       length="50"
-                      lineageId="Package\Load Data Vehicles\Vehicles File csv.Outputs[Flat File Source Output].Columns[Vehicle_Type]"
-                      name="Vehicle_Type"
+                      lineageId="Package\Load Data Casualties\Casualties File csv.Outputs[Flat File Source Output].Columns[Sex_of_Casualty]"
+                      name="Sex_of_Casualty"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -1037,15 +677,15 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Load Data Vehicles\Vehicles File csv.Outputs[Flat File Source Output].Columns[Journey_Purpose_of_Driver]"
+                      refId="Package\Load Data Casualties\Casualties File csv.Outputs[Flat File Source Output].Columns[Age_of_Casualty]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load Data Vehicles\Vehicles File csv.Outputs[Flat File Source Output].ExternalColumns[Journey_Purpose_of_Driver]"
+                      externalMetadataColumnId="Package\Load Data Casualties\Casualties File csv.Outputs[Flat File Source Output].ExternalColumns[Age_of_Casualty]"
                       length="50"
-                      lineageId="Package\Load Data Vehicles\Vehicles File csv.Outputs[Flat File Source Output].Columns[Journey_Purpose_of_Driver]"
-                      name="Journey_Purpose_of_Driver"
+                      lineageId="Package\Load Data Casualties\Casualties File csv.Outputs[Flat File Source Output].Columns[Age_of_Casualty]"
+                      name="Age_of_Casualty"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -1059,15 +699,15 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Load Data Vehicles\Vehicles File csv.Outputs[Flat File Source Output].Columns[Age_of_Driver]"
+                      refId="Package\Load Data Casualties\Casualties File csv.Outputs[Flat File Source Output].Columns[Age_Band_of_Casualty]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load Data Vehicles\Vehicles File csv.Outputs[Flat File Source Output].ExternalColumns[Age_of_Driver]"
+                      externalMetadataColumnId="Package\Load Data Casualties\Casualties File csv.Outputs[Flat File Source Output].ExternalColumns[Age_Band_of_Casualty]"
                       length="50"
-                      lineageId="Package\Load Data Vehicles\Vehicles File csv.Outputs[Flat File Source Output].Columns[Age_of_Driver]"
-                      name="Age_of_Driver"
+                      lineageId="Package\Load Data Casualties\Casualties File csv.Outputs[Flat File Source Output].Columns[Age_Band_of_Casualty]"
+                      name="Age_Band_of_Casualty"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -1081,15 +721,37 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Load Data Vehicles\Vehicles File csv.Outputs[Flat File Source Output].Columns[Age_of_Vehicle]"
+                      refId="Package\Load Data Casualties\Casualties File csv.Outputs[Flat File Source Output].Columns[Casualty_Severity]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load Data Vehicles\Vehicles File csv.Outputs[Flat File Source Output].ExternalColumns[Age_of_Vehicle]"
+                      externalMetadataColumnId="Package\Load Data Casualties\Casualties File csv.Outputs[Flat File Source Output].ExternalColumns[Casualty_Severity]"
                       length="50"
-                      lineageId="Package\Load Data Vehicles\Vehicles File csv.Outputs[Flat File Source Output].Columns[Age_of_Vehicle]"
-                      name="Age_of_Vehicle"
+                      lineageId="Package\Load Data Casualties\Casualties File csv.Outputs[Flat File Source Output].Columns[Casualty_Severity]"
+                      name="Casualty_Severity"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load Data Casualties\Casualties File csv.Outputs[Flat File Source Output].Columns[Casualty_Type]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Data Casualties\Casualties File csv.Outputs[Flat File Source Output].ExternalColumns[Casualty_Type]"
+                      length="50"
+                      lineageId="Package\Load Data Casualties\Casualties File csv.Outputs[Flat File Source Output].Columns[Casualty_Type]"
+                      name="Casualty_Type"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -1106,161 +768,119 @@
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Load Data Vehicles\Vehicles File csv.Outputs[Flat File Source Output].ExternalColumns[Accident_Index]"
+                      refId="Package\Load Data Casualties\Casualties File csv.Outputs[Flat File Source Output].ExternalColumns[Accident_Index]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="Accident_Index" />
                     <externalMetadataColumn
-                      refId="Package\Load Data Vehicles\Vehicles File csv.Outputs[Flat File Source Output].ExternalColumns[Vehicle_Reference]"
+                      refId="Package\Load Data Casualties\Casualties File csv.Outputs[Flat File Source Output].ExternalColumns[Vehicle_Reference]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="Vehicle_Reference" />
                     <externalMetadataColumn
-                      refId="Package\Load Data Vehicles\Vehicles File csv.Outputs[Flat File Source Output].ExternalColumns[Vehicle_Type]"
+                      refId="Package\Load Data Casualties\Casualties File csv.Outputs[Flat File Source Output].ExternalColumns[Casualty_Reference]"
                       codePage="1252"
                       dataType="str"
                       length="50"
-                      name="Vehicle_Type" />
+                      name="Casualty_Reference" />
                     <externalMetadataColumn
-                      refId="Package\Load Data Vehicles\Vehicles File csv.Outputs[Flat File Source Output].ExternalColumns[Towing_and_Articulation]"
+                      refId="Package\Load Data Casualties\Casualties File csv.Outputs[Flat File Source Output].ExternalColumns[Casualty_Class]"
                       codePage="1252"
                       dataType="str"
                       length="50"
-                      name="Towing_and_Articulation" />
+                      name="Casualty_Class" />
                     <externalMetadataColumn
-                      refId="Package\Load Data Vehicles\Vehicles File csv.Outputs[Flat File Source Output].ExternalColumns[Vehicle_Manoeuvre]"
+                      refId="Package\Load Data Casualties\Casualties File csv.Outputs[Flat File Source Output].ExternalColumns[Sex_of_Casualty]"
                       codePage="1252"
                       dataType="str"
                       length="50"
-                      name="Vehicle_Manoeuvre" />
+                      name="Sex_of_Casualty" />
                     <externalMetadataColumn
-                      refId="Package\Load Data Vehicles\Vehicles File csv.Outputs[Flat File Source Output].ExternalColumns[Vehicle_Location-Restricted_Lane]"
+                      refId="Package\Load Data Casualties\Casualties File csv.Outputs[Flat File Source Output].ExternalColumns[Age_of_Casualty]"
                       codePage="1252"
                       dataType="str"
                       length="50"
-                      name="Vehicle_Location-Restricted_Lane" />
+                      name="Age_of_Casualty" />
                     <externalMetadataColumn
-                      refId="Package\Load Data Vehicles\Vehicles File csv.Outputs[Flat File Source Output].ExternalColumns[Junction_Location]"
+                      refId="Package\Load Data Casualties\Casualties File csv.Outputs[Flat File Source Output].ExternalColumns[Age_Band_of_Casualty]"
                       codePage="1252"
                       dataType="str"
                       length="50"
-                      name="Junction_Location" />
+                      name="Age_Band_of_Casualty" />
                     <externalMetadataColumn
-                      refId="Package\Load Data Vehicles\Vehicles File csv.Outputs[Flat File Source Output].ExternalColumns[Skidding_and_Overturning]"
+                      refId="Package\Load Data Casualties\Casualties File csv.Outputs[Flat File Source Output].ExternalColumns[Casualty_Severity]"
                       codePage="1252"
                       dataType="str"
                       length="50"
-                      name="Skidding_and_Overturning" />
+                      name="Casualty_Severity" />
                     <externalMetadataColumn
-                      refId="Package\Load Data Vehicles\Vehicles File csv.Outputs[Flat File Source Output].ExternalColumns[Hit_Object_in_Carriageway]"
+                      refId="Package\Load Data Casualties\Casualties File csv.Outputs[Flat File Source Output].ExternalColumns[Pedestrian_Location]"
                       codePage="1252"
                       dataType="str"
                       length="50"
-                      name="Hit_Object_in_Carriageway" />
+                      name="Pedestrian_Location" />
                     <externalMetadataColumn
-                      refId="Package\Load Data Vehicles\Vehicles File csv.Outputs[Flat File Source Output].ExternalColumns[Vehicle_Leaving_Carriageway]"
+                      refId="Package\Load Data Casualties\Casualties File csv.Outputs[Flat File Source Output].ExternalColumns[Pedestrian_Movement]"
                       codePage="1252"
                       dataType="str"
                       length="50"
-                      name="Vehicle_Leaving_Carriageway" />
+                      name="Pedestrian_Movement" />
                     <externalMetadataColumn
-                      refId="Package\Load Data Vehicles\Vehicles File csv.Outputs[Flat File Source Output].ExternalColumns[Hit_Object_off_Carriageway]"
+                      refId="Package\Load Data Casualties\Casualties File csv.Outputs[Flat File Source Output].ExternalColumns[Car_Passenger]"
                       codePage="1252"
                       dataType="str"
                       length="50"
-                      name="Hit_Object_off_Carriageway" />
+                      name="Car_Passenger" />
                     <externalMetadataColumn
-                      refId="Package\Load Data Vehicles\Vehicles File csv.Outputs[Flat File Source Output].ExternalColumns[1st_Point_of_Impact]"
+                      refId="Package\Load Data Casualties\Casualties File csv.Outputs[Flat File Source Output].ExternalColumns[Bus_or_Coach_Passenger]"
                       codePage="1252"
                       dataType="str"
                       length="50"
-                      name="1st_Point_of_Impact" />
+                      name="Bus_or_Coach_Passenger" />
                     <externalMetadataColumn
-                      refId="Package\Load Data Vehicles\Vehicles File csv.Outputs[Flat File Source Output].ExternalColumns[Was_Vehicle_Left_Hand_Drive?]"
+                      refId="Package\Load Data Casualties\Casualties File csv.Outputs[Flat File Source Output].ExternalColumns[Pedestrian_Road_Maintenance_Worker]"
                       codePage="1252"
                       dataType="str"
                       length="50"
-                      name="Was_Vehicle_Left_Hand_Drive?" />
+                      name="Pedestrian_Road_Maintenance_Worker" />
                     <externalMetadataColumn
-                      refId="Package\Load Data Vehicles\Vehicles File csv.Outputs[Flat File Source Output].ExternalColumns[Journey_Purpose_of_Driver]"
+                      refId="Package\Load Data Casualties\Casualties File csv.Outputs[Flat File Source Output].ExternalColumns[Casualty_Type]"
                       codePage="1252"
                       dataType="str"
                       length="50"
-                      name="Journey_Purpose_of_Driver" />
+                      name="Casualty_Type" />
                     <externalMetadataColumn
-                      refId="Package\Load Data Vehicles\Vehicles File csv.Outputs[Flat File Source Output].ExternalColumns[Sex_of_Driver]"
+                      refId="Package\Load Data Casualties\Casualties File csv.Outputs[Flat File Source Output].ExternalColumns[Casualty_Home_Area_Type]"
                       codePage="1252"
                       dataType="str"
                       length="50"
-                      name="Sex_of_Driver" />
-                    <externalMetadataColumn
-                      refId="Package\Load Data Vehicles\Vehicles File csv.Outputs[Flat File Source Output].ExternalColumns[Age_of_Driver]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Age_of_Driver" />
-                    <externalMetadataColumn
-                      refId="Package\Load Data Vehicles\Vehicles File csv.Outputs[Flat File Source Output].ExternalColumns[Age_Band_of_Driver]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Age_Band_of_Driver" />
-                    <externalMetadataColumn
-                      refId="Package\Load Data Vehicles\Vehicles File csv.Outputs[Flat File Source Output].ExternalColumns[Engine_Capacity_(CC)]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Engine_Capacity_(CC)" />
-                    <externalMetadataColumn
-                      refId="Package\Load Data Vehicles\Vehicles File csv.Outputs[Flat File Source Output].ExternalColumns[Propulsion_Code]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Propulsion_Code" />
-                    <externalMetadataColumn
-                      refId="Package\Load Data Vehicles\Vehicles File csv.Outputs[Flat File Source Output].ExternalColumns[Age_of_Vehicle]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Age_of_Vehicle" />
-                    <externalMetadataColumn
-                      refId="Package\Load Data Vehicles\Vehicles File csv.Outputs[Flat File Source Output].ExternalColumns[Driver_IMD_Decile]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Driver_IMD_Decile" />
-                    <externalMetadataColumn
-                      refId="Package\Load Data Vehicles\Vehicles File csv.Outputs[Flat File Source Output].ExternalColumns[Driver_Home_Area_Type]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Driver_Home_Area_Type" />
+                      name="Casualty_Home_Area_Type" />
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\Load Data Vehicles\Vehicles File csv.Outputs[Flat File Source Error Output]"
+                  refId="Package\Load Data Casualties\Casualties File csv.Outputs[Flat File Source Error Output]"
                   isErrorOut="true"
                   name="Flat File Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Load Data Vehicles\Vehicles File csv.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      refId="Package\Load Data Casualties\Casualties File csv.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
                       codePage="1252"
                       dataType="text"
                       description="Flat File Source Error Output Column"
-                      lineageId="Package\Load Data Vehicles\Vehicles File csv.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      lineageId="Package\Load Data Casualties\Casualties File csv.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
                       name="Flat File Source Error Output Column" />
                     <outputColumn
-                      refId="Package\Load Data Vehicles\Vehicles File csv.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      refId="Package\Load Data Casualties\Casualties File csv.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Load Data Vehicles\Vehicles File csv.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Load Data Casualties\Casualties File csv.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Load Data Vehicles\Vehicles File csv.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      refId="Package\Load Data Casualties\Casualties File csv.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Load Data Vehicles\Vehicles File csv.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Load Data Casualties\Casualties File csv.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -1269,11 +889,11 @@
               </outputs>
             </component>
             <component
-              refId="Package\Load Data Vehicles\Vehicles_Stage"
+              refId="Package\Load Data Casualties\Casualties_Stage"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
               description="OLE DB Destination"
-              name="Vehicles_Stage"
+              name="Casualties_Stage"
               usesDispositions="true"
               version="4">
               <properties>
@@ -1284,7 +904,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[Vehicles_Stage]</property>
+                  name="OpenRowset">[Casualties_Stage]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -1326,7 +946,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Load Data Vehicles\Vehicles_Stage.Connections[OleDbConnection]"
+                  refId="Package\Load Data Casualties\Casualties_Stage.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[LocalHost.UCA_STAGE]"
                   connectionManagerRefId="Package.ConnectionManagers[LocalHost.UCA_STAGE]"
                   description="The OLE DB runtime connection used to access the database."
@@ -1334,106 +954,199 @@
               </connections>
               <inputs>
                 <input
-                  refId="Package\Load Data Vehicles\Vehicles_Stage.Inputs[OLE DB Destination Input]"
+                  refId="Package\Load Data Casualties\Casualties_Stage.Inputs[OLE DB Destination Input]"
                   errorOrTruncationOperation="Insert"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Load Data Vehicles\Vehicles_Stage.Inputs[OLE DB Destination Input].Columns[Vehicle_Type]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Vehicle_Type"
-                      externalMetadataColumnId="Package\Load Data Vehicles\Vehicles_Stage.Inputs[OLE DB Destination Input].ExternalColumns[Vehicle_Type]"
-                      lineageId="Package\Load Data Vehicles\Vehicles File csv.Outputs[Flat File Source Output].Columns[Vehicle_Type]" />
-                    <inputColumn
-                      refId="Package\Load Data Vehicles\Vehicles_Stage.Inputs[OLE DB Destination Input].Columns[Journey_Purpose_of_Driver]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Journey_Purpose_of_Driver"
-                      externalMetadataColumnId="Package\Load Data Vehicles\Vehicles_Stage.Inputs[OLE DB Destination Input].ExternalColumns[Journey_Purpose_of_Driver]"
-                      lineageId="Package\Load Data Vehicles\Vehicles File csv.Outputs[Flat File Source Output].Columns[Journey_Purpose_of_Driver]" />
-                    <inputColumn
-                      refId="Package\Load Data Vehicles\Vehicles_Stage.Inputs[OLE DB Destination Input].Columns[Copy of Accident_Index]"
+                      refId="Package\Load Data Casualties\Casualties_Stage.Inputs[OLE DB Destination Input].Columns[Copy of Accident_Index]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="Copy of Accident_Index"
-                      externalMetadataColumnId="Package\Load Data Vehicles\Vehicles_Stage.Inputs[OLE DB Destination Input].ExternalColumns[Accident_Index]"
-                      lineageId="Package\Load Data Vehicles\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Accident_Index]" />
+                      externalMetadataColumnId="Package\Load Data Casualties\Casualties_Stage.Inputs[OLE DB Destination Input].ExternalColumns[Accident_Index]"
+                      lineageId="Package\Load Data Casualties\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Accident_Index]" />
                     <inputColumn
-                      refId="Package\Load Data Vehicles\Vehicles_Stage.Inputs[OLE DB Destination Input].Columns[Age_of_Driver]"
+                      refId="Package\Load Data Casualties\Casualties_Stage.Inputs[OLE DB Destination Input].Columns[Sex_of_Casualty]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
-                      cachedName="Age_of_Driver"
-                      externalMetadataColumnId="Package\Load Data Vehicles\Vehicles_Stage.Inputs[OLE DB Destination Input].ExternalColumns[Age_of_Driver]"
-                      lineageId="Package\Load Data Vehicles\Vehicles File csv.Outputs[Flat File Source Output].Columns[Age_of_Driver]" />
+                      cachedName="Sex_of_Casualty"
+                      externalMetadataColumnId="Package\Load Data Casualties\Casualties_Stage.Inputs[OLE DB Destination Input].ExternalColumns[Sex_of_Casualty]"
+                      lineageId="Package\Load Data Casualties\Casualties File csv.Outputs[Flat File Source Output].Columns[Sex_of_Casualty]" />
                     <inputColumn
-                      refId="Package\Load Data Vehicles\Vehicles_Stage.Inputs[OLE DB Destination Input].Columns[Age_of_Vehicle]"
+                      refId="Package\Load Data Casualties\Casualties_Stage.Inputs[OLE DB Destination Input].Columns[Age_of_Casualty]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
-                      cachedName="Age_of_Vehicle"
-                      externalMetadataColumnId="Package\Load Data Vehicles\Vehicles_Stage.Inputs[OLE DB Destination Input].ExternalColumns[Age_of_Vehicle]"
-                      lineageId="Package\Load Data Vehicles\Vehicles File csv.Outputs[Flat File Source Output].Columns[Age_of_Vehicle]" />
+                      cachedName="Age_of_Casualty"
+                      externalMetadataColumnId="Package\Load Data Casualties\Casualties_Stage.Inputs[OLE DB Destination Input].ExternalColumns[Age_of_Casualty]"
+                      lineageId="Package\Load Data Casualties\Casualties File csv.Outputs[Flat File Source Output].Columns[Age_of_Casualty]" />
+                    <inputColumn
+                      refId="Package\Load Data Casualties\Casualties_Stage.Inputs[OLE DB Destination Input].Columns[Age_Band_of_Casualty]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Age_Band_of_Casualty"
+                      externalMetadataColumnId="Package\Load Data Casualties\Casualties_Stage.Inputs[OLE DB Destination Input].ExternalColumns[Age_Band_of_Casualty]"
+                      lineageId="Package\Load Data Casualties\Casualties File csv.Outputs[Flat File Source Output].Columns[Age_Band_of_Casualty]" />
+                    <inputColumn
+                      refId="Package\Load Data Casualties\Casualties_Stage.Inputs[OLE DB Destination Input].Columns[Casualty_Severity]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Casualty_Severity"
+                      externalMetadataColumnId="Package\Load Data Casualties\Casualties_Stage.Inputs[OLE DB Destination Input].ExternalColumns[Casualty_Severity]"
+                      lineageId="Package\Load Data Casualties\Casualties File csv.Outputs[Flat File Source Output].Columns[Casualty_Severity]" />
+                    <inputColumn
+                      refId="Package\Load Data Casualties\Casualties_Stage.Inputs[OLE DB Destination Input].Columns[Casualty_Type]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Casualty_Type"
+                      externalMetadataColumnId="Package\Load Data Casualties\Casualties_Stage.Inputs[OLE DB Destination Input].ExternalColumns[Casualty_Type]"
+                      lineageId="Package\Load Data Casualties\Casualties File csv.Outputs[Flat File Source Output].Columns[Casualty_Type]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Load Data Vehicles\Vehicles_Stage.Inputs[OLE DB Destination Input].ExternalColumns[Accident_Index]"
+                      refId="Package\Load Data Casualties\Casualties_Stage.Inputs[OLE DB Destination Input].ExternalColumns[Accident_Index]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="Accident_Index" />
                     <externalMetadataColumn
-                      refId="Package\Load Data Vehicles\Vehicles_Stage.Inputs[OLE DB Destination Input].ExternalColumns[Vehicle_Type]"
+                      refId="Package\Load Data Casualties\Casualties_Stage.Inputs[OLE DB Destination Input].ExternalColumns[Sex_of_Casualty]"
                       codePage="1252"
                       dataType="str"
                       length="50"
-                      name="Vehicle_Type" />
+                      name="Sex_of_Casualty" />
                     <externalMetadataColumn
-                      refId="Package\Load Data Vehicles\Vehicles_Stage.Inputs[OLE DB Destination Input].ExternalColumns[Journey_Purpose_of_Driver]"
+                      refId="Package\Load Data Casualties\Casualties_Stage.Inputs[OLE DB Destination Input].ExternalColumns[Age_of_Casualty]"
                       codePage="1252"
                       dataType="str"
                       length="50"
-                      name="Journey_Purpose_of_Driver" />
+                      name="Age_of_Casualty" />
                     <externalMetadataColumn
-                      refId="Package\Load Data Vehicles\Vehicles_Stage.Inputs[OLE DB Destination Input].ExternalColumns[Age_of_Driver]"
+                      refId="Package\Load Data Casualties\Casualties_Stage.Inputs[OLE DB Destination Input].ExternalColumns[Age_Band_of_Casualty]"
                       codePage="1252"
                       dataType="str"
                       length="50"
-                      name="Age_of_Driver" />
+                      name="Age_Band_of_Casualty" />
                     <externalMetadataColumn
-                      refId="Package\Load Data Vehicles\Vehicles_Stage.Inputs[OLE DB Destination Input].ExternalColumns[Age_of_Vehicle]"
+                      refId="Package\Load Data Casualties\Casualties_Stage.Inputs[OLE DB Destination Input].ExternalColumns[Casualty_Severity]"
                       codePage="1252"
                       dataType="str"
                       length="50"
-                      name="Age_of_Vehicle" />
+                      name="Casualty_Severity" />
+                    <externalMetadataColumn
+                      refId="Package\Load Data Casualties\Casualties_Stage.Inputs[OLE DB Destination Input].ExternalColumns[Casualty_Type]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Casualty_Type" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Load Data Vehicles\Vehicles_Stage.Outputs[OLE DB Destination Error Output]"
+                  refId="Package\Load Data Casualties\Casualties_Stage.Outputs[OLE DB Destination Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Load Data Vehicles\Vehicles_Stage.Inputs[OLE DB Destination Input]">
+                  synchronousInputId="Package\Load Data Casualties\Casualties_Stage.Inputs[OLE DB Destination Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Load Data Vehicles\Vehicles_Stage.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      refId="Package\Load Data Casualties\Casualties_Stage.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Load Data Vehicles\Vehicles_Stage.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Load Data Casualties\Casualties_Stage.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Load Data Vehicles\Vehicles_Stage.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      refId="Package\Load Data Casualties\Casualties_Stage.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Load Data Vehicles\Vehicles_Stage.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Load Data Casualties\Casualties_Stage.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load Data Casualties\Data Conversion"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Data Conversion"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Load Data Casualties\Data Conversion.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load Data Casualties\Data Conversion.Inputs[Data Conversion Input].Columns[Accident_Index]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Accident_Index"
+                      lineageId="Package\Load Data Casualties\Casualties File csv.Outputs[Flat File Source Output].Columns[Accident_Index]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load Data Casualties\Data Conversion.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\Load Data Casualties\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load Data Casualties\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Accident_Index]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Load Data Casualties\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Accident_Index]"
+                      name="Copy of Accident_Index"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Load Data Casualties\Casualties File csv.Outputs[Flat File Source Output].Columns[Accident_Index]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load Data Casualties\Data Conversion.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\Load Data Casualties\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load Data Casualties\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load Data Casualties\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load Data Casualties\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load Data Casualties\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -1444,15 +1157,15 @@
           </components>
           <paths>
             <path
-              refId="Package\Load Data Vehicles.Paths[Data Conversion Output]"
-              endId="Package\Load Data Vehicles\Vehicles_Stage.Inputs[OLE DB Destination Input]"
+              refId="Package\Load Data Casualties.Paths[Data Conversion Output]"
+              endId="Package\Load Data Casualties\Casualties_Stage.Inputs[OLE DB Destination Input]"
               name="Data Conversion Output"
-              startId="Package\Load Data Vehicles\Data Conversion.Outputs[Data Conversion Output]" />
+              startId="Package\Load Data Casualties\Data Conversion.Outputs[Data Conversion Output]" />
             <path
-              refId="Package\Load Data Vehicles.Paths[Flat File Source Output]"
-              endId="Package\Load Data Vehicles\Data Conversion.Inputs[Data Conversion Input]"
+              refId="Package\Load Data Casualties.Paths[Flat File Source Output]"
+              endId="Package\Load Data Casualties\Data Conversion.Inputs[Data Conversion Input]"
               name="Flat File Source Output"
-              startId="Package\Load Data Vehicles\Vehicles File csv.Outputs[Flat File Source Output]" />
+              startId="Package\Load Data Casualties\Casualties File csv.Outputs[Flat File Source Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -1461,7 +1174,7 @@
       DTS:refId="Package\TRUNCATE STAGE"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
-      DTS:DTSID="{F1EBFAD3-D311-4771-9323-59F02C1E032A}"
+      DTS:DTSID="{0AB2CF9D-9C31-44B2-B890-3CB1ED64AF69}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="TRUNCATE STAGE"
@@ -1470,15 +1183,15 @@
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{478CDD65-2D07-4706-928C-02C35269FDF0}"
-          SQLTask:SqlStatementSource="TRUNCATE TABLE Vehicles_Stage" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:Connection="{20D41374-4B0C-4CDA-8D81-FD3FF87A6A37}"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE Casualties_Stage" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
       DTS:refId="Package\UPDATE LSET"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
-      DTS:DTSID="{FFF896F3-4A51-4AB5-8C19-D55EF4559C96}"
+      DTS:DTSID="{3618DBA8-8314-4BD7-9A67-3071BB349C59}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="UPDATE LSET"
@@ -1487,7 +1200,7 @@
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{405B1D67-239E-43FF-9FA5-5FD238F2500F}"
+          SQLTask:Connection="{DB6D8185-6ADC-4F12-BC08-4D4812654EC8}"
           SQLTask:SqlStatementSource="UPDATE LSET_CET&#xA;SET LSET = CET" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
@@ -1496,7 +1209,7 @@
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint]"
       DTS:CreationName=""
-      DTS:DTSID="{FA4C4592-C7F7-472A-A83C-1CF4BC264DFD}"
+      DTS:DTSID="{0727E03A-055D-4551-9334-AD42E69442A0}"
       DTS:From="Package\TRUNCATE STAGE"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
@@ -1504,16 +1217,16 @@
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
       DTS:CreationName=""
-      DTS:DTSID="{84FE5C52-6BCB-4680-9813-9E5D34257119}"
+      DTS:DTSID="{3553D87B-CFEE-48BE-9E23-1EFA9A6BE572}"
       DTS:From="Package\GET LSET,CET"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 1"
-      DTS:To="Package\Load Data Vehicles" />
+      DTS:To="Package\Load Data Casualties" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
       DTS:CreationName=""
-      DTS:DTSID="{9048B51A-3A19-4B2A-8B0A-A227683A9147}"
-      DTS:From="Package\Load Data Vehicles"
+      DTS:DTSID="{E4901361-876D-465E-9EDB-6726BA42E831}"
+      DTS:From="Package\Load Data Casualties"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 2"
       DTS:To="Package\UPDATE LSET" />
@@ -1533,33 +1246,33 @@
         <NodeLayout
           Size="147,42"
           Id="Package\GET LSET,CET"
-          TopLeft="271,132" />
+          TopLeft="271,130" />
         <NodeLayout
-          Size="168,42"
-          Id="Package\Load Data Vehicles"
-          TopLeft="263,213" />
+          Size="177,42"
+          Id="Package\Load Data Casualties"
+          TopLeft="263,211" />
         <NodeLayout
-          Size="166,42"
+          Size="179,42"
           Id="Package\TRUNCATE STAGE"
-          TopLeft="261,41" />
+          TopLeft="248,49" />
         <NodeLayout
           Size="145,42"
           Id="Package\UPDATE LSET"
-          TopLeft="270,308" />
+          TopLeft="272,313" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="344.25,83">
+          TopLeft="341,91">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,49"
+              EndConnector="0,39"
               Start="0,0"
-              End="0,41.5">
+              End="0,31.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,41.5" />
+                    End="0,31.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1570,7 +1283,7 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="345.75,174">
+          TopLeft="348,172">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -1592,7 +1305,71 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
-          TopLeft="344.75,255">
+          TopLeft="348,253">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Load Data Casualties">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="156,42"
+          Id="Package\Load Data Casualties\Data Conversion"
+          TopLeft="278,170" />
+        <NodeLayout
+          Size="159,42"
+          Id="Package\Load Data Casualties\Casualties_Stage"
+          TopLeft="275,265" />
+        <NodeLayout
+          Size="164,42"
+          Id="Package\Load Data Casualties\Casualties File csv"
+          TopLeft="276,54" />
+        <EdgeLayout
+          Id="Package\Load Data Casualties.Paths[Flat File Source Output]"
+          TopLeft="357,96">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,74"
+              Start="0,0"
+              End="0,66.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,66.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load Data Casualties.Paths[Data Conversion Output]"
+          TopLeft="355.25,212">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -1614,73 +1391,9 @@
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
-  </Package>
-  <TaskHost
-    design-time-name="Package\Load Data Vehicles">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="155,42"
-          Id="Package\Load Data Vehicles\Vehicles File csv"
-          TopLeft="278,64" />
-        <NodeLayout
-          Size="150,42"
-          Id="Package\Load Data Vehicles\Vehicles_Stage"
-          TopLeft="278,296" />
-        <NodeLayout
-          Size="156,42"
-          Id="Package\Load Data Vehicles\Data Conversion"
-          TopLeft="282,168" />
-        <EdgeLayout
-          Id="Package\Load Data Vehicles.Paths[Flat File Source Output]"
-          TopLeft="357.75,106">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,62"
-              Start="0,0"
-              End="0,54.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,54.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Load Data Vehicles.Paths[Data Conversion Output]"
-          TopLeft="356.5,210">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,86"
-              Start="0,0"
-              End="0,78.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,78.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Load Data Vehicles\Vehicles_Stage">
+    design-time-name="Package\Load Data Casualties\Casualties_Stage">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

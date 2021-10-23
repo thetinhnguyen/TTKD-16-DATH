@@ -73,11 +73,11 @@ GO
 
 CREATE TABLE [Casualties_Stage] (
     [Accident_Index] varchar(50),
-    [Sex_of_Casualty] varchar(50),
-    [Age_of_Casualty] varchar(50),
-    [Age_Band_of_Casualty] varchar(50),
-    [Casualty_Severity] varchar(50),
-    [Casualty_Type] varchar(50)
+    [Sex_of_Casualty] int,
+    [Age_of_Casualty] int,
+    [Age_Band_of_Casualty] int,
+    [Casualty_Severity] int,
+    [Casualty_Type] int
 ) ON [PRIMARY]
 GO
 
