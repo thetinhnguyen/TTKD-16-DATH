@@ -1,23 +1,23 @@
-CREATE DATABASE UCA_LSET_CET
-GO
-USE UCA_LSET_CET
-go
+--CREATE DATABASE UCA_LSET_CET
+--GO
+--USE UCA_LSET_CET
+--go
 
-CREATE TABLE LSET_CET
-(
-	ID INT IDENTITY(1,1) PRIMARY KEY,
-	LSET DATETIME,
-	CET DATETIME
-)
+--CREATE TABLE LSET_CET
+--(
+--	ID INT IDENTITY(1,1) PRIMARY KEY,
+--	LSET DATETIME,
+--	CET DATETIME
+--)
 
-INSERT INTO LSET_CET(LSET) VALUES('2012-12-31')
+--INSERT INTO LSET_CET(LSET) VALUES('2012-12-31')
 
-SELECT * 
-FROM LSET_CET
+--SELECT * 
+--FROM LSET_CET
 
 
-CREATE DATABASE [UCA_STAGE]
--- DROP DATABASE [UCA_STAGE]
+--CREATE DATABASE [UCA_STAGE]
+---- DROP DATABASE [UCA_STAGE]
 USE [UCA_STAGE]
 GO
 
@@ -57,10 +57,10 @@ GO
 
 CREATE TABLE [Vehicles_Stage] (
     [Accident_Index] varchar(50),
-    [Vehicle_Type] varchar(50),
-    [Journey_Purpose_of_Driver] varchar(50),
-    [Age_of_Driver] varchar(50),
-    [Age_of_Vehicle] varchar(50)
+    [Vehicle_Type] int,
+    [Journey_Purpose_of_Driver] int,
+    [Age_of_Driver] int,
+    [Age_of_Vehicle] int
 ) ON [PRIMARY]
 GO
 
