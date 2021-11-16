@@ -2,7 +2,7 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>TTKD-16_DATH</Name>
-    <LastWriteTime>2021-11-16T14:49:03.5810725Z</LastWriteTime>
+    <LastWriteTime>2021-11-16T15:27:36.6338432Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
@@ -13,7 +13,7 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Vehicles.dtsx</Name>
-      <LastWriteTime>2021-11-16T14:49:03.5451044Z</LastWriteTime>
+      <LastWriteTime>2021-11-16T15:27:36.5580466Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
@@ -29,6 +29,11 @@
     <ProjectBuildItemInfo>
       <Name>LSOA_to_dim_Eng_Wales.dtsx</Name>
       <LastWriteTime>2021-11-16T03:22:10.8685945Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>Accident_location.dtsx</Name>
+      <LastWriteTime>2021-11-16T15:27:36.587966Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>

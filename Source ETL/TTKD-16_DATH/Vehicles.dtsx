@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Vehicles"
   DTS:PackageType="5"
-  DTS:VersionBuild="13"
-  DTS:VersionGUID="{10E12AA4-5231-43AD-8248-1E764861140F}">
+  DTS:VersionBuild="16"
+  DTS:VersionGUID="{D4F8E6BD-3297-4791-A14F-C107709422A0}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1753,7 +1753,7 @@
           Id="Package\TRUNCATE STAGE"
           TopLeft="261,41" />
         <NodeLayout
-          Size="144.8,41.6"
+          Size="144,41.6"
           Id="Package\UPDATE LSET"
           TopLeft="270,308" />
         <EdgeLayout
@@ -1802,18 +1802,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
-          TopLeft="344.75,255">
+          TopLeft="344.5,254.6">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,53"
+              EndConnector="0,53.4"
               Start="0,0"
-              End="0,45.5">
+              End="0,45.9">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,45.5" />
+                    End="0,45.9" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

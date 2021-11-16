@@ -81,29 +81,15 @@ CREATE TABLE [Casualties_Stage] (
 ) ON [PRIMARY]
 GO
 
-/****** Object:  Table [dbo].[LDA_to_dim_Scotland_NIreland_Stage]    Script Date: 10/21/2021 12:19:23 PM ******/
+/****** Object:  Table [dbo].[Accident_location_Stage]    Script Date: 10/21/2021 12:19:23 PM ******/
 SET ANSI_NULLS ON
 GO
 
 SET QUOTED_IDENTIFIER ON
 GO
-CREATE TABLE [LDA_to_dim_Scotland_NIreland_Stage] (
-    [Local_Authority_(District)] int,
-    [county] varchar(50),
-    [country_name] varchar(50),
-    [region_name] varchar(50)
-) ON [PRIMARY]
-GO
-
-/****** Object:  Table [dbo].[LSOA_to_dim_Eng_Wales_Stage]    Script Date: 10/21/2021 12:19:23 PM ******/
-SET ANSI_NULLS ON
-GO
-
-SET QUOTED_IDENTIFIER ON
-GO
-CREATE TABLE [LSOA_to_dim_Eng_Wales_Stage] (
-    [lsoa11cd] varchar(50),
-    [city] varchar(50),
+CREATE TABLE [Accident_location_Stage] (
+	[Accident_Index] varchar(50),
+	[city] varchar(50),
     [county] varchar(50),
     [country_name] varchar(50),
     [region_name] varchar(50)
