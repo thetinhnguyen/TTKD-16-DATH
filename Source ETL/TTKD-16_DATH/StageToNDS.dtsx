@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="17"
-  DTS:VersionGUID="{5206537C-07FA-4BCA-AC01-907648035D7D}">
+  DTS:VersionBuild="23"
+  DTS:VersionGUID="{C906A88E-EBCE-41CE-9DFF-7E7B3B512272}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -52,9 +52,1104 @@
           DTS:ConnectionString="Data Source=.;Initial Catalog=UCA_STAGE;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost.UCA_STAGE 1]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{C417686A-AA08-44F1-A932-8941D112DEC5}"
+      DTS:ObjectName="LocalHost.UCA_STAGE 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=.;Initial Catalog=UCA_STAGE;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
   <DTS:Variables />
   <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Load dữ liệu từ  Vehicles Stage To NDS"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{c6293e46-1a5f-4b12-88fa-b4d6cd5e8305}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Load dữ liệu từ  Vehicles Stage To NDS"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Cap nhat du lieu Vehicle"
+              componentClassID="Microsoft.OLEDBCommand"
+              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
+              name="Cap nhat du lieu Vehicle"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">update [Vehicles_NDS] set  
+    [Vehicle_Type]=?,
+    [Journey_Purpose_of_Driver] =?,
+    [Age_of_Driver] =?,
+    [Age_of_Vehicle]=?,
+    [UpdatedDate]=?
+ where  [Accident_Index] =?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Cap nhat du lieu Vehicle.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.UCA_NDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.UCA_NDS]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Cap nhat du lieu Vehicle.Inputs[OLE DB Command Input]"
+                  errorOrTruncationOperation="Command Execution"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Command Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Cap nhat du lieu Vehicle.Inputs[OLE DB Command Input].Columns[Vehicle_Type]"
+                      cachedDataType="i4"
+                      cachedName="Vehicle_Type"
+                      externalMetadataColumnId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Cap nhat du lieu Vehicle.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      lineageId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Load du lieu Vehicles trong Stage.Outputs[OLE DB Source Output].Columns[Vehicle_Type]" />
+                    <inputColumn
+                      refId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Cap nhat du lieu Vehicle.Inputs[OLE DB Command Input].Columns[Journey_Purpose_of_Driver]"
+                      cachedDataType="i4"
+                      cachedName="Journey_Purpose_of_Driver"
+                      externalMetadataColumnId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Cap nhat du lieu Vehicle.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      lineageId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Load du lieu Vehicles trong Stage.Outputs[OLE DB Source Output].Columns[Journey_Purpose_of_Driver]" />
+                    <inputColumn
+                      refId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Cap nhat du lieu Vehicle.Inputs[OLE DB Command Input].Columns[Age_of_Driver]"
+                      cachedDataType="i4"
+                      cachedName="Age_of_Driver"
+                      externalMetadataColumnId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Cap nhat du lieu Vehicle.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      lineageId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Load du lieu Vehicles trong Stage.Outputs[OLE DB Source Output].Columns[Age_of_Driver]" />
+                    <inputColumn
+                      refId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Cap nhat du lieu Vehicle.Inputs[OLE DB Command Input].Columns[Age_of_Vehicle]"
+                      cachedDataType="i4"
+                      cachedName="Age_of_Vehicle"
+                      externalMetadataColumnId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Cap nhat du lieu Vehicle.Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
+                      lineageId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Load du lieu Vehicles trong Stage.Outputs[OLE DB Source Output].Columns[Age_of_Vehicle]" />
+                    <inputColumn
+                      refId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Cap nhat du lieu Vehicle.Inputs[OLE DB Command Input].Columns[UpdatedDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="UpdatedDate"
+                      externalMetadataColumnId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Cap nhat du lieu Vehicle.Inputs[OLE DB Command Input].ExternalColumns[Param_4]"
+                      lineageId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Them UpdatedDate.Outputs[Derived Column Output].Columns[UpdatedDate]" />
+                    <inputColumn
+                      refId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Cap nhat du lieu Vehicle.Inputs[OLE DB Command Input].Columns[Accident_IndexTrongNDS]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Accident_IndexTrongNDS"
+                      externalMetadataColumnId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Cap nhat du lieu Vehicle.Inputs[OLE DB Command Input].ExternalColumns[Param_5]"
+                      lineageId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Xem xet Accident_Index trong Vehicle NDS.Outputs[Lookup Match Output].Columns[Accident_IndexTrongNDS]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Cap nhat du lieu Vehicle.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      dataType="i4"
+                      name="Param_0">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Cap nhat du lieu Vehicle.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      dataType="i4"
+                      name="Param_1">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Cap nhat du lieu Vehicle.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      dataType="i4"
+                      name="Param_2">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Cap nhat du lieu Vehicle.Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
+                      dataType="i4"
+                      name="Param_3">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Cap nhat du lieu Vehicle.Inputs[OLE DB Command Input].ExternalColumns[Param_4]"
+                      dataType="dbTimeStamp"
+                      name="Param_4">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Cap nhat du lieu Vehicle.Inputs[OLE DB Command Input].ExternalColumns[Param_5]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Param_5">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Cap nhat du lieu Vehicle.Outputs[OLE DB Command Output]"
+                  exclusionGroup="1"
+                  name="OLE DB Command Output"
+                  synchronousInputId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Cap nhat du lieu Vehicle.Inputs[OLE DB Command Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Cap nhat du lieu Vehicle.Outputs[OLE DB Command Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Command Error Output"
+                  synchronousInputId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Cap nhat du lieu Vehicle.Inputs[OLE DB Command Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Cap nhat du lieu Vehicle.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Cap nhat du lieu Vehicle.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Cap nhat du lieu Vehicle.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Cap nhat du lieu Vehicle.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Load du lieu Vehicles trong Stage"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="Load du lieu Vehicles trong Stage"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Vehicles_Stage]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Load du lieu Vehicles trong Stage.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.UCA_STAGE 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.UCA_STAGE 1]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Load du lieu Vehicles trong Stage.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Load du lieu Vehicles trong Stage.Outputs[OLE DB Source Output].Columns[Accident_Index]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Load du lieu Vehicles trong Stage.Outputs[OLE DB Source Output].ExternalColumns[Accident_Index]"
+                      length="50"
+                      lineageId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Load du lieu Vehicles trong Stage.Outputs[OLE DB Source Output].Columns[Accident_Index]"
+                      name="Accident_Index"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Load du lieu Vehicles trong Stage.Outputs[OLE DB Source Output].Columns[Vehicle_Type]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Load du lieu Vehicles trong Stage.Outputs[OLE DB Source Output].ExternalColumns[Vehicle_Type]"
+                      lineageId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Load du lieu Vehicles trong Stage.Outputs[OLE DB Source Output].Columns[Vehicle_Type]"
+                      name="Vehicle_Type"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Load du lieu Vehicles trong Stage.Outputs[OLE DB Source Output].Columns[Journey_Purpose_of_Driver]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Load du lieu Vehicles trong Stage.Outputs[OLE DB Source Output].ExternalColumns[Journey_Purpose_of_Driver]"
+                      lineageId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Load du lieu Vehicles trong Stage.Outputs[OLE DB Source Output].Columns[Journey_Purpose_of_Driver]"
+                      name="Journey_Purpose_of_Driver"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Load du lieu Vehicles trong Stage.Outputs[OLE DB Source Output].Columns[Age_of_Driver]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Load du lieu Vehicles trong Stage.Outputs[OLE DB Source Output].ExternalColumns[Age_of_Driver]"
+                      lineageId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Load du lieu Vehicles trong Stage.Outputs[OLE DB Source Output].Columns[Age_of_Driver]"
+                      name="Age_of_Driver"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Load du lieu Vehicles trong Stage.Outputs[OLE DB Source Output].Columns[Age_of_Vehicle]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Load du lieu Vehicles trong Stage.Outputs[OLE DB Source Output].ExternalColumns[Age_of_Vehicle]"
+                      lineageId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Load du lieu Vehicles trong Stage.Outputs[OLE DB Source Output].Columns[Age_of_Vehicle]"
+                      name="Age_of_Vehicle"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Load du lieu Vehicles trong Stage.Outputs[OLE DB Source Output].ExternalColumns[Accident_Index]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Accident_Index" />
+                    <externalMetadataColumn
+                      refId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Load du lieu Vehicles trong Stage.Outputs[OLE DB Source Output].ExternalColumns[Vehicle_Type]"
+                      dataType="i4"
+                      name="Vehicle_Type" />
+                    <externalMetadataColumn
+                      refId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Load du lieu Vehicles trong Stage.Outputs[OLE DB Source Output].ExternalColumns[Journey_Purpose_of_Driver]"
+                      dataType="i4"
+                      name="Journey_Purpose_of_Driver" />
+                    <externalMetadataColumn
+                      refId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Load du lieu Vehicles trong Stage.Outputs[OLE DB Source Output].ExternalColumns[Age_of_Driver]"
+                      dataType="i4"
+                      name="Age_of_Driver" />
+                    <externalMetadataColumn
+                      refId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Load du lieu Vehicles trong Stage.Outputs[OLE DB Source Output].ExternalColumns[Age_of_Vehicle]"
+                      dataType="i4"
+                      name="Age_of_Vehicle" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Load du lieu Vehicles trong Stage.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Load du lieu Vehicles trong Stage.Outputs[OLE DB Source Error Output].Columns[Accident_Index]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Load du lieu Vehicles trong Stage.Outputs[OLE DB Source Error Output].Columns[Accident_Index]"
+                      name="Accident_Index" />
+                    <outputColumn
+                      refId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Load du lieu Vehicles trong Stage.Outputs[OLE DB Source Error Output].Columns[Vehicle_Type]"
+                      dataType="i4"
+                      lineageId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Load du lieu Vehicles trong Stage.Outputs[OLE DB Source Error Output].Columns[Vehicle_Type]"
+                      name="Vehicle_Type" />
+                    <outputColumn
+                      refId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Load du lieu Vehicles trong Stage.Outputs[OLE DB Source Error Output].Columns[Journey_Purpose_of_Driver]"
+                      dataType="i4"
+                      lineageId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Load du lieu Vehicles trong Stage.Outputs[OLE DB Source Error Output].Columns[Journey_Purpose_of_Driver]"
+                      name="Journey_Purpose_of_Driver" />
+                    <outputColumn
+                      refId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Load du lieu Vehicles trong Stage.Outputs[OLE DB Source Error Output].Columns[Age_of_Driver]"
+                      dataType="i4"
+                      lineageId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Load du lieu Vehicles trong Stage.Outputs[OLE DB Source Error Output].Columns[Age_of_Driver]"
+                      name="Age_of_Driver" />
+                    <outputColumn
+                      refId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Load du lieu Vehicles trong Stage.Outputs[OLE DB Source Error Output].Columns[Age_of_Vehicle]"
+                      dataType="i4"
+                      lineageId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Load du lieu Vehicles trong Stage.Outputs[OLE DB Source Error Output].Columns[Age_of_Vehicle]"
+                      name="Age_of_Vehicle" />
+                    <outputColumn
+                      refId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Load du lieu Vehicles trong Stage.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Load du lieu Vehicles trong Stage.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Load du lieu Vehicles trong Stage.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Load du lieu Vehicles trong Stage.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Them CreatedDate, UpdatedDate"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Them CreatedDate, UpdatedDate"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Them CreatedDate, UpdatedDate.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Them CreatedDate, UpdatedDate.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Them CreatedDate, UpdatedDate.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Them CreatedDate, UpdatedDate.Outputs[Derived Column Output].Columns[CreatedDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Them CreatedDate, UpdatedDate.Outputs[Derived Column Output].Columns[CreatedDate]"
+                      name="CreatedDate"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[GETDATE]()</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">GETDATE()</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Them CreatedDate, UpdatedDate.Outputs[Derived Column Output].Columns[UpdatedDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Them CreatedDate, UpdatedDate.Outputs[Derived Column Output].Columns[UpdatedDate]"
+                      name="UpdatedDate"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[GETDATE]()</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">GETDATE()</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Them CreatedDate, UpdatedDate.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Them CreatedDate, UpdatedDate.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Them CreatedDate, UpdatedDate.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Them CreatedDate, UpdatedDate.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Them CreatedDate, UpdatedDate.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Them CreatedDate, UpdatedDate.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Them du lieu vehicle"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Them du lieu vehicle"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Vehicles_NDS]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Them du lieu vehicle.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.UCA_NDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.UCA_NDS]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Them du lieu vehicle.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Them du lieu vehicle.Inputs[OLE DB Destination Input].Columns[CreatedDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="CreatedDate"
+                      externalMetadataColumnId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Them du lieu vehicle.Inputs[OLE DB Destination Input].ExternalColumns[CreatedDate]"
+                      lineageId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Them CreatedDate, UpdatedDate.Outputs[Derived Column Output].Columns[CreatedDate]" />
+                    <inputColumn
+                      refId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Them du lieu vehicle.Inputs[OLE DB Destination Input].Columns[UpdatedDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="UpdatedDate"
+                      externalMetadataColumnId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Them du lieu vehicle.Inputs[OLE DB Destination Input].ExternalColumns[UpdatedDate]"
+                      lineageId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Them CreatedDate, UpdatedDate.Outputs[Derived Column Output].Columns[UpdatedDate]" />
+                    <inputColumn
+                      refId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Them du lieu vehicle.Inputs[OLE DB Destination Input].Columns[Accident_Index]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Accident_Index"
+                      externalMetadataColumnId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Them du lieu vehicle.Inputs[OLE DB Destination Input].ExternalColumns[Accident_Index]"
+                      lineageId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Load du lieu Vehicles trong Stage.Outputs[OLE DB Source Output].Columns[Accident_Index]" />
+                    <inputColumn
+                      refId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Them du lieu vehicle.Inputs[OLE DB Destination Input].Columns[Vehicle_Type]"
+                      cachedDataType="i4"
+                      cachedName="Vehicle_Type"
+                      externalMetadataColumnId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Them du lieu vehicle.Inputs[OLE DB Destination Input].ExternalColumns[Vehicle_Type]"
+                      lineageId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Load du lieu Vehicles trong Stage.Outputs[OLE DB Source Output].Columns[Vehicle_Type]" />
+                    <inputColumn
+                      refId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Them du lieu vehicle.Inputs[OLE DB Destination Input].Columns[Journey_Purpose_of_Driver]"
+                      cachedDataType="i4"
+                      cachedName="Journey_Purpose_of_Driver"
+                      externalMetadataColumnId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Them du lieu vehicle.Inputs[OLE DB Destination Input].ExternalColumns[Journey_Purpose_of_Driver]"
+                      lineageId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Load du lieu Vehicles trong Stage.Outputs[OLE DB Source Output].Columns[Journey_Purpose_of_Driver]" />
+                    <inputColumn
+                      refId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Them du lieu vehicle.Inputs[OLE DB Destination Input].Columns[Age_of_Driver]"
+                      cachedDataType="i4"
+                      cachedName="Age_of_Driver"
+                      externalMetadataColumnId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Them du lieu vehicle.Inputs[OLE DB Destination Input].ExternalColumns[Age_of_Driver]"
+                      lineageId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Load du lieu Vehicles trong Stage.Outputs[OLE DB Source Output].Columns[Age_of_Driver]" />
+                    <inputColumn
+                      refId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Them du lieu vehicle.Inputs[OLE DB Destination Input].Columns[Age_of_Vehicle]"
+                      cachedDataType="i4"
+                      cachedName="Age_of_Vehicle"
+                      externalMetadataColumnId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Them du lieu vehicle.Inputs[OLE DB Destination Input].ExternalColumns[Age_of_Vehicle]"
+                      lineageId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Load du lieu Vehicles trong Stage.Outputs[OLE DB Source Output].Columns[Age_of_Vehicle]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Them du lieu vehicle.Inputs[OLE DB Destination Input].ExternalColumns[CreatedDate]"
+                      dataType="dbTimeStamp"
+                      name="CreatedDate" />
+                    <externalMetadataColumn
+                      refId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Them du lieu vehicle.Inputs[OLE DB Destination Input].ExternalColumns[UpdatedDate]"
+                      dataType="dbTimeStamp"
+                      name="UpdatedDate" />
+                    <externalMetadataColumn
+                      refId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Them du lieu vehicle.Inputs[OLE DB Destination Input].ExternalColumns[Accident_Index]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Accident_Index" />
+                    <externalMetadataColumn
+                      refId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Them du lieu vehicle.Inputs[OLE DB Destination Input].ExternalColumns[Vehicles_Id]"
+                      dataType="i4"
+                      name="Vehicles_Id" />
+                    <externalMetadataColumn
+                      refId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Them du lieu vehicle.Inputs[OLE DB Destination Input].ExternalColumns[Vehicle_Type]"
+                      dataType="i4"
+                      name="Vehicle_Type" />
+                    <externalMetadataColumn
+                      refId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Them du lieu vehicle.Inputs[OLE DB Destination Input].ExternalColumns[Journey_Purpose_of_Driver]"
+                      dataType="i4"
+                      name="Journey_Purpose_of_Driver" />
+                    <externalMetadataColumn
+                      refId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Them du lieu vehicle.Inputs[OLE DB Destination Input].ExternalColumns[Age_of_Driver]"
+                      dataType="i4"
+                      name="Age_of_Driver" />
+                    <externalMetadataColumn
+                      refId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Them du lieu vehicle.Inputs[OLE DB Destination Input].ExternalColumns[Age_of_Vehicle]"
+                      dataType="i4"
+                      name="Age_of_Vehicle" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Them du lieu vehicle.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Them du lieu vehicle.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Them du lieu vehicle.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Them du lieu vehicle.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Them du lieu vehicle.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Them du lieu vehicle.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Them UpdatedDate"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Them UpdatedDate"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Them UpdatedDate.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Them UpdatedDate.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Them UpdatedDate.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Them UpdatedDate.Outputs[Derived Column Output].Columns[UpdatedDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Them UpdatedDate.Outputs[Derived Column Output].Columns[UpdatedDate]"
+                      name="UpdatedDate"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[GETDATE]()</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">GETDATE()</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Them UpdatedDate.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Them UpdatedDate.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Them UpdatedDate.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Them UpdatedDate.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Them UpdatedDate.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Them UpdatedDate.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Xem xet Accident_Index trong Vehicle NDS"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Xem xet Accident_Index trong Vehicle NDS"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select [Vehicles_Id], [Accident_Index]
+from [Vehicles_NDS]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select [Vehicles_Id], [Accident_Index]
+from [Vehicles_NDS]) [refTable]
+where [refTable].[Accident_Index] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="Vehicles_Id" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Accident_Index" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\Load dữ liệu từ  Vehicles Stage To NDS\Load du lieu Vehicles trong Stage.Outputs[OLE DB Source Output].Columns[Accident_Index]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Xem xet Accident_Index trong Vehicle NDS.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.UCA_NDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.UCA_NDS]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Xem xet Accident_Index trong Vehicle NDS.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Xem xet Accident_Index trong Vehicle NDS.Inputs[Lookup Input].Columns[Accident_Index]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Accident_Index"
+                      lineageId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Load du lieu Vehicles trong Stage.Outputs[OLE DB Source Output].Columns[Accident_Index]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">Accident_Index</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Xem xet Accident_Index trong Vehicle NDS.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  errorRowDisposition="RedirectRow"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Xem xet Accident_Index trong Vehicle NDS.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Xem xet Accident_Index trong Vehicle NDS.Outputs[Lookup Match Output].Columns[Accident_IndexTrongNDS]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Copy Column"
+                      length="50"
+                      lineageId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Xem xet Accident_Index trong Vehicle NDS.Outputs[Lookup Match Output].Columns[Accident_IndexTrongNDS]"
+                      name="Accident_IndexTrongNDS"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">Accident_Index</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Xem xet Accident_Index trong Vehicle NDS.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Xem xet Accident_Index trong Vehicle NDS.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Xem xet Accident_Index trong Vehicle NDS.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Xem xet Accident_Index trong Vehicle NDS.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Xem xet Accident_Index trong Vehicle NDS.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Xem xet Accident_Index trong Vehicle NDS.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Xem xet Accident_Index trong Vehicle NDS.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Xem xet Accident_Index trong Vehicle NDS.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Xem xet du lieu Accident_Index co trong Accident_NDS"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Xem xet du lieu Accident_Index co trong Accident_NDS"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select [Accident_Index]
+from [Accidents_NDS]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select [Accident_Index]
+from [Accidents_NDS]) [refTable]
+where [refTable].[Accident_Index] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="Accident_Index" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\Load dữ liệu từ  Vehicles Stage To NDS\226:invalid};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Xem xet du lieu Accident_Index co trong Accident_NDS.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.UCA_NDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.UCA_NDS]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Xem xet du lieu Accident_Index co trong Accident_NDS.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Xem xet du lieu Accident_Index co trong Accident_NDS.Inputs[Lookup Input].Columns[Accident_Index]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Accident_Index"
+                      lineageId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Load du lieu Vehicles trong Stage.Outputs[OLE DB Source Output].Columns[Accident_Index]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">Accident_Index</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Xem xet du lieu Accident_Index co trong Accident_NDS.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Xem xet du lieu Accident_Index co trong Accident_NDS.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Xem xet du lieu Accident_Index co trong Accident_NDS.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Xem xet du lieu Accident_Index co trong Accident_NDS.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Xem xet du lieu Accident_Index co trong Accident_NDS.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Xem xet du lieu Accident_Index co trong Accident_NDS.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Xem xet du lieu Accident_Index co trong Accident_NDS.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Xem xet du lieu Accident_Index co trong Accident_NDS.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Xem xet du lieu Accident_Index co trong Accident_NDS.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Xem xet du lieu Accident_Index co trong Accident_NDS.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Load dữ liệu từ  Vehicles Stage To NDS.Paths[Derived Column Output]"
+              endId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Them du lieu vehicle.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Them CreatedDate, UpdatedDate.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Load dữ liệu từ  Vehicles Stage To NDS.Paths[Derived Column Output1]"
+              endId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Cap nhat du lieu Vehicle.Inputs[OLE DB Command Input]"
+              name="Derived Column Output"
+              startId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Them UpdatedDate.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Load dữ liệu từ  Vehicles Stage To NDS.Paths[Lookup Error Output]"
+              endId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Them CreatedDate, UpdatedDate.Inputs[Derived Column Input]"
+              name="Lookup Error Output"
+              startId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Xem xet Accident_Index trong Vehicle NDS.Outputs[Lookup Error Output]" />
+            <path
+              refId="Package\Load dữ liệu từ  Vehicles Stage To NDS.Paths[Lookup Match Output]"
+              endId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Them UpdatedDate.Inputs[Derived Column Input]"
+              name="Lookup Match Output"
+              startId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Xem xet Accident_Index trong Vehicle NDS.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Load dữ liệu từ  Vehicles Stage To NDS.Paths[Lookup Match Output1]"
+              endId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Xem xet Accident_Index trong Vehicle NDS.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Xem xet du lieu Accident_Index co trong Accident_NDS.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Load dữ liệu từ  Vehicles Stage To NDS.Paths[OLE DB Source Output]"
+              endId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Xem xet du lieu Accident_Index co trong Accident_NDS.Inputs[Lookup Input]"
+              name="OLE DB Source Output"
+              startId="Package\Load dữ liệu từ  Vehicles Stage To NDS\Load du lieu Vehicles trong Stage.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
     <DTS:Executable
       DTS:refId="Package\Load dữ liệu từ Accidents Stage To NDS"
       DTS:CreationName="Microsoft.Pipeline"
@@ -579,17 +1674,6 @@
                       name="Local_Authority_(District)"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Load dữ liệu từ Accidents Stage To NDS\Load du lieu Accidents trong Stage.Outputs[OLE DB Source Output].Columns[Local_Authority_(Highway)]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load dữ liệu từ Accidents Stage To NDS\Load du lieu Accidents trong Stage.Outputs[OLE DB Source Output].ExternalColumns[Local_Authority_(Highway)]"
-                      length="50"
-                      lineageId="Package\Load dữ liệu từ Accidents Stage To NDS\Load du lieu Accidents trong Stage.Outputs[OLE DB Source Output].Columns[Local_Authority_(Highway)]"
-                      name="Local_Authority_(Highway)"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
                       refId="Package\Load dữ liệu từ Accidents Stage To NDS\Load du lieu Accidents trong Stage.Outputs[OLE DB Source Output].Columns[Road_Type]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
@@ -776,13 +1860,6 @@
                       dataType="i4"
                       lineageId="Package\Load dữ liệu từ Accidents Stage To NDS\Load du lieu Accidents trong Stage.Outputs[OLE DB Source Error Output].Columns[Local_Authority_(District)]"
                       name="Local_Authority_(District)" />
-                    <outputColumn
-                      refId="Package\Load dữ liệu từ Accidents Stage To NDS\Load du lieu Accidents trong Stage.Outputs[OLE DB Source Error Output].Columns[Local_Authority_(Highway)]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      lineageId="Package\Load dữ liệu từ Accidents Stage To NDS\Load du lieu Accidents trong Stage.Outputs[OLE DB Source Error Output].Columns[Local_Authority_(Highway)]"
-                      name="Local_Authority_(Highway)" />
                     <outputColumn
                       refId="Package\Load dữ liệu từ Accidents Stage To NDS\Load du lieu Accidents trong Stage.Outputs[OLE DB Source Error Output].Columns[Road_Type]"
                       dataType="i4"
@@ -1686,8 +2763,8 @@ where [refTable].[Accident_Index] = ?</property>
               <connections>
                 <connection
                   refId="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Load du lieu Accidents trong Stage.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[LocalHost.UCA_STAGE]"
-                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.UCA_STAGE]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.UCA_STAGE 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.UCA_STAGE 1]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -2482,17 +3559,1094 @@ where [refTable].[Local_Authority_(District)] = ?</property>
         </pipeline>
       </DTS:ObjectData>
     </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{c4024f03-5bd4-4abb-a875-e7bcca649731}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Load dữ liệu từ Casualties Stage To  Casualties_NDS"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Cap nhat du lieu  Casualties_NDS"
+              componentClassID="Microsoft.OLEDBCommand"
+              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
+              name="Cap nhat du lieu  Casualties_NDS"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">   update [Casualties_NDS] set  
+    [Sex_of_Casualty]=?,
+    [Age_of_Casualty]=?,
+    [Casualty_Severity] =?,
+    [Casualty_Type]=?,
+    [UpdatedDate] =?
+ where   [Accident_Index] =?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Cap nhat du lieu  Casualties_NDS.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.UCA_NDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.UCA_NDS]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Cap nhat du lieu  Casualties_NDS.Inputs[OLE DB Command Input]"
+                  errorOrTruncationOperation="Command Execution"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Command Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Cap nhat du lieu  Casualties_NDS.Inputs[OLE DB Command Input].Columns[Sex_of_Casualty]"
+                      cachedDataType="i4"
+                      cachedName="Sex_of_Casualty"
+                      externalMetadataColumnId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Cap nhat du lieu  Casualties_NDS.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      lineageId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Load du lieu Casualties trong Stage.Outputs[OLE DB Source Output].Columns[Sex_of_Casualty]" />
+                    <inputColumn
+                      refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Cap nhat du lieu  Casualties_NDS.Inputs[OLE DB Command Input].Columns[Age_of_Casualty]"
+                      cachedDataType="i4"
+                      cachedName="Age_of_Casualty"
+                      externalMetadataColumnId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Cap nhat du lieu  Casualties_NDS.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      lineageId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Load du lieu Casualties trong Stage.Outputs[OLE DB Source Output].Columns[Age_of_Casualty]" />
+                    <inputColumn
+                      refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Cap nhat du lieu  Casualties_NDS.Inputs[OLE DB Command Input].Columns[Casualty_Severity]"
+                      cachedDataType="i4"
+                      cachedName="Casualty_Severity"
+                      externalMetadataColumnId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Cap nhat du lieu  Casualties_NDS.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      lineageId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Load du lieu Casualties trong Stage.Outputs[OLE DB Source Output].Columns[Casualty_Severity]" />
+                    <inputColumn
+                      refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Cap nhat du lieu  Casualties_NDS.Inputs[OLE DB Command Input].Columns[Casualty_Type]"
+                      cachedDataType="i4"
+                      cachedName="Casualty_Type"
+                      externalMetadataColumnId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Cap nhat du lieu  Casualties_NDS.Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
+                      lineageId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Load du lieu Casualties trong Stage.Outputs[OLE DB Source Output].Columns[Casualty_Type]" />
+                    <inputColumn
+                      refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Cap nhat du lieu  Casualties_NDS.Inputs[OLE DB Command Input].Columns[UpdatedDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="UpdatedDate"
+                      externalMetadataColumnId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Cap nhat du lieu  Casualties_NDS.Inputs[OLE DB Command Input].ExternalColumns[Param_4]"
+                      lineageId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Them UpdatedDate.Outputs[Derived Column Output].Columns[UpdatedDate]" />
+                    <inputColumn
+                      refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Cap nhat du lieu  Casualties_NDS.Inputs[OLE DB Command Input].Columns[Accident_Index]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Accident_Index"
+                      externalMetadataColumnId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Cap nhat du lieu  Casualties_NDS.Inputs[OLE DB Command Input].ExternalColumns[Param_5]"
+                      lineageId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Load du lieu Casualties trong Stage.Outputs[OLE DB Source Output].Columns[Accident_Index]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Cap nhat du lieu  Casualties_NDS.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      dataType="i4"
+                      name="Param_0">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Cap nhat du lieu  Casualties_NDS.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      dataType="i4"
+                      name="Param_1">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Cap nhat du lieu  Casualties_NDS.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      dataType="i4"
+                      name="Param_2">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Cap nhat du lieu  Casualties_NDS.Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
+                      dataType="i4"
+                      name="Param_3">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Cap nhat du lieu  Casualties_NDS.Inputs[OLE DB Command Input].ExternalColumns[Param_4]"
+                      dataType="dbTimeStamp"
+                      name="Param_4">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Cap nhat du lieu  Casualties_NDS.Inputs[OLE DB Command Input].ExternalColumns[Param_5]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Param_5">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Cap nhat du lieu  Casualties_NDS.Outputs[OLE DB Command Output]"
+                  exclusionGroup="1"
+                  name="OLE DB Command Output"
+                  synchronousInputId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Cap nhat du lieu  Casualties_NDS.Inputs[OLE DB Command Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Cap nhat du lieu  Casualties_NDS.Outputs[OLE DB Command Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Command Error Output"
+                  synchronousInputId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Cap nhat du lieu  Casualties_NDS.Inputs[OLE DB Command Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Cap nhat du lieu  Casualties_NDS.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Cap nhat du lieu  Casualties_NDS.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Cap nhat du lieu  Casualties_NDS.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Cap nhat du lieu  Casualties_NDS.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Load du lieu Casualties trong Stage"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="Load du lieu Casualties trong Stage"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Casualties_Stage]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Load du lieu Casualties trong Stage.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.UCA_STAGE 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.UCA_STAGE 1]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Load du lieu Casualties trong Stage.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Load du lieu Casualties trong Stage.Outputs[OLE DB Source Output].Columns[Sex_of_Casualty]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Load du lieu Casualties trong Stage.Outputs[OLE DB Source Output].ExternalColumns[Sex_of_Casualty]"
+                      lineageId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Load du lieu Casualties trong Stage.Outputs[OLE DB Source Output].Columns[Sex_of_Casualty]"
+                      name="Sex_of_Casualty"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Load du lieu Casualties trong Stage.Outputs[OLE DB Source Output].Columns[Age_of_Casualty]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Load du lieu Casualties trong Stage.Outputs[OLE DB Source Output].ExternalColumns[Age_of_Casualty]"
+                      lineageId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Load du lieu Casualties trong Stage.Outputs[OLE DB Source Output].Columns[Age_of_Casualty]"
+                      name="Age_of_Casualty"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Load du lieu Casualties trong Stage.Outputs[OLE DB Source Output].Columns[Casualty_Severity]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Load du lieu Casualties trong Stage.Outputs[OLE DB Source Output].ExternalColumns[Casualty_Severity]"
+                      lineageId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Load du lieu Casualties trong Stage.Outputs[OLE DB Source Output].Columns[Casualty_Severity]"
+                      name="Casualty_Severity"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Load du lieu Casualties trong Stage.Outputs[OLE DB Source Output].Columns[Casualty_Type]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Load du lieu Casualties trong Stage.Outputs[OLE DB Source Output].ExternalColumns[Casualty_Type]"
+                      lineageId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Load du lieu Casualties trong Stage.Outputs[OLE DB Source Output].Columns[Casualty_Type]"
+                      name="Casualty_Type"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Load du lieu Casualties trong Stage.Outputs[OLE DB Source Output].Columns[Accident_Index]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Load du lieu Casualties trong Stage.Outputs[OLE DB Source Output].ExternalColumns[Accident_Index]"
+                      length="50"
+                      lineageId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Load du lieu Casualties trong Stage.Outputs[OLE DB Source Output].Columns[Accident_Index]"
+                      name="Accident_Index"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Load du lieu Casualties trong Stage.Outputs[OLE DB Source Output].ExternalColumns[Accident_Index]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Accident_Index" />
+                    <externalMetadataColumn
+                      refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Load du lieu Casualties trong Stage.Outputs[OLE DB Source Output].ExternalColumns[Sex_of_Casualty]"
+                      dataType="i4"
+                      name="Sex_of_Casualty" />
+                    <externalMetadataColumn
+                      refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Load du lieu Casualties trong Stage.Outputs[OLE DB Source Output].ExternalColumns[Age_of_Casualty]"
+                      dataType="i4"
+                      name="Age_of_Casualty" />
+                    <externalMetadataColumn
+                      refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Load du lieu Casualties trong Stage.Outputs[OLE DB Source Output].ExternalColumns[Age_Band_of_Casualty]"
+                      dataType="i4"
+                      name="Age_Band_of_Casualty" />
+                    <externalMetadataColumn
+                      refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Load du lieu Casualties trong Stage.Outputs[OLE DB Source Output].ExternalColumns[Casualty_Severity]"
+                      dataType="i4"
+                      name="Casualty_Severity" />
+                    <externalMetadataColumn
+                      refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Load du lieu Casualties trong Stage.Outputs[OLE DB Source Output].ExternalColumns[Casualty_Type]"
+                      dataType="i4"
+                      name="Casualty_Type" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Load du lieu Casualties trong Stage.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Load du lieu Casualties trong Stage.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Load du lieu Casualties trong Stage.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Load du lieu Casualties trong Stage.Outputs[OLE DB Source Error Output].Columns[Sex_of_Casualty]"
+                      dataType="i4"
+                      lineageId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Load du lieu Casualties trong Stage.Outputs[OLE DB Source Error Output].Columns[Sex_of_Casualty]"
+                      name="Sex_of_Casualty" />
+                    <outputColumn
+                      refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Load du lieu Casualties trong Stage.Outputs[OLE DB Source Error Output].Columns[Age_of_Casualty]"
+                      dataType="i4"
+                      lineageId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Load du lieu Casualties trong Stage.Outputs[OLE DB Source Error Output].Columns[Age_of_Casualty]"
+                      name="Age_of_Casualty" />
+                    <outputColumn
+                      refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Load du lieu Casualties trong Stage.Outputs[OLE DB Source Error Output].Columns[Casualty_Severity]"
+                      dataType="i4"
+                      lineageId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Load du lieu Casualties trong Stage.Outputs[OLE DB Source Error Output].Columns[Casualty_Severity]"
+                      name="Casualty_Severity" />
+                    <outputColumn
+                      refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Load du lieu Casualties trong Stage.Outputs[OLE DB Source Error Output].Columns[Casualty_Type]"
+                      dataType="i4"
+                      lineageId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Load du lieu Casualties trong Stage.Outputs[OLE DB Source Error Output].Columns[Casualty_Type]"
+                      name="Casualty_Type" />
+                    <outputColumn
+                      refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Load du lieu Casualties trong Stage.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Load du lieu Casualties trong Stage.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                    <outputColumn
+                      refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Load du lieu Casualties trong Stage.Outputs[OLE DB Source Error Output].Columns[Accident_Index]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Load du lieu Casualties trong Stage.Outputs[OLE DB Source Error Output].Columns[Accident_Index]"
+                      name="Accident_Index" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Them CreatedDate, UpdatedDate"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Them CreatedDate, UpdatedDate"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Them CreatedDate, UpdatedDate.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Them CreatedDate, UpdatedDate.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Them CreatedDate, UpdatedDate.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Them CreatedDate, UpdatedDate.Outputs[Derived Column Output].Columns[CreatedDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Them CreatedDate, UpdatedDate.Outputs[Derived Column Output].Columns[CreatedDate]"
+                      name="CreatedDate"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[GETDATE]()</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">GETDATE()</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Them CreatedDate, UpdatedDate.Outputs[Derived Column Output].Columns[UpdatedDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Them CreatedDate, UpdatedDate.Outputs[Derived Column Output].Columns[UpdatedDate]"
+                      name="UpdatedDate"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[GETDATE]()</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">GETDATE()</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Them CreatedDate, UpdatedDate.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Them CreatedDate, UpdatedDate.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Them CreatedDate, UpdatedDate.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Them CreatedDate, UpdatedDate.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Them CreatedDate, UpdatedDate.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Them CreatedDate, UpdatedDate.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Them du lieu Casualties_NDS"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Them du lieu Casualties_NDS"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Casualties_NDS]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Them du lieu Casualties_NDS.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.UCA_NDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.UCA_NDS]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Them du lieu Casualties_NDS.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Them du lieu Casualties_NDS.Inputs[OLE DB Destination Input].Columns[CreatedDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="CreatedDate"
+                      externalMetadataColumnId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Them du lieu Casualties_NDS.Inputs[OLE DB Destination Input].ExternalColumns[CreatedDate]"
+                      lineageId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Them CreatedDate, UpdatedDate.Outputs[Derived Column Output].Columns[CreatedDate]" />
+                    <inputColumn
+                      refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Them du lieu Casualties_NDS.Inputs[OLE DB Destination Input].Columns[UpdatedDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="UpdatedDate"
+                      externalMetadataColumnId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Them du lieu Casualties_NDS.Inputs[OLE DB Destination Input].ExternalColumns[UpdatedDate]"
+                      lineageId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Them CreatedDate, UpdatedDate.Outputs[Derived Column Output].Columns[UpdatedDate]" />
+                    <inputColumn
+                      refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Them du lieu Casualties_NDS.Inputs[OLE DB Destination Input].Columns[Age_of_Casualty]"
+                      cachedDataType="i4"
+                      cachedName="Age_of_Casualty"
+                      externalMetadataColumnId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Them du lieu Casualties_NDS.Inputs[OLE DB Destination Input].ExternalColumns[Age_of_Casualty]"
+                      lineageId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Load du lieu Casualties trong Stage.Outputs[OLE DB Source Output].Columns[Age_of_Casualty]" />
+                    <inputColumn
+                      refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Them du lieu Casualties_NDS.Inputs[OLE DB Destination Input].Columns[Accident_Index]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Accident_Index"
+                      externalMetadataColumnId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Them du lieu Casualties_NDS.Inputs[OLE DB Destination Input].ExternalColumns[Accident_Index]"
+                      lineageId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Load du lieu Casualties trong Stage.Outputs[OLE DB Source Output].Columns[Accident_Index]" />
+                    <inputColumn
+                      refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Them du lieu Casualties_NDS.Inputs[OLE DB Destination Input].Columns[Sex_of_Casualty]"
+                      cachedDataType="i4"
+                      cachedName="Sex_of_Casualty"
+                      externalMetadataColumnId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Them du lieu Casualties_NDS.Inputs[OLE DB Destination Input].ExternalColumns[Sex_of_Casualty]"
+                      lineageId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Load du lieu Casualties trong Stage.Outputs[OLE DB Source Output].Columns[Sex_of_Casualty]" />
+                    <inputColumn
+                      refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Them du lieu Casualties_NDS.Inputs[OLE DB Destination Input].Columns[Casualty_Severity]"
+                      cachedDataType="i4"
+                      cachedName="Casualty_Severity"
+                      externalMetadataColumnId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Them du lieu Casualties_NDS.Inputs[OLE DB Destination Input].ExternalColumns[Casualty_Severity]"
+                      lineageId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Load du lieu Casualties trong Stage.Outputs[OLE DB Source Output].Columns[Casualty_Severity]" />
+                    <inputColumn
+                      refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Them du lieu Casualties_NDS.Inputs[OLE DB Destination Input].Columns[Casualty_Type]"
+                      cachedDataType="i4"
+                      cachedName="Casualty_Type"
+                      externalMetadataColumnId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Them du lieu Casualties_NDS.Inputs[OLE DB Destination Input].ExternalColumns[Casualty_Type]"
+                      lineageId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Load du lieu Casualties trong Stage.Outputs[OLE DB Source Output].Columns[Casualty_Type]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Them du lieu Casualties_NDS.Inputs[OLE DB Destination Input].ExternalColumns[CreatedDate]"
+                      dataType="dbTimeStamp"
+                      name="CreatedDate" />
+                    <externalMetadataColumn
+                      refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Them du lieu Casualties_NDS.Inputs[OLE DB Destination Input].ExternalColumns[UpdatedDate]"
+                      dataType="dbTimeStamp"
+                      name="UpdatedDate" />
+                    <externalMetadataColumn
+                      refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Them du lieu Casualties_NDS.Inputs[OLE DB Destination Input].ExternalColumns[Age_of_Casualty]"
+                      dataType="i4"
+                      name="Age_of_Casualty" />
+                    <externalMetadataColumn
+                      refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Them du lieu Casualties_NDS.Inputs[OLE DB Destination Input].ExternalColumns[Casualties_Id]"
+                      dataType="i4"
+                      name="Casualties_Id" />
+                    <externalMetadataColumn
+                      refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Them du lieu Casualties_NDS.Inputs[OLE DB Destination Input].ExternalColumns[Accident_Index]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Accident_Index" />
+                    <externalMetadataColumn
+                      refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Them du lieu Casualties_NDS.Inputs[OLE DB Destination Input].ExternalColumns[Sex_of_Casualty]"
+                      dataType="i4"
+                      name="Sex_of_Casualty" />
+                    <externalMetadataColumn
+                      refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Them du lieu Casualties_NDS.Inputs[OLE DB Destination Input].ExternalColumns[Casualty_Severity]"
+                      dataType="i4"
+                      name="Casualty_Severity" />
+                    <externalMetadataColumn
+                      refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Them du lieu Casualties_NDS.Inputs[OLE DB Destination Input].ExternalColumns[Casualty_Type]"
+                      dataType="i4"
+                      name="Casualty_Type" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Them du lieu Casualties_NDS.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Them du lieu Casualties_NDS.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Them du lieu Casualties_NDS.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Them du lieu Casualties_NDS.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Them du lieu Casualties_NDS.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Them du lieu Casualties_NDS.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Them UpdatedDate"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Them UpdatedDate"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Them UpdatedDate.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Them UpdatedDate.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Them UpdatedDate.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Them UpdatedDate.Outputs[Derived Column Output].Columns[UpdatedDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Them UpdatedDate.Outputs[Derived Column Output].Columns[UpdatedDate]"
+                      name="UpdatedDate"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[GETDATE]()</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">GETDATE()</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Them UpdatedDate.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Them UpdatedDate.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Them UpdatedDate.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Them UpdatedDate.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Them UpdatedDate.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Them UpdatedDate.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Xem xet du lieu Accident_Index co nam trong NDS"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Xem xet du lieu Accident_Index co nam trong NDS"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select [Accident_Index]
+from [Casualties_NDS]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select [Accident_Index]
+from [Casualties_NDS]) [refTable]
+where [refTable].[Accident_Index] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="Accident_Index" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Load du lieu Casualties trong Stage.Outputs[OLE DB Source Output].Columns[Accident_Index]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Xem xet du lieu Accident_Index co nam trong NDS.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.UCA_NDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.UCA_NDS]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Xem xet du lieu Accident_Index co nam trong NDS.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Xem xet du lieu Accident_Index co nam trong NDS.Inputs[Lookup Input].Columns[Accident_Index]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Accident_Index"
+                      lineageId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Load du lieu Casualties trong Stage.Outputs[OLE DB Source Output].Columns[Accident_Index]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">Accident_Index</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Xem xet du lieu Accident_Index co nam trong NDS.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  errorRowDisposition="RedirectRow"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Xem xet du lieu Accident_Index co nam trong NDS.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Xem xet du lieu Accident_Index co nam trong NDS.Outputs[Lookup Match Output].Columns[Accident_IndexTrongNDS]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Copy Column"
+                      length="50"
+                      lineageId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Xem xet du lieu Accident_Index co nam trong NDS.Outputs[Lookup Match Output].Columns[Accident_IndexTrongNDS]"
+                      name="Accident_IndexTrongNDS"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">Accident_Index</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Xem xet du lieu Accident_Index co nam trong NDS.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Xem xet du lieu Accident_Index co nam trong NDS.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Xem xet du lieu Accident_Index co nam trong NDS.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Xem xet du lieu Accident_Index co nam trong NDS.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Xem xet du lieu Accident_Index co nam trong NDS.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Xem xet du lieu Accident_Index co nam trong NDS.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Xem xet du lieu Accident_Index co nam trong NDS.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Xem xet du lieu Accident_Index co nam trong NDS.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Xem xet du lieu Accident_Index co trong Accident_NDS"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Xem xet du lieu Accident_Index co trong Accident_NDS"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select [Accident_Index]
+from [Accidents_NDS]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select [Accident_Index]
+from [Accidents_NDS]) [refTable]
+where [refTable].[Accident_Index] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="Accident_Index" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\227:invalid};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Xem xet du lieu Accident_Index co trong Accident_NDS.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.UCA_NDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.UCA_NDS]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Xem xet du lieu Accident_Index co trong Accident_NDS.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Xem xet du lieu Accident_Index co trong Accident_NDS.Inputs[Lookup Input].Columns[Accident_Index]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Accident_Index"
+                      lineageId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Load du lieu Casualties trong Stage.Outputs[OLE DB Source Output].Columns[Accident_Index]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">Accident_Index</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Xem xet du lieu Accident_Index co trong Accident_NDS.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Xem xet du lieu Accident_Index co trong Accident_NDS.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Xem xet du lieu Accident_Index co trong Accident_NDS.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Xem xet du lieu Accident_Index co trong Accident_NDS.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Xem xet du lieu Accident_Index co trong Accident_NDS.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Xem xet du lieu Accident_Index co trong Accident_NDS.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Xem xet du lieu Accident_Index co trong Accident_NDS.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Xem xet du lieu Accident_Index co trong Accident_NDS.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Xem xet du lieu Accident_Index co trong Accident_NDS.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Xem xet du lieu Accident_Index co trong Accident_NDS.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS.Paths[Derived Column Output]"
+              endId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Them du lieu Casualties_NDS.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Them CreatedDate, UpdatedDate.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS.Paths[Derived Column Output1]"
+              endId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Cap nhat du lieu  Casualties_NDS.Inputs[OLE DB Command Input]"
+              name="Derived Column Output"
+              startId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Them UpdatedDate.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS.Paths[Lookup Error Output]"
+              endId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Them CreatedDate, UpdatedDate.Inputs[Derived Column Input]"
+              name="Lookup Error Output"
+              startId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Xem xet du lieu Accident_Index co nam trong NDS.Outputs[Lookup Error Output]" />
+            <path
+              refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS.Paths[Lookup Match Output]"
+              endId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Them UpdatedDate.Inputs[Derived Column Input]"
+              name="Lookup Match Output"
+              startId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Xem xet du lieu Accident_Index co nam trong NDS.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS.Paths[Lookup Match Output1]"
+              endId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Xem xet du lieu Accident_Index co nam trong NDS.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Xem xet du lieu Accident_Index co trong Accident_NDS.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS.Paths[OLE DB Source Output]"
+              endId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Xem xet du lieu Accident_Index co trong Accident_NDS.Inputs[Lookup Input]"
+              name="OLE DB Source Output"
+              startId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Load du lieu Casualties trong Stage.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
   </DTS:Executables>
-  <DTS:PrecedenceConstraints>
-    <DTS:PrecedenceConstraint
-      DTS:refId="Package.PrecedenceConstraints[Constraint]"
-      DTS:CreationName=""
-      DTS:DTSID="{17D998A1-D9E8-412E-A360-C87417D0075C}"
-      DTS:From="Package\Load dữ liệu từ Accidents Stage To NDS"
-      DTS:LogicalAnd="True"
-      DTS:ObjectName="Constraint"
-      DTS:To="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS" />
-  </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
 <!--If you manually edit this section and make a mistake, you can delete it. -->
@@ -2504,49 +4658,23 @@ where [refTable].[Local_Authority_(District)] = ?</property>
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="269.333333333334,42.6666666666667"
+          Size="267,42"
           Id="Package\Load dữ liệu từ Accidents Stage To NDS"
           TopLeft="73.7499997951089,26.4736835794766" />
         <NodeLayout
-          Size="349.333333333334,42.6666666666667"
+          Size="349,43"
           Id="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS"
-          TopLeft="76.8749997485433,99.719297060786" />
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="208.416666461776,69.1403502461433">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="43.1249999534344,30.5789468146427"
-              Start="0,0"
-              End="43.1249999534344,23.0789468146427">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,11.2894734073214" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,11.2894734073214"
-                    Point2="0,15.2894734073214"
-                    Point3="4,15.2894734073214" />
-                  <mssgle:LineSegment
-                    End="39.1249999534344,15.2894734073214" />
-                  <mssgle:CubicBezierSegment
-                    Point1="39.1249999534344,15.2894734073214"
-                    Point2="43.1249999534344,15.2894734073214"
-                    Point3="43.1249999534344,19.2894734073214" />
-                  <mssgle:LineSegment
-                    End="43.1249999534344,23.0789468146427" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          TopLeft="74.8749997485433,117.719297060786" />
+        <NodeLayout
+          Size="267,43"
+          Id="Package\Load dữ liệu từ  Vehicles Stage To NDS"
+          TopLeft="95.1249996554114,202.719297060786" />
+        <NodeLayout
+          Size="332,43"
+          Id="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS"
+          TopLeft="72.7499997951089,296.210522555248" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -2556,27 +4684,27 @@ where [refTable].[Local_Authority_(District)] = ?</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="185.333333333334,42.6666666666667"
+          Size="185,43"
           Id="Package\Load dữ liệu từ Accidents Stage To NDS\Them du lieu Accident"
           TopLeft="373.249999832361,290.052630149426" />
         <NodeLayout
-          Size="385.333333333334,42.6666666666667"
+          Size="385,43"
           Id="Package\Load dữ liệu từ Accidents Stage To NDS\Xem xet Accident_NK trong tung dong du lieu co nam trong NDS"
           TopLeft="69.3750000093131,118.684209315731" />
         <NodeLayout
-          Size="245.333333333334,42.6666666666667"
+          Size="245,43"
           Id="Package\Load dữ liệu từ Accidents Stage To NDS\Load du lieu Accidents trong Stage"
           TopLeft="139,13" />
         <NodeLayout
-          Size="238.666666666667,42.6666666666667"
+          Size="239,43"
           Id="Package\Load dữ liệu từ Accidents Stage To NDS\Them CreatedDate, UpdatedDate"
           TopLeft="319.499999962747,204.105261522317" />
         <NodeLayout
-          Size="200.666666666667,42.6666666666667"
+          Size="201,43"
           Id="Package\Load dữ liệu từ Accidents Stage To NDS\Cap nhat du lieu Accident"
           TopLeft="65.375000083819,306.157893629285" />
         <NodeLayout
-          Size="172,42.6666666666667"
+          Size="172,43"
           Id="Package\Load dữ liệu từ Accidents Stage To NDS\Them UpdatedDate"
           TopLeft="51.2500001303852,223.368419854925" />
         <EdgeLayout
@@ -2669,7 +4797,7 @@ where [refTable].[Local_Authority_(District)] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="11.0850021468559,22.2078298796092,91.7327734375,11.609375"
+              BoundingBox="11.085002146856,22.2078298796092,91.7327734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -2799,31 +4927,31 @@ where [refTable].[Local_Authority_(District)] = ?</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="172,42.6666666666667"
+          Size="172,43"
           Id="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Them UpdatedDate"
           TopLeft="58.2500001303852,264.368419854925" />
         <NodeLayout
-          Size="358.666666666667,42.6666666666667"
+          Size="359,43"
           Id="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Xem xet Local_Authority_District du lieu co nam trong NDS"
           TopLeft="78.3750000093131,176.684209315731" />
         <NodeLayout
-          Size="238.666666666667,42.6666666666667"
+          Size="239,43"
           Id="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Them CreatedDate, UpdatedDate"
           TopLeft="320.749999869615,279.84210416848" />
         <NodeLayout
-          Size="245.333333333334,42.6666666666667"
+          Size="245,43"
           Id="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Load du lieu Accidents trong Stage"
           TopLeft="139,13" />
         <NodeLayout
-          Size="233.333333333334,42.6666666666667"
+          Size="233,43"
           Id="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Cap nhat du lieu Local_Authority"
           TopLeft="49.375000083819,396.157893629285" />
         <NodeLayout
-          Size="410.666666666667,42.6666666666667"
+          Size="411,43"
           Id="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Xem xet Local_Authority_District du lieu co nam trong Accidents_NDS"
           TopLeft="56.375000083819,85.9298237758107" />
         <NodeLayout
-          Size="217.333333333334,42.6666666666667"
+          Size="217,43"
           Id="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Them du lieu Local_Authority"
           TopLeft="362.999999776482,397.263157109144" />
         <EdgeLayout
@@ -3008,7 +5136,7 @@ where [refTable].[Local_Authority_(District)] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="16.0988909891787,29.3576818158615,91.7327734375,11.609375"
+              BoundingBox="16.0988909891785,29.3576818158615,91.7327734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -3076,6 +5204,512 @@ where [refTable].[Local_Authority_(District)] = ?</property>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Them du lieu Local_Authority">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Load dữ liệu từ  Vehicles Stage To NDS">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="239,43"
+          Id="Package\Load dữ liệu từ  Vehicles Stage To NDS\Load du lieu Vehicles trong Stage"
+          TopLeft="139,13" />
+        <NodeLayout
+          Size="172,43"
+          Id="Package\Load dữ liệu từ  Vehicles Stage To NDS\Them UpdatedDate"
+          TopLeft="46.2500001303852,275.368419854925" />
+        <NodeLayout
+          Size="239,43"
+          Id="Package\Load dữ liệu từ  Vehicles Stage To NDS\Them CreatedDate, UpdatedDate"
+          TopLeft="327.749999869615,265.84210416848" />
+        <NodeLayout
+          Size="343,43"
+          Id="Package\Load dữ liệu từ  Vehicles Stage To NDS\Xem xet du lieu Accident_Index co trong Accident_NDS"
+          TopLeft="39.375000083819,78.9298237758107" />
+        <NodeLayout
+          Size="177,43"
+          Id="Package\Load dữ liệu từ  Vehicles Stage To NDS\Them du lieu vehicle"
+          TopLeft="378.999999776482,352.263157109144" />
+        <NodeLayout
+          Size="195,43"
+          Id="Package\Load dữ liệu từ  Vehicles Stage To NDS\Cap nhat du lieu Vehicle"
+          TopLeft="29.375000083819,354.157893629285" />
+        <NodeLayout
+          Size="285,43"
+          Id="Package\Load dữ liệu từ  Vehicles Stage To NDS\Xem xet Accident_Index trong Vehicle NDS"
+          TopLeft="93,172" />
+        <EdgeLayout
+          Id="Package\Load dữ liệu từ  Vehicles Stage To NDS.Paths[OLE DB Source Output]"
+          TopLeft="258.333333333333,55.6666666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-47.624999916181,23.2631571091441"
+              Start="0,0"
+              End="-47.624999916181,15.7631571091441">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,7.63157855457204" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,7.63157855457204"
+                    Point2="0,11.631578554572"
+                    Point3="-4,11.631578554572" />
+                  <mssgle:LineSegment
+                    End="-43.624999916181,11.631578554572" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-43.624999916181,11.631578554572"
+                    Point2="-47.624999916181,11.631578554572"
+                    Point3="-47.624999916181,15.631578554572" />
+                  <mssgle:LineSegment
+                    End="-47.624999916181,15.7631571091441" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load dữ liệu từ  Vehicles Stage To NDS.Paths[Lookup Match Output1]"
+          TopLeft="210.708333417152,121.596490442477">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="24.9583332495143,50.4035095575226"
+              Start="0,0"
+              End="24.9583332495143,42.9035095575226">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.2017547787613" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,21.2017547787613"
+                    Point2="0,25.2017547787613"
+                    Point3="4,25.2017547787613" />
+                  <mssgle:LineSegment
+                    End="20.9583332495143,25.2017547787613" />
+                  <mssgle:CubicBezierSegment
+                    Point1="20.9583332495143,25.2017547787613"
+                    Point2="24.9583332495143,25.2017547787613"
+                    Point3="24.9583332495143,29.2017547787613" />
+                  <mssgle:LineSegment
+                    End="24.9583332495143,42.9035095575226" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-35.7122200939929,30.2017547787613,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load dữ liệu từ  Vehicles Stage To NDS.Paths[Lookup Match Output]"
+          TopLeft="189.444444444444,214.666666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-57.1944443140592,60.7017531882584"
+              Start="0,0"
+              End="-57.1944443140592,53.2017531882584">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.4837926428477" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.4837926428477"
+                    Point2="0,24.4837926428477"
+                    Point3="-4,24.4837926428477" />
+                  <mssgle:LineSegment
+                    End="-53.1944443140592,24.4837926428477" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-53.1944443140592,24.4837926428477"
+                    Point2="-57.1944443140592,24.4837926428477"
+                    Point3="-57.1944443140592,28.4837926428477" />
+                  <mssgle:LineSegment
+                    End="-57.1944443140592,53.2017531882584" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-76.7886088757796,29.4837926428477,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load dữ liệu từ  Vehicles Stage To NDS.Paths[Lookup Error Output]"
+          TopLeft="281.888888888889,214.666666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="165.19444431406,51.1754375018134"
+              Start="0,0"
+              End="165.19444431406,43.6754375018134">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.641393936605" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16.641393936605"
+                    Point2="0,20.641393936605"
+                    Point3="4,20.641393936605" />
+                  <mssgle:LineSegment
+                    End="161.19444431406,20.641393936605" />
+                  <mssgle:CubicBezierSegment
+                    Point1="161.19444431406,20.641393936605"
+                    Point2="165.19444431406,20.641393936605"
+                    Point3="165.19444431406,24.641393936605" />
+                  <mssgle:LineSegment
+                    End="165.19444431406,43.6754375018134" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="36.7308354382798,25.641393936605,91.7327734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load dữ liệu từ  Vehicles Stage To NDS.Paths[Derived Column Output1]"
+          TopLeft="129.479166773769,318.035086521592">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,36.1228071076933"
+              Start="0,0"
+              End="0,28.6228071076933">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28.6228071076933" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load dữ liệu từ  Vehicles Stage To NDS.Paths[Derived Column Output]"
+          TopLeft="447.083333202948,308.508770835147">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="20.5833332402004,43.7543862739973"
+              Start="0,0"
+              End="20.5833332402004,36.2543862739973">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17.8771931369986" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,17.8771931369986"
+                    Point2="0,21.8771931369986"
+                    Point3="4,21.8771931369986" />
+                  <mssgle:LineSegment
+                    End="16.5833332402004,21.8771931369986" />
+                  <mssgle:CubicBezierSegment
+                    Point1="16.5833332402004,21.8771931369986"
+                    Point2="20.5833332402004,21.8771931369986"
+                    Point3="20.5833332402004,25.8771931369986" />
+                  <mssgle:LineSegment
+                    End="20.5833332402004,36.2543862739973" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load dữ liệu từ  Vehicles Stage To NDS\Load du lieu Vehicles trong Stage">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="248,43"
+          Id="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Load du lieu Casualties trong Stage"
+          TopLeft="180.749997783452,9" />
+        <NodeLayout
+          Size="319,43"
+          Id="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Xem xet du lieu Accident_Index co nam trong NDS"
+          TopLeft="160,168" />
+        <NodeLayout
+          Size="343,43"
+          Id="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Xem xet du lieu Accident_Index co trong Accident_NDS"
+          TopLeft="166.874999823049,96.2456137260017" />
+        <NodeLayout
+          Size="239,43"
+          Id="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Them CreatedDate, UpdatedDate"
+          TopLeft="462.624997830019,260.894736275449" />
+        <NodeLayout
+          Size="223,43"
+          Id="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Them du lieu Casualties_NDS"
+          TopLeft="506.999997839331,349.578947059335" />
+        <NodeLayout
+          Size="172,43"
+          Id="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Them UpdatedDate"
+          TopLeft="117.374999264255,266.789473284975" />
+        <NodeLayout
+          Size="241,43"
+          Id="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Cap nhat du lieu  Casualties_NDS"
+          TopLeft="73.8749998230488,344.789473040282" />
+        <EdgeLayout
+          Id="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS.Paths[OLE DB Source Output]"
+          TopLeft="304.749997783452,51.6666666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="33.4583353729302,44.578947059335"
+              Start="0,0"
+              End="33.4583353729302,37.078947059335">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.2894735296675" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,18.2894735296675"
+                    Point2="0,22.2894735296675"
+                    Point3="4,22.2894735296675" />
+                  <mssgle:LineSegment
+                    End="29.4583353729302,22.2894735296675" />
+                  <mssgle:CubicBezierSegment
+                    Point1="29.4583353729302,22.2894735296675"
+                    Point2="33.4583353729302,22.2894735296675"
+                    Point3="33.4583353729302,26.2894735296675" />
+                  <mssgle:LineSegment
+                    End="33.4583353729302,37.078947059335" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS.Paths[Lookup Match Output1]"
+          TopLeft="338.208333156382,138.912280392668">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-18.8749998230489,29.0877196073317"
+              Start="0,0"
+              End="-18.8749998230489,21.5877196073317">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,10.5438598036658" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,10.5438598036658"
+                    Point2="0,14.5438598036658"
+                    Point3="-4,14.5438598036658" />
+                  <mssgle:LineSegment
+                    End="-14.8749998230489,14.5438598036658" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-14.8749998230489,14.5438598036658"
+                    Point2="-18.8749998230489,14.5438598036658"
+                    Point3="-18.8749998230489,18.5438598036658" />
+                  <mssgle:LineSegment
+                    End="-18.8749998230489,21.5877196073317" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-57.6288866302745,19.5438598036658,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS.Paths[Lookup Match Output]"
+          TopLeft="267.555555555555,210.666666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-64.1805562913005,56.1228066183083"
+              Start="0,0"
+              End="-64.1805562913005,48.6228066183083">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.6173508769869" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,18.6173508769869"
+                    Point2="0,22.6173508769869"
+                    Point3="-4,22.6173508769869" />
+                  <mssgle:LineSegment
+                    End="-60.1805562913005,22.6173508769869" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-60.1805562913005,22.6173508769869"
+                    Point2="-64.1805562913005,22.6173508769869"
+                    Point3="-64.1805562913005,26.6173508769869" />
+                  <mssgle:LineSegment
+                    End="-64.1805562913005,48.6228066183083" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-80.2816648644003,27.6173508769869,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS.Paths[Lookup Error Output]"
+          TopLeft="371.111111111111,210.666666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="210.847220052241,50.2280696087824"
+              Start="0,0"
+              End="210.847220052241,42.7280696087824">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.24178658672" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16.24178658672"
+                    Point2="0,20.24178658672"
+                    Point3="4,20.24178658672" />
+                  <mssgle:LineSegment
+                    End="206.847220052241,20.24178658672" />
+                  <mssgle:CubicBezierSegment
+                    Point1="206.847220052241,20.24178658672"
+                    Point2="210.847220052241,20.24178658672"
+                    Point3="210.847220052241,24.24178658672" />
+                  <mssgle:LineSegment
+                    End="210.847220052241,42.7280696087824" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="59.5572233073706,25.24178658672,91.7327734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS.Paths[Derived Column Output1]"
+          TopLeft="203.374999264255,309.456139951642">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-8.83333277453954,35.3333330886404"
+              Start="0,0"
+              End="-8.83333277453954,27.8333330886404">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,13.6666665443202" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,13.6666665443202"
+                    Point2="0,17.6666665443202"
+                    Point3="-4,17.6666665443202" />
+                  <mssgle:LineSegment
+                    End="-4.83333277453954,17.6666665443202" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-4.83333277453954,17.6666665443202"
+                    Point2="-8.83333277453954,17.6666665443202"
+                    Point3="-8.83333277453954,21.6666665443202" />
+                  <mssgle:LineSegment
+                    End="-8.83333277453954,27.8333330886404" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS.Paths[Derived Column Output]"
+          TopLeft="581.958331163352,303.561402942116">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="36.375000009312,46.0175441172193"
+              Start="0,0"
+              End="36.375000009312,38.5175441172193">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19.0087720586097" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,19.0087720586097"
+                    Point2="0,23.0087720586097"
+                    Point3="4,23.0087720586097" />
+                  <mssgle:LineSegment
+                    End="32.375000009312,23.0087720586097" />
+                  <mssgle:CubicBezierSegment
+                    Point1="32.375000009312,23.0087720586097"
+                    Point2="36.375000009312,23.0087720586097"
+                    Point3="36.375000009312,27.0087720586097" />
+                  <mssgle:LineSegment
+                    End="36.375000009312,38.5175441172193" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Load du lieu Casualties trong Stage">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
