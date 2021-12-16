@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Casualties"
   DTS:PackageType="5"
-  DTS:VersionBuild="17"
-  DTS:VersionGUID="{F1F81286-1233-4F50-8719-A4E8290E087B}">
+  DTS:VersionBuild="19"
+  DTS:VersionGUID="{836D1717-79F7-4ED8-BE4E-1F52D1F27E99}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1074,6 +1074,28 @@
                           name="UseBinaryFormat">false</property>
                       </properties>
                     </outputColumn>
+                    <outputColumn
+                      refId="Package\Load Data Casualties\Casualties File csv.Outputs[Flat File Source Output].Columns[Vehicle_Reference]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Data Casualties\Casualties File csv.Outputs[Flat File Source Output].ExternalColumns[Vehicle_Reference]"
+                      length="50"
+                      lineageId="Package\Load Data Casualties\Casualties File csv.Outputs[Flat File Source Output].Columns[Vehicle_Reference]"
+                      name="Vehicle_Reference"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1318,6 +1340,14 @@
                       cachedName="Casualty_Type"
                       externalMetadataColumnId="Package\Load Data Casualties\Casualties_Stage.Inputs[OLE DB Destination Input].ExternalColumns[Casualty_Type]"
                       lineageId="Package\Load Data Casualties\Casualties File csv.Outputs[Flat File Source Output].Columns[Casualty_Type]" />
+                    <inputColumn
+                      refId="Package\Load Data Casualties\Casualties_Stage.Inputs[OLE DB Destination Input].Columns[Vehicle_Reference]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Vehicle_Reference"
+                      externalMetadataColumnId="Package\Load Data Casualties\Casualties_Stage.Inputs[OLE DB Destination Input].ExternalColumns[Vehicle_Reference]"
+                      lineageId="Package\Load Data Casualties\Casualties File csv.Outputs[Flat File Source Output].Columns[Vehicle_Reference]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1347,6 +1377,12 @@
                       refId="Package\Load Data Casualties\Casualties_Stage.Inputs[OLE DB Destination Input].ExternalColumns[Casualty_Type]"
                       dataType="i4"
                       name="Casualty_Type" />
+                    <externalMetadataColumn
+                      refId="Package\Load Data Casualties\Casualties_Stage.Inputs[OLE DB Destination Input].ExternalColumns[Vehicle_Reference]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Vehicle_Reference" />
                   </externalMetadataColumns>
                 </input>
               </inputs>

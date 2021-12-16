@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="24"
-  DTS:VersionGUID="{E8B5CD11-6917-4ED1-BB9E-31A2043AF014}">
+  DTS:VersionBuild="25"
+  DTS:VersionGUID="{0FBECEC5-22AA-467F-9E8E-220805C6CFDF}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -3615,7 +3615,7 @@
           Id="Package\Load Data Accidents\Accidents File csv"
           TopLeft="278,85" />
         <NodeLayout
-          Size="156,41.3333333333334"
+          Size="156,42.6666666666667"
           Id="Package\Load Data Accidents\Accidents_Stage"
           TopLeft="275.249999981373,266.52631519706" />
         <EdgeLayout
@@ -3646,14 +3646,14 @@
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,55.4035085787513"
+              EndConnector="0,55.4035085787517"
               Start="0,0"
-              End="0,47.9035085787513">
+              End="0,47.9035085787517">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,47.9035085787513" />
+                    End="0,47.9035085787517" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

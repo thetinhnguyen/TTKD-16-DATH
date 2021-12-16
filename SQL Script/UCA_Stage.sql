@@ -16,7 +16,8 @@
 --FROM LSET_CET
 
 
---CREATE DATABASE [UCA_STAGE]
+CREATE DATABASE [UCA_STAGE]
+go
 ---- DROP DATABASE [UCA_STAGE]
 USE [UCA_STAGE]
 GO
@@ -57,6 +58,7 @@ GO
 
 CREATE TABLE [Vehicles_Stage] (
     [Accident_Index] varchar(50),
+	Vehicle_Reference varchar(50),
     [Vehicle_Type] int,
     [Journey_Purpose_of_Driver] int,
     [Age_of_Driver] int,
@@ -73,6 +75,7 @@ GO
 
 CREATE TABLE [Casualties_Stage] (
     [Accident_Index] varchar(50),
+	Vehicle_Reference varchar(50),
     [Sex_of_Casualty] int,
     [Age_of_Casualty] int,
     [Age_Band_of_Casualty] int,

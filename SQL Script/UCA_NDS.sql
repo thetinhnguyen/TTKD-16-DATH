@@ -14,7 +14,7 @@ SET QUOTED_IDENTIFIER ON
 GO
 -----------------------------Accidents----------------------------------------
 CREATE TABLE [dbo].[Accidents_NDS](
-	[Accident_Id] [int] IDENTITY(1,1) NOT NULL,
+	[Accident_Index] [int] IDENTITY(1,1) NOT NULL,
     [Accident_NK] varchar(50),
     [Accident_Severity] int,
     [Number_of_Vehicles] int,
@@ -34,7 +34,7 @@ CREATE TABLE [dbo].[Accidents_NDS](
 	[UpdatedDate] [datetime] NULL,
 PRIMARY KEY CLUSTERED 
 (
-	[Accident_Id] ASC
+	[Accident_Index] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
@@ -59,6 +59,7 @@ GO
 CREATE TABLE [Vehicles_NDS] (
 	[Vehicles_Id] [int] IDENTITY(1,1) NOT NULL,
     [Accident_Index] int,
+	Vehicle_Reference varchar(50),
     [Vehicle_Type] int,
     [Journey_Purpose_of_Driver] int,
     [Age_of_Driver] int,
@@ -84,6 +85,7 @@ GO
 CREATE TABLE [Casualties_NDS] (
 	[Casualties_Id] [int] IDENTITY(1,1) NOT NULL,
     [Accident_Index] int,
+	Vehicle_Reference varchar(50),
     [Sex_of_Casualty] int,
     [Age_of_Casualty] int,
     [Casualty_Severity] int,
@@ -150,7 +152,7 @@ GO
 
 
 ALTER TABLE [dbo].[Casualties_NDS]  WITH CHECK ADD  CONSTRAINT [FK_Casualties_Accident] FOREIGN KEY([Accident_Index])
-REFERENCES [dbo].[Accidents_NDS] ([Accident_Id])
+REFERENCES [dbo].[Accidents_NDS] ([Accident_Index])
 GO
 
 
