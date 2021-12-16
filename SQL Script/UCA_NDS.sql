@@ -15,7 +15,7 @@ GO
 -----------------------------Accidents----------------------------------------
 CREATE TABLE [dbo].[Accidents_NDS](
 	[Accident_Id] [int] IDENTITY(1,1) NOT NULL,
-    [Accident_Index] varchar(50),
+    [Accident_NK] varchar(50),
     [Accident_Severity] int,
     [Number_of_Vehicles] int,
     [Number_of_Casualties] int,
@@ -58,7 +58,7 @@ GO
 
 CREATE TABLE [Vehicles_NDS] (
 	[Vehicles_Id] [int] IDENTITY(1,1) NOT NULL,
-    [Accident_Index] varchar(50),
+    [Accident_Index] int,
     [Vehicle_Type] int,
     [Journey_Purpose_of_Driver] int,
     [Age_of_Driver] int,
@@ -83,7 +83,7 @@ GO
 
 CREATE TABLE [Casualties_NDS] (
 	[Casualties_Id] [int] IDENTITY(1,1) NOT NULL,
-    [Accident_Index] varchar(50),
+    [Accident_Index] int,
     [Sex_of_Casualty] int,
     [Age_of_Casualty] int,
     [Casualty_Severity] int,
@@ -122,7 +122,7 @@ SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [Accident_location_NDS] (
 	[Accident_location_Id] [int] IDENTITY(1,1) NOT NULL,
-	[Accident_Index] varchar(50),
+	[Accident_Index] int,
 	[city] varchar(50),
     [county] varchar(50),
     [country_name] varchar(50),
@@ -140,16 +140,16 @@ GO
 ALTER TABLE [dbo].[Accidents_NDS]  WITH CHECK ADD  CONSTRAINT [FK_Accident_Local] FOREIGN KEY([Local_Authority_(District)])
 REFERENCES [dbo].[Local_Authority_NDS] ([Local_Authority_(District)_Id])
 GO
-ALTER TABLE [dbo].[Accident_location_NDS]  WITH CHECK ADD  CONSTRAINT [FK_Accident_Location_Accident] FOREIGN KEY([Accident_location_Id])
-REFERENCES [dbo].[Accidents_NDS] ([Accident_Id])
+ALTER TABLE [dbo].[Accident_location_NDS]  WITH CHECK ADD  CONSTRAINT [FK_Accident_Location_Accident] FOREIGN KEY([Accident_Index])
+REFERENCES [dbo].[Accidents_NDS] ([Accident_Index])
 GO
 
-ALTER TABLE [dbo].[Vehicles_NDS]  WITH CHECK ADD  CONSTRAINT [FK_Vehicles_Accident] FOREIGN KEY([Vehicles_Id])
-REFERENCES [dbo].[Accidents_NDS] ([Accident_Id])
+ALTER TABLE [dbo].[Vehicles_NDS]  WITH CHECK ADD  CONSTRAINT [FK_Vehicles_Accident] FOREIGN KEY([Accident_Index])
+REFERENCES [dbo].[Accidents_NDS] ([Accident_Index])
 GO
 
 
-ALTER TABLE [dbo].[Casualties_NDS]  WITH CHECK ADD  CONSTRAINT [FK_Casualties_Accident] FOREIGN KEY([Casualties_Id])
+ALTER TABLE [dbo].[Casualties_NDS]  WITH CHECK ADD  CONSTRAINT [FK_Casualties_Accident] FOREIGN KEY([Accident_Index])
 REFERENCES [dbo].[Accidents_NDS] ([Accident_Id])
 GO
 
