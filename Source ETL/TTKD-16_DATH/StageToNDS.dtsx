@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="43"
-  DTS:VersionGUID="{2D94BBA8-7508-4643-A0A6-0248E1067FB4}">
+  DTS:VersionBuild="46"
+  DTS:VersionGUID="{7A52644A-69E0-4C13-A35A-E66C09470C39}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1273,7 +1273,7 @@ where [refTable].[Vehicle_Reference] = ? and [refTable].[Accident_Index] = ?</pr
     [Date]=?,
     [Day_of_Week]=?,
     [Time]=?,
-    [Local_Authority_(District)_Id]=?,
+    [Local_Authority_(District)]=?,
     [Road_Type]=?,
     [Speed_limit]=?,
     [Road_Surface_Conditions]=?,
@@ -2301,6 +2301,12 @@ where [refTable].[Vehicle_Reference] = ? and [refTable].[Accident_Index] = ?</pr
                       cachedName="Accident_Index"
                       externalMetadataColumnId="Package\Load dữ liệu từ Accidents Stage To NDS\Them du lieu Accident.Inputs[OLE DB Destination Input].ExternalColumns[Accident_NK]"
                       lineageId="Package\Load dữ liệu từ Accidents Stage To NDS\Load du lieu Accidents trong Stage.Outputs[OLE DB Source Output].Columns[Accident_Index]" />
+                    <inputColumn
+                      refId="Package\Load dữ liệu từ Accidents Stage To NDS\Them du lieu Accident.Inputs[OLE DB Destination Input].Columns[Local_Authority_(District)_IdTrongNDS]"
+                      cachedDataType="i4"
+                      cachedName="Local_Authority_(District)_IdTrongNDS"
+                      externalMetadataColumnId="Package\Load dữ liệu từ Accidents Stage To NDS\Them du lieu Accident.Inputs[OLE DB Destination Input].ExternalColumns[Local_Authority_(District)]"
+                      lineageId="Package\Load dữ liệu từ Accidents Stage To NDS\Xem xet Local_Authority_District_Id du lieu co nam trong Local_Authority_NDS.Outputs[Lookup Match Output].Columns[Local_Authority_(District)_IdTrongNDS]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -2377,9 +2383,9 @@ where [refTable].[Vehicle_Reference] = ? and [refTable].[Accident_Index] = ?</pr
                       length="50"
                       name="Accident_NK" />
                     <externalMetadataColumn
-                      refId="Package\Load dữ liệu từ Accidents Stage To NDS\Them du lieu Accident.Inputs[OLE DB Destination Input].ExternalColumns[Local_Authority_(District)_Id]"
+                      refId="Package\Load dữ liệu từ Accidents Stage To NDS\Them du lieu Accident.Inputs[OLE DB Destination Input].ExternalColumns[Local_Authority_(District)]"
                       dataType="i4"
-                      name="Local_Authority_(District)_Id" />
+                      name="Local_Authority_(District)" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -2673,13 +2679,15 @@ where [refTable].[Accident_Nk] = ?</property>
                   description="Specifies the SQL statement that generates the lookup table."
                   expressionType="Notify"
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select [Local_Authority_(District)_Id] ,[Local_Authority_(District)] from Local_Authority_NDS</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT        [Local_Authority_(District)_Id], [Local_Authority_(District)]
+FROM            Local_Authority_NDS</property>
                 <property
                   dataType="System.String"
                   description="Specifies a SQL statement that uses parameters to generate the lookup table."
                   expressionType="Notify"
                   name="SqlCommandParam"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select [Local_Authority_(District)_Id] ,[Local_Authority_(District)] from Local_Authority_NDS) [refTable]
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (SELECT        [Local_Authority_(District)_Id], [Local_Authority_(District)]
+FROM            Local_Authority_NDS) [refTable]
 where [refTable].[Local_Authority_(District)] = ?</property>
                 <property
                   dataType="System.Int32"
@@ -7085,6 +7093,48 @@ where [refTable].[Age_of_Casualty] = ?</property>
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{E6F6C70F-71DC-4E66-94D0-A8ADF6165464}"
+      DTS:From="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Load dữ liệu từ Accidents Stage To NDS" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{27DD1AA8-A121-41DD-9FE9-FFD93A2D80D9}"
+      DTS:From="Package\Load dữ liệu từ Accidents Stage To NDS"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\Load dữ liệu từ  Vehicles Stage To NDS" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{FBE89748-8BF0-4426-A8AD-1EB65E8EAFCF}"
+      DTS:From="Package\Load dữ liệu từ  Vehicles Stage To NDS"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
+      DTS:CreationName=""
+      DTS:DTSID="{5BC2B11F-72CF-4C82-8A16-CE3DB366AA86}"
+      DTS:From="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 3"
+      DTS:To="Package\Load dữ liệu từ Casualties Stage To Age_of_Casualty NDS" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 4]"
+      DTS:CreationName=""
+      DTS:DTSID="{0892F0F2-4F92-421B-A883-4B06C6D99D22}"
+      DTS:From="Package\Load dữ liệu từ Casualties Stage To Age_of_Casualty NDS"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 4"
+      DTS:To="Package\Load dữ liệu từ Accident_location_Stage To  Accident_location_NDS" />
+  </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
 <!--If you manually edit this section and make a mistake, you can delete it. -->
@@ -7096,31 +7146,153 @@ where [refTable].[Age_of_Casualty] = ?</property>
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="266.666666666667,42.6666666666667"
+          Size="267,43"
           Id="Package\Load dữ liệu từ  Vehicles Stage To NDS"
-          TopLeft="115.124999357388,179.087719607332" />
+          TopLeft="146.124999357388,169.087719607332" />
         <NodeLayout
-          Size="402.666666666667,42.6666666666667"
+          Size="403,43"
           Id="Package\Load dữ liệu từ Accident_location_Stage To  Accident_location_NDS"
-          TopLeft="44.3750002328304,401.561402208037" />
+          TopLeft="75.3750002328304,410.561402208037" />
         <NodeLayout
-          Size="346.666666666667,42.6666666666667"
+          Size="267,42"
+          Id="Package\Load dữ liệu từ Accidents Stage To NDS"
+          TopLeft="138.124998984858,90.7736823939402" />
+        <NodeLayout
+          Size="347,43"
           Id="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS"
           TopLeft="101.249999385328,8.00087807513201" />
         <NodeLayout
-          Size="332,42.6666666666667"
+          Size="332,43"
           Id="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS"
-          TopLeft="93.7499994970855,247.578945101794" />
+          TopLeft="109.749999497085,253.578945101794" />
         <NodeLayout
-          Size="357.333333333334,42.6666666666667"
+          Size="357,43"
           Id="Package\Load dữ liệu từ Casualties Stage To Age_of_Casualty NDS"
-          TopLeft="84.9999996274708,315.964913233716" />
-        <NodeLayout
-          Size="269.333333333334,42.6666666666667"
-          Id="Package\Load dữ liệu từ Accidents Stage To NDS"
-          TopLeft="128.124998984858,92.7736823939402" />
+          TopLeft="94.9999996274708,322.964913233716" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="273.187499185093,51.000878075132">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,39.7728043188082"
+              Start="0,0"
+              End="0,32.2728043188082">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,32.2728043188082" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="271.624998984858,132.77368239394">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="8.00000037253,36.3140372133918"
+              Start="0,0"
+              End="8.00000037253,28.8140372133918">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,14.1570186066959" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,14.1570186066959"
+                    Point2="0,18.1570186066959"
+                    Point3="4,18.1570186066959" />
+                  <mssgle:LineSegment
+                    End="4.00000037253,18.1570186066959" />
+                  <mssgle:CubicBezierSegment
+                    Point1="4.00000037253,18.1570186066959"
+                    Point2="8.00000037253,18.1570186066959"
+                    Point3="8.00000037253,22.1570186066959" />
+                  <mssgle:LineSegment
+                    End="8.00000037253,28.8140372133918" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="277.687499427237,212.087719607332">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,41.491225494462"
+              Start="0,0"
+              End="0,33.991225494462">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,33.991225494462" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 3]"
+          TopLeft="274.624999562278,296.578945101794">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,26.385968131922"
+              Start="0,0"
+              End="0,18.885968131922">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.885968131922" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 4]"
+          TopLeft="275.187499930151,365.964913233716">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,44.596488974321"
+              Start="0,0"
+              End="0,37.096488974321">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,37.096488974321" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -7134,81 +7306,29 @@ where [refTable].[Age_of_Casualty] = ?</property>
           Id="Package\Load dữ liệu từ  Vehicles Stage To NDS\Load du lieu Vehicles trong Stage"
           TopLeft="139,13" />
         <NodeLayout
-          Size="172,42.6666666666667"
-          Id="Package\Load dữ liệu từ  Vehicles Stage To NDS\Them UpdatedDate"
-          TopLeft="53.2500001303852,258.368419854925" />
-        <NodeLayout
           Size="238.666666666667,42.6666666666667"
           Id="Package\Load dữ liệu từ  Vehicles Stage To NDS\Them CreatedDate, UpdatedDate"
           TopLeft="327.749999869615,264.84210416848" />
         <NodeLayout
-          Size="177.333333333334,42.6666666666667"
-          Id="Package\Load dữ liệu từ  Vehicles Stage To NDS\Them du lieu vehicle"
-          TopLeft="358.999999776482,353.263157109144" />
+          Size="342.666666666667,42.6666666666667"
+          Id="Package\Load dữ liệu từ  Vehicles Stage To NDS\Xem xet du lieu Accident_Index co trong Accident_NDS"
+          TopLeft="79.3750000838188,84.929823775811" />
+        <NodeLayout
+          Size="172,42.6666666666667"
+          Id="Package\Load dữ liệu từ  Vehicles Stage To NDS\Them UpdatedDate"
+          TopLeft="53.2500001303852,258.368419854925" />
+        <NodeLayout
+          Size="262.666666666667,42.6666666666667"
+          Id="Package\Load dữ liệu từ  Vehicles Stage To NDS\Xem xet du lieu co trong vehicles_NDS"
+          TopLeft="112.375000083819,175.824560295952" />
         <NodeLayout
           Size="194.666666666667,42.6666666666667"
           Id="Package\Load dữ liệu từ  Vehicles Stage To NDS\Cap nhat du lieu Vehicle"
           TopLeft="29.375000083819,354.157893629285" />
-        <EdgeLayout
-          Id="Package\Load dữ liệu từ  Vehicles Stage To NDS.Paths[Derived Column Output1]"
-          TopLeft="447.374999823048,307.508770835147">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,45.7543862739973"
-              Start="0,0"
-              End="0,38.2543862739973">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,38.2543862739973" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Load dữ liệu từ  Vehicles Stage To NDS.Paths[Derived Column Output]"
-          TopLeft="139.250000130385,301.035086521592">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-12.5416667132329,53.1228071076933"
-              Start="0,0"
-              End="-12.5416667132329,45.6228071076933">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,22.5614035538467" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,22.5614035538467"
-                    Point2="0,26.5614035538467"
-                    Point3="-4,26.5614035538467" />
-                  <mssgle:LineSegment
-                    End="-8.54166671323289,26.5614035538467" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-8.54166671323289,26.5614035538467"
-                    Point2="-12.5416667132329,26.5614035538467"
-                    Point3="-12.5416667132329,30.5614035538467" />
-                  <mssgle:LineSegment
-                    End="-12.5416667132329,45.6228071076933" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <NodeLayout
-          Size="342.666666666667,42.6666666666667"
-          Id="Package\Load dữ liệu từ  Vehicles Stage To NDS\Xem xet du lieu Accident_Index co trong Accident_NDS"
-          TopLeft="79.3750000838188,84.929823775811" />
+          Size="177.333333333334,42.6666666666667"
+          Id="Package\Load dữ liệu từ  Vehicles Stage To NDS\Them du lieu vehicle"
+          TopLeft="358.999999776482,353.263157109144" />
         <EdgeLayout
           Id="Package\Load dữ liệu từ  Vehicles Stage To NDS.Paths[OLE DB Source Output]"
           TopLeft="254.520833375243,55.6666666666667">
@@ -7228,34 +7348,8 @@ where [refTable].[Age_of_Casualty] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="262.666666666667,42.6666666666667"
-          Id="Package\Load dữ liệu từ  Vehicles Stage To NDS\Xem xet du lieu co trong vehicles_NDS"
-          TopLeft="112.375000083819,175.824560295952" />
-        <EdgeLayout
-          Id="Package\Load dữ liệu từ  Vehicles Stage To NDS.Paths[Lookup Match Output]"
-          TopLeft="247.208333417152,127.596490442478">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,48.228069853474"
-              Start="0,0"
-              End="0,40.728069853474">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,40.728069853474" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,14.559347426737,96.3827734375,11.609375"
+              BoundingBox="0,0,0,0"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -7296,6 +7390,30 @@ where [refTable].[Age_of_Casualty] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
+          Id="Package\Load dữ liệu từ  Vehicles Stage To NDS.Paths[Lookup Match Output]"
+          TopLeft="247.208333417152,127.596490442478">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,48.228069853474"
+              Start="0,0"
+              End="0,40.728069853474">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,40.728069853474" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,14.559347426737,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
           Id="Package\Load dữ liệu từ  Vehicles Stage To NDS.Paths[Lookup Error Output]"
           TopLeft="286.152777861597,218.491226962618">
           <EdgeLayout.Curve>
@@ -7331,6 +7449,66 @@ where [refTable].[Age_of_Casualty] = ?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load dữ liệu từ  Vehicles Stage To NDS.Paths[Derived Column Output1]"
+          TopLeft="447.374999823048,307.508770835147">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,45.7543862739973"
+              Start="0,0"
+              End="0,38.2543862739973">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,38.2543862739973" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load dữ liệu từ  Vehicles Stage To NDS.Paths[Derived Column Output]"
+          TopLeft="139.250000130385,301.035086521592">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-12.5416667132329,53.1228071076933"
+              Start="0,0"
+              End="-12.5416667132329,45.6228071076933">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22.5614035538467" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,22.5614035538467"
+                    Point2="0,26.5614035538467"
+                    Point3="-4,26.5614035538467" />
+                  <mssgle:LineSegment
+                    End="-8.54166671323289,26.5614035538467" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-8.54166671323289,26.5614035538467"
+                    Point2="-12.5416667132329,26.5614035538467"
+                    Point3="-12.5416667132329,30.5614035538467" />
+                  <mssgle:LineSegment
+                    End="-12.5416667132329,45.6228071076933" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
@@ -7344,6 +7522,52 @@ where [refTable].[Age_of_Casualty] = ?</property>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load dữ liệu từ  Vehicles Stage To NDS\Xem xet du lieu Accident_Index co trong Accident_NDS">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string"></Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load dữ liệu từ  Vehicles Stage To NDS\Xem xet du lieu co trong vehicles_NDS">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string"></Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -7424,7 +7648,9 @@ where [refTable].[Age_of_Casualty] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7566,7 +7792,9 @@ where [refTable].[Age_of_Casualty] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7588,7 +7816,9 @@ where [refTable].[Age_of_Casualty] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -7613,7 +7843,7 @@ where [refTable].[Age_of_Casualty] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -7623,7 +7853,7 @@ where [refTable].[Age_of_Casualty] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -7649,7 +7879,7 @@ where [refTable].[Age_of_Casualty] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -7659,10 +7889,315 @@ where [refTable].[Age_of_Casualty] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Load dữ liệu từ Accidents Stage To NDS">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="245,43"
+          Id="Package\Load dữ liệu từ Accidents Stage To NDS\Load du lieu Accidents trong Stage"
+          TopLeft="139,13" />
+        <NodeLayout
+          Size="385,43"
+          Id="Package\Load dữ liệu từ Accidents Stage To NDS\Xem xet Accident_NK trong tung dong du lieu co nam trong NDS"
+          TopLeft="107.375000009313,118.684209315731" />
+        <NodeLayout
+          Size="452,43"
+          Id="Package\Load dữ liệu từ Accidents Stage To NDS\Xem xet Local_Authority_District_Id du lieu co nam trong Local_Authority_NDS"
+          TopLeft="446.250000130385,38.7192968160927" />
+        <NodeLayout
+          Size="239,43"
+          Id="Package\Load dữ liệu từ Accidents Stage To NDS\Them CreatedDate, UpdatedDate"
+          TopLeft="319.499999962747,204.105261522317" />
+        <NodeLayout
+          Size="185,43"
+          Id="Package\Load dữ liệu từ Accidents Stage To NDS\Them du lieu Accident"
+          TopLeft="382.249999832361,314.052630149426" />
+        <NodeLayout
+          Size="172,43"
+          Id="Package\Load dữ liệu từ Accidents Stage To NDS\Them UpdatedDate"
+          TopLeft="51.2500001303852,223.368419854925" />
+        <NodeLayout
+          Size="201,43"
+          Id="Package\Load dữ liệu từ Accidents Stage To NDS\Cap nhat du lieu Accident"
+          TopLeft="65.375000083819,306.157893629285" />
+        <EdgeLayout
+          Id="Package\Load dữ liệu từ Accidents Stage To NDS.Paths[Lookup Match Output1]"
+          TopLeft="237.152777787091,161.350875982398">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-99.9027776567056,62.0175438725273"
+              Start="0,0"
+              End="-99.9027776567056,54.5175438725273">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.9608860245045" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.9608860245045"
+                    Point2="0,24.9608860245045"
+                    Point3="-4,24.9608860245045" />
+                  <mssgle:LineSegment
+                    End="-95.9027776567056,24.9608860245045" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-95.9027776567056,24.9608860245045"
+                    Point2="-99.9027776567056,24.9608860245045"
+                    Point3="-99.9027776567056,28.9608860245045" />
+                  <mssgle:LineSegment
+                    End="-99.9027776567056,54.5175438725273" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-98.1427755471028,29.9608860245045,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load dữ liệu từ Accidents Stage To NDS.Paths[Lookup Match Output]"
+          TopLeft="672.250000130385,81.3859634827594">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-372.208333454405,37.2982458329716"
+              Start="0,0"
+              End="-372.208333454405,29.7982458329716">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,14.6491229164858" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,14.6491229164858"
+                    Point2="0,18.6491229164858"
+                    Point3="-4,18.6491229164858" />
+                  <mssgle:LineSegment
+                    End="-368.208333454405,18.6491229164858" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-368.208333454405,18.6491229164858"
+                    Point2="-372.208333454405,18.6491229164858"
+                    Point3="-372.208333454405,22.6491229164858" />
+                  <mssgle:LineSegment
+                    End="-372.208333454405,29.7982458329716" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-234.378886779286,16.4824562498191,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load dữ liệu từ Accidents Stage To NDS.Paths[Lookup Error Output]"
+          TopLeft="362.930555564869,161.350875982398">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="75.9027777312118,42.7543855399193"
+              Start="0,0"
+              End="75.9027777312118,35.2543855399193">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,13.2078298796092" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,13.2078298796092"
+                    Point2="0,17.2078298796092"
+                    Point3="4,17.2078298796092" />
+                  <mssgle:LineSegment
+                    End="71.9027777312118,17.2078298796092" />
+                  <mssgle:CubicBezierSegment
+                    Point1="71.9027777312118,17.2078298796092"
+                    Point2="75.9027777312118,17.2078298796092"
+                    Point3="75.9027777312118,21.2078298796092" />
+                  <mssgle:LineSegment
+                    End="75.9027777312118,35.2543855399193" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-7.91499785314413,22.2078298796092,91.7327734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load dữ liệu từ Accidents Stage To NDS.Paths[Derived Column Output1]"
+          TopLeft="137.250000130385,266.035086521592">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="28.4583332867671,40.1228071076938"
+              Start="0,0"
+              End="28.4583332867671,32.6228071076938">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.0614035538469" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16.0614035538469"
+                    Point2="0,20.0614035538469"
+                    Point3="4,20.0614035538469" />
+                  <mssgle:LineSegment
+                    End="24.4583332867671,20.0614035538469" />
+                  <mssgle:CubicBezierSegment
+                    Point1="24.4583332867671,20.0614035538469"
+                    Point2="28.4583332867671,20.0614035538469"
+                    Point3="28.4583332867671,24.0614035538469" />
+                  <mssgle:LineSegment
+                    End="28.4583332867671,32.6228071076938" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load dữ liệu từ Accidents Stage To NDS.Paths[Derived Column Output]"
+          TopLeft="438.83333329608,246.771928188984">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="36.0833332029473,67.2807019604424"
+              Start="0,0"
+              End="36.0833332029473,59.7807019604424">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.6403509802212" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,29.6403509802212"
+                    Point2="0,33.6403509802212"
+                    Point3="4,33.6403509802212" />
+                  <mssgle:LineSegment
+                    End="32.0833332029473,33.6403509802212" />
+                  <mssgle:CubicBezierSegment
+                    Point1="32.0833332029473,33.6403509802212"
+                    Point2="36.0833332029473,33.6403509802212"
+                    Point3="36.0833332029473,37.6403509802212" />
+                  <mssgle:LineSegment
+                    End="36.0833332029473,59.7807019604424" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load dữ liệu từ Accidents Stage To NDS.Paths[OLE DB Source Output]"
+          TopLeft="384.333333333333,34.3333333333333">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="61.9166667970518,25.7192968160927"
+              Start="0,0"
+              End="54.4166667970518,25.7192968160927">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="26.9583333985259,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="26.9583333985259,0"
+                    Point2="30.9583333985259,0"
+                    Point3="30.9583333985259,4" />
+                  <mssgle:LineSegment
+                    End="30.9583333985259,21.7192968160927" />
+                  <mssgle:CubicBezierSegment
+                    Point1="30.9583333985259,21.7192968160927"
+                    Point2="30.9583333985259,25.7192968160927"
+                    Point3="34.9583333985259,25.7192968160927" />
+                  <mssgle:LineSegment
+                    End="54.4166667970518,25.7192968160927" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load dữ liệu từ Accidents Stage To NDS\Xem xet Accident_NK trong tung dong du lieu co nam trong NDS">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string"></Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load dữ liệu từ Accidents Stage To NDS\Xem xet Local_Authority_District_Id du lieu co nam trong Local_Authority_NDS">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string"></Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load dữ liệu từ Accidents Stage To NDS\Them du lieu Accident">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -7672,29 +8207,65 @@ where [refTable].[Age_of_Casualty] = ?</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="172,42.6666666666667"
+          Size="172,43"
           Id="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Them UpdatedDate"
           TopLeft="58.2500001303852,264.368419854925" />
         <NodeLayout
-          Size="358.666666666667,42.6666666666667"
-          Id="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Xem xet Local_Authority_District du lieu co nam trong NDS"
-          TopLeft="93.3750000093131,121.684209315731" />
-        <NodeLayout
-          Size="238.666666666667,42.6666666666667"
+          Size="239,43"
           Id="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Them CreatedDate, UpdatedDate"
           TopLeft="320.749999869615,279.84210416848" />
         <NodeLayout
-          Size="245.333333333334,42.6666666666667"
+          Size="245,43"
           Id="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Load du lieu Accidents trong Stage"
           TopLeft="140,13" />
         <NodeLayout
-          Size="233.333333333334,42.6666666666667"
+          Size="233,43"
           Id="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Cap nhat du lieu Local_Authority"
           TopLeft="49.375000083819,396.157893629285" />
         <NodeLayout
-          Size="217.333333333334,42.6666666666667"
+          Size="359,43"
+          Id="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Xem xet Local_Authority_District du lieu co nam trong NDS"
+          TopLeft="93.3750000093131,121.684209315731" />
+        <NodeLayout
+          Size="217,43"
           Id="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Them du lieu Local_Authority"
           TopLeft="362.999999776482,397.263157109144" />
+        <EdgeLayout
+          Id="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS.Paths[Lookup Error Output]"
+          TopLeft="331.152777787091,164.350875982398">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="108.930555415857,115.491228186082"
+              Start="0,0"
+              End="108.930555415857,107.991228186082">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,42.5042399209687" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,42.5042399209687"
+                    Point2="0,46.5042399209687"
+                    Point3="4,46.5042399209687" />
+                  <mssgle:LineSegment
+                    End="104.930555415857,46.5042399209687" />
+                  <mssgle:CubicBezierSegment
+                    Point1="104.930555415857,46.5042399209687"
+                    Point2="108.930555415857,46.5042399209687"
+                    Point3="108.930555415857,50.5042399209687" />
+                  <mssgle:LineSegment
+                    End="108.930555415857,107.991228186082" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="8.59889098917874,51.5042399209687,91.7327734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS.Paths[Derived Column Output1]"
           TopLeft="144.250000130385,307.035086521592">
@@ -7764,6 +8335,40 @@ where [refTable].[Age_of_Casualty] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
+          Id="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS.Paths[OLE DB Source Output]"
+          TopLeft="262.666666666667,55.6666666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="10.0416666759797,66.0175426490644"
+              Start="0,0"
+              End="10.0416666759797,58.5175426490644">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.0087713245322" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,29.0087713245322"
+                    Point2="0,33.0087713245322"
+                    Point3="4,33.0087713245322" />
+                  <mssgle:LineSegment
+                    End="6.04166667597974,33.0087713245322" />
+                  <mssgle:CubicBezierSegment
+                    Point1="6.04166667597974,33.0087713245322"
+                    Point2="10.0416666759797,33.0087713245322"
+                    Point3="10.0416666759797,37.0087713245322" />
+                  <mssgle:LineSegment
+                    End="10.0416666759797,58.5175426490644" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
           Id="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS.Paths[Lookup Match Output]"
           TopLeft="214.263888898202,164.350875982398">
           <EdgeLayout.Curve>
@@ -7799,102 +8404,9 @@ where [refTable].[Age_of_Casualty] = ?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS.Paths[Lookup Error Output]"
-          TopLeft="331.152777787091,164.350875982398">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="108.930555415857,115.491228186082"
-              Start="0,0"
-              End="108.930555415857,107.991228186082">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,42.5042399209687" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,42.5042399209687"
-                    Point2="0,46.5042399209687"
-                    Point3="4,46.5042399209687" />
-                  <mssgle:LineSegment
-                    End="104.930555415857,46.5042399209687" />
-                  <mssgle:CubicBezierSegment
-                    Point1="104.930555415857,46.5042399209687"
-                    Point2="108.930555415857,46.5042399209687"
-                    Point3="108.930555415857,50.5042399209687" />
-                  <mssgle:LineSegment
-                    End="108.930555415857,107.991228186082" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="8.59889098917874,51.5042399209687,91.7327734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS.Paths[OLE DB Source Output]"
-          TopLeft="262.666666666667,55.6666666666667">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="10.0416666759797,66.0175426490644"
-              Start="0,0"
-              End="10.0416666759797,58.5175426490644">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,29.0087713245322" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,29.0087713245322"
-                    Point2="0,33.0087713245322"
-                    Point3="4,33.0087713245322" />
-                  <mssgle:LineSegment
-                    End="6.04166667597974,33.0087713245322" />
-                  <mssgle:CubicBezierSegment
-                    Point1="6.04166667597974,33.0087713245322"
-                    Point2="10.0416666759797,33.0087713245322"
-                    Point3="10.0416666759797,37.0087713245322" />
-                  <mssgle:LineSegment
-                    End="10.0416666759797,58.5175426490644" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Xem xet Local_Authority_District du lieu co nam trong NDS">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string"></Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Load du lieu Accidents trong Stage">
     <Properties>
@@ -7905,6 +8417,29 @@ where [refTable].[Age_of_Casualty] = ?</property>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Xem xet Local_Authority_District du lieu co nam trong NDS">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string"></Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -7927,18 +8462,6 @@ where [refTable].[Age_of_Casualty] = ?</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="248,42.6666666666667"
-          Id="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Load du lieu Casualties trong Stage"
-          TopLeft="180.749997783452,9" />
-        <NodeLayout
-          Size="318.666666666667,42.6666666666667"
-          Id="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Xem xet du lieu Accident_Index co nam trong NDS"
-          TopLeft="160,168" />
-        <NodeLayout
-          Size="342.666666666667,42.6666666666667"
-          Id="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Xem xet du lieu Accident_Index co trong Accident_NDS"
-          TopLeft="166.874999823049,96.2456137260017" />
-        <NodeLayout
           Size="238.666666666667,42.6666666666667"
           Id="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Them CreatedDate, UpdatedDate"
           TopLeft="462.624997830019,260.894736275449" />
@@ -7947,13 +8470,25 @@ where [refTable].[Age_of_Casualty] = ?</property>
           Id="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Them du lieu Casualties_NDS"
           TopLeft="506.999997839331,349.578947059335" />
         <NodeLayout
-          Size="172,42.6666666666667"
-          Id="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Them UpdatedDate"
-          TopLeft="117.374999264255,266.789473284975" />
+          Size="342.666666666667,42.6666666666667"
+          Id="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Xem xet du lieu Accident_Index co trong Accident_NDS"
+          TopLeft="166.874999823049,96.2456137260017" />
+        <NodeLayout
+          Size="248,42.6666666666667"
+          Id="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Load du lieu Casualties trong Stage"
+          TopLeft="180.749997783452,9" />
+        <NodeLayout
+          Size="318.666666666667,42.6666666666667"
+          Id="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Xem xet du lieu Accident_Index co nam trong NDS"
+          TopLeft="160,168" />
         <NodeLayout
           Size="241.333333333334,42.6666666666667"
           Id="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Cap nhat du lieu  Casualties_NDS"
           TopLeft="73.8749998230488,344.789473040282" />
+        <NodeLayout
+          Size="172,42.6666666666667"
+          Id="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Them UpdatedDate"
+          TopLeft="117.374999264255,266.789473284975" />
         <EdgeLayout
           Id="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS.Paths[OLE DB Source Output]"
           TopLeft="304.749997783452,51.6666666666667">
@@ -7985,7 +8520,9 @@ where [refTable].[Age_of_Casualty] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -8127,7 +8664,9 @@ where [refTable].[Age_of_Casualty] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -8161,12 +8700,27 @@ where [refTable].[Age_of_Casualty] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Them du lieu Casualties_NDS">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Load du lieu Casualties trong Stage">
     <Properties>
@@ -8186,7 +8740,7 @@ where [refTable].[Age_of_Casualty] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -8196,23 +8750,10 @@ where [refTable].[Age_of_Casualty] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Them du lieu Casualties_NDS">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -8226,29 +8767,65 @@ where [refTable].[Age_of_Casualty] = ?</property>
           Id="Package\Load dữ liệu từ Casualties Stage To Age_of_Casualty NDS\Xem xet Age_of_Casualty  du lieu co nam trong Casualties_NDS"
           TopLeft="166.732141296512,80.8170353062088" />
         <NodeLayout
-          Size="225.333333333334,42.6666666666667"
-          Id="Package\Load dữ liệu từ Casualties Stage To Age_of_Casualty NDS\Them du lieu Age_of_Casualty"
-          TopLeft="506.999997839331,349.578947059335" />
-        <NodeLayout
           Size="172,42.6666666666667"
           Id="Package\Load dữ liệu từ Casualties Stage To Age_of_Casualty NDS\Them UpdatedDate"
           TopLeft="117.374999264255,266.789473284975" />
-        <NodeLayout
-          Size="248,42.6666666666667"
-          Id="Package\Load dữ liệu từ Casualties Stage To Age_of_Casualty NDS\Load du lieu Casualties trong Stage"
-          TopLeft="287.749997783452,13" />
         <NodeLayout
           Size="330,42.6666666666667"
           Id="Package\Load dữ liệu từ Casualties Stage To Age_of_Casualty NDS\Xem xet du lieu Age_of_Casualty  co nam trong NDS"
           TopLeft="223.303568101089,164.210529406645" />
         <NodeLayout
+          Size="238.666666666667,42.6666666666667"
+          Id="Package\Load dữ liệu từ Casualties Stage To Age_of_Casualty NDS\Them CreatedDate, UpdatedDate"
+          TopLeft="462.624997830019,260.894736275449" />
+        <NodeLayout
+          Size="248,42.6666666666667"
+          Id="Package\Load dữ liệu từ Casualties Stage To Age_of_Casualty NDS\Load du lieu Casualties trong Stage"
+          TopLeft="287.749997783452,13" />
+        <NodeLayout
           Size="244,42.6666666666667"
           Id="Package\Load dữ liệu từ Casualties Stage To Age_of_Casualty NDS\Cap nhat du lieu  Age_of_Casualty"
           TopLeft="73.8749998230488,344.789473040282" />
         <NodeLayout
-          Size="238.666666666667,42.6666666666667"
-          Id="Package\Load dữ liệu từ Casualties Stage To Age_of_Casualty NDS\Them CreatedDate, UpdatedDate"
-          TopLeft="462.624997830019,260.894736275449" />
+          Size="225.333333333334,42.6666666666667"
+          Id="Package\Load dữ liệu từ Casualties Stage To Age_of_Casualty NDS\Them du lieu Age_of_Casualty"
+          TopLeft="506.999997839331,349.578947059335" />
+        <EdgeLayout
+          Id="Package\Load dữ liệu từ Casualties Stage To Age_of_Casualty NDS.Paths[Derived Column Output]"
+          TopLeft="581.958331163352,303.561402942115">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="37.7083333426455,46.0175441172199"
+              Start="0,0"
+              End="37.7083333426455,38.5175441172199">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19.00877205861" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,19.00877205861"
+                    Point2="0,23.00877205861"
+                    Point3="4,23.00877205861" />
+                  <mssgle:LineSegment
+                    End="33.7083333426455,23.00877205861" />
+                  <mssgle:CubicBezierSegment
+                    Point1="33.7083333426455,23.00877205861"
+                    Point2="37.7083333426455,23.00877205861"
+                    Point3="37.7083333426455,27.00877205861" />
+                  <mssgle:LineSegment
+                    End="37.7083333426455,38.5175441172199" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Load dữ liệu từ Casualties Stage To Age_of_Casualty NDS.Paths[OLE DB Source Output]"
           TopLeft="411.749997783452,55.6666666666667">
@@ -8280,7 +8857,9 @@ where [refTable].[Age_of_Casualty] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -8410,46 +8989,37 @@ where [refTable].[Age_of_Casualty] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Load dữ liệu từ Casualties Stage To Age_of_Casualty NDS.Paths[Derived Column Output]"
-          TopLeft="581.958331163352,303.561402942115">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="37.7083333426455,46.0175441172199"
-              Start="0,0"
-              End="37.7083333426455,38.5175441172199">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,19.00877205861" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,19.00877205861"
-                    Point2="0,23.00877205861"
-                    Point3="4,23.00877205861" />
-                  <mssgle:LineSegment
-                    End="33.7083333426455,23.00877205861" />
-                  <mssgle:CubicBezierSegment
-                    Point1="33.7083333426455,23.00877205861"
-                    Point2="37.7083333426455,23.00877205861"
-                    Point3="37.7083333426455,27.00877205861" />
-                  <mssgle:LineSegment
-                    End="37.7083333426455,38.5175441172199" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load dữ liệu từ Casualties Stage To Age_of_Casualty NDS\Xem xet du lieu Age_of_Casualty  co nam trong NDS">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string"></Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Load dữ liệu từ Casualties Stage To Age_of_Casualty NDS\Load du lieu Casualties trong Stage">
     <Properties>
@@ -8460,380 +9030,6 @@ where [refTable].[Age_of_Casualty] = ?</property>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Load dữ liệu từ Casualties Stage To Age_of_Casualty NDS\Xem xet du lieu Age_of_Casualty  co nam trong NDS">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string"></Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Load dữ liệu từ  Vehicles Stage To NDS\Xem xet du lieu Accident_Index co trong Accident_NDS">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string"></Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Load dữ liệu từ  Vehicles Stage To NDS\Xem xet du lieu co trong vehicles_NDS">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string"></Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\Load dữ liệu từ Accidents Stage To NDS">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="185.333333333334,42.6666666666667"
-          Id="Package\Load dữ liệu từ Accidents Stage To NDS\Them du lieu Accident"
-          TopLeft="382.249999832361,314.052630149426" />
-        <NodeLayout
-          Size="245.333333333334,42.6666666666667"
-          Id="Package\Load dữ liệu từ Accidents Stage To NDS\Load du lieu Accidents trong Stage"
-          TopLeft="139,13" />
-        <NodeLayout
-          Size="238.666666666667,42.6666666666667"
-          Id="Package\Load dữ liệu từ Accidents Stage To NDS\Them CreatedDate, UpdatedDate"
-          TopLeft="319.499999962747,204.105261522317" />
-        <NodeLayout
-          Size="200.666666666667,42.6666666666667"
-          Id="Package\Load dữ liệu từ Accidents Stage To NDS\Cap nhat du lieu Accident"
-          TopLeft="65.375000083819,306.157893629285" />
-        <NodeLayout
-          Size="172,42.6666666666667"
-          Id="Package\Load dữ liệu từ Accidents Stage To NDS\Them UpdatedDate"
-          TopLeft="51.2500001303852,223.368419854925" />
-        <EdgeLayout
-          Id="Package\Load dữ liệu từ Accidents Stage To NDS.Paths[Derived Column Output1]"
-          TopLeft="137.250000130385,266.035086521592">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="28.4583332867671,40.1228071076938"
-              Start="0,0"
-              End="28.4583332867671,32.6228071076938">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,16.0614035538469" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,16.0614035538469"
-                    Point2="0,20.0614035538469"
-                    Point3="4,20.0614035538469" />
-                  <mssgle:LineSegment
-                    End="24.4583332867671,20.0614035538469" />
-                  <mssgle:CubicBezierSegment
-                    Point1="24.4583332867671,20.0614035538469"
-                    Point2="28.4583332867671,20.0614035538469"
-                    Point3="28.4583332867671,24.0614035538469" />
-                  <mssgle:LineSegment
-                    End="28.4583332867671,32.6228071076938" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Load dữ liệu từ Accidents Stage To NDS.Paths[Derived Column Output]"
-          TopLeft="438.83333329608,246.771928188984">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="36.0833332029473,67.2807019604424"
-              Start="0,0"
-              End="36.0833332029473,59.7807019604424">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,29.6403509802212" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,29.6403509802212"
-                    Point2="0,33.6403509802212"
-                    Point3="4,33.6403509802212" />
-                  <mssgle:LineSegment
-                    End="32.0833332029473,33.6403509802212" />
-                  <mssgle:CubicBezierSegment
-                    Point1="32.0833332029473,33.6403509802212"
-                    Point2="36.0833332029473,33.6403509802212"
-                    Point3="36.0833332029473,37.6403509802212" />
-                  <mssgle:LineSegment
-                    End="36.0833332029473,59.7807019604424" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="452,42.6666666666667"
-          Id="Package\Load dữ liệu từ Accidents Stage To NDS\Xem xet Local_Authority_District_Id du lieu co nam trong Local_Authority_NDS"
-          TopLeft="446.250000130385,38.7192968160927" />
-        <EdgeLayout
-          Id="Package\Load dữ liệu từ Accidents Stage To NDS.Paths[OLE DB Source Output]"
-          TopLeft="384.333333333333,34.3333333333333">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="61.9166667970518,25.7192968160927"
-              Start="0,0"
-              End="54.4166667970518,25.7192968160927">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="26.9583333985259,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="26.9583333985259,0"
-                    Point2="30.9583333985259,0"
-                    Point3="30.9583333985259,4" />
-                  <mssgle:LineSegment
-                    End="30.9583333985259,21.7192968160927" />
-                  <mssgle:CubicBezierSegment
-                    Point1="30.9583333985259,21.7192968160927"
-                    Point2="30.9583333985259,25.7192968160927"
-                    Point3="34.9583333985259,25.7192968160927" />
-                  <mssgle:LineSegment
-                    End="54.4166667970518,25.7192968160927" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="385.333333333334,42.6666666666667"
-          Id="Package\Load dữ liệu từ Accidents Stage To NDS\Xem xet Accident_NK trong tung dong du lieu co nam trong NDS"
-          TopLeft="107.375000009313,118.684209315731" />
-        <EdgeLayout
-          Id="Package\Load dữ liệu từ Accidents Stage To NDS.Paths[Lookup Match Output]"
-          TopLeft="672.250000130385,81.3859634827594">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-372.208333454405,37.2982458329716"
-              Start="0,0"
-              End="-372.208333454405,29.7982458329716">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,14.6491229164858" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,14.6491229164858"
-                    Point2="0,18.6491229164858"
-                    Point3="-4,18.6491229164858" />
-                  <mssgle:LineSegment
-                    End="-368.208333454405,18.6491229164858" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-368.208333454405,18.6491229164858"
-                    Point2="-372.208333454405,18.6491229164858"
-                    Point3="-372.208333454405,22.6491229164858" />
-                  <mssgle:LineSegment
-                    End="-372.208333454405,29.7982458329716" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-234.295553445953,23.6491229164858,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Load dữ liệu từ Accidents Stage To NDS.Paths[Lookup Error Output]"
-          TopLeft="362.930555564869,161.350875982398">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="75.9027777312118,42.7543855399193"
-              Start="0,0"
-              End="75.9027777312118,35.2543855399193">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,13.2078298796092" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,13.2078298796092"
-                    Point2="0,17.2078298796092"
-                    Point3="4,17.2078298796092" />
-                  <mssgle:LineSegment
-                    End="71.9027777312118,17.2078298796092" />
-                  <mssgle:CubicBezierSegment
-                    Point1="71.9027777312118,17.2078298796092"
-                    Point2="75.9027777312118,17.2078298796092"
-                    Point3="75.9027777312118,21.2078298796092" />
-                  <mssgle:LineSegment
-                    End="75.9027777312118,35.2543855399193" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-7.91499785314413,22.2078298796092,91.7327734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Load dữ liệu từ Accidents Stage To NDS.Paths[Lookup Match Output1]"
-          TopLeft="237.152777787091,161.350875982398">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-99.9027776567056,62.0175438725273"
-              Start="0,0"
-              End="-99.9027776567056,54.5175438725273">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,20.9608860245045" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,20.9608860245045"
-                    Point2="0,24.9608860245045"
-                    Point3="-4,24.9608860245045" />
-                  <mssgle:LineSegment
-                    End="-95.9027776567056,24.9608860245045" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-95.9027776567056,24.9608860245045"
-                    Point2="-99.9027776567056,24.9608860245045"
-                    Point3="-99.9027776567056,28.9608860245045" />
-                  <mssgle:LineSegment
-                    End="-99.9027776567056,54.5175438725273" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-98.1427755471028,29.9608860245045,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Load dữ liệu từ Accidents Stage To NDS\Them du lieu Accident">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Load dữ liệu từ Accidents Stage To NDS\Xem xet Local_Authority_District_Id du lieu co nam trong Local_Authority_NDS">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string"></Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Load dữ liệu từ Accidents Stage To NDS\Xem xet Accident_NK trong tung dong du lieu co nam trong NDS">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string"></Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

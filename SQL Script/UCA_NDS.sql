@@ -1,7 +1,5 @@
-
-
 CREATE DATABASE [UCA_NDS]
----- DROP DATABASE [UCA_STAGE]
+---- DROP DATABASE  [UCA_NDS]
 go
 USE [UCA_NDS]
 GO
@@ -160,7 +158,3 @@ GO
 ALTER TABLE [dbo].[Casualties_NDS]   WITH CHECK ADD  CONSTRAINT [FK_Casualties_Age_of_Casualty] FOREIGN KEY( [Age_of_Casualty])
 REFERENCES [dbo].[Age_of_Casualty_NDS] ( [Age_of_Casualty_Id])
 GO
-
-
-
-
