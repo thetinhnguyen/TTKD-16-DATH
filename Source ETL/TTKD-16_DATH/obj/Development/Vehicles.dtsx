@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Vehicles"
   DTS:PackageType="5"
-  DTS:VersionBuild="5"
-  DTS:VersionGUID="{BE3C3517-E2B1-4E0C-AA89-16C897D3094A}">
+  DTS:VersionBuild="7"
+  DTS:VersionGUID="{136AE3F1-96AB-46DE-860C-C8FE5F81EAD1}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -874,9 +874,7 @@
                       name="Age_of_Vehicle" />
                     <externalMetadataColumn
                       refId="Package\Load Data Vehicles\Vehicles_Stage.Inputs[OLE DB Destination Input].ExternalColumns[Vehicle_Reference]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
+                      dataType="i4"
                       name="Vehicle_Reference" />
                   </externalMetadataColumns>
                 </input>
@@ -998,22 +996,22 @@
         <NodeLayout
           Size="147,41"
           Id="Package\GET LSET,CET"
-          TopLeft="70,151" />
+          TopLeft="379,161" />
         <NodeLayout
           Size="168,41"
           Id="Package\Load Data Vehicles"
-          TopLeft="62,232" />
+          TopLeft="371,242" />
         <NodeLayout
           Size="167,41"
           Id="Package\TRUNCATE STAGE"
-          TopLeft="60,60" />
+          TopLeft="369,70" />
         <NodeLayout
           Size="144,41"
           Id="Package\UPDATE LSET"
-          TopLeft="69,327" />
+          TopLeft="378,337" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="143.25,102">
+          TopLeft="452.25,112">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -1035,7 +1033,7 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="144.75,193">
+          TopLeft="453.75,203">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -1057,7 +1055,7 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
-          TopLeft="143.5,273.6">
+          TopLeft="452.5,283.6">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -1086,39 +1084,17 @@
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="155.333333333334,41.3333333333334"
+          Size="155,41"
           Id="Package\Load Data Vehicles\Vehicles File csv"
           TopLeft="278,63.3500000116229" />
         <NodeLayout
-          Size="156,41.3333333333334"
-          Id="Package\Load Data Vehicles\Data Conversion"
-          TopLeft="282,168" />
-        <NodeLayout
-          Size="150.666666666667,41.3333333333334"
+          Size="151,41"
           Id="Package\Load Data Vehicles\Vehicles_Stage"
           TopLeft="278,296" />
-        <EdgeLayout
-          Id="Package\Load Data Vehicles.Paths[Flat File Source Output]"
-          TopLeft="357.833333333333,104.683333344956">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,63.3166666550438"
-              Start="0,0"
-              End="0,55.8166666550438">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,55.8166666550438" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+        <NodeLayout
+          Size="156,41"
+          Id="Package\Load Data Vehicles\Data Conversion"
+          TopLeft="282,168" />
         <EdgeLayout
           Id="Package\Load Data Vehicles.Paths[Data Conversion Output]"
           TopLeft="356.5,210">
@@ -1133,6 +1109,28 @@
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,78.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load Data Vehicles.Paths[Flat File Source Output]"
+          TopLeft="357.833333333333,104.683333344956">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,63.3166666550438"
+              Start="0,0"
+              End="0,55.8166666550438">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,55.8166666550438" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

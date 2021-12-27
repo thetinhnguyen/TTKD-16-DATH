@@ -15,12 +15,14 @@
 --SELECT * 
 --FROM LSET_CET
 
-
-CREATE DATABASE [UCA_STAGE]
-go
----- DROP DATABASE [UCA_STAGE]
-USE [UCA_STAGE]
+USE MASTER
 GO
+IF DB_ID ('UCA_STAGE') IS NOT NULL DROP DATABASE [UCA_STAGE]
+GO
+CREATE DATABASE [UCA_STAGE]
+GO
+USE [UCA_STAGE]
+
 
 /****** Object:  Table [dbo].[Accidents_Stage]    Script Date: 10/21/2021 12:19:23 PM ******/
 SET ANSI_NULLS ON
@@ -58,7 +60,7 @@ GO
 
 CREATE TABLE [Vehicles_Stage] (
     [Accident_Index] varchar(50),
-	Vehicle_Reference varchar(50),
+	[Vehicle_Reference] int,
     [Vehicle_Type] int,
     [Journey_Purpose_of_Driver] int,
     [Age_of_Driver] int,
@@ -75,7 +77,7 @@ GO
 
 CREATE TABLE [Casualties_Stage] (
     [Accident_Index] varchar(50),
-	Vehicle_Reference varchar(50),
+	[Vehicle_Reference] int,
     [Sex_of_Casualty] int,
     [Age_of_Casualty] int,
     [Age_Band_of_Casualty] int,

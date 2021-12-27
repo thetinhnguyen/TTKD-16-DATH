@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Casualties"
   DTS:PackageType="5"
-  DTS:VersionBuild="21"
-  DTS:VersionGUID="{F28C399C-D509-4D41-BBDD-EDB7FBF674CC}">
+  DTS:VersionBuild="22"
+  DTS:VersionGUID="{336E7041-1F58-4114-9839-44FE2E4C91E8}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -761,9 +761,7 @@
                       name="Casualty_Type" />
                     <externalMetadataColumn
                       refId="Package\Load Data Casualties\Casualties_Stage.Inputs[OLE DB Destination Input].ExternalColumns[Vehicle_Reference]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
+                      dataType="i4"
                       name="Vehicle_Reference" />
                   </externalMetadataColumns>
                 </input>

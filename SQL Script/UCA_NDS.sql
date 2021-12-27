@@ -1,9 +1,10 @@
-CREATE DATABASE [UCA_NDS]
----- DROP DATABASE  [UCA_NDS]
-go
-USE [UCA_NDS]
+USE MASTER
 GO
-
+IF DB_ID ('UCA_NDS') IS NOT NULL DROP DATABASE [UCA_NDS]
+GO
+CREATE DATABASE [UCA_NDS]
+GO
+USE [UCA_NDS]
 /****** Object:  Table [dbo].[Accidents_Stage]    Script Date: 10/21/2021 12:19:23 PM ******/
 SET ANSI_NULLS ON
 GO
@@ -57,7 +58,7 @@ GO
 CREATE TABLE [Vehicles_NDS] (
 	[Vehicles_Id] [int] IDENTITY(1,1) NOT NULL,
     [Accident_Index] int,
-	Vehicle_Reference varchar(50),
+	[Vehicle_Reference] int,
     [Vehicle_Type] int,
     [Journey_Purpose_of_Driver] int,
     [Age_of_Driver] int,
@@ -79,11 +80,10 @@ SET QUOTED_IDENTIFIER ON
 GO
 
 ----------------------------------------------------------Casualties------------------------------------------------
-
 CREATE TABLE [Casualties_NDS] (
 	[Casualties_Id] [int] IDENTITY(1,1) NOT NULL,
     [Accident_Index] int,
-	Vehicle_Reference varchar(50),
+	[Vehicle_Reference] int,
     [Sex_of_Casualty] int,
     [Age_of_Casualty] int,
     [Casualty_Severity] int,
