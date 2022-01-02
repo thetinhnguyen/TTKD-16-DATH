@@ -102,15 +102,15 @@ CREATE TABLE [Accident_location_Stage] (
 ) ON [PRIMARY]
 GO
 
-/****** Object:  Table [dbo].[Local_Authority_(District)_Stage]    Script Date: 10/21/2021 12:19:23 PM ******/
+/****** Object:  Table [dbo].[Local_Authority_District_Stage]    Script Date: 10/21/2021 12:19:23 PM ******/
 SET ANSI_NULLS ON
 GO
 
 SET QUOTED_IDENTIFIER ON
 GO  
 
-CREATE TABLE [dbo].[Local_Authority_(District)_Stage](
-	[Local_Authority_(District)_Id] [int] NULL,
+CREATE TABLE [dbo].[Local_Authority_District_Stage](
+	[Local_Authority_(District)_Id] [int],
     [Local_Authority_(District)] nvarchar(255)
 ) ON [PRIMARY]
 GO
@@ -123,7 +123,85 @@ SET QUOTED_IDENTIFIER ON
 GO
 
 CREATE TABLE [dbo].[Severity_Stage](
-  [Severity_ID] int NOT NULL,
-  [Severity_Name] varchar(50) NOT NULL
+  [Severity_ID] int,
+  [Severity_Name] nvarchar(255)
+) ON [PRIMARY]
+GO
+
+/****** Object:  Table [dbo].[Sex_of_Casualty_Stage]    Script Date: 10/21/2021 12:19:23 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Sex_of_Casualty_Stage](
+  [Sex_of_Casualty_ID] int,
+  [Sex_of_Casualty_Name] nvarchar(255)
+) ON [PRIMARY]
+GO
+
+/****** Object:  Table [dbo].[Casualty_Type_Stage]    Script Date: 10/21/2021 12:19:23 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Casualty_Type_Stage](
+  [Casualty_Type_ID] int,
+  [Casualty_Type_Name] nvarchar(255)
+) ON [PRIMARY]
+GO
+
+/****** Object:  Table [dbo].[Age_Band_of_Casualty_Stage]    Script Date: 10/21/2021 12:19:23 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Age_Band_of_Casualty_Stage](
+  [Age_Band_of_Casualty_ID] int,
+  [Age_Band_of_Casualty_Name] nvarchar(255)
+) ON [PRIMARY]
+GO
+
+/****** Object:  Table [dbo].[Road_Type_Stage]    Script Date: 10/21/2021 12:19:23 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Road_Type_Stage](
+  [Road_Type_ID] int,
+  [Road_Type_Name] nvarchar(255)
+) ON [PRIMARY]
+GO
+
+/****** Object:  Table [dbo].[Journey_Purpose_of_Driver_Stage]    Script Date: 10/21/2021 12:19:23 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Journey_Purpose_of_Driver_Stage](
+  [Journey_Purpose_of_Driver_ID] int,
+  [Journey_Purpose_of_Driver_Name] nvarchar(255)
+) ON [PRIMARY]
+GO
+
+/****** Object:  Table [dbo].[Vehicle_Type_Stage]    Script Date: 10/21/2021 12:19:23 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Vehicle_Type_Stage](
+  [Vehicle_Type_ID] int,
+  [Vehicle_Type_Name] nvarchar(255)
 ) ON [PRIMARY]
 GO

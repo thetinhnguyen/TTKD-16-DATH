@@ -11,7 +11,7 @@ GO
 
 SET QUOTED_IDENTIFIER ON
 GO
-
+-- select Accident_Index, Time, RIGHT('00' + CAST(DATEPART(HOUR, Time) AS VARCHAR),2) from Accidents_NDS
 CREATE TABLE [dbo].[Accidents_NDS](
 	[Accident_Index] [int] IDENTITY(1,1) NOT NULL,
     [Accident_NK] varchar(50),

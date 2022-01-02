@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="5"
-  DTS:VersionGUID="{A5EE948F-B537-493F-BA8D-4F378C6A018F}">
+  DTS:VersionBuild="6"
+  DTS:VersionGUID="{BE170F83-2133-46F7-B572-FD95988766E2}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -739,22 +739,22 @@
         <NodeLayout
           Size="147,41"
           Id="Package\GET LSET,CET"
-          TopLeft="70,151" />
+          TopLeft="272,163" />
         <NodeLayout
           Size="215,42"
           Id="Package\Load Data Accident_Location"
-          TopLeft="38,240" />
+          TopLeft="240,252" />
         <NodeLayout
           Size="165,41"
           Id="Package\TRUNCATE STAGE"
-          TopLeft="60,60" />
+          TopLeft="262,72" />
         <NodeLayout
           Size="145,41"
           Id="Package\UPDATE LSET"
-          TopLeft="69,327" />
+          TopLeft="271,339" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="143.2,101.6">
+          TopLeft="345.2,113.6">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -776,7 +776,7 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="144.5,192">
+          TopLeft="346.5,204">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -798,7 +798,7 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
-          TopLeft="143.5,282">
+          TopLeft="345.5,294">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"

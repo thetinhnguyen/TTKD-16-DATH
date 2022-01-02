@@ -5,21 +5,21 @@
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="DESKTOP-5243EHL"
   DTS:CreatorName="DESKTOP-5243EHL\ADMIN"
-  DTS:DTSID="{3E989CCA-D4A8-4FFF-B995-9304D3C94AF6}"
+  DTS:DTSID="{50B869E3-77D2-4A05-BF8D-36A7777D45C3}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="15.0.2000.170"
   DTS:LocaleID="1033"
   DTS:ObjectName="Casualties"
   DTS:PackageType="5"
-  DTS:VersionBuild="22"
-  DTS:VersionGUID="{336E7041-1F58-4114-9839-44FE2E4C91E8}">
+  DTS:VersionBuild="23"
+  DTS:VersionGUID="{B4A8F8C6-A919-4554-9ADC-2F9E77626998}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[Casualties File csv]"
       DTS:CreationName="FLATFILE"
-      DTS:DTSID="{1194BB64-8C75-4E0F-81F7-E6A630B9B941}"
+      DTS:DTSID="{10B36DA1-9F60-4953-9F24-0AFDA0E46586}"
       DTS:ObjectName="Casualties File csv">
       <DTS:ObjectData>
         <DTS:ConnectionManager
@@ -39,7 +39,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Accident_Index"
-              DTS:DTSID="{22C9BE9F-8FC5-40DE-9802-C8E75C5A30EB}"
+              DTS:DTSID="{443EF75E-C964-429F-910B-40EF11D30E47}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -48,7 +48,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Vehicle_Reference"
-              DTS:DTSID="{D8D764A9-A0E6-45E5-AD97-ACF2D7728A0A}"
+              DTS:DTSID="{AD923B1A-B38C-4FE0-9A8E-75C02805720C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -57,7 +57,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Casualty_Reference"
-              DTS:DTSID="{576E92C4-ED78-4D3C-B8E9-0D25F350AB21}"
+              DTS:DTSID="{127D8347-A0EC-4469-A640-B147CAC6A3AE}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -66,7 +66,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Casualty_Class"
-              DTS:DTSID="{68CD7021-0E34-44FB-A6B2-0EA9F0E9E4FB}"
+              DTS:DTSID="{8F001574-B969-4AC6-9308-83F736061156}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -75,7 +75,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Sex_of_Casualty"
-              DTS:DTSID="{87280A2D-41BE-4251-9CE7-8708EBCE0838}"
+              DTS:DTSID="{B3E2A86D-137F-4D0B-8353-2D956074CA7C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -84,7 +84,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Age_of_Casualty"
-              DTS:DTSID="{CCED3CB4-8F46-48CC-B991-3174F5A6EC5B}"
+              DTS:DTSID="{715DDF77-B977-4F21-A7D9-249086B2CBEC}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -93,7 +93,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Age_Band_of_Casualty"
-              DTS:DTSID="{894BACD5-9EB9-41AB-B13C-ACF75A89E257}"
+              DTS:DTSID="{486A297C-130D-4FA9-B464-CDABD7496467}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -102,7 +102,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Casualty_Severity"
-              DTS:DTSID="{D515857E-7347-4218-BEAC-8C3B71767335}"
+              DTS:DTSID="{C5D2E882-1D89-4401-A271-1E6973565E1D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -111,7 +111,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Pedestrian_Location"
-              DTS:DTSID="{B3B659E2-C95F-4F83-A7B9-61B3B45B3707}"
+              DTS:DTSID="{DAF9701C-BD74-4509-B5B1-1CE7F74C53DF}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -120,7 +120,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Pedestrian_Movement"
-              DTS:DTSID="{4B0E9FDA-C110-4857-AD2A-CFA12A5AC57C}"
+              DTS:DTSID="{C03BBEAA-AF6D-494C-92BA-2DD7E3C6E697}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -129,7 +129,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Car_Passenger"
-              DTS:DTSID="{3AC9F87E-3B6D-42A6-8167-08B452EFD926}"
+              DTS:DTSID="{FAB0689C-8106-42F1-9112-5226501353BC}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -138,7 +138,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Bus_or_Coach_Passenger"
-              DTS:DTSID="{A70E7643-2E86-432C-81BF-C2FCEC735C09}"
+              DTS:DTSID="{9212B16F-9A06-444F-993F-78106C5756FF}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -147,7 +147,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Pedestrian_Road_Maintenance_Worker"
-              DTS:DTSID="{E1D482F2-D207-493C-BF99-D7B59B532CC6}"
+              DTS:DTSID="{49ADD94D-6E9E-44F3-B7BF-CB24B4D18D52}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -156,7 +156,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Casualty_Type"
-              DTS:DTSID="{2633DBE2-1256-421E-939D-0C2D41999398}"
+              DTS:DTSID="{F2F904C8-0486-43D7-B54C-369B4EB1D2E0}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -165,7 +165,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Casualty_Home_Area_Type"
-              DTS:DTSID="{53064C1D-3F26-4020-A8DC-B6557D95DEC7}"
+              DTS:DTSID="{58DE69AE-FDAB-409A-A610-0D5CD01332EC}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -174,7 +174,7 @@
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[LocalHost.UCA_LSET_CET]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{DB6D8185-6ADC-4F12-BC08-4D4812654EC8}"
+      DTS:DTSID="{24945EC9-6537-4353-BA4B-A4753FC98551}"
       DTS:ObjectName="LocalHost.UCA_LSET_CET">
       <DTS:ObjectData>
         <DTS:ConnectionManager
@@ -186,7 +186,7 @@
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[LocalHost.UCA_STAGE]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{20D41374-4B0C-4CDA-8D81-FD3FF87A6A37}"
+      DTS:DTSID="{22A5B5B3-3C77-4D5B-AD48-98CD30A788DF}"
       DTS:ObjectName="LocalHost.UCA_STAGE">
       <DTS:ObjectData>
         <DTS:ConnectionManager
@@ -199,7 +199,7 @@
   <DTS:Variables>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{DDC395A2-AAF8-4C3A-B0AE-3D7A8F8FCDD4}"
+      DTS:DTSID="{4A7C6C38-438D-4CBC-9DFC-C1687A426E80}"
       DTS:IncludeInDebugDump="6789"
       DTS:Namespace="User"
       DTS:ObjectName="CETResult">
@@ -208,7 +208,7 @@
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{E12879FF-6B34-46E3-9641-A50D3C70AE13}"
+      DTS:DTSID="{C8D2F142-45D7-4387-9862-095663D0FC53}"
       DTS:IncludeInDebugDump="6789"
       DTS:Namespace="User"
       DTS:ObjectName="CET_Result">
@@ -217,7 +217,7 @@
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{A43183DA-137A-4403-BD94-28D7F92D0F22}"
+      DTS:DTSID="{55C70A76-B449-4247-AB91-272BE9C4E931}"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="LSETResult">
@@ -227,7 +227,7 @@
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{C1B43C9F-7B38-4DC7-A7BB-6C90019096BB}"
+      DTS:DTSID="{561A6066-17CE-4D50-99E4-CB371C3B76BE}"
       DTS:IncludeInDebugDump="6789"
       DTS:Namespace="User"
       DTS:ObjectName="LSETResult1">
@@ -236,7 +236,7 @@
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{A583D3E6-6E0F-455F-8526-B1A6E8B85782}"
+      DTS:DTSID="{6627DA48-428D-430C-A00E-4108E4146E75}"
       DTS:IncludeInDebugDump="6789"
       DTS:Namespace="User"
       DTS:ObjectName="LSET_Result">
@@ -245,7 +245,7 @@
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{D87327C1-5227-4A4F-A892-35154449CC9D}"
+      DTS:DTSID="{70DF3D07-58A0-41A9-932F-203A3288EE0C}"
       DTS:IncludeInDebugDump="6789"
       DTS:Namespace="CETResult"
       DTS:ObjectName="Variable">
@@ -258,7 +258,7 @@
       DTS:refId="Package\GET LSET,CET"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
-      DTS:DTSID="{F7303B7C-2A80-4F8C-9550-A60BD8D0A4CB}"
+      DTS:DTSID="{98F4F523-073C-4D55-B7C2-9EF796E3AED1}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="GET LSET,CET"
@@ -267,7 +267,7 @@
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{DB6D8185-6ADC-4F12-BC08-4D4812654EC8}"
+          SQLTask:Connection="{24945EC9-6537-4353-BA4B-A4753FC98551}"
           SQLTask:SqlStatementSource="UPDATE LSET_CET&#xA;SET CET = GETDATE()&#xA;&#xA;SELECT LSET,CET&#xA;FROM LSET_CET"
           SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
           <SQLTask:ResultBinding
@@ -283,7 +283,7 @@
       DTS:refId="Package\Load Data Casualties"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:DTSID="{91F5AE04-2008-4CEB-AE1F-6CF4FA7F7BAF}"
+      DTS:DTSID="{B8B26B11-A5A7-409B-B958-5C9697C0562A}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
       DTS:ObjectName="Load Data Casualties"
@@ -890,7 +890,7 @@
       DTS:refId="Package\TRUNCATE STAGE"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
-      DTS:DTSID="{0AB2CF9D-9C31-44B2-B890-3CB1ED64AF69}"
+      DTS:DTSID="{6EBCB901-D6B1-43ED-B853-758787918B7D}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="TRUNCATE STAGE"
@@ -899,7 +899,7 @@
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{20D41374-4B0C-4CDA-8D81-FD3FF87A6A37}"
+          SQLTask:Connection="{22A5B5B3-3C77-4D5B-AD48-98CD30A788DF}"
           SQLTask:SqlStatementSource="TRUNCATE TABLE Casualties_Stage" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
@@ -907,7 +907,7 @@
       DTS:refId="Package\UPDATE LSET"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
-      DTS:DTSID="{3618DBA8-8314-4BD7-9A67-3071BB349C59}"
+      DTS:DTSID="{3EB54C50-7C98-4009-BDC9-D44B988A3C6F}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="UPDATE LSET"
@@ -916,7 +916,7 @@
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{DB6D8185-6ADC-4F12-BC08-4D4812654EC8}"
+          SQLTask:Connection="{24945EC9-6537-4353-BA4B-A4753FC98551}"
           SQLTask:SqlStatementSource="UPDATE LSET_CET&#xA;SET LSET = CET" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
@@ -925,7 +925,7 @@
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint]"
       DTS:CreationName=""
-      DTS:DTSID="{0727E03A-055D-4551-9334-AD42E69442A0}"
+      DTS:DTSID="{FD824BCD-26A8-4E46-91ED-BC3464690675}"
       DTS:From="Package\TRUNCATE STAGE"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
@@ -933,7 +933,7 @@
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
       DTS:CreationName=""
-      DTS:DTSID="{3553D87B-CFEE-48BE-9E23-1EFA9A6BE572}"
+      DTS:DTSID="{7488223B-6059-4BB4-AC53-3BC4C7E4BFDB}"
       DTS:From="Package\GET LSET,CET"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 1"
@@ -941,7 +941,7 @@
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
       DTS:CreationName=""
-      DTS:DTSID="{E4901361-876D-465E-9EDB-6726BA42E831}"
+      DTS:DTSID="{8932BA8B-320E-432A-9BF8-7E6C940A1CA2}"
       DTS:From="Package\Load Data Casualties"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 2"
@@ -970,25 +970,25 @@
         <NodeLayout
           Size="179,41"
           Id="Package\TRUNCATE STAGE"
-          TopLeft="248,49" />
+          TopLeft="262,48" />
         <NodeLayout
           Size="145,41"
           Id="Package\UPDATE LSET"
           TopLeft="272,313" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="341,91">
+          TopLeft="348,89">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,39"
+              EndConnector="0,41"
               Start="0,0"
-              End="0,31.5">
+              End="0,33.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,31.5" />
+                    End="0,33.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
