@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="47"
-  DTS:VersionGUID="{BFFF8A62-CF7C-489F-BC93-C7D4B50D6150}">
+  DTS:VersionBuild="48"
+  DTS:VersionGUID="{6C87FBC7-2C2E-4E50-83DA-CE5AD81C2F41}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -2995,11 +2995,11 @@ where [refTable].[Local_Authority_(District)] = ?</property>
               </outputs>
             </component>
             <component
-              refId="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Load du lieu Accidents trong Stage"
+              refId="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Load du lieu Accidents_Stage To Local_Authority trong Stage"
               componentClassID="Microsoft.OLEDBSource"
               contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
               description="OLE DB Source"
-              name="Load du lieu Accidents trong Stage"
+              name="Load du lieu Accidents_Stage To Local_Authority trong Stage"
               usesDispositions="true"
               version="7">
               <properties>
@@ -3044,7 +3044,7 @@ where [refTable].[Local_Authority_(District)] = ?</property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Load du lieu Accidents trong Stage.Connections[OleDbConnection]"
+                  refId="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Load du lieu Accidents_Stage To Local_Authority trong Stage.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[LocalHost.UCA_STAGE]"
                   connectionManagerRefId="Package.ConnectionManagers[LocalHost.UCA_STAGE]"
                   description="The OLE DB runtime connection used to access the database."
@@ -3052,98 +3052,98 @@ where [refTable].[Local_Authority_(District)] = ?</property>
               </connections>
               <outputs>
                 <output
-                  refId="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Load du lieu Accidents trong Stage.Outputs[OLE DB Source Output]"
+                  refId="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Load du lieu Accidents_Stage To Local_Authority trong Stage.Outputs[OLE DB Source Output]"
                   name="OLE DB Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Load du lieu Accidents trong Stage.Outputs[OLE DB Source Output].Columns[Local_Authority_(District)]"
+                      refId="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Load du lieu Accidents_Stage To Local_Authority trong Stage.Outputs[OLE DB Source Output].Columns[Local_Authority_(District)]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Load du lieu Accidents trong Stage.Outputs[OLE DB Source Output].ExternalColumns[Local_Authority_(District)]"
-                      lineageId="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Load du lieu Accidents trong Stage.Outputs[OLE DB Source Output].Columns[Local_Authority_(District)]"
+                      externalMetadataColumnId="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Load du lieu Accidents_Stage To Local_Authority trong Stage.Outputs[OLE DB Source Output].ExternalColumns[Local_Authority_(District)]"
+                      lineageId="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Load du lieu Accidents_Stage To Local_Authority trong Stage.Outputs[OLE DB Source Output].Columns[Local_Authority_(District)]"
                       name="Local_Authority_(District)"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Load du lieu Accidents trong Stage.Outputs[OLE DB Source Output].Columns[Local_Authority_(Highway)]"
+                      refId="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Load du lieu Accidents_Stage To Local_Authority trong Stage.Outputs[OLE DB Source Output].Columns[Local_Authority_(Highway)]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Load du lieu Accidents trong Stage.Outputs[OLE DB Source Output].ExternalColumns[Local_Authority_(Highway)]"
+                      externalMetadataColumnId="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Load du lieu Accidents_Stage To Local_Authority trong Stage.Outputs[OLE DB Source Output].ExternalColumns[Local_Authority_(Highway)]"
                       length="50"
-                      lineageId="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Load du lieu Accidents trong Stage.Outputs[OLE DB Source Output].Columns[Local_Authority_(Highway)]"
+                      lineageId="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Load du lieu Accidents_Stage To Local_Authority trong Stage.Outputs[OLE DB Source Output].Columns[Local_Authority_(Highway)]"
                       name="Local_Authority_(Highway)"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Load du lieu Accidents trong Stage.Outputs[OLE DB Source Output].ExternalColumns[Accident_Index]"
+                      refId="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Load du lieu Accidents_Stage To Local_Authority trong Stage.Outputs[OLE DB Source Output].ExternalColumns[Accident_Index]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="Accident_Index" />
                     <externalMetadataColumn
-                      refId="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Load du lieu Accidents trong Stage.Outputs[OLE DB Source Output].ExternalColumns[Accident_Severity]"
+                      refId="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Load du lieu Accidents_Stage To Local_Authority trong Stage.Outputs[OLE DB Source Output].ExternalColumns[Accident_Severity]"
                       dataType="i4"
                       name="Accident_Severity" />
                     <externalMetadataColumn
-                      refId="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Load du lieu Accidents trong Stage.Outputs[OLE DB Source Output].ExternalColumns[Number_of_Vehicles]"
+                      refId="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Load du lieu Accidents_Stage To Local_Authority trong Stage.Outputs[OLE DB Source Output].ExternalColumns[Number_of_Vehicles]"
                       dataType="i4"
                       name="Number_of_Vehicles" />
                     <externalMetadataColumn
-                      refId="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Load du lieu Accidents trong Stage.Outputs[OLE DB Source Output].ExternalColumns[Number_of_Casualties]"
+                      refId="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Load du lieu Accidents_Stage To Local_Authority trong Stage.Outputs[OLE DB Source Output].ExternalColumns[Number_of_Casualties]"
                       dataType="i4"
                       name="Number_of_Casualties" />
                     <externalMetadataColumn
-                      refId="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Load du lieu Accidents trong Stage.Outputs[OLE DB Source Output].ExternalColumns[Date]"
+                      refId="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Load du lieu Accidents_Stage To Local_Authority trong Stage.Outputs[OLE DB Source Output].ExternalColumns[Date]"
                       dataType="dbTimeStamp"
                       name="Date" />
                     <externalMetadataColumn
-                      refId="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Load du lieu Accidents trong Stage.Outputs[OLE DB Source Output].ExternalColumns[Day_of_Week]"
+                      refId="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Load du lieu Accidents_Stage To Local_Authority trong Stage.Outputs[OLE DB Source Output].ExternalColumns[Day_of_Week]"
                       dataType="i4"
                       name="Day_of_Week" />
                     <externalMetadataColumn
-                      refId="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Load du lieu Accidents trong Stage.Outputs[OLE DB Source Output].ExternalColumns[Time]"
+                      refId="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Load du lieu Accidents_Stage To Local_Authority trong Stage.Outputs[OLE DB Source Output].ExternalColumns[Time]"
                       dataType="dbTimeStamp"
                       name="Time" />
                     <externalMetadataColumn
-                      refId="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Load du lieu Accidents trong Stage.Outputs[OLE DB Source Output].ExternalColumns[Local_Authority_(District)]"
+                      refId="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Load du lieu Accidents_Stage To Local_Authority trong Stage.Outputs[OLE DB Source Output].ExternalColumns[Local_Authority_(District)]"
                       dataType="i4"
                       name="Local_Authority_(District)" />
                     <externalMetadataColumn
-                      refId="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Load du lieu Accidents trong Stage.Outputs[OLE DB Source Output].ExternalColumns[Local_Authority_(Highway)]"
+                      refId="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Load du lieu Accidents_Stage To Local_Authority trong Stage.Outputs[OLE DB Source Output].ExternalColumns[Local_Authority_(Highway)]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="Local_Authority_(Highway)" />
                     <externalMetadataColumn
-                      refId="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Load du lieu Accidents trong Stage.Outputs[OLE DB Source Output].ExternalColumns[Road_Type]"
+                      refId="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Load du lieu Accidents_Stage To Local_Authority trong Stage.Outputs[OLE DB Source Output].ExternalColumns[Road_Type]"
                       dataType="i4"
                       name="Road_Type" />
                     <externalMetadataColumn
-                      refId="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Load du lieu Accidents trong Stage.Outputs[OLE DB Source Output].ExternalColumns[Speed_limit]"
+                      refId="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Load du lieu Accidents_Stage To Local_Authority trong Stage.Outputs[OLE DB Source Output].ExternalColumns[Speed_limit]"
                       dataType="i4"
                       name="Speed_limit" />
                     <externalMetadataColumn
-                      refId="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Load du lieu Accidents trong Stage.Outputs[OLE DB Source Output].ExternalColumns[Road_Surface_Conditions]"
+                      refId="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Load du lieu Accidents_Stage To Local_Authority trong Stage.Outputs[OLE DB Source Output].ExternalColumns[Road_Surface_Conditions]"
                       dataType="i4"
                       name="Road_Surface_Conditions" />
                     <externalMetadataColumn
-                      refId="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Load du lieu Accidents trong Stage.Outputs[OLE DB Source Output].ExternalColumns[Special_Conditions_at_Site]"
+                      refId="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Load du lieu Accidents_Stage To Local_Authority trong Stage.Outputs[OLE DB Source Output].ExternalColumns[Special_Conditions_at_Site]"
                       dataType="i4"
                       name="Special_Conditions_at_Site" />
                     <externalMetadataColumn
-                      refId="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Load du lieu Accidents trong Stage.Outputs[OLE DB Source Output].ExternalColumns[Carriageway_Hazards]"
+                      refId="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Load du lieu Accidents_Stage To Local_Authority trong Stage.Outputs[OLE DB Source Output].ExternalColumns[Carriageway_Hazards]"
                       dataType="i4"
                       name="Carriageway_Hazards" />
                     <externalMetadataColumn
-                      refId="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Load du lieu Accidents trong Stage.Outputs[OLE DB Source Output].ExternalColumns[Urban_or_Rural_Area]"
+                      refId="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Load du lieu Accidents_Stage To Local_Authority trong Stage.Outputs[OLE DB Source Output].ExternalColumns[Urban_or_Rural_Area]"
                       dataType="i4"
                       name="Urban_or_Rural_Area" />
                     <externalMetadataColumn
-                      refId="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Load du lieu Accidents trong Stage.Outputs[OLE DB Source Output].ExternalColumns[LSOA_of_Accident_Location]"
+                      refId="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Load du lieu Accidents_Stage To Local_Authority trong Stage.Outputs[OLE DB Source Output].ExternalColumns[LSOA_of_Accident_Location]"
                       codePage="1252"
                       dataType="str"
                       length="50"
@@ -3151,33 +3151,33 @@ where [refTable].[Local_Authority_(District)] = ?</property>
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Load du lieu Accidents trong Stage.Outputs[OLE DB Source Error Output]"
+                  refId="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Load du lieu Accidents_Stage To Local_Authority trong Stage.Outputs[OLE DB Source Error Output]"
                   isErrorOut="true"
                   name="OLE DB Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Load du lieu Accidents trong Stage.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      refId="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Load du lieu Accidents_Stage To Local_Authority trong Stage.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Load du lieu Accidents trong Stage.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Load du lieu Accidents_Stage To Local_Authority trong Stage.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Load du lieu Accidents trong Stage.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      refId="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Load du lieu Accidents_Stage To Local_Authority trong Stage.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Load du lieu Accidents trong Stage.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Load du lieu Accidents_Stage To Local_Authority trong Stage.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                     <outputColumn
-                      refId="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Load du lieu Accidents trong Stage.Outputs[OLE DB Source Error Output].Columns[Local_Authority_(District)]"
+                      refId="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Load du lieu Accidents_Stage To Local_Authority trong Stage.Outputs[OLE DB Source Error Output].Columns[Local_Authority_(District)]"
                       dataType="i4"
-                      lineageId="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Load du lieu Accidents trong Stage.Outputs[OLE DB Source Error Output].Columns[Local_Authority_(District)]"
+                      lineageId="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Load du lieu Accidents_Stage To Local_Authority trong Stage.Outputs[OLE DB Source Error Output].Columns[Local_Authority_(District)]"
                       name="Local_Authority_(District)" />
                     <outputColumn
-                      refId="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Load du lieu Accidents trong Stage.Outputs[OLE DB Source Error Output].Columns[Local_Authority_(Highway)]"
+                      refId="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Load du lieu Accidents_Stage To Local_Authority trong Stage.Outputs[OLE DB Source Error Output].Columns[Local_Authority_(Highway)]"
                       codePage="1252"
                       dataType="str"
                       length="50"
-                      lineageId="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Load du lieu Accidents trong Stage.Outputs[OLE DB Source Error Output].Columns[Local_Authority_(Highway)]"
+                      lineageId="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Load du lieu Accidents_Stage To Local_Authority trong Stage.Outputs[OLE DB Source Error Output].Columns[Local_Authority_(Highway)]"
                       name="Local_Authority_(Highway)" />
                   </outputColumns>
                   <externalMetadataColumns />
@@ -3368,7 +3368,7 @@ where [refTable].[Local_Authority_(District)] = ?</property>
                       cachedDataType="i4"
                       cachedName="Local_Authority_(District)"
                       externalMetadataColumnId="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Them du lieu Local_Authority.Inputs[OLE DB Destination Input].ExternalColumns[Local_Authority_(District)]"
-                      lineageId="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Load du lieu Accidents trong Stage.Outputs[OLE DB Source Output].Columns[Local_Authority_(District)]" />
+                      lineageId="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Load du lieu Accidents_Stage To Local_Authority trong Stage.Outputs[OLE DB Source Output].Columns[Local_Authority_(District)]" />
                     <inputColumn
                       refId="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Them du lieu Local_Authority.Inputs[OLE DB Destination Input].Columns[Local_Authority_(Highway)]"
                       cachedCodepage="1252"
@@ -3376,7 +3376,7 @@ where [refTable].[Local_Authority_(District)] = ?</property>
                       cachedLength="50"
                       cachedName="Local_Authority_(Highway)"
                       externalMetadataColumnId="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Them du lieu Local_Authority.Inputs[OLE DB Destination Input].ExternalColumns[Local_Authority_(Highway)]"
-                      lineageId="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Load du lieu Accidents trong Stage.Outputs[OLE DB Source Output].Columns[Local_Authority_(Highway)]" />
+                      lineageId="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Load du lieu Accidents_Stage To Local_Authority trong Stage.Outputs[OLE DB Source Output].Columns[Local_Authority_(Highway)]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -3560,7 +3560,7 @@ where [refTable].[Local_Authority_(District)] = ? and [refTable].[Local_Authorit
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Load du lieu Accidents trong Stage.Outputs[OLE DB Source Output].Columns[Local_Authority_(District)]};#{Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Load du lieu Accidents trong Stage.Outputs[OLE DB Source Output].Columns[Local_Authority_(Highway)]};</property>
+                  name="ParameterMap">#{Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Load du lieu Accidents_Stage To Local_Authority trong Stage.Outputs[OLE DB Source Output].Columns[Local_Authority_(District)]};#{Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Load du lieu Accidents_Stage To Local_Authority trong Stage.Outputs[OLE DB Source Output].Columns[Local_Authority_(Highway)]};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -3587,7 +3587,7 @@ where [refTable].[Local_Authority_(District)] = ? and [refTable].[Local_Authorit
                       refId="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Xem xet Local_Authority_District du lieu co nam trong NDS.Inputs[Lookup Input].Columns[Local_Authority_(District)]"
                       cachedDataType="i4"
                       cachedName="Local_Authority_(District)"
-                      lineageId="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Load du lieu Accidents trong Stage.Outputs[OLE DB Source Output].Columns[Local_Authority_(District)]">
+                      lineageId="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Load du lieu Accidents_Stage To Local_Authority trong Stage.Outputs[OLE DB Source Output].Columns[Local_Authority_(District)]">
                       <properties>
                         <property
                           dataType="System.String"
@@ -3605,7 +3605,7 @@ where [refTable].[Local_Authority_(District)] = ? and [refTable].[Local_Authorit
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="Local_Authority_(Highway)"
-                      lineageId="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Load du lieu Accidents trong Stage.Outputs[OLE DB Source Output].Columns[Local_Authority_(Highway)]">
+                      lineageId="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Load du lieu Accidents_Stage To Local_Authority trong Stage.Outputs[OLE DB Source Output].Columns[Local_Authority_(Highway)]">
                       <properties>
                         <property
                           dataType="System.String"
@@ -3721,7 +3721,7 @@ where [refTable].[Local_Authority_(District)] = ? and [refTable].[Local_Authorit
               refId="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS.Paths[OLE DB Source Output]"
               endId="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Xem xet Local_Authority_District du lieu co nam trong NDS.Inputs[Lookup Input]"
               name="OLE DB Source Output"
-              startId="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Load du lieu Accidents trong Stage.Outputs[OLE DB Source Output]" />
+              startId="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Load du lieu Accidents_Stage To Local_Authority trong Stage.Outputs[OLE DB Source Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -7118,9 +7118,9 @@ where [refTable].[Age_of_Casualty] = ?</property>
         <NodeLayout
           Size="267,42"
           Id="Package\Load dữ liệu từ Accidents Stage To NDS"
-          TopLeft="138.124998984858,90.7736823939402" />
+          TopLeft="139.124998984858,90.7736823939402" />
         <NodeLayout
-          Size="347,43"
+          Size="346,42"
           Id="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS"
           TopLeft="101.249999385328,8.00087807513201" />
         <NodeLayout
@@ -7133,18 +7133,18 @@ where [refTable].[Age_of_Casualty] = ?</property>
           TopLeft="94.9999996274708,322.964913233716" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="273.187499185093,51.000878075132">
+          TopLeft="273.437499185093,50.000878075132">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,39.7728043188082"
+              EndConnector="0,40.7728043188082"
               Start="0,0"
-              End="0,32.2728043188082">
+              End="0,33.2728043188082">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,32.2728043188082" />
+                    End="0,33.2728043188082" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -7155,7 +7155,7 @@ where [refTable].[Age_of_Casualty] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="273.124999171123,132.77368239394">
+          TopLeft="273.624999171123,132.77368239394">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -7252,34 +7252,34 @@ where [refTable].[Age_of_Casualty] = ?</property>
         <NodeLayout
           Size="239,43"
           Id="Package\Load dữ liệu từ  Vehicles Stage To NDS\Load du lieu Vehicles trong Stage"
-          TopLeft="139,13" />
+          TopLeft="311,48" />
         <NodeLayout
           Size="239,43"
           Id="Package\Load dữ liệu từ  Vehicles Stage To NDS\Them CreatedDate, UpdatedDate"
-          TopLeft="327.749999869615,264.84210416848" />
+          TopLeft="498.749999869615,317.84210416848" />
         <NodeLayout
           Size="343,43"
           Id="Package\Load dữ liệu từ  Vehicles Stage To NDS\Xem xet du lieu Accident_Index co trong Accident_NDS"
-          TopLeft="79.3750000838188,84.929823775811" />
+          TopLeft="251.375000083819,119.929823775811" />
         <NodeLayout
           Size="172,43"
           Id="Package\Load dữ liệu từ  Vehicles Stage To NDS\Them UpdatedDate"
-          TopLeft="42.2500001303852,260.368419854925" />
+          TopLeft="160.250000130385,301.368419854925" />
         <NodeLayout
           Size="263,43"
           Id="Package\Load dữ liệu từ  Vehicles Stage To NDS\Xem xet du lieu co trong vehicles_NDS"
-          TopLeft="112.375000083819,175.824560295952" />
+          TopLeft="284.375000083819,210.824560295952" />
         <NodeLayout
           Size="195,43"
           Id="Package\Load dữ liệu từ  Vehicles Stage To NDS\Cap nhat du lieu Vehicle"
-          TopLeft="38.375000083819,357.157893629285" />
+          TopLeft="146.375000083819,392.157893629285" />
         <NodeLayout
           Size="177,43"
           Id="Package\Load dữ liệu từ  Vehicles Stage To NDS\Them du lieu vehicle"
-          TopLeft="358.999999776482,353.263157109144" />
+          TopLeft="528.999999776482,400.263157109144" />
         <EdgeLayout
           Id="Package\Load dữ liệu từ  Vehicles Stage To NDS.Paths[OLE DB Source Output]"
-          TopLeft="254.520833375243,55.6666666666667">
+          TopLeft="426.520833375243,90.6666666666667">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -7301,43 +7301,43 @@ where [refTable].[Age_of_Casualty] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Load dữ liệu từ  Vehicles Stage To NDS.Paths[Lookup Match Output1]"
-          TopLeft="201.375000083819,218.824560295952">
+          TopLeft="373.375000083819,253.824560295952">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-73.1249999534338,41.543859558973"
+              EndConnector="-127.124999953434,47.543859558973"
               Start="0,0"
-              End="-73.1249999534338,34.043859558973">
+              End="-127.124999953434,40.043859558973">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,12.7682698446648" />
+                    End="0,15.1900385521478" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,12.7682698446648"
-                    Point2="0,16.7682698446648"
-                    Point3="-4,16.7682698446648" />
+                    Point1="0,15.1900385521478"
+                    Point2="0,19.1900385521478"
+                    Point3="-4,19.1900385521478" />
                   <mssgle:LineSegment
-                    End="-69.1249999534338,16.7682698446648" />
+                    End="-123.124999953434,19.1900385521478" />
                   <mssgle:CubicBezierSegment
-                    Point1="-69.1249999534338,16.7682698446648"
-                    Point2="-73.1249999534338,16.7682698446648"
-                    Point3="-73.1249999534338,20.7682698446648" />
+                    Point1="-123.124999953434,19.1900385521478"
+                    Point2="-127.124999953434,19.1900385521478"
+                    Point3="-127.124999953434,23.1900385521478" />
                   <mssgle:LineSegment
-                    End="-73.1249999534338,34.043859558973" />
+                    End="-127.124999953434,40.043859558973" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-84.7538866954669,21.7682698446648,96.3827734375,11.609375"
+              BoundingBox="-111.753886695467,24.1900385521478,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Load dữ liệu từ  Vehicles Stage To NDS.Paths[Lookup Match Output]"
-          TopLeft="247.208333417152,127.596490442478">
+          TopLeft="419.208333417152,162.596490442478">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -7361,54 +7361,54 @@ where [refTable].[Age_of_Casualty] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Load dữ liệu từ  Vehicles Stage To NDS.Paths[Lookup Error Output]"
-          TopLeft="286.152777861597,218.491226962618">
+          TopLeft="458.375000083819,253.824560295952">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="160.930555341352,46.3508772058616"
+              EndConnector="159.874999785796,64.017543872528"
               Start="0,0"
-              End="160.930555341352,38.8508772058616">
+              End="159.874999785796,56.517543872528">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,14.708729447371" />
+                    End="0,21.8392807467346" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,14.708729447371"
-                    Point2="0,18.708729447371"
-                    Point3="4,18.708729447371" />
+                    Point1="0,21.8392807467346"
+                    Point2="0,25.8392807467346"
+                    Point3="4,25.8392807467346" />
                   <mssgle:LineSegment
-                    End="156.930555341352,18.708729447371" />
+                    End="155.874999785796,25.8392807467346" />
                   <mssgle:CubicBezierSegment
-                    Point1="156.930555341352,18.708729447371"
-                    Point2="160.930555341352,18.708729447371"
-                    Point3="160.930555341352,22.708729447371" />
+                    Point1="155.874999785796,25.8392807467346"
+                    Point2="159.874999785796,25.8392807467346"
+                    Point3="159.874999785796,29.8392807467346" />
                   <mssgle:LineSegment
-                    End="160.930555341352,38.8508772058616" />
+                    End="159.874999785796,56.517543872528" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="34.5988909519258,23.708729447371,91.7327734375,11.609375"
+              BoundingBox="34.071113174148,30.8392807467346,91.7327734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Load dữ liệu từ  Vehicles Stage To NDS.Paths[Derived Column Output1]"
-          TopLeft="447.374999823048,307.508770835147">
+          TopLeft="617.874999823048,360.84210416848">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,45.7543862739973"
+              EndConnector="0,39.421052940664"
               Start="0,0"
-              End="0,38.2543862739973">
+              End="0,31.921052940664">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,38.2543862739973" />
+                    End="0,31.921052940664" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -7419,18 +7419,18 @@ where [refTable].[Age_of_Casualty] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Load dữ liệu từ  Vehicles Stage To NDS.Paths[Derived Column Output]"
-          TopLeft="132.062500107102,303.368419854925">
+          TopLeft="245.062500107102,344.368419854925">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,53.78947377436"
+              EndConnector="0,47.78947377436"
               Start="0,0"
-              End="0,46.28947377436">
+              End="0,40.28947377436">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,46.28947377436" />
+                    End="0,40.28947377436" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -7792,105 +7792,105 @@ where [refTable].[Age_of_Casualty] = ?</property>
         <NodeLayout
           Size="385,43"
           Id="Package\Load dữ liệu từ Accidents Stage To NDS\Xem xet Accident_NK trong tung dong du lieu co nam trong NDS"
-          TopLeft="398.375000009313,130.684209315731" />
+          TopLeft="296.375000009313,198.684209315731" />
         <NodeLayout
           Size="245,43"
           Id="Package\Load dữ liệu từ Accidents Stage To NDS\Load du lieu Accidents trong Stage"
-          TopLeft="62,36" />
+          TopLeft="372,13" />
         <NodeLayout
-          Size="452,43"
+          Size="451,42"
           Id="Package\Load dữ liệu từ Accidents Stage To NDS\Xem xet Local_Authority_District_Id du lieu co nam trong Local_Authority_NDS"
-          TopLeft="367.250000130385,32.7192968160927" />
+          TopLeft="265.250000130385,100.719296816093" />
         <NodeLayout
           Size="239,43"
           Id="Package\Load dữ liệu từ Accidents Stage To NDS\Them CreatedDate, UpdatedDate"
-          TopLeft="629.499999962747,204.105261522317" />
+          TopLeft="528.499999962747,297.105261522317" />
         <NodeLayout
-          Size="185,43"
+          Size="184,42"
           Id="Package\Load dữ liệu từ Accidents Stage To NDS\Them du lieu Accident"
-          TopLeft="664.249999832361,315.052630149426" />
+          TopLeft="562.249999832361,383.052630149426" />
         <NodeLayout
           Size="172,43"
           Id="Package\Load dữ liệu từ Accidents Stage To NDS\Them UpdatedDate"
-          TopLeft="287.250000130385,223.368419854925" />
+          TopLeft="234.250000130385,305.368419854925" />
         <NodeLayout
           Size="201,43"
           Id="Package\Load dữ liệu từ Accidents Stage To NDS\Cap nhat du lieu Accident"
-          TopLeft="275.375000083819,314.157893629285" />
+          TopLeft="225.375000083819,383.157893629285" />
         <EdgeLayout
           Id="Package\Load dữ liệu từ Accidents Stage To NDS.Paths[Lookup Match Output]"
-          TopLeft="592.062500069849,75.7192968160927">
+          TopLeft="489.812500069849,142.719296816093">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,54.9649124996383"
+              EndConnector="0,55.9649124996383"
               Start="0,0"
-              End="0,47.4649124996383">
+              End="0,48.4649124996383">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,47.4649124996383" />
+                    End="0,48.4649124996383" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,17.9277687498191,96.3827734375,11.609375"
+              BoundingBox="-48.19138671875,18.4277687498191,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Load dữ liệu từ Accidents Stage To NDS.Paths[Lookup Error Output]"
-          TopLeft="653.708333342646,173.684209315731">
+          TopLeft="551.708333342646,241.684209315731">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="95.2916666201007,30.421052206586"
+              EndConnector="96.2916666201007,55.421052206586"
               Start="0,0"
-              End="95.2916666201007,22.921052206586">
+              End="96.2916666201007,47.921052206586">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,8.24396203658765" />
+                    End="0,18.3060417054961" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,8.24396203658765"
-                    Point2="0,12.2439620365877"
-                    Point3="4,12.2439620365877" />
+                    Point1="0,18.3060417054961"
+                    Point2="0,22.3060417054961"
+                    Point3="4,22.3060417054961" />
                   <mssgle:LineSegment
-                    End="91.2916666201007,12.2439620365877" />
+                    End="92.2916666201007,22.3060417054961" />
                   <mssgle:CubicBezierSegment
-                    Point1="91.2916666201007,12.2439620365877"
-                    Point2="95.2916666201007,12.2439620365877"
-                    Point3="95.2916666201007,16.2439620365877" />
+                    Point1="92.2916666201007,22.3060417054961"
+                    Point2="96.2916666201007,22.3060417054961"
+                    Point3="96.2916666201007,26.3060417054961" />
                   <mssgle:LineSegment
-                    End="95.2916666201007,22.921052206586" />
+                    End="96.2916666201007,47.921052206586" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="1.77944659130036,17.2439620365877,91.7327734375,11.609375"
+              BoundingBox="2.27944659130036,27.3060417054961,91.7327734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Load dữ liệu từ Accidents Stage To NDS.Paths[Derived Column Output1]"
-          TopLeft="374.562500107102,266.368419854925">
+          TopLeft="323.062500107102,348.368419854925">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,47.78947377436"
+              EndConnector="0,34.78947377436"
               Start="0,0"
-              End="0,40.28947377436">
+              End="0,27.28947377436">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,40.28947377436" />
+                    End="0,27.28947377436" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -7901,18 +7901,18 @@ where [refTable].[Age_of_Casualty] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Load dữ liệu từ Accidents Stage To NDS.Paths[Derived Column Output]"
-          TopLeft="752.874999897554,247.105261522317">
+          TopLeft="651.124999897554,340.105261522317">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,67.947368627109"
+              EndConnector="0,42.947368627109"
               Start="0,0"
-              End="0,60.447368627109">
+              End="0,35.447368627109">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,60.447368627109" />
+                    End="0,35.447368627109" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -7923,18 +7923,18 @@ where [refTable].[Age_of_Casualty] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Load dữ liệu từ Accidents Stage To NDS.Paths[OLE DB Source Output]"
-          TopLeft="307,55.8596484080464">
+          TopLeft="492.625000065192,56">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="60.2500001303849,0"
+              EndConnector="0,44.7192968160927"
               Start="0,0"
-              End="52.7500001303849,0">
+              End="0,37.2192968160927">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="52.7500001303849,0" />
+                    End="0,37.2192968160927" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -7945,37 +7945,37 @@ where [refTable].[Age_of_Casualty] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Load dữ liệu từ Accidents Stage To NDS.Paths[Lookup Match Output1]"
-          TopLeft="528.04166667598,173.684209315731">
+          TopLeft="426.04166667598,241.684209315731">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-154.791666545594,49.684210539194"
+              EndConnector="-105.791666545594,63.6842105391941"
               Start="0,0"
-              End="-154.791666545594,42.184210539194">
+              End="-105.791666545594,56.1842105391941">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,15.9970593892876" />
+                    End="0,21.6318240038763" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,15.9970593892876"
-                    Point2="0,19.9970593892876"
-                    Point3="-4,19.9970593892876" />
+                    Point1="0,21.6318240038763"
+                    Point2="0,25.6318240038763"
+                    Point3="-4,25.6318240038763" />
                   <mssgle:LineSegment
-                    End="-150.791666545594,19.9970593892876" />
+                    End="-101.791666545594,25.6318240038763" />
                   <mssgle:CubicBezierSegment
-                    Point1="-150.791666545594,19.9970593892876"
-                    Point2="-154.791666545594,19.9970593892876"
-                    Point3="-154.791666545594,23.9970593892876" />
+                    Point1="-101.791666545594,25.6318240038763"
+                    Point2="-105.791666545594,25.6318240038763"
+                    Point3="-105.791666545594,29.6318240038763" />
                   <mssgle:LineSegment
-                    End="-154.791666545594,42.184210539194" />
+                    End="-105.791666545594,56.1842105391941" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-125.587219991547,24.9970593892876,96.3827734375,11.609375"
+              BoundingBox="-101.087219991547,30.6318240038763,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -8055,9 +8055,9 @@ where [refTable].[Age_of_Casualty] = ?</property>
           Id="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Them CreatedDate, UpdatedDate"
           TopLeft="320.749999869615,279.84210416848" />
         <NodeLayout
-          Size="245,43"
-          Id="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Load du lieu Accidents trong Stage"
-          TopLeft="153,13" />
+          Size="366,42"
+          Id="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Load du lieu Accidents_Stage To Local_Authority trong Stage"
+          TopLeft="89,12" />
         <NodeLayout
           Size="233,43"
           Id="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Cap nhat du lieu Local_Authority"
@@ -8102,7 +8102,7 @@ where [refTable].[Age_of_Casualty] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="8.59889098917874,51.5042399209687,91.7327734375,11.609375"
+              BoundingBox="8.59889098917849,51.5042399209687,91.7327734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -8152,18 +8152,18 @@ where [refTable].[Age_of_Casualty] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS.Paths[OLE DB Source Output]"
-          TopLeft="274.187500004657,56">
+          TopLeft="272.437500004657,54">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,65.684209315731"
+              EndConnector="0,67.684209315731"
               Start="0,0"
-              End="0,58.184209315731">
+              End="0,60.184209315731">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,58.184209315731" />
+                    End="0,60.184209315731" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -8212,7 +8212,7 @@ where [refTable].[Age_of_Casualty] = ?</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Load du lieu Accidents trong Stage">
+    design-time-name="Package\Load dữ liệu từ Accidents_Stage To Local_Authority NDS\Load du lieu Accidents_Stage To Local_Authority trong Stage">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

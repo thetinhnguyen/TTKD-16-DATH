@@ -23,6 +23,7 @@ CREATE DATABASE [UCA_STAGE]
 GO
 USE [UCA_STAGE]
 
+--select * from [dbo].[Accidents_Stage]
 
 /****** Object:  Table [dbo].[Accidents_Stage]    Script Date: 10/21/2021 12:19:23 PM ******/
 SET ANSI_NULLS ON
@@ -98,5 +99,31 @@ CREATE TABLE [Accident_location_Stage] (
     [county] varchar(50),
     [country_name] varchar(50),
     [region_name] varchar(50)
+) ON [PRIMARY]
+GO
+
+/****** Object:  Table [dbo].[Local_Authority_(District)_Stage]    Script Date: 10/21/2021 12:19:23 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO  
+
+CREATE TABLE [dbo].[Local_Authority_(District)_Stage](
+	[Local_Authority_(District)_Id] [int] NULL,
+    [Local_Authority_(District)] nvarchar(255)
+) ON [PRIMARY]
+GO
+
+/****** Object:  Table [dbo].[Severity_Stage]    Script Date: 10/21/2021 12:19:23 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Severity_Stage](
+  [Severity_ID] int NOT NULL,
+  [Severity_Name] varchar(50) NOT NULL
 ) ON [PRIMARY]
 GO

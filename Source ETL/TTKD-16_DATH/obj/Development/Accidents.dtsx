@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="27"
-  DTS:VersionGUID="{61B4637A-9688-4E03-B8AF-0FAD55A5BE63}">
+  DTS:VersionBuild="28"
+  DTS:VersionGUID="{FB27734D-8347-4257-8C30-EC9E49548391}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1591,7 +1591,7 @@
           Id="Package\Load Data Accidents"
           TopLeft="262,217" />
         <NodeLayout
-          Size="167,41"
+          Size="166,42"
           Id="Package\TRUNCATE STAGE"
           TopLeft="256,40" />
         <NodeLayout

@@ -5,13 +5,13 @@ GO
 CREATE DATABASE [UCA_NDS]
 GO
 USE [UCA_NDS]
-/****** Object:  Table [dbo].[Accidents_Stage]    Script Date: 10/21/2021 12:19:23 PM ******/
+/****** Object:  Table [dbo].[Accidents_NDS]    Script Date: 10/21/2021 12:19:23 PM ******/
 SET ANSI_NULLS ON
 GO
 
 SET QUOTED_IDENTIFIER ON
 GO
------------------------------Accidents----------------------------------------
+
 CREATE TABLE [dbo].[Accidents_NDS](
 	[Accident_Index] [int] IDENTITY(1,1) NOT NULL,
     [Accident_NK] varchar(50),
@@ -37,11 +37,18 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
------------------------------------------------------------[Local_Authority_NDS]-----------------------------------------------------------
+
+/****** Object:  Table [dbo].[Local_Authority_NDS]    Script Date: 10/21/2021 12:19:23 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO  
 
 CREATE TABLE [dbo].[Local_Authority_NDS](
 	[Local_Authority_(District)_Id] [int] IDENTITY(1,1) NOT NULL,
     [Local_Authority_(District)] int,
+--	[Local_Authority_(District_name)] nvarchar(255),
     [Local_Authority_(Highway)] varchar(50),
 	[CreatedDate] [datetime] NULL,
 	[UpdatedDate] [datetime] NULL,
@@ -53,7 +60,12 @@ PRIMARY KEY CLUSTERED
 GO
 
 
----------------------------------------Vehicles-----------------------------------------------
+/****** Object:  Table [dbo].[Vehicles_NDS]    Script Date: 10/21/2021 12:19:23 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
 
 CREATE TABLE [Vehicles_NDS] (
 	[Vehicles_Id] [int] IDENTITY(1,1) NOT NULL,
@@ -72,14 +84,13 @@ PRIMARY KEY CLUSTERED
 ) ON [PRIMARY]
 GO
 
-/****** Object:  Table [dbo].[Casualties_Stage]    Script Date: 10/21/2021 12:19:23 PM ******/
+/****** Object:  Table [dbo].[Casualties_NDS]    Script Date: 10/21/2021 12:19:23 PM ******/
 SET ANSI_NULLS ON
 GO
 
 SET QUOTED_IDENTIFIER ON
 GO
 
-----------------------------------------------------------Casualties------------------------------------------------
 CREATE TABLE [Casualties_NDS] (
 	[Casualties_Id] [int] IDENTITY(1,1) NOT NULL,
     [Accident_Index] int,
@@ -97,12 +108,18 @@ PRIMARY KEY CLUSTERED
 ) ON [PRIMARY]
 GO
 
+/****** Object:  Table [dbo].[Age_of_Casualty_NDS]    Script Date: 10/21/2021 12:19:23 PM ******/
+SET ANSI_NULLS ON
+GO
 
--------------------------------[Age_of_Casualty_NDS]-------------------------------------------------
+SET QUOTED_IDENTIFIER ON
+GO
+
 CREATE TABLE [Age_of_Casualty_NDS] (
 	[Age_of_Casualty_Id] [int] IDENTITY(1,1) NOT NULL,
     [Age_of_Casualty] int,
     [Age_Band_of_Casualty] int,
+--  [Age_Band_Name] nvarchar(255),
 	[CreatedDate] [datetime] NULL,
 	[UpdatedDate] [datetime] NULL,
 PRIMARY KEY CLUSTERED 
@@ -111,13 +128,11 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Accident_location_Stage]    Script Date: 10/21/2021 12:19:23 PM ******/
+
+/****** Object:  Table [dbo].[Accident_location_NDS]    Script Date: 10/21/2021 12:19:23 PM ******/
 SET ANSI_NULLS ON
 GO
 
-
-
--------------------------------------------------Accident_location-----------------------------------------
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [Accident_location_NDS] (
