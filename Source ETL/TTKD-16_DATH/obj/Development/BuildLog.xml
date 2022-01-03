@@ -2,7 +2,7 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>TTKD-16_DATH</Name>
-    <LastWriteTime>2022-01-02T14:44:03.6076231Z</LastWriteTime>
+    <LastWriteTime>2022-01-02T23:55:51.6489414Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
@@ -18,7 +18,7 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>StageToNDS.dtsx</Name>
-      <LastWriteTime>2021-12-27T13:32:25.3166036Z</LastWriteTime>
+      <LastWriteTime>2022-01-02T23:54:08.4804975Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
@@ -28,12 +28,12 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Codebook.dtsx</Name>
-      <LastWriteTime>2022-01-02T14:19:48.2668304Z</LastWriteTime>
+      <LastWriteTime>2022-01-02T23:55:51.464434Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Casualties.dtsx</Name>
-      <LastWriteTime>2022-01-02T14:44:03.2941725Z</LastWriteTime>
+      <LastWriteTime>2022-01-02T14:44:46.86397Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>

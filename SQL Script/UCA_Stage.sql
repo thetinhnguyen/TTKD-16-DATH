@@ -110,8 +110,8 @@ SET QUOTED_IDENTIFIER ON
 GO  
 
 CREATE TABLE [dbo].[Local_Authority_District_Stage](
-	[Local_Authority_(District)_Id] [int],
-    [Local_Authority_(District)] nvarchar(255)
+	[Local_Authority_District_Id] [int],
+    [Local_Authority_District_Name] nvarchar(255)
 ) ON [PRIMARY]
 GO
 
