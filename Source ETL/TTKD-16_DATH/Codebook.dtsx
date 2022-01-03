@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="14"
-  DTS:VersionGUID="{2D9BF2D8-CFAD-4068-9C67-BD19BC95E3BE}">
+  DTS:VersionBuild="15"
+  DTS:VersionGUID="{527E3EFB-364A-4C7C-B745-B0C0A4276A8F}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -25,7 +25,7 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="0"
           DTS:ConnectRetryInterval="0"
-          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\DELL\Desktop\TTKD-16-DATH\Data\UK Accidents - Codebook.xls;Extended Properties=&quot;Excel 12.0 XML;HDR=YES&quot;;" />
+          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=D:\DATH BI 2021\TTKD-16-DATH\Data\UK Accidents - Codebook.xls;Extended Properties=&quot;Excel 8.0;HDR=YES&quot;;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -3021,15 +3021,19 @@
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="146.666666666667,41.3333333333334"
+          Size="147,41"
           Id="Package\GET LSET,CET"
           TopLeft="92,151" />
         <NodeLayout
-          Size="198.666666666667,42"
+          Size="238,42"
+          Id="Package\Load Data Age_Band_of_Casualty"
+          TopLeft="88.2499995343392,397.483341109057" />
+        <NodeLayout
+          Size="199,42"
           Id="Package\Load Data Casualty_Type"
           TopLeft="985,245" />
         <NodeLayout
-          Size="260,42.6666666666667"
+          Size="260,43"
           Id="Package\Load Data Journey_Purpose_of_Driver"
           TopLeft="658.624999841676,400.650004405081" />
         <NodeLayout
@@ -3037,7 +3041,7 @@
           Id="Package\Load Data Local_Authority_(District)"
           TopLeft="45,246" />
         <NodeLayout
-          Size="182.666666666667,42"
+          Size="183,42"
           Id="Package\Load Data Road_Type"
           TopLeft="398.62499976717,397.050004451573" />
         <NodeLayout
@@ -3057,7 +3061,7 @@
           Id="Package\TRUNCATE STAGE"
           TopLeft="84,58" />
         <NodeLayout
-          Size="145.333333333334,41.3333333333334"
+          Size="145,41"
           Id="Package\UPDATE LSET"
           TopLeft="126.624999469146,311.40000027895" />
         <EdgeLayout
@@ -3170,10 +3174,6 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="238,42"
-          Id="Package\Load Data Age_Band_of_Casualty"
-          TopLeft="88.2499995343392,397.483341109057" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 5]"
           TopLeft="1081.66666685293,287">
@@ -3287,6 +3287,96 @@
       </GraphLayout>
     </LayoutInfo>
   </Package>
+  <TaskHost
+    design-time-name="Package\Load Data Age_Band_of_Casualty">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="250,42"
+          Id="Package\Load Data Age_Band_of_Casualty\Excel Age_Band_of_Casualty Source"
+          TopLeft="223,57" />
+        <NodeLayout
+          Size="156,41.3333333333334"
+          Id="Package\Load Data Age_Band_of_Casualty\Data Conversion"
+          TopLeft="275,179" />
+        <NodeLayout
+          Size="220,42.6666666666667"
+          Id="Package\Load Data Age_Band_of_Casualty\Age_Band_of_Casualty_Stage"
+          TopLeft="244,313" />
+        <EdgeLayout
+          Id="Package\Load Data Age_Band_of_Casualty.Paths[Excel Source Output]"
+          TopLeft="350.5,99">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,80"
+              Start="0,0"
+              End="0,72.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,72.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load Data Age_Band_of_Casualty.Paths[Data Conversion Output]"
+          TopLeft="353.5,220.333333333333">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,92.6666666666667"
+              Start="0,0"
+              End="0,85.1666666666667">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,85.1666666666667" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load Data Age_Band_of_Casualty\Excel Age_Band_of_Casualty Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load Data Age_Band_of_Casualty\Age_Band_of_Casualty_Stage">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Load Data Casualty_Type">
     <LayoutInfo>
@@ -3906,96 +3996,6 @@
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Load Data Vehicle_Type\Vehicle_Type_Stage">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\Load Data Age_Band_of_Casualty">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="250,42"
-          Id="Package\Load Data Age_Band_of_Casualty\Excel Age_Band_of_Casualty Source"
-          TopLeft="223,57" />
-        <NodeLayout
-          Size="156,41.3333333333334"
-          Id="Package\Load Data Age_Band_of_Casualty\Data Conversion"
-          TopLeft="275,179" />
-        <NodeLayout
-          Size="220,42.6666666666667"
-          Id="Package\Load Data Age_Band_of_Casualty\Age_Band_of_Casualty_Stage"
-          TopLeft="244,313" />
-        <EdgeLayout
-          Id="Package\Load Data Age_Band_of_Casualty.Paths[Excel Source Output]"
-          TopLeft="350.5,99">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,80"
-              Start="0,0"
-              End="0,72.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,72.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Load Data Age_Band_of_Casualty.Paths[Data Conversion Output]"
-          TopLeft="353.5,220.333333333333">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,92.6666666666667"
-              Start="0,0"
-              End="0,85.1666666666667">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,85.1666666666667" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Load Data Age_Band_of_Casualty\Excel Age_Band_of_Casualty Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Load Data Age_Band_of_Casualty\Age_Band_of_Casualty_Stage">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

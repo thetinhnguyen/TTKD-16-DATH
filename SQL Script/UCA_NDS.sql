@@ -160,6 +160,8 @@ CREATE TABLE [dbo].[Vehicle_Type_NDS](
 	[Vehicle_Type_ID] [int] IDENTITY(1,1) NOT NULL,
 	[Vehicle_Type_NK] [int] NULL,
 	[Vehicle_Type_Name] nvarchar(255),
+	[CreatedDate] [datetime] NULL,
+	[UpdatedDate] [datetime] NULL,
  CONSTRAINT [PK_Vehicle_Type_NDS] PRIMARY KEY CLUSTERED 
 (
 	[Vehicle_Type_ID] ASC
@@ -177,6 +179,8 @@ CREATE TABLE [dbo].[Road_Type_NDS](
 	[Road_Type_ID] [int] IDENTITY(1,1) NOT NULL,
 	[Road_Type_NK] [int] NULL,
 	[Road_Type_Name] nvarchar(255),
+	[CreatedDate] [datetime] NULL,
+	[UpdatedDate] [datetime] NULL,
  CONSTRAINT [PK_Road_Type_NDS] PRIMARY KEY CLUSTERED 
 (
 	[Road_Type_ID] ASC
@@ -193,6 +197,8 @@ CREATE TABLE [dbo].[Casualty_Type_NDS](
 	[Casualty_Type_ID] [int] IDENTITY(1,1) NOT NULL,
 	[Casualty_Type_NK] [int] NULL,
 	[Casualty_Type_Name] nvarchar(255),
+	[CreatedDate] [datetime] NULL,
+	[UpdatedDate] [datetime] NULL,
  CONSTRAINT [PK_Casualty_Type_NDS] PRIMARY KEY CLUSTERED 
 (
 	[Casualty_Type_ID] ASC
@@ -209,6 +215,8 @@ CREATE TABLE [dbo].[Journey_Purpose_NDS](
 	[Journey_Purpose_ID] [int] IDENTITY(1,1) NOT NULL,
 	[Journey_Purpose_NK] [int] NULL,
 	[Journey_Purpose_Name] nvarchar(255),
+	[CreatedDate] [datetime] NULL,
+	[UpdatedDate] [datetime] NULL,
  CONSTRAINT [PK_Journey_Purpose_NDS] PRIMARY KEY CLUSTERED 
 (
 	[Journey_Purpose_ID] ASC
@@ -225,6 +233,8 @@ CREATE TABLE [dbo].[Severity_NDS](
 	[Severity_ID] [int] IDENTITY(1,1) NOT NULL,
 	[Severity_NK] [int] NULL,
 	[Severity_Name] nvarchar(255),
+	[CreatedDate] [datetime] NULL,
+	[UpdatedDate] [datetime] NULL,
  CONSTRAINT [PK_Severity_NDS] PRIMARY KEY CLUSTERED 
 (
 	[Severity_ID] ASC
@@ -241,6 +251,8 @@ CREATE TABLE [dbo].[Sex_of_Person_NDS](
 	[Sex_of_Person_ID] [int] IDENTITY(1,1) NOT NULL,
 	[Sex_of_Person_NK] [int] NULL,
 	[Sex_of_Person_Name] nvarchar(255),
+	[CreatedDate] [datetime] NULL,
+	[UpdatedDate] [datetime] NULL,
  CONSTRAINT [PK_Sex_of_Person_NDS] PRIMARY KEY CLUSTERED 
 (
 	[Sex_of_Person_ID] ASC
