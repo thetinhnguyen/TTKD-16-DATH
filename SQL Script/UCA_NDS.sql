@@ -98,7 +98,7 @@ GO
 
 CREATE TABLE [dbo].[Local_Authority_District_NDS](
 	[Local_Authority_District_Id] [int] IDENTITY(1,1) NOT NULL,
-    [Local_Authority_District] int,
+    [Local_Authority_District_NK] int,
 	[Local_Authority_District_Name] nvarchar(255),
 	[CreatedDate] [datetime] NULL,
 	[UpdatedDate] [datetime] NULL,
