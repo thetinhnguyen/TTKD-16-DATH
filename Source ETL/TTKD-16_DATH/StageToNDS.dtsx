@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="24"
-  DTS:VersionGUID="{97F735C2-AB24-40CD-8AC5-74A2756E7A5F}">
+  DTS:VersionBuild="26"
+  DTS:VersionGUID="{FAF5C232-385D-40B2-99BE-9324803BAF4F}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -7265,7 +7265,7 @@ where [refTable].[Sex_of_Person_NK] = ?</property>
                   expressionType="Notify"
                   name="SqlCommand"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">   update Casualty_Type_NDS set  
-   [Casualty_Type_Name]=?
+   [Casualty_Type_Name]=?,[UpdatedDate]=?
  where [Casualty_Type_NK]=?</property>
                 <property
                   dataType="System.Int32"
@@ -7296,10 +7296,16 @@ where [refTable].[Sex_of_Person_NK] = ?</property>
                       externalMetadataColumnId="Package\Load dữ liệu từ Casualty_Type_Stage To Casualty_Type_NDS\Cap nhat du lieu  Sex_of_Person.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
                       lineageId="Package\Load dữ liệu từ Casualty_Type_Stage To Casualty_Type_NDS\Load du lieu Casualty_Type trong Stage.Outputs[OLE DB Source Output].Columns[Casualty_Type_Name]" />
                     <inputColumn
+                      refId="Package\Load dữ liệu từ Casualty_Type_Stage To Casualty_Type_NDS\Cap nhat du lieu  Sex_of_Person.Inputs[OLE DB Command Input].Columns[UpdatedDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="UpdatedDate"
+                      externalMetadataColumnId="Package\Load dữ liệu từ Casualty_Type_Stage To Casualty_Type_NDS\Cap nhat du lieu  Sex_of_Person.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      lineageId="Package\Load dữ liệu từ Casualty_Type_Stage To Casualty_Type_NDS\Them UpdatedDate.Outputs[Derived Column Output].Columns[UpdatedDate]" />
+                    <inputColumn
                       refId="Package\Load dữ liệu từ Casualty_Type_Stage To Casualty_Type_NDS\Cap nhat du lieu  Sex_of_Person.Inputs[OLE DB Command Input].Columns[Casualty_Type_NKTrongNDS]"
                       cachedDataType="i4"
                       cachedName="Casualty_Type_NKTrongNDS"
-                      externalMetadataColumnId="Package\Load dữ liệu từ Casualty_Type_Stage To Casualty_Type_NDS\Cap nhat du lieu  Sex_of_Person.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      externalMetadataColumnId="Package\Load dữ liệu từ Casualty_Type_Stage To Casualty_Type_NDS\Cap nhat du lieu  Sex_of_Person.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
                       lineageId="Package\Load dữ liệu từ Casualty_Type_Stage To Casualty_Type_NDS\Xem xet du lieu Casualty_Type _NK  co nam trong NDS.Outputs[Lookup Match Output].Columns[Casualty_Type_NKTrongNDS]" />
                   </inputColumns>
                   <externalMetadataColumns
@@ -7318,13 +7324,24 @@ where [refTable].[Sex_of_Person_NK] = ?</property>
                     </externalMetadataColumn>
                     <externalMetadataColumn
                       refId="Package\Load dữ liệu từ Casualty_Type_Stage To Casualty_Type_NDS\Cap nhat du lieu  Sex_of_Person.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
-                      dataType="i4"
+                      dataType="dbTimeStamp"
                       name="Param_1">
                       <properties>
                         <property
                           dataType="System.Int32"
                           description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
                           name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Load dữ liệu từ Casualty_Type_Stage To Casualty_Type_NDS\Cap nhat du lieu  Sex_of_Person.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      dataType="i4"
+                      name="Param_2">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
                       </properties>
                     </externalMetadataColumn>
                   </externalMetadataColumns>
@@ -7669,6 +7686,18 @@ where [refTable].[Sex_of_Person_NK] = ?</property>
                       cachedName="Casualty_Type_ID"
                       externalMetadataColumnId="Package\Load dữ liệu từ Casualty_Type_Stage To Casualty_Type_NDS\Them du lieu Sex_of_Person.Inputs[OLE DB Destination Input].ExternalColumns[Casualty_Type_NK]"
                       lineageId="Package\Load dữ liệu từ Casualty_Type_Stage To Casualty_Type_NDS\Load du lieu Casualty_Type trong Stage.Outputs[OLE DB Source Output].Columns[Casualty_Type_ID]" />
+                    <inputColumn
+                      refId="Package\Load dữ liệu từ Casualty_Type_Stage To Casualty_Type_NDS\Them du lieu Sex_of_Person.Inputs[OLE DB Destination Input].Columns[CreatedDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="CreatedDate"
+                      externalMetadataColumnId="Package\Load dữ liệu từ Casualty_Type_Stage To Casualty_Type_NDS\Them du lieu Sex_of_Person.Inputs[OLE DB Destination Input].ExternalColumns[CreatedDate]"
+                      lineageId="Package\Load dữ liệu từ Casualty_Type_Stage To Casualty_Type_NDS\Them CreatedDate, UpdatedDate.Outputs[Derived Column Output].Columns[CreatedDate]" />
+                    <inputColumn
+                      refId="Package\Load dữ liệu từ Casualty_Type_Stage To Casualty_Type_NDS\Them du lieu Sex_of_Person.Inputs[OLE DB Destination Input].Columns[UpdatedDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="UpdatedDate"
+                      externalMetadataColumnId="Package\Load dữ liệu từ Casualty_Type_Stage To Casualty_Type_NDS\Them du lieu Sex_of_Person.Inputs[OLE DB Destination Input].ExternalColumns[UpdatedDate]"
+                      lineageId="Package\Load dữ liệu từ Casualty_Type_Stage To Casualty_Type_NDS\Them CreatedDate, UpdatedDate.Outputs[Derived Column Output].Columns[UpdatedDate]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -7685,6 +7714,14 @@ where [refTable].[Sex_of_Person_NK] = ?</property>
                       dataType="wstr"
                       length="255"
                       name="Casualty_Type_Name" />
+                    <externalMetadataColumn
+                      refId="Package\Load dữ liệu từ Casualty_Type_Stage To Casualty_Type_NDS\Them du lieu Sex_of_Person.Inputs[OLE DB Destination Input].ExternalColumns[CreatedDate]"
+                      dataType="dbTimeStamp"
+                      name="CreatedDate" />
+                    <externalMetadataColumn
+                      refId="Package\Load dữ liệu từ Casualty_Type_Stage To Casualty_Type_NDS\Them du lieu Sex_of_Person.Inputs[OLE DB Destination Input].ExternalColumns[UpdatedDate]"
+                      dataType="dbTimeStamp"
+                      name="UpdatedDate" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -8008,7 +8045,7 @@ where [refTable].[Casualty_Type_NK] = ?</property>
                   expressionType="Notify"
                   name="SqlCommand"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">   update [Journey_Purpose_NDS]set  
-   [Journey_Purpose_Name]=?
+   [Journey_Purpose_Name]=?,[UpdatedDate]=?
  where [Journey_Purpose_NK]=?</property>
                 <property
                   dataType="System.Int32"
@@ -8039,10 +8076,16 @@ where [refTable].[Casualty_Type_NK] = ?</property>
                       externalMetadataColumnId="Package\Load dữ liệu từ Journey_Purpose_Stage To Journey_Purpose_NDS\Cap nhat du lieu Journey_Purpose.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
                       lineageId="Package\Load dữ liệu từ Journey_Purpose_Stage To Journey_Purpose_NDS\Load du lieu Journey_Purpose trong Stage.Outputs[OLE DB Source Output].Columns[Journey_Purpose_of_Driver_Name]" />
                     <inputColumn
+                      refId="Package\Load dữ liệu từ Journey_Purpose_Stage To Journey_Purpose_NDS\Cap nhat du lieu Journey_Purpose.Inputs[OLE DB Command Input].Columns[UpdatedDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="UpdatedDate"
+                      externalMetadataColumnId="Package\Load dữ liệu từ Journey_Purpose_Stage To Journey_Purpose_NDS\Cap nhat du lieu Journey_Purpose.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      lineageId="Package\Load dữ liệu từ Journey_Purpose_Stage To Journey_Purpose_NDS\Them UpdatedDate.Outputs[Derived Column Output].Columns[UpdatedDate]" />
+                    <inputColumn
                       refId="Package\Load dữ liệu từ Journey_Purpose_Stage To Journey_Purpose_NDS\Cap nhat du lieu Journey_Purpose.Inputs[OLE DB Command Input].Columns[Journey_Purpose_NKTrongNDS]"
                       cachedDataType="i4"
                       cachedName="Journey_Purpose_NKTrongNDS"
-                      externalMetadataColumnId="Package\Load dữ liệu từ Journey_Purpose_Stage To Journey_Purpose_NDS\Cap nhat du lieu Journey_Purpose.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      externalMetadataColumnId="Package\Load dữ liệu từ Journey_Purpose_Stage To Journey_Purpose_NDS\Cap nhat du lieu Journey_Purpose.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
                       lineageId="Package\Load dữ liệu từ Journey_Purpose_Stage To Journey_Purpose_NDS\Xem xet Journey_Purpose_Nk du lieu co nam trong NDS.Outputs[Lookup Match Output].Columns[Journey_Purpose_NKTrongNDS]" />
                   </inputColumns>
                   <externalMetadataColumns
@@ -8061,13 +8104,24 @@ where [refTable].[Casualty_Type_NK] = ?</property>
                     </externalMetadataColumn>
                     <externalMetadataColumn
                       refId="Package\Load dữ liệu từ Journey_Purpose_Stage To Journey_Purpose_NDS\Cap nhat du lieu Journey_Purpose.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
-                      dataType="i4"
+                      dataType="dbTimeStamp"
                       name="Param_1">
                       <properties>
                         <property
                           dataType="System.Int32"
                           description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
                           name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Load dữ liệu từ Journey_Purpose_Stage To Journey_Purpose_NDS\Cap nhat du lieu Journey_Purpose.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      dataType="i4"
+                      name="Param_2">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
                       </properties>
                     </externalMetadataColumn>
                   </externalMetadataColumns>
@@ -8412,6 +8466,18 @@ where [refTable].[Casualty_Type_NK] = ?</property>
                       cachedName="Journey_Purpose_of_Driver_Name"
                       externalMetadataColumnId="Package\Load dữ liệu từ Journey_Purpose_Stage To Journey_Purpose_NDS\Them du lieu Journey_Purpose.Inputs[OLE DB Destination Input].ExternalColumns[Journey_Purpose_Name]"
                       lineageId="Package\Load dữ liệu từ Journey_Purpose_Stage To Journey_Purpose_NDS\Load du lieu Journey_Purpose trong Stage.Outputs[OLE DB Source Output].Columns[Journey_Purpose_of_Driver_Name]" />
+                    <inputColumn
+                      refId="Package\Load dữ liệu từ Journey_Purpose_Stage To Journey_Purpose_NDS\Them du lieu Journey_Purpose.Inputs[OLE DB Destination Input].Columns[CreatedDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="CreatedDate"
+                      externalMetadataColumnId="Package\Load dữ liệu từ Journey_Purpose_Stage To Journey_Purpose_NDS\Them du lieu Journey_Purpose.Inputs[OLE DB Destination Input].ExternalColumns[CreatedDate]"
+                      lineageId="Package\Load dữ liệu từ Journey_Purpose_Stage To Journey_Purpose_NDS\Them CreatedDate, UpdatedDate.Outputs[Derived Column Output].Columns[CreatedDate]" />
+                    <inputColumn
+                      refId="Package\Load dữ liệu từ Journey_Purpose_Stage To Journey_Purpose_NDS\Them du lieu Journey_Purpose.Inputs[OLE DB Destination Input].Columns[UpdatedDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="UpdatedDate"
+                      externalMetadataColumnId="Package\Load dữ liệu từ Journey_Purpose_Stage To Journey_Purpose_NDS\Them du lieu Journey_Purpose.Inputs[OLE DB Destination Input].ExternalColumns[UpdatedDate]"
+                      lineageId="Package\Load dữ liệu từ Journey_Purpose_Stage To Journey_Purpose_NDS\Them CreatedDate, UpdatedDate.Outputs[Derived Column Output].Columns[UpdatedDate]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -8428,6 +8494,14 @@ where [refTable].[Casualty_Type_NK] = ?</property>
                       dataType="wstr"
                       length="255"
                       name="Journey_Purpose_Name" />
+                    <externalMetadataColumn
+                      refId="Package\Load dữ liệu từ Journey_Purpose_Stage To Journey_Purpose_NDS\Them du lieu Journey_Purpose.Inputs[OLE DB Destination Input].ExternalColumns[CreatedDate]"
+                      dataType="dbTimeStamp"
+                      name="CreatedDate" />
+                    <externalMetadataColumn
+                      refId="Package\Load dữ liệu từ Journey_Purpose_Stage To Journey_Purpose_NDS\Them du lieu Journey_Purpose.Inputs[OLE DB Destination Input].ExternalColumns[UpdatedDate]"
+                      dataType="dbTimeStamp"
+                      name="UpdatedDate" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -9532,7 +9606,7 @@ where [refTable].[Local_Authority_District_NK] = ?</property>
                   expressionType="Notify"
                   name="SqlCommand"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">   update [Road_Type_NDS]set  
-    [Road_Type_Name]=?
+    [Road_Type_Name]=?,[UpdatedDate]=?
  where  [Road_Type_NK]=?</property>
                 <property
                   dataType="System.Int32"
@@ -9563,10 +9637,16 @@ where [refTable].[Local_Authority_District_NK] = ?</property>
                       externalMetadataColumnId="Package\Load dữ liệu từ Road_Type_Stage To Road_Type_NDS\Cap nhat du lieu Severity.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
                       lineageId="Package\Load dữ liệu từ Road_Type_Stage To Road_Type_NDS\Load du lieu Road_Type trong Stage.Outputs[OLE DB Source Output].Columns[Road_Type_Name]" />
                     <inputColumn
+                      refId="Package\Load dữ liệu từ Road_Type_Stage To Road_Type_NDS\Cap nhat du lieu Severity.Inputs[OLE DB Command Input].Columns[UpdatedDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="UpdatedDate"
+                      externalMetadataColumnId="Package\Load dữ liệu từ Road_Type_Stage To Road_Type_NDS\Cap nhat du lieu Severity.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      lineageId="Package\Load dữ liệu từ Road_Type_Stage To Road_Type_NDS\Them UpdatedDate.Outputs[Derived Column Output].Columns[UpdatedDate]" />
+                    <inputColumn
                       refId="Package\Load dữ liệu từ Road_Type_Stage To Road_Type_NDS\Cap nhat du lieu Severity.Inputs[OLE DB Command Input].Columns[Road_Type_NK_trongNDS]"
                       cachedDataType="i4"
                       cachedName="Road_Type_NK_trongNDS"
-                      externalMetadataColumnId="Package\Load dữ liệu từ Road_Type_Stage To Road_Type_NDS\Cap nhat du lieu Severity.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      externalMetadataColumnId="Package\Load dữ liệu từ Road_Type_Stage To Road_Type_NDS\Cap nhat du lieu Severity.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
                       lineageId="Package\Load dữ liệu từ Road_Type_Stage To Road_Type_NDS\Xem xet Severity_Nk du lieu co nam trong NDS.Outputs[Lookup Match Output].Columns[Road_Type_NK_trongNDS]" />
                   </inputColumns>
                   <externalMetadataColumns
@@ -9585,13 +9665,24 @@ where [refTable].[Local_Authority_District_NK] = ?</property>
                     </externalMetadataColumn>
                     <externalMetadataColumn
                       refId="Package\Load dữ liệu từ Road_Type_Stage To Road_Type_NDS\Cap nhat du lieu Severity.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
-                      dataType="i4"
+                      dataType="dbTimeStamp"
                       name="Param_1">
                       <properties>
                         <property
                           dataType="System.Int32"
                           description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
                           name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Load dữ liệu từ Road_Type_Stage To Road_Type_NDS\Cap nhat du lieu Severity.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      dataType="i4"
+                      name="Param_2">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
                       </properties>
                     </externalMetadataColumn>
                   </externalMetadataColumns>
@@ -9936,6 +10027,18 @@ where [refTable].[Local_Authority_District_NK] = ?</property>
                       cachedName="Road_Type_ID"
                       externalMetadataColumnId="Package\Load dữ liệu từ Road_Type_Stage To Road_Type_NDS\Them du lieu Severity.Inputs[OLE DB Destination Input].ExternalColumns[Road_Type_NK]"
                       lineageId="Package\Load dữ liệu từ Road_Type_Stage To Road_Type_NDS\Load du lieu Road_Type trong Stage.Outputs[OLE DB Source Output].Columns[Road_Type_ID]" />
+                    <inputColumn
+                      refId="Package\Load dữ liệu từ Road_Type_Stage To Road_Type_NDS\Them du lieu Severity.Inputs[OLE DB Destination Input].Columns[CreatedDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="CreatedDate"
+                      externalMetadataColumnId="Package\Load dữ liệu từ Road_Type_Stage To Road_Type_NDS\Them du lieu Severity.Inputs[OLE DB Destination Input].ExternalColumns[CreatedDate]"
+                      lineageId="Package\Load dữ liệu từ Road_Type_Stage To Road_Type_NDS\Them CreatedDate, UpdatedDate.Outputs[Derived Column Output].Columns[CreatedDate]" />
+                    <inputColumn
+                      refId="Package\Load dữ liệu từ Road_Type_Stage To Road_Type_NDS\Them du lieu Severity.Inputs[OLE DB Destination Input].Columns[UpdatedDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="UpdatedDate"
+                      externalMetadataColumnId="Package\Load dữ liệu từ Road_Type_Stage To Road_Type_NDS\Them du lieu Severity.Inputs[OLE DB Destination Input].ExternalColumns[UpdatedDate]"
+                      lineageId="Package\Load dữ liệu từ Road_Type_Stage To Road_Type_NDS\Them CreatedDate, UpdatedDate.Outputs[Derived Column Output].Columns[UpdatedDate]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -9952,6 +10055,14 @@ where [refTable].[Local_Authority_District_NK] = ?</property>
                       dataType="wstr"
                       length="255"
                       name="Road_Type_Name" />
+                    <externalMetadataColumn
+                      refId="Package\Load dữ liệu từ Road_Type_Stage To Road_Type_NDS\Them du lieu Severity.Inputs[OLE DB Destination Input].ExternalColumns[CreatedDate]"
+                      dataType="dbTimeStamp"
+                      name="CreatedDate" />
+                    <externalMetadataColumn
+                      refId="Package\Load dữ liệu từ Road_Type_Stage To Road_Type_NDS\Them du lieu Severity.Inputs[OLE DB Destination Input].ExternalColumns[UpdatedDate]"
+                      dataType="dbTimeStamp"
+                      name="UpdatedDate" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -10275,7 +10386,7 @@ where [refTable].[Road_Type_NK] = ?</property>
                   expressionType="Notify"
                   name="SqlCommand"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">   update [Severity_NDS] set  
-    [Severity_Name]=?
+    [Severity_Name]=?,[UpdatedDate]=?
  where  [Severity_NK]=?</property>
                 <property
                   dataType="System.Int32"
@@ -10309,8 +10420,14 @@ where [refTable].[Road_Type_NK] = ?</property>
                       refId="Package\Load dữ liệu từ Severity_Stage To Severity_NDS\Cap nhat du lieu Severity.Inputs[OLE DB Command Input].Columns[Severity_NK_TrongNDS]"
                       cachedDataType="i4"
                       cachedName="Severity_NK_TrongNDS"
-                      externalMetadataColumnId="Package\Load dữ liệu từ Severity_Stage To Severity_NDS\Cap nhat du lieu Severity.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      externalMetadataColumnId="Package\Load dữ liệu từ Severity_Stage To Severity_NDS\Cap nhat du lieu Severity.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
                       lineageId="Package\Load dữ liệu từ Severity_Stage To Severity_NDS\Xem xet Severity_Nk du lieu co nam trong NDS.Outputs[Lookup Match Output].Columns[Severity_NK_TrongNDS]" />
+                    <inputColumn
+                      refId="Package\Load dữ liệu từ Severity_Stage To Severity_NDS\Cap nhat du lieu Severity.Inputs[OLE DB Command Input].Columns[UpdatedDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="UpdatedDate"
+                      externalMetadataColumnId="Package\Load dữ liệu từ Severity_Stage To Severity_NDS\Cap nhat du lieu Severity.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      lineageId="Package\Load dữ liệu từ Severity_Stage To Severity_NDS\Them UpdatedDate.Outputs[Derived Column Output].Columns[UpdatedDate]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -10328,13 +10445,24 @@ where [refTable].[Road_Type_NK] = ?</property>
                     </externalMetadataColumn>
                     <externalMetadataColumn
                       refId="Package\Load dữ liệu từ Severity_Stage To Severity_NDS\Cap nhat du lieu Severity.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
-                      dataType="i4"
+                      dataType="dbTimeStamp"
                       name="Param_1">
                       <properties>
                         <property
                           dataType="System.Int32"
                           description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
                           name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Load dữ liệu từ Severity_Stage To Severity_NDS\Cap nhat du lieu Severity.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      dataType="i4"
+                      name="Param_2">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
                       </properties>
                     </externalMetadataColumn>
                   </externalMetadataColumns>
@@ -10679,6 +10807,18 @@ where [refTable].[Road_Type_NK] = ?</property>
                       cachedName="Severity_ID"
                       externalMetadataColumnId="Package\Load dữ liệu từ Severity_Stage To Severity_NDS\Them du lieu Severity.Inputs[OLE DB Destination Input].ExternalColumns[Severity_NK]"
                       lineageId="Package\Load dữ liệu từ Severity_Stage To Severity_NDS\Load du lieu Severity trong Stage.Outputs[OLE DB Source Output].Columns[Severity_ID]" />
+                    <inputColumn
+                      refId="Package\Load dữ liệu từ Severity_Stage To Severity_NDS\Them du lieu Severity.Inputs[OLE DB Destination Input].Columns[CreatedDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="CreatedDate"
+                      externalMetadataColumnId="Package\Load dữ liệu từ Severity_Stage To Severity_NDS\Them du lieu Severity.Inputs[OLE DB Destination Input].ExternalColumns[CreatedDate]"
+                      lineageId="Package\Load dữ liệu từ Severity_Stage To Severity_NDS\Them CreatedDate, UpdatedDate.Outputs[Derived Column Output].Columns[CreatedDate]" />
+                    <inputColumn
+                      refId="Package\Load dữ liệu từ Severity_Stage To Severity_NDS\Them du lieu Severity.Inputs[OLE DB Destination Input].Columns[UpdatedDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="UpdatedDate"
+                      externalMetadataColumnId="Package\Load dữ liệu từ Severity_Stage To Severity_NDS\Them du lieu Severity.Inputs[OLE DB Destination Input].ExternalColumns[UpdatedDate]"
+                      lineageId="Package\Load dữ liệu từ Severity_Stage To Severity_NDS\Them CreatedDate, UpdatedDate.Outputs[Derived Column Output].Columns[UpdatedDate]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -10695,6 +10835,14 @@ where [refTable].[Road_Type_NK] = ?</property>
                       dataType="wstr"
                       length="255"
                       name="Severity_Name" />
+                    <externalMetadataColumn
+                      refId="Package\Load dữ liệu từ Severity_Stage To Severity_NDS\Them du lieu Severity.Inputs[OLE DB Destination Input].ExternalColumns[CreatedDate]"
+                      dataType="dbTimeStamp"
+                      name="CreatedDate" />
+                    <externalMetadataColumn
+                      refId="Package\Load dữ liệu từ Severity_Stage To Severity_NDS\Them du lieu Severity.Inputs[OLE DB Destination Input].ExternalColumns[UpdatedDate]"
+                      dataType="dbTimeStamp"
+                      name="UpdatedDate" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -11018,7 +11166,7 @@ where [refTable].[Severity_NK] = ?</property>
                   expressionType="Notify"
                   name="SqlCommand"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">   update [Sex_of_Person_NDS] set  
-   [Sex_of_Person_Name]=?
+   [Sex_of_Person_Name]=?,[UpdatedDate]=?
  where [Sex_of_Person_NK]=?</property>
                 <property
                   dataType="System.Int32"
@@ -11049,10 +11197,16 @@ where [refTable].[Severity_NK] = ?</property>
                       externalMetadataColumnId="Package\Load dữ liệu từ Sex_of_Person Stage To Sex_of_Person NDS\Cap nhat du lieu  Sex_of_Person.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
                       lineageId="Package\Load dữ liệu từ Sex_of_Person Stage To Sex_of_Person NDS\Load du lieu Sex_of_Casualty trong Stage.Outputs[OLE DB Source Output].Columns[Sex_of_Casualty_Name]" />
                     <inputColumn
+                      refId="Package\Load dữ liệu từ Sex_of_Person Stage To Sex_of_Person NDS\Cap nhat du lieu  Sex_of_Person.Inputs[OLE DB Command Input].Columns[UpdatedDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="UpdatedDate"
+                      externalMetadataColumnId="Package\Load dữ liệu từ Sex_of_Person Stage To Sex_of_Person NDS\Cap nhat du lieu  Sex_of_Person.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      lineageId="Package\Load dữ liệu từ Sex_of_Person Stage To Sex_of_Person NDS\Them UpdatedDate.Outputs[Derived Column Output].Columns[UpdatedDate]" />
+                    <inputColumn
                       refId="Package\Load dữ liệu từ Sex_of_Person Stage To Sex_of_Person NDS\Cap nhat du lieu  Sex_of_Person.Inputs[OLE DB Command Input].Columns[Sex_of_Person_NKTrongNDS]"
                       cachedDataType="i4"
                       cachedName="Sex_of_Person_NKTrongNDS"
-                      externalMetadataColumnId="Package\Load dữ liệu từ Sex_of_Person Stage To Sex_of_Person NDS\Cap nhat du lieu  Sex_of_Person.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      externalMetadataColumnId="Package\Load dữ liệu từ Sex_of_Person Stage To Sex_of_Person NDS\Cap nhat du lieu  Sex_of_Person.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
                       lineageId="Package\Load dữ liệu từ Sex_of_Person Stage To Sex_of_Person NDS\Xem xet du lieu Sex_of_Person_NK  co nam trong NDS.Outputs[Lookup Match Output].Columns[Sex_of_Person_NKTrongNDS]" />
                   </inputColumns>
                   <externalMetadataColumns
@@ -11071,13 +11225,24 @@ where [refTable].[Severity_NK] = ?</property>
                     </externalMetadataColumn>
                     <externalMetadataColumn
                       refId="Package\Load dữ liệu từ Sex_of_Person Stage To Sex_of_Person NDS\Cap nhat du lieu  Sex_of_Person.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
-                      dataType="i4"
+                      dataType="dbTimeStamp"
                       name="Param_1">
                       <properties>
                         <property
                           dataType="System.Int32"
                           description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
                           name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Load dữ liệu từ Sex_of_Person Stage To Sex_of_Person NDS\Cap nhat du lieu  Sex_of_Person.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      dataType="i4"
+                      name="Param_2">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
                       </properties>
                     </externalMetadataColumn>
                   </externalMetadataColumns>
@@ -11422,6 +11587,18 @@ where [refTable].[Severity_NK] = ?</property>
                       cachedName="Sex_of_Casualty_Name"
                       externalMetadataColumnId="Package\Load dữ liệu từ Sex_of_Person Stage To Sex_of_Person NDS\Them du lieu Sex_of_Person.Inputs[OLE DB Destination Input].ExternalColumns[Sex_of_Person_Name]"
                       lineageId="Package\Load dữ liệu từ Sex_of_Person Stage To Sex_of_Person NDS\Load du lieu Sex_of_Casualty trong Stage.Outputs[OLE DB Source Output].Columns[Sex_of_Casualty_Name]" />
+                    <inputColumn
+                      refId="Package\Load dữ liệu từ Sex_of_Person Stage To Sex_of_Person NDS\Them du lieu Sex_of_Person.Inputs[OLE DB Destination Input].Columns[CreatedDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="CreatedDate"
+                      externalMetadataColumnId="Package\Load dữ liệu từ Sex_of_Person Stage To Sex_of_Person NDS\Them du lieu Sex_of_Person.Inputs[OLE DB Destination Input].ExternalColumns[CreatedDate]"
+                      lineageId="Package\Load dữ liệu từ Sex_of_Person Stage To Sex_of_Person NDS\Them CreatedDate, UpdatedDate.Outputs[Derived Column Output].Columns[CreatedDate]" />
+                    <inputColumn
+                      refId="Package\Load dữ liệu từ Sex_of_Person Stage To Sex_of_Person NDS\Them du lieu Sex_of_Person.Inputs[OLE DB Destination Input].Columns[UpdatedDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="UpdatedDate"
+                      externalMetadataColumnId="Package\Load dữ liệu từ Sex_of_Person Stage To Sex_of_Person NDS\Them du lieu Sex_of_Person.Inputs[OLE DB Destination Input].ExternalColumns[UpdatedDate]"
+                      lineageId="Package\Load dữ liệu từ Sex_of_Person Stage To Sex_of_Person NDS\Them CreatedDate, UpdatedDate.Outputs[Derived Column Output].Columns[UpdatedDate]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -11438,6 +11615,14 @@ where [refTable].[Severity_NK] = ?</property>
                       dataType="wstr"
                       length="255"
                       name="Sex_of_Person_Name" />
+                    <externalMetadataColumn
+                      refId="Package\Load dữ liệu từ Sex_of_Person Stage To Sex_of_Person NDS\Them du lieu Sex_of_Person.Inputs[OLE DB Destination Input].ExternalColumns[CreatedDate]"
+                      dataType="dbTimeStamp"
+                      name="CreatedDate" />
+                    <externalMetadataColumn
+                      refId="Package\Load dữ liệu từ Sex_of_Person Stage To Sex_of_Person NDS\Them du lieu Sex_of_Person.Inputs[OLE DB Destination Input].ExternalColumns[UpdatedDate]"
+                      dataType="dbTimeStamp"
+                      name="UpdatedDate" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -11761,7 +11946,7 @@ where [refTable].[Sex_of_Person_NK] = ?</property>
                   expressionType="Notify"
                   name="SqlCommand"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">   update [Vehicle_Type_NDS]set  
-  [Vehicle_Type_Name]=?
+  [Vehicle_Type_Name]=?,[UpdatedDate]=?
  where [Vehicle_Type_NK]=?</property>
                 <property
                   dataType="System.Int32"
@@ -11792,10 +11977,16 @@ where [refTable].[Sex_of_Person_NK] = ?</property>
                       externalMetadataColumnId="Package\Load dữ liệu từ Vehicle_Type_Stage To Vehicle_Type_NDS\Cap nhat du lieu Vehicle_Type.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
                       lineageId="Package\Load dữ liệu từ Vehicle_Type_Stage To Vehicle_Type_NDS\Load du lieu Vehicle_Type trong Stage.Outputs[OLE DB Source Output].Columns[Vehicle_Type_Name]" />
                     <inputColumn
+                      refId="Package\Load dữ liệu từ Vehicle_Type_Stage To Vehicle_Type_NDS\Cap nhat du lieu Vehicle_Type.Inputs[OLE DB Command Input].Columns[UpdatedDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="UpdatedDate"
+                      externalMetadataColumnId="Package\Load dữ liệu từ Vehicle_Type_Stage To Vehicle_Type_NDS\Cap nhat du lieu Vehicle_Type.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      lineageId="Package\Load dữ liệu từ Vehicle_Type_Stage To Vehicle_Type_NDS\Them UpdatedDate.Outputs[Derived Column Output].Columns[UpdatedDate]" />
+                    <inputColumn
                       refId="Package\Load dữ liệu từ Vehicle_Type_Stage To Vehicle_Type_NDS\Cap nhat du lieu Vehicle_Type.Inputs[OLE DB Command Input].Columns[Vehicle_Type_NKTrongNDS]"
                       cachedDataType="i4"
                       cachedName="Vehicle_Type_NKTrongNDS"
-                      externalMetadataColumnId="Package\Load dữ liệu từ Vehicle_Type_Stage To Vehicle_Type_NDS\Cap nhat du lieu Vehicle_Type.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      externalMetadataColumnId="Package\Load dữ liệu từ Vehicle_Type_Stage To Vehicle_Type_NDS\Cap nhat du lieu Vehicle_Type.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
                       lineageId="Package\Load dữ liệu từ Vehicle_Type_Stage To Vehicle_Type_NDS\Xem xet Vehicle_Type_Nk du lieu co nam trong NDS.Outputs[Lookup Match Output].Columns[Vehicle_Type_NKTrongNDS]" />
                   </inputColumns>
                   <externalMetadataColumns
@@ -11814,13 +12005,24 @@ where [refTable].[Sex_of_Person_NK] = ?</property>
                     </externalMetadataColumn>
                     <externalMetadataColumn
                       refId="Package\Load dữ liệu từ Vehicle_Type_Stage To Vehicle_Type_NDS\Cap nhat du lieu Vehicle_Type.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
-                      dataType="i4"
+                      dataType="dbTimeStamp"
                       name="Param_1">
                       <properties>
                         <property
                           dataType="System.Int32"
                           description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
                           name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Load dữ liệu từ Vehicle_Type_Stage To Vehicle_Type_NDS\Cap nhat du lieu Vehicle_Type.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      dataType="i4"
+                      name="Param_2">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
                       </properties>
                     </externalMetadataColumn>
                   </externalMetadataColumns>
@@ -12165,6 +12367,18 @@ where [refTable].[Sex_of_Person_NK] = ?</property>
                       cachedName="Vehicle_Type_ID"
                       externalMetadataColumnId="Package\Load dữ liệu từ Vehicle_Type_Stage To Vehicle_Type_NDS\Them du lieu Vehicle_Type.Inputs[OLE DB Destination Input].ExternalColumns[Vehicle_Type_NK]"
                       lineageId="Package\Load dữ liệu từ Vehicle_Type_Stage To Vehicle_Type_NDS\Load du lieu Vehicle_Type trong Stage.Outputs[OLE DB Source Output].Columns[Vehicle_Type_ID]" />
+                    <inputColumn
+                      refId="Package\Load dữ liệu từ Vehicle_Type_Stage To Vehicle_Type_NDS\Them du lieu Vehicle_Type.Inputs[OLE DB Destination Input].Columns[CreatedDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="CreatedDate"
+                      externalMetadataColumnId="Package\Load dữ liệu từ Vehicle_Type_Stage To Vehicle_Type_NDS\Them du lieu Vehicle_Type.Inputs[OLE DB Destination Input].ExternalColumns[CreatedDate]"
+                      lineageId="Package\Load dữ liệu từ Vehicle_Type_Stage To Vehicle_Type_NDS\Them CreatedDate, UpdatedDate.Outputs[Derived Column Output].Columns[CreatedDate]" />
+                    <inputColumn
+                      refId="Package\Load dữ liệu từ Vehicle_Type_Stage To Vehicle_Type_NDS\Them du lieu Vehicle_Type.Inputs[OLE DB Destination Input].Columns[UpdatedDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="UpdatedDate"
+                      externalMetadataColumnId="Package\Load dữ liệu từ Vehicle_Type_Stage To Vehicle_Type_NDS\Them du lieu Vehicle_Type.Inputs[OLE DB Destination Input].ExternalColumns[UpdatedDate]"
+                      lineageId="Package\Load dữ liệu từ Vehicle_Type_Stage To Vehicle_Type_NDS\Them CreatedDate, UpdatedDate.Outputs[Derived Column Output].Columns[UpdatedDate]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -12181,6 +12395,14 @@ where [refTable].[Sex_of_Person_NK] = ?</property>
                       dataType="wstr"
                       length="255"
                       name="Vehicle_Type_Name" />
+                    <externalMetadataColumn
+                      refId="Package\Load dữ liệu từ Vehicle_Type_Stage To Vehicle_Type_NDS\Them du lieu Vehicle_Type.Inputs[OLE DB Destination Input].ExternalColumns[CreatedDate]"
+                      dataType="dbTimeStamp"
+                      name="CreatedDate" />
+                    <externalMetadataColumn
+                      refId="Package\Load dữ liệu từ Vehicle_Type_Stage To Vehicle_Type_NDS\Them du lieu Vehicle_Type.Inputs[OLE DB Destination Input].ExternalColumns[UpdatedDate]"
+                      dataType="dbTimeStamp"
+                      name="UpdatedDate" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -12575,51 +12797,51 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="267,43"
+          Size="266.666666666667,42.6666666666667"
           Id="Package\Load dữ liệu từ  Vehicles Stage To NDS"
           TopLeft="341.708330064392,659.037717015424" />
         <NodeLayout
-          Size="403,43"
+          Size="402.666666666667,42.6666666666667"
           Id="Package\Load dữ liệu từ Accident_location_Stage To  Accident_location_NDS"
           TopLeft="276.374993378296,400.661403440065" />
         <NodeLayout
-          Size="269,43"
+          Size="269.333333333334,42.6666666666667"
           Id="Package\Load dữ liệu từ Accidents Stage To NDS"
           TopLeft="340.249993350357,316.623680894585" />
         <NodeLayout
-          Size="443,43"
+          Size="442.666666666667,42.6666666666667"
           Id="Package\Load dữ liệu từ Age_Band_of_Casualty Stage To Age_Band_of_Casualty NDS"
           TopLeft="249.874994458631,743.998240778842" />
         <NodeLayout
-          Size="332,43"
+          Size="332,42.6666666666667"
           Id="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS"
           TopLeft="296.749994132668,1018.51228094568" />
         <NodeLayout
-          Size="369,43"
+          Size="369.333333333334,42.6666666666667"
           Id="Package\Load dữ liệu từ Casualty_Type_Stage To Casualty_Type_NDS"
           TopLeft="275.874994309619,930.314909758467" />
         <NodeLayout
-          Size="392,43"
+          Size="392,42.6666666666667"
           Id="Package\Load dữ liệu từ Journey_Purpose_Stage To Journey_Purpose_NDS"
           TopLeft="278.499993853271,482.88158216685" />
         <NodeLayout
-          Size="377,43"
+          Size="377.333333333334,42.6666666666667"
           Id="Package\Load dữ liệu từ Local_Authority _Stage To Local_Authority NDS"
           TopLeft="289.374994123355,48.9008780053946" />
         <NodeLayout
-          Size="337,43"
+          Size="337.333333333334,42.6666666666667"
           Id="Package\Load dữ liệu từ Road_Type_Stage To Road_Type_NDS"
           TopLeft="308.249993573874,227.428074825631" />
         <NodeLayout
-          Size="307,43"
+          Size="306.666666666667,42.6666666666667"
           Id="Package\Load dữ liệu từ Severity_Stage To Severity_NDS"
           TopLeft="322.124993694946,136.594741608527" />
         <NodeLayout
-          Size="365,43"
+          Size="365.333333333334,42.6666666666667"
           Id="Package\Load dữ liệu từ Sex_of_Person Stage To Sex_of_Person NDS"
           TopLeft="284.124994290993,836.164907794196" />
         <NodeLayout
-          Size="356,43"
+          Size="356,42.6666666666667"
           Id="Package\Load dữ liệu từ Vehicle_Type_Stage To Vehicle_Type_NDS"
           TopLeft="297.249995213002,576.548249065974" />
         <EdgeLayout
@@ -12646,18 +12868,18 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="476.18749363441,179.594741608527">
+          TopLeft="476.18749363441,179.261408275194">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,47.8333332171039"
+              EndConnector="0,48.1666665504374"
               Start="0,0"
-              End="0,40.3333332171039">
+              End="0,40.6666665504374">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,40.3333332171039" />
+                    End="0,40.6666665504374" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -12734,18 +12956,18 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 4]"
-          TopLeft="475.749993462116,270.428074825631">
+          TopLeft="475.916660128782,270.094741492298">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,46.195606068954"
+              EndConnector="0,46.5289394022873"
               Start="0,0"
-              End="0,38.695606068954">
+              End="0,39.0289394022873">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,38.695606068954" />
+                    End="0,39.0289394022873" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -12873,39 +13095,39 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="239,43"
+          Size="238.666666666667,42.6666666666667"
           Id="Package\Load dữ liệu từ  Vehicles Stage To NDS\Load du lieu Vehicles trong Stage"
           TopLeft="175,3" />
         <NodeLayout
-          Size="239,43"
+          Size="238.666666666667,42.6666666666667"
           Id="Package\Load dữ liệu từ  Vehicles Stage To NDS\Them CreatedDate, UpdatedDate"
           TopLeft="398.749999869615,433.84210416848" />
         <NodeLayout
-          Size="283,43"
+          Size="282.666666666667,42.6666666666667"
           Id="Package\Load dữ liệu từ  Vehicles Stage To NDS\Xem xet Accident_Index trong Vehicle NDS"
           TopLeft="160,333" />
         <NodeLayout
-          Size="172,43"
+          Size="172,42.6666666666667"
           Id="Package\Load dữ liệu từ  Vehicles Stage To NDS\Them UpdatedDate"
           TopLeft="54.2500001303852,431.368419854925" />
         <NodeLayout
-          Size="372,43"
+          Size="372,42.6666666666667"
           Id="Package\Load dữ liệu từ  Vehicles Stage To NDS\Xem xet du lieu Vehicle_Type_NK co trong Vehicle_Type_NDS"
           TopLeft="119.375000083819,251.824560295952" />
         <NodeLayout
-          Size="327,42"
+          Size="326.666666666667,42"
           Id="Package\Load dữ liệu từ  Vehicles Stage To NDS\Xem xet du lieu Accident_NK co trong Accident_NDS"
           TopLeft="131.375000083819,81.9298237758107" />
         <NodeLayout
-          Size="195,43"
+          Size="194.666666666667,42.6666666666667"
           Id="Package\Load dữ liệu từ  Vehicles Stage To NDS\Cap nhat du lieu Vehicle"
           TopLeft="44.375000083819,515.157893629285" />
         <NodeLayout
-          Size="408,43"
+          Size="408,42.6666666666667"
           Id="Package\Load dữ liệu từ  Vehicles Stage To NDS\Xem xet du lieu Journey_Purpose_NK co trong Journey_Purpose_NDS"
           TopLeft="96.375000083819,164.157893629285" />
         <NodeLayout
-          Size="177,43"
+          Size="177.333333333334,42.6666666666667"
           Id="Package\Load dữ liệu từ  Vehicles Stage To NDS\Them du lieu vehicle"
           TopLeft="429.999999776482,514.263157109144" />
         <EdgeLayout
@@ -13245,31 +13467,31 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="283,43"
+          Size="282.666666666667,42.6666666666667"
           Id="Package\Load dữ liệu từ Accident_location_Stage To  Accident_location_NDS\Load du lieu Accident_location trong Stage"
           TopLeft="265.749997783452,13" />
         <NodeLayout
-          Size="172,43"
+          Size="172,42.6666666666667"
           Id="Package\Load dữ liệu từ Accident_location_Stage To  Accident_location_NDS\Them UpdatedDate"
           TopLeft="109.374999264255,311.789473284975" />
         <NodeLayout
-          Size="239,43"
+          Size="238.666666666667,42.6666666666667"
           Id="Package\Load dữ liệu từ Accident_location_Stage To  Accident_location_NDS\Them CreatedDate, UpdatedDate"
           TopLeft="462.624997830019,316.894736275449" />
         <NodeLayout
-          Size="343,43"
+          Size="342.666666666667,42.6666666666667"
           Id="Package\Load dữ liệu từ Accident_location_Stage To  Accident_location_NDS\Xem xet du lieu Accident_Index co trong Accident_NDS"
           TopLeft="243,101" />
         <NodeLayout
-          Size="223,43"
+          Size="222.666666666667,42.6666666666667"
           Id="Package\Load dữ liệu từ Accident_location_Stage To  Accident_location_NDS\Them du lieu Casualties_NDS"
           TopLeft="472.999997839331,408.578947059335" />
         <NodeLayout
-          Size="241,43"
+          Size="241.333333333334,42.6666666666667"
           Id="Package\Load dữ liệu từ Accident_location_Stage To  Accident_location_NDS\Cap nhat du lieu Accident_Index"
           TopLeft="75.8749998230488,408.789473040282" />
         <NodeLayout
-          Size="319,43"
+          Size="318.666666666667,42.6666666666667"
           Id="Package\Load dữ liệu từ Accident_location_Stage To  Accident_location_NDS\Xem xet du lieu Accident_Index co nam trong NDS"
           TopLeft="250,193" />
         <EdgeLayout
@@ -13515,39 +13737,39 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="555,43"
+          Size="554.666666666667,42.6666666666667"
           Id="Package\Load dữ liệu từ Accidents Stage To NDS\Xem xet Local_Authority_District trong tung dong du lieu co nam trong Local_Authority_District_NDS"
           TopLeft="464.374993974343,90.0912315652889" />
         <NodeLayout
-          Size="385,43"
+          Size="385.333333333334,42.6666666666667"
           Id="Package\Load dữ liệu từ Accidents Stage To NDS\Xem xet Accident_NK trong tung dong du lieu co nam trong NDS"
           TopLeft="545.249999459833,354.817542044673" />
         <NodeLayout
-          Size="435,43"
+          Size="434.666666666667,42.6666666666667"
           Id="Package\Load dữ liệu từ Accidents Stage To NDS\Xem xet Road_Type trong tung dong du lieu co nam trong Road_Type NDS"
           TopLeft="520.249993201345,171.641232181303" />
         <NodeLayout
-          Size="245,43"
+          Size="245.333333333334,42.6666666666667"
           Id="Package\Load dữ liệu từ Accidents Stage To NDS\Load du lieu Accidents trong Stage"
           TopLeft="614,2" />
         <NodeLayout
-          Size="185,43"
+          Size="185.333333333334,42.6666666666667"
           Id="Package\Load dữ liệu từ Accidents Stage To NDS\Them du lieu Accident"
           TopLeft="967.874998556449,533.835961936913" />
         <NodeLayout
-          Size="239,43"
+          Size="238.666666666667,42.6666666666667"
           Id="Package\Load dữ liệu từ Accidents Stage To NDS\Them CreatedDate, UpdatedDate"
           TopLeft="946.124998686835,453.888593309804" />
         <NodeLayout
-          Size="172,43"
+          Size="172,42.6666666666667"
           Id="Package\Load dữ liệu từ Accidents Stage To NDS\Them UpdatedDate"
           TopLeft="466.124998537824,442.051752502507" />
         <NodeLayout
-          Size="405,43"
+          Size="405.333333333334,42.6666666666667"
           Id="Package\Load dữ liệu từ Accidents Stage To NDS\Xem xet Severity trong tung dong du lieu co nam trong Severity NDS"
           TopLeft="541.249992679805,256.324564363969" />
         <NodeLayout
-          Size="201,45"
+          Size="201.333333333334,45.3333333333334"
           Id="Package\Load dữ liệu từ Accidents Stage To NDS\Cap nhat du lieu Accident"
           TopLeft="447.499999143183,537.491226032786" />
         <EdgeLayout
@@ -13570,7 +13792,7 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,9.72031280800699,96.3827734375,11.609375"
+              BoundingBox="-48.19138671875,9.720312808007,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -13642,7 +13864,7 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="86.6544462280843,27.5676553979679,91.7327734375,11.609375"
+              BoundingBox="86.6544462280845,27.5676553979679,91.7327734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -13756,7 +13978,7 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,11.2869785913331,96.3827734375,11.609375"
+              BoundingBox="-48.19138671875,11.286978591333,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -13864,7 +14086,7 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -13874,7 +14096,7 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -13929,7 +14151,9 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -14023,7 +14247,9 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -14045,7 +14271,9 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -14360,7 +14588,9 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -14382,7 +14612,9 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -14404,7 +14636,9 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -14580,27 +14814,27 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="172,43"
+          Size="172,42.6666666666667"
           Id="Package\Load dữ liệu từ Casualty_Type_Stage To Casualty_Type_NDS\Them UpdatedDate"
           TopLeft="117.374999264255,266.789473284975" />
         <NodeLayout
-          Size="341,43"
+          Size="341.333333333334,42.6666666666667"
           Id="Package\Load dữ liệu từ Casualty_Type_Stage To Casualty_Type_NDS\Xem xet du lieu Casualty_Type _NK  co nam trong NDS"
           TopLeft="254.303568101089,128.210529406645" />
         <NodeLayout
-          Size="239,43"
+          Size="238.666666666667,42.6666666666667"
           Id="Package\Load dữ liệu từ Casualty_Type_Stage To Casualty_Type_NDS\Them CreatedDate, UpdatedDate"
           TopLeft="504.624997830019,259.894736275449" />
         <NodeLayout
-          Size="233,43"
+          Size="233.333333333334,42.6666666666667"
           Id="Package\Load dữ liệu từ Casualty_Type_Stage To Casualty_Type_NDS\Cap nhat du lieu  Sex_of_Person"
           TopLeft="82.8749998230488,349.789473040282" />
         <NodeLayout
-          Size="268,43"
+          Size="268,42.6666666666667"
           Id="Package\Load dữ liệu từ Casualty_Type_Stage To Casualty_Type_NDS\Load du lieu Casualty_Type trong Stage"
           TopLeft="287.749997783452,13" />
         <NodeLayout
-          Size="215,43"
+          Size="214.666666666667,42.6666666666667"
           Id="Package\Load dữ liệu từ Casualty_Type_Stage To Casualty_Type_NDS\Them du lieu Sex_of_Person"
           TopLeft="520.999997839331,356.578947059335" />
         <EdgeLayout
@@ -14799,27 +15033,27 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="172,43"
+          Size="172,42.6666666666667"
           Id="Package\Load dữ liệu từ Journey_Purpose_Stage To Journey_Purpose_NDS\Them UpdatedDate"
           TopLeft="55.2500001303852,264.368419854925" />
         <NodeLayout
-          Size="345,43"
+          Size="345.333333333334,42.6666666666667"
           Id="Package\Load dữ liệu từ Journey_Purpose_Stage To Journey_Purpose_NDS\Xem xet Journey_Purpose_Nk du lieu co nam trong NDS"
           TopLeft="106.375000009313,118.684209315731" />
         <NodeLayout
-          Size="239,43"
+          Size="238.666666666667,42.6666666666667"
           Id="Package\Load dữ liệu từ Journey_Purpose_Stage To Journey_Purpose_NDS\Them CreatedDate, UpdatedDate"
           TopLeft="353.749999869615,279.84210416848" />
         <NodeLayout
-          Size="241,43"
+          Size="241.333333333334,42.6666666666667"
           Id="Package\Load dữ liệu từ Journey_Purpose_Stage To Journey_Purpose_NDS\Cap nhat du lieu Journey_Purpose"
           TopLeft="15.375000083819,374.157893629285" />
         <NodeLayout
-          Size="279,43"
+          Size="278.666666666667,42.6666666666667"
           Id="Package\Load dữ liệu từ Journey_Purpose_Stage To Journey_Purpose_NDS\Load du lieu Journey_Purpose trong Stage"
           TopLeft="142,20" />
         <NodeLayout
-          Size="225,43"
+          Size="225.333333333334,42.6666666666667"
           Id="Package\Load dữ liệu từ Journey_Purpose_Stage To Journey_Purpose_NDS\Them du lieu Journey_Purpose"
           TopLeft="356.999999776482,383.263157109144" />
         <EdgeLayout
@@ -15018,27 +15252,27 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="172,43"
+          Size="172,42.6666666666667"
           Id="Package\Load dữ liệu từ Local_Authority _Stage To Local_Authority NDS\Them UpdatedDate"
           TopLeft="46.2500001303852,257.368419854925" />
         <NodeLayout
-          Size="239,43"
+          Size="238.666666666667,42.6666666666667"
           Id="Package\Load dữ liệu từ Local_Authority _Stage To Local_Authority NDS\Them CreatedDate, UpdatedDate"
           TopLeft="328.749999869615,260.84210416848" />
         <NodeLayout
-          Size="313,42"
+          Size="313.333333333334,42"
           Id="Package\Load dữ liệu từ Local_Authority _Stage To Local_Authority NDS\Load du lieu Local_Authority_District  trong Stage"
           TopLeft="93,23" />
         <NodeLayout
-          Size="217,42"
+          Size="217.333333333334,42"
           Id="Package\Load dữ liệu từ Local_Authority _Stage To Local_Authority NDS\Them du lieu Local_Authority"
           TopLeft="337.999999776482,359.263157109144" />
         <NodeLayout
-          Size="233,43"
+          Size="233.333333333334,42.6666666666667"
           Id="Package\Load dữ liệu từ Local_Authority _Stage To Local_Authority NDS\Cap nhat du lieu Local_Authority"
           TopLeft="16.375000083819,361.157893629285" />
         <NodeLayout
-          Size="357,43"
+          Size="357.333333333334,42.6666666666667"
           Id="Package\Load dữ liệu từ Local_Authority _Stage To Local_Authority NDS\Xem xet Local_Authority_District du lieu co nam trong NDS"
           TopLeft="73.3750000093131,117.684209315731" />
         <EdgeLayout
@@ -15131,7 +15365,7 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="23.2377798780676,45.3312883902313,91.7327734375,11.609375"
+              BoundingBox="23.2377798780675,45.3312883902313,91.7327734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -15237,27 +15471,27 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="172,43"
+          Size="172,42.6666666666667"
           Id="Package\Load dữ liệu từ Road_Type_Stage To Road_Type_NDS\Them UpdatedDate"
           TopLeft="36.2500001303852,264.368419854925" />
         <NodeLayout
-          Size="303,43"
+          Size="302.666666666667,42.6666666666667"
           Id="Package\Load dữ liệu từ Road_Type_Stage To Road_Type_NDS\Xem xet Severity_Nk du lieu co nam trong NDS"
           TopLeft="126.375000009313,115.684209315731" />
         <NodeLayout
-          Size="239,43"
+          Size="238.666666666667,42.6666666666667"
           Id="Package\Load dữ liệu từ Road_Type_Stage To Road_Type_NDS\Them CreatedDate, UpdatedDate"
           TopLeft="320.749999869615,279.84210416848" />
         <NodeLayout
-          Size="197,43"
+          Size="197.333333333334,42.6666666666667"
           Id="Package\Load dữ liệu từ Road_Type_Stage To Road_Type_NDS\Cap nhat du lieu Severity"
           TopLeft="28.375000083819,375.157893629285" />
         <NodeLayout
-          Size="252,43"
+          Size="252,42.6666666666667"
           Id="Package\Load dữ liệu từ Road_Type_Stage To Road_Type_NDS\Load du lieu Road_Type trong Stage"
           TopLeft="159,16" />
         <NodeLayout
-          Size="183,43"
+          Size="182.666666666667,42.6666666666667"
           Id="Package\Load dữ liệu từ Road_Type_Stage To Road_Type_NDS\Them du lieu Severity"
           TopLeft="344.999999776482,376.263157109144" />
         <EdgeLayout
@@ -15350,7 +15584,7 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="10.7377798780676,53.8450081678187,91.7327734375,11.609375"
+              BoundingBox="10.7377798780675,53.8450081678187,91.7327734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -15456,27 +15690,27 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="172,43"
+          Size="172,42.6666666666667"
           Id="Package\Load dữ liệu từ Severity_Stage To Severity_NDS\Them UpdatedDate"
           TopLeft="34.2500001303852,268.368419854925" />
         <NodeLayout
-          Size="303,43"
+          Size="302.666666666667,42.6666666666667"
           Id="Package\Load dữ liệu từ Severity_Stage To Severity_NDS\Xem xet Severity_Nk du lieu co nam trong NDS"
           TopLeft="87.3750000093131,120.684209315731" />
         <NodeLayout
-          Size="239,43"
+          Size="238.666666666667,42.6666666666667"
           Id="Package\Load dữ liệu từ Severity_Stage To Severity_NDS\Them CreatedDate, UpdatedDate"
           TopLeft="322.749999869615,269.84210416848" />
         <NodeLayout
-          Size="197,43"
+          Size="197.333333333334,42.6666666666667"
           Id="Package\Load dữ liệu từ Severity_Stage To Severity_NDS\Cap nhat du lieu Severity"
           TopLeft="27.375000083819,386.157893629285" />
         <NodeLayout
-          Size="236,43"
+          Size="236,42.6666666666667"
           Id="Package\Load dữ liệu từ Severity_Stage To Severity_NDS\Load du lieu Severity trong Stage"
           TopLeft="116,15" />
         <NodeLayout
-          Size="183,43"
+          Size="182.666666666667,42.6666666666667"
           Id="Package\Load dữ liệu từ Severity_Stage To Severity_NDS\Them du lieu Severity"
           TopLeft="355.999999776482,382.263157109144" />
         <EdgeLayout
@@ -15569,7 +15803,7 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="31.2377798780676,47.7977330529139,91.7327734375,11.609375"
+              BoundingBox="31.2377798780675,47.7977330529139,91.7327734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -15675,27 +15909,27 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="172,43"
+          Size="172,42.6666666666667"
           Id="Package\Load dữ liệu từ Sex_of_Person Stage To Sex_of_Person NDS\Them UpdatedDate"
           TopLeft="117.374999264255,265.789473284975" />
         <NodeLayout
-          Size="339,43"
+          Size="338.666666666667,42.6666666666667"
           Id="Package\Load dữ liệu từ Sex_of_Person Stage To Sex_of_Person NDS\Xem xet du lieu Sex_of_Person_NK  co nam trong NDS"
           TopLeft="250.303568101089,138.210529406645" />
         <NodeLayout
-          Size="239,43"
+          Size="238.666666666667,42.6666666666667"
           Id="Package\Load dữ liệu từ Sex_of_Person Stage To Sex_of_Person NDS\Them CreatedDate, UpdatedDate"
           TopLeft="472.624997830019,264.894736275449" />
         <NodeLayout
-          Size="233,43"
+          Size="233.333333333334,42.6666666666667"
           Id="Package\Load dữ liệu từ Sex_of_Person Stage To Sex_of_Person NDS\Cap nhat du lieu  Sex_of_Person"
           TopLeft="88.8749998230488,362.789473040282" />
         <NodeLayout
-          Size="276,43"
+          Size="276,42.6666666666667"
           Id="Package\Load dữ liệu từ Sex_of_Person Stage To Sex_of_Person NDS\Load du lieu Sex_of_Casualty trong Stage"
           TopLeft="284.749997783452,34" />
         <NodeLayout
-          Size="215,43"
+          Size="214.666666666667,42.6666666666667"
           Id="Package\Load dữ liệu từ Sex_of_Person Stage To Sex_of_Person NDS\Them du lieu Sex_of_Person"
           TopLeft="487.999997839331,359.578947059335" />
         <EdgeLayout
@@ -15894,27 +16128,27 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="172,43"
+          Size="172,42.6666666666667"
           Id="Package\Load dữ liệu từ Vehicle_Type_Stage To Vehicle_Type_NDS\Them UpdatedDate"
           TopLeft="37.2500001303852,266.368419854925" />
         <NodeLayout
-          Size="327,43"
+          Size="326.666666666667,42.6666666666667"
           Id="Package\Load dữ liệu từ Vehicle_Type_Stage To Vehicle_Type_NDS\Xem xet Vehicle_Type_Nk du lieu co nam trong NDS"
           TopLeft="134.375000009313,145.684209315731" />
         <NodeLayout
-          Size="239,43"
+          Size="238.666666666667,42.6666666666667"
           Id="Package\Load dữ liệu từ Vehicle_Type_Stage To Vehicle_Type_NDS\Them CreatedDate, UpdatedDate"
           TopLeft="374.749999869615,279.84210416848" />
         <NodeLayout
-          Size="223,43"
+          Size="222.666666666667,42.6666666666667"
           Id="Package\Load dữ liệu từ Vehicle_Type_Stage To Vehicle_Type_NDS\Cap nhat du lieu Vehicle_Type"
           TopLeft="12.375000083819,371.157893629285" />
         <NodeLayout
-          Size="261,43"
+          Size="261.333333333334,42.6666666666667"
           Id="Package\Load dữ liệu từ Vehicle_Type_Stage To Vehicle_Type_NDS\Load du lieu Vehicle_Type trong Stage"
           TopLeft="165,46" />
         <NodeLayout
-          Size="207,43"
+          Size="206.666666666667,42.6666666666667"
           Id="Package\Load dữ liệu từ Vehicle_Type_Stage To Vehicle_Type_NDS\Them du lieu Vehicle_Type"
           TopLeft="385.999999776482,381.263157109144" />
         <EdgeLayout
