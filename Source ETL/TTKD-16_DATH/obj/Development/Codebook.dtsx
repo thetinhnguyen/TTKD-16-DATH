@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="17"
-  DTS:VersionGUID="{A6D8454A-7062-42F0-AC38-F60C8A9C5953}">
+  DTS:VersionBuild="20"
+  DTS:VersionGUID="{716B0619-6A87-4302-AF5F-FC71D8A9E95C}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -25,7 +25,7 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="0"
           DTS:ConnectRetryInterval="0"
-          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=D:\TTKD-16-DATH\Data\UK Accidents - Codebook.xls;Extended Properties=&quot;EXCEL 8.0;HDR=YES&quot;;" />
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\DELL\Desktop\TTKD-16-DATH\Data\UK Accidents - Codebook.xls;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -3378,7 +3378,7 @@
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="147,41"
+          Size="146.666666666667,41.3333333333334"
           Id="Package\GET LSET,CET"
           TopLeft="105,151" />
         <NodeLayout
@@ -3386,11 +3386,11 @@
           Id="Package\Load Data Age_Band_of_Casualty"
           TopLeft="101.249999534339,397.483341109057" />
         <NodeLayout
-          Size="199,42"
+          Size="198.666666666667,42"
           Id="Package\Load Data Casualty_Type"
           TopLeft="998,245" />
         <NodeLayout
-          Size="260,43"
+          Size="260,42.6666666666667"
           Id="Package\Load Data Journey_Purpose_of_Driver"
           TopLeft="671.624999841676,400.650004405081" />
         <NodeLayout
@@ -3398,7 +3398,7 @@
           Id="Package\Load Data Local_Authority_(District)"
           TopLeft="58,246" />
         <NodeLayout
-          Size="183,42"
+          Size="182.666666666667,42"
           Id="Package\Load Data Road_Type"
           TopLeft="411.62499976717,397.050004451573" />
         <NodeLayout
@@ -3410,6 +3410,10 @@
           Id="Package\Load Data Sex_of_Casualty"
           TopLeft="679,242" />
         <NodeLayout
+          Size="232,42"
+          Id="Package\Load Data Urban_or_Rural_Area"
+          TopLeft="103,491.40000027895" />
+        <NodeLayout
           Size="192,42"
           Id="Package\Load Data Vehicle_Type"
           TopLeft="996.00000037253,399.750004474819" />
@@ -3418,7 +3422,7 @@
           Id="Package\TRUNCATE STAGE"
           TopLeft="97,58" />
         <NodeLayout
-          Size="145,41"
+          Size="145.333333333334,41.3333333333334"
           Id="Package\UPDATE LSET"
           TopLeft="472.624999469146,497.40000027895" />
         <EdgeLayout
@@ -3457,6 +3461,28 @@
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,46.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 10]"
+          TopLeft="335,515.15000027895">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="137.624999469146,0"
+              Start="0,0"
+              End="130.124999469146,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="130.124999469146,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3619,10 +3645,6 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="232,42"
-          Id="Package\Load Data Urban_or_Rural_Area"
-          TopLeft="103,491.40000027895" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 9]"
           TopLeft="219.62499976717,439.483341109057">
@@ -3637,28 +3659,6 @@
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,44.4166591698931" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 10]"
-          TopLeft="335,515.15000027895">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="137.624999469146,0"
-              Start="0,0"
-              End="130.124999469146,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="130.124999469146,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4329,6 +4329,100 @@
     </Properties>
   </PipelineComponentMetadata>
   <TaskHost
+    design-time-name="Package\Load Data Urban_or_Rural_Area">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="243,42"
+          Id="Package\Load Data Urban_or_Rural_Area\Excel Urban_or_Rural_Area Source"
+          TopLeft="232,57" />
+        <NodeLayout
+          Size="213,42"
+          Id="Package\Load Data Urban_or_Rural_Area\Urban_or_Rural_Area_Stage"
+          TopLeft="244,313" />
+        <NodeLayout
+          Size="156,41"
+          Id="Package\Load Data Urban_or_Rural_Area\Data Conversion"
+          TopLeft="275,179" />
+        <EdgeLayout
+          Id="Package\Load Data Urban_or_Rural_Area.Paths[Excel Source Output]"
+          TopLeft="353.25,99">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,80"
+              Start="0,0"
+              End="0,72.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,72.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load Data Urban_or_Rural_Area.Paths[Data Conversion Output]"
+          TopLeft="351.75,220">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,93"
+              Start="0,0"
+              End="0,85.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,85.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load Data Urban_or_Rural_Area\Excel Urban_or_Rural_Area Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load Data Urban_or_Rural_Area\Urban_or_Rural_Area_Stage">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
     design-time-name="Package\Load Data Vehicle_Type">
     <LayoutInfo>
       <GraphLayout
@@ -4411,96 +4505,6 @@
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Load Data Vehicle_Type\Vehicle_Type_Stage">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\Load Data Urban_or_Rural_Area">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="243,42"
-          Id="Package\Load Data Urban_or_Rural_Area\Excel Urban_or_Rural_Area Source"
-          TopLeft="232,57" />
-        <NodeLayout
-          Size="156,41"
-          Id="Package\Load Data Urban_or_Rural_Area\Data Conversion"
-          TopLeft="275,179" />
-        <NodeLayout
-          Size="213,42"
-          Id="Package\Load Data Urban_or_Rural_Area\Urban_or_Rural_Area_Stage"
-          TopLeft="244,313" />
-        <EdgeLayout
-          Id="Package\Load Data Urban_or_Rural_Area.Paths[Excel Source Output]"
-          TopLeft="353.25,99">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,80"
-              Start="0,0"
-              End="0,72.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,72.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Load Data Urban_or_Rural_Area.Paths[Data Conversion Output]"
-          TopLeft="351.75,220">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,93"
-              Start="0,0"
-              End="0,85.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,85.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Load Data Urban_or_Rural_Area\Excel Urban_or_Rural_Area Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Load Data Urban_or_Rural_Area\Urban_or_Rural_Area_Stage">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

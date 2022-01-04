@@ -8,7 +8,9 @@
         <UseWinAuth>false</UseWinAuth>
         <WinAuthUserName />
         <WinAuthDomain />
-        <StartObjectID>Vehicles.dtsx</StartObjectID>
+        <ServerName />
+        <PathOnServer />
+        <StartObjectID>StageToNDS.dtsx</StartObjectID>
         <UserIDs />
         <UserPasswords />
         <OfflineMode>false</OfflineMode>

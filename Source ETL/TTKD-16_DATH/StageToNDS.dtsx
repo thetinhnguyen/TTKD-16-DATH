@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="26"
-  DTS:VersionGUID="{FAF5C232-385D-40B2-99BE-9324803BAF4F}">
+  DTS:VersionBuild="33"
+  DTS:VersionGUID="{E8F4F0C3-B202-43BE-ADA2-80D38C1F0F2E}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -2571,12 +2571,6 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
                       externalMetadataColumnId="Package\Load dữ liệu từ Accidents Stage To NDS\Them du lieu Accident.Inputs[OLE DB Destination Input].ExternalColumns[Local_Authority_Highway]"
                       lineageId="Package\Load dữ liệu từ Accidents Stage To NDS\Load du lieu Accidents trong Stage.Outputs[OLE DB Source Output].Columns[Local_Authority_(Highway)]" />
                     <inputColumn
-                      refId="Package\Load dữ liệu từ Accidents Stage To NDS\Them du lieu Accident.Inputs[OLE DB Destination Input].Columns[Urban_or_Rural_Area]"
-                      cachedDataType="i4"
-                      cachedName="Urban_or_Rural_Area"
-                      externalMetadataColumnId="Package\Load dữ liệu từ Accidents Stage To NDS\Them du lieu Accident.Inputs[OLE DB Destination Input].ExternalColumns[Urban_or_Rural_Area]"
-                      lineageId="Package\Load dữ liệu từ Accidents Stage To NDS\Load du lieu Accidents trong Stage.Outputs[OLE DB Source Output].Columns[Urban_or_Rural_Area]" />
-                    <inputColumn
                       refId="Package\Load dữ liệu từ Accidents Stage To NDS\Them du lieu Accident.Inputs[OLE DB Destination Input].Columns[Accident_Index]"
                       cachedCodepage="1252"
                       cachedDataType="str"
@@ -2602,6 +2596,12 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
                       cachedName="Local_Authority_District_IdTrongNDS"
                       externalMetadataColumnId="Package\Load dữ liệu từ Accidents Stage To NDS\Them du lieu Accident.Inputs[OLE DB Destination Input].ExternalColumns[Local_Authority_District]"
                       lineageId="Package\Load dữ liệu từ Accidents Stage To NDS\Xem xet Local_Authority_District trong tung dong du lieu co nam trong Local_Authority_District_NDS.Outputs[Lookup Match Output].Columns[Local_Authority_District_IdTrongNDS]" />
+                    <inputColumn
+                      refId="Package\Load dữ liệu từ Accidents Stage To NDS\Them du lieu Accident.Inputs[OLE DB Destination Input].Columns[Urban_or_Rural_Area_IDTrongNDS]"
+                      cachedDataType="i4"
+                      cachedName="Urban_or_Rural_Area_IDTrongNDS"
+                      externalMetadataColumnId="Package\Load dữ liệu từ Accidents Stage To NDS\Them du lieu Accident.Inputs[OLE DB Destination Input].ExternalColumns[Urban_or_Rural_Area]"
+                      lineageId="Package\Load dữ liệu từ Accidents Stage To NDS\Xem xet Urban_or_Rural_Area trong tung dong du lieu co nam trong Urban_or_Rural_Area_NDS.Outputs[Lookup Match Output].Columns[Urban_or_Rural_Area_IDTrongNDS]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -2687,6 +2687,14 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
                       dataType="str"
                       length="50"
                       name="Local_Authority_Highway" />
+                    <externalMetadataColumn
+                      refId="Package\Load dữ liệu từ Accidents Stage To NDS\Them du lieu Accident.Inputs[OLE DB Destination Input].ExternalColumns[Session_in_Day]"
+                      dataType="i4"
+                      name="Session_in_Day" />
+                    <externalMetadataColumn
+                      refId="Package\Load dữ liệu từ Accidents Stage To NDS\Them du lieu Accident.Inputs[OLE DB Destination Input].ExternalColumns[Built_up_Road_Type]"
+                      dataType="i4"
+                      name="Built_up_Road_Type" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -3424,6 +3432,164 @@ where [refTable].[Severity_NK] = ?</property>
                 </output>
               </outputs>
             </component>
+            <component
+              refId="Package\Load dữ liệu từ Accidents Stage To NDS\Xem xet Urban_or_Rural_Area trong tung dong du lieu co nam trong Urban_or_Rural_Area_NDS"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Xem xet Urban_or_Rural_Area trong tung dong du lieu co nam trong Urban_or_Rural_Area_NDS"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select Urban_or_Rural_Area_NK,Urban_or_Rural_Area_ID from [Urban_or_Rural_Area_NDS]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select Urban_or_Rural_Area_NK,Urban_or_Rural_Area_ID from [Urban_or_Rural_Area_NDS]) [refTable]
+where [refTable].[Urban_or_Rural_Area_NK] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="Urban_or_Rural_Area_NK" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Urban_or_Rural_Area_ID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\Load dữ liệu từ Accidents Stage To NDS\Load du lieu Accidents trong Stage.Outputs[OLE DB Source Output].Columns[Urban_or_Rural_Area]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load dữ liệu từ Accidents Stage To NDS\Xem xet Urban_or_Rural_Area trong tung dong du lieu co nam trong Urban_or_Rural_Area_NDS.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.UCA_NDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.UCA_NDS]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Load dữ liệu từ Accidents Stage To NDS\Xem xet Urban_or_Rural_Area trong tung dong du lieu co nam trong Urban_or_Rural_Area_NDS.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load dữ liệu từ Accidents Stage To NDS\Xem xet Urban_or_Rural_Area trong tung dong du lieu co nam trong Urban_or_Rural_Area_NDS.Inputs[Lookup Input].Columns[Urban_or_Rural_Area]"
+                      cachedDataType="i4"
+                      cachedName="Urban_or_Rural_Area"
+                      lineageId="Package\Load dữ liệu từ Accidents Stage To NDS\Load du lieu Accidents trong Stage.Outputs[OLE DB Source Output].Columns[Urban_or_Rural_Area]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">Urban_or_Rural_Area_NK</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load dữ liệu từ Accidents Stage To NDS\Xem xet Urban_or_Rural_Area trong tung dong du lieu co nam trong Urban_or_Rural_Area_NDS.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\Load dữ liệu từ Accidents Stage To NDS\Xem xet Urban_or_Rural_Area trong tung dong du lieu co nam trong Urban_or_Rural_Area_NDS.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load dữ liệu từ Accidents Stage To NDS\Xem xet Urban_or_Rural_Area trong tung dong du lieu co nam trong Urban_or_Rural_Area_NDS.Outputs[Lookup Match Output].Columns[Urban_or_Rural_Area_IDTrongNDS]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Load dữ liệu từ Accidents Stage To NDS\Xem xet Urban_or_Rural_Area trong tung dong du lieu co nam trong Urban_or_Rural_Area_NDS.Outputs[Lookup Match Output].Columns[Urban_or_Rural_Area_IDTrongNDS]"
+                      name="Urban_or_Rural_Area_IDTrongNDS"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">Urban_or_Rural_Area_ID</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load dữ liệu từ Accidents Stage To NDS\Xem xet Urban_or_Rural_Area trong tung dong du lieu co nam trong Urban_or_Rural_Area_NDS.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\Load dữ liệu từ Accidents Stage To NDS\Xem xet Urban_or_Rural_Area trong tung dong du lieu co nam trong Urban_or_Rural_Area_NDS.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load dữ liệu từ Accidents Stage To NDS\Xem xet Urban_or_Rural_Area trong tung dong du lieu co nam trong Urban_or_Rural_Area_NDS.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\Load dữ liệu từ Accidents Stage To NDS\Xem xet Urban_or_Rural_Area trong tung dong du lieu co nam trong Urban_or_Rural_Area_NDS.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load dữ liệu từ Accidents Stage To NDS\Xem xet Urban_or_Rural_Area trong tung dong du lieu co nam trong Urban_or_Rural_Area_NDS.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load dữ liệu từ Accidents Stage To NDS\Xem xet Urban_or_Rural_Area trong tung dong du lieu co nam trong Urban_or_Rural_Area_NDS.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load dữ liệu từ Accidents Stage To NDS\Xem xet Urban_or_Rural_Area trong tung dong du lieu co nam trong Urban_or_Rural_Area_NDS.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load dữ liệu từ Accidents Stage To NDS\Xem xet Urban_or_Rural_Area trong tung dong du lieu co nam trong Urban_or_Rural_Area_NDS.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
           </components>
           <paths>
             <path
@@ -3458,9 +3624,14 @@ where [refTable].[Severity_NK] = ?</property>
               startId="Package\Load dữ liệu từ Accidents Stage To NDS\Xem xet Road_Type trong tung dong du lieu co nam trong Road_Type NDS.Outputs[Lookup Match Output]" />
             <path
               refId="Package\Load dữ liệu từ Accidents Stage To NDS.Paths[Lookup Match Output3]"
-              endId="Package\Load dữ liệu từ Accidents Stage To NDS\Xem xet Accident_NK trong tung dong du lieu co nam trong NDS.Inputs[Lookup Input]"
+              endId="Package\Load dữ liệu từ Accidents Stage To NDS\Xem xet Urban_or_Rural_Area trong tung dong du lieu co nam trong Urban_or_Rural_Area_NDS.Inputs[Lookup Input]"
               name="Lookup Match Output"
               startId="Package\Load dữ liệu từ Accidents Stage To NDS\Xem xet Severity trong tung dong du lieu co nam trong Severity NDS.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Load dữ liệu từ Accidents Stage To NDS.Paths[Lookup Match Output4]"
+              endId="Package\Load dữ liệu từ Accidents Stage To NDS\Xem xet Accident_NK trong tung dong du lieu co nam trong NDS.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\Load dữ liệu từ Accidents Stage To NDS\Xem xet Urban_or_Rural_Area trong tung dong du lieu co nam trong Urban_or_Rural_Area_NDS.Outputs[Lookup Match Output]" />
             <path
               refId="Package\Load dữ liệu từ Accidents Stage To NDS.Paths[OLE DB Source Output]"
               endId="Package\Load dữ liệu từ Accidents Stage To NDS\Xem xet Local_Authority_District trong tung dong du lieu co nam trong Local_Authority_District_NDS.Inputs[Lookup Input]"
@@ -6113,6 +6284,10 @@ where [refTable].[Age_Band_of_Casualty_NK] = ?</property>
                       refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Them du lieu Casualties_NDS.Inputs[OLE DB Destination Input].ExternalColumns[Age_Band_of_Casualty]"
                       dataType="i4"
                       name="Age_Band_of_Casualty" />
+                    <externalMetadataColumn
+                      refId="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Them du lieu Casualties_NDS.Inputs[OLE DB Destination Input].ExternalColumns[Age_Group]"
+                      dataType="i4"
+                      name="Age_Group" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -11914,6 +12089,786 @@ where [refTable].[Sex_of_Person_NK] = ?</property>
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
+      DTS:refId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{84834988-1cbd-424a-a56b-bdf9699e0aa5}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Cap nhat du lieu Urban_or_Rural_Area"
+              componentClassID="Microsoft.OLEDBCommand"
+              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
+              name="Cap nhat du lieu Urban_or_Rural_Area"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">   update [Urban_or_Rural_Area_NDS] set  
+   [Urban_or_Rural_Area_Name]=?,[UpdatedDate]=?
+ where  [Urban_or_Rural_Area_NK]=?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Cap nhat du lieu Urban_or_Rural_Area.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.UCA_NDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.UCA_NDS]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Cap nhat du lieu Urban_or_Rural_Area.Inputs[OLE DB Command Input]"
+                  errorOrTruncationOperation="Command Execution"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Command Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Cap nhat du lieu Urban_or_Rural_Area.Inputs[OLE DB Command Input].Columns[Urban_or_Rural_Area_Name]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Urban_or_Rural_Area_Name"
+                      externalMetadataColumnId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Cap nhat du lieu Urban_or_Rural_Area.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      lineageId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Load du lieu Urban_or_Rural_Area trong Stage.Outputs[OLE DB Source Output].Columns[Urban_or_Rural_Area_Name]" />
+                    <inputColumn
+                      refId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Cap nhat du lieu Urban_or_Rural_Area.Inputs[OLE DB Command Input].Columns[UpdatedDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="UpdatedDate"
+                      externalMetadataColumnId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Cap nhat du lieu Urban_or_Rural_Area.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      lineageId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Them UpdatedDate.Outputs[Derived Column Output].Columns[UpdatedDate]" />
+                    <inputColumn
+                      refId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Cap nhat du lieu Urban_or_Rural_Area.Inputs[OLE DB Command Input].Columns[Urban_or_Rural_Area_NKTrongNDS]"
+                      cachedDataType="i4"
+                      cachedName="Urban_or_Rural_Area_NKTrongNDS"
+                      externalMetadataColumnId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Cap nhat du lieu Urban_or_Rural_Area.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      lineageId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Xem xet Urban_or_Rural_Area_Nk du lieu co nam trong NDS.Outputs[Lookup Match Output].Columns[Urban_or_Rural_Area_NKTrongNDS]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Cap nhat du lieu Urban_or_Rural_Area.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      dataType="wstr"
+                      length="255"
+                      name="Param_0">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Cap nhat du lieu Urban_or_Rural_Area.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      dataType="dbTimeStamp"
+                      name="Param_1">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Cap nhat du lieu Urban_or_Rural_Area.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      dataType="i4"
+                      name="Param_2">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Cap nhat du lieu Urban_or_Rural_Area.Outputs[OLE DB Command Output]"
+                  exclusionGroup="1"
+                  name="OLE DB Command Output"
+                  synchronousInputId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Cap nhat du lieu Urban_or_Rural_Area.Inputs[OLE DB Command Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Cap nhat du lieu Urban_or_Rural_Area.Outputs[OLE DB Command Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Command Error Output"
+                  synchronousInputId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Cap nhat du lieu Urban_or_Rural_Area.Inputs[OLE DB Command Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Cap nhat du lieu Urban_or_Rural_Area.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Cap nhat du lieu Urban_or_Rural_Area.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Cap nhat du lieu Urban_or_Rural_Area.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Cap nhat du lieu Urban_or_Rural_Area.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Load du lieu Urban_or_Rural_Area trong Stage"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="Load du lieu Urban_or_Rural_Area trong Stage"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Urban_or_Rural_Area_Stage]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Load du lieu Urban_or_Rural_Area trong Stage.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.UCA_STAGE]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.UCA_STAGE]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Load du lieu Urban_or_Rural_Area trong Stage.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Load du lieu Urban_or_Rural_Area trong Stage.Outputs[OLE DB Source Output].Columns[Urban_or_Rural_Area_ID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Load du lieu Urban_or_Rural_Area trong Stage.Outputs[OLE DB Source Output].ExternalColumns[Urban_or_Rural_Area_ID]"
+                      lineageId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Load du lieu Urban_or_Rural_Area trong Stage.Outputs[OLE DB Source Output].Columns[Urban_or_Rural_Area_ID]"
+                      name="Urban_or_Rural_Area_ID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Load du lieu Urban_or_Rural_Area trong Stage.Outputs[OLE DB Source Output].Columns[Urban_or_Rural_Area_Name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Load du lieu Urban_or_Rural_Area trong Stage.Outputs[OLE DB Source Output].ExternalColumns[Urban_or_Rural_Area_Name]"
+                      length="255"
+                      lineageId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Load du lieu Urban_or_Rural_Area trong Stage.Outputs[OLE DB Source Output].Columns[Urban_or_Rural_Area_Name]"
+                      name="Urban_or_Rural_Area_Name"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Load du lieu Urban_or_Rural_Area trong Stage.Outputs[OLE DB Source Output].ExternalColumns[Urban_or_Rural_Area_ID]"
+                      dataType="i4"
+                      name="Urban_or_Rural_Area_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Load du lieu Urban_or_Rural_Area trong Stage.Outputs[OLE DB Source Output].ExternalColumns[Urban_or_Rural_Area_Name]"
+                      dataType="wstr"
+                      length="255"
+                      name="Urban_or_Rural_Area_Name" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Load du lieu Urban_or_Rural_Area trong Stage.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Load du lieu Urban_or_Rural_Area trong Stage.Outputs[OLE DB Source Error Output].Columns[Urban_or_Rural_Area_ID]"
+                      dataType="i4"
+                      lineageId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Load du lieu Urban_or_Rural_Area trong Stage.Outputs[OLE DB Source Error Output].Columns[Urban_or_Rural_Area_ID]"
+                      name="Urban_or_Rural_Area_ID" />
+                    <outputColumn
+                      refId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Load du lieu Urban_or_Rural_Area trong Stage.Outputs[OLE DB Source Error Output].Columns[Urban_or_Rural_Area_Name]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Load du lieu Urban_or_Rural_Area trong Stage.Outputs[OLE DB Source Error Output].Columns[Urban_or_Rural_Area_Name]"
+                      name="Urban_or_Rural_Area_Name" />
+                    <outputColumn
+                      refId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Load du lieu Urban_or_Rural_Area trong Stage.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Load du lieu Urban_or_Rural_Area trong Stage.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Load du lieu Urban_or_Rural_Area trong Stage.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Load du lieu Urban_or_Rural_Area trong Stage.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Them CreatedDate, UpdatedDate"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Them CreatedDate, UpdatedDate"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Them CreatedDate, UpdatedDate.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Them CreatedDate, UpdatedDate.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Them CreatedDate, UpdatedDate.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Them CreatedDate, UpdatedDate.Outputs[Derived Column Output].Columns[CreatedDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Them CreatedDate, UpdatedDate.Outputs[Derived Column Output].Columns[CreatedDate]"
+                      name="CreatedDate"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[GETDATE]()</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">GETDATE()</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Them CreatedDate, UpdatedDate.Outputs[Derived Column Output].Columns[UpdatedDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Them CreatedDate, UpdatedDate.Outputs[Derived Column Output].Columns[UpdatedDate]"
+                      name="UpdatedDate"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[GETDATE]()</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">GETDATE()</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Them CreatedDate, UpdatedDate.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Them CreatedDate, UpdatedDate.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Them CreatedDate, UpdatedDate.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Them CreatedDate, UpdatedDate.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Them CreatedDate, UpdatedDate.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Them CreatedDate, UpdatedDate.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Them du lieu Urban_or_Rural_Area"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Them du lieu Urban_or_Rural_Area"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Urban_or_Rural_Area_NDS]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Them du lieu Urban_or_Rural_Area.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.UCA_NDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.UCA_NDS]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Them du lieu Urban_or_Rural_Area.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Them du lieu Urban_or_Rural_Area.Inputs[OLE DB Destination Input].Columns[Urban_or_Rural_Area_Name]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Urban_or_Rural_Area_Name"
+                      externalMetadataColumnId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Them du lieu Urban_or_Rural_Area.Inputs[OLE DB Destination Input].ExternalColumns[Urban_or_Rural_Area_Name]"
+                      lineageId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Load du lieu Urban_or_Rural_Area trong Stage.Outputs[OLE DB Source Output].Columns[Urban_or_Rural_Area_Name]" />
+                    <inputColumn
+                      refId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Them du lieu Urban_or_Rural_Area.Inputs[OLE DB Destination Input].Columns[CreatedDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="CreatedDate"
+                      externalMetadataColumnId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Them du lieu Urban_or_Rural_Area.Inputs[OLE DB Destination Input].ExternalColumns[CreatedDate]"
+                      lineageId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Them CreatedDate, UpdatedDate.Outputs[Derived Column Output].Columns[CreatedDate]" />
+                    <inputColumn
+                      refId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Them du lieu Urban_or_Rural_Area.Inputs[OLE DB Destination Input].Columns[UpdatedDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="UpdatedDate"
+                      externalMetadataColumnId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Them du lieu Urban_or_Rural_Area.Inputs[OLE DB Destination Input].ExternalColumns[UpdatedDate]"
+                      lineageId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Them CreatedDate, UpdatedDate.Outputs[Derived Column Output].Columns[UpdatedDate]" />
+                    <inputColumn
+                      refId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Them du lieu Urban_or_Rural_Area.Inputs[OLE DB Destination Input].Columns[Urban_or_Rural_Area_ID]"
+                      cachedDataType="i4"
+                      cachedName="Urban_or_Rural_Area_ID"
+                      externalMetadataColumnId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Them du lieu Urban_or_Rural_Area.Inputs[OLE DB Destination Input].ExternalColumns[Urban_or_Rural_Area_NK]"
+                      lineageId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Load du lieu Urban_or_Rural_Area trong Stage.Outputs[OLE DB Source Output].Columns[Urban_or_Rural_Area_ID]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Them du lieu Urban_or_Rural_Area.Inputs[OLE DB Destination Input].ExternalColumns[CreatedDate]"
+                      dataType="dbTimeStamp"
+                      name="CreatedDate" />
+                    <externalMetadataColumn
+                      refId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Them du lieu Urban_or_Rural_Area.Inputs[OLE DB Destination Input].ExternalColumns[UpdatedDate]"
+                      dataType="dbTimeStamp"
+                      name="UpdatedDate" />
+                    <externalMetadataColumn
+                      refId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Them du lieu Urban_or_Rural_Area.Inputs[OLE DB Destination Input].ExternalColumns[Urban_or_Rural_Area_ID]"
+                      dataType="i4"
+                      name="Urban_or_Rural_Area_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Them du lieu Urban_or_Rural_Area.Inputs[OLE DB Destination Input].ExternalColumns[Urban_or_Rural_Area_NK]"
+                      dataType="i4"
+                      name="Urban_or_Rural_Area_NK" />
+                    <externalMetadataColumn
+                      refId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Them du lieu Urban_or_Rural_Area.Inputs[OLE DB Destination Input].ExternalColumns[Urban_or_Rural_Area_Name]"
+                      dataType="wstr"
+                      length="255"
+                      name="Urban_or_Rural_Area_Name" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Them du lieu Urban_or_Rural_Area.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Them du lieu Urban_or_Rural_Area.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Them du lieu Urban_or_Rural_Area.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Them du lieu Urban_or_Rural_Area.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Them du lieu Urban_or_Rural_Area.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Them du lieu Urban_or_Rural_Area.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Them UpdatedDate"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Them UpdatedDate"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Them UpdatedDate.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Them UpdatedDate.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Them UpdatedDate.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Them UpdatedDate.Outputs[Derived Column Output].Columns[UpdatedDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Them UpdatedDate.Outputs[Derived Column Output].Columns[UpdatedDate]"
+                      name="UpdatedDate"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[GETDATE]()</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">GETDATE()</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Them UpdatedDate.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Them UpdatedDate.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Them UpdatedDate.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Them UpdatedDate.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Them UpdatedDate.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Them UpdatedDate.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Xem xet Urban_or_Rural_Area_Nk du lieu co nam trong NDS"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Xem xet Urban_or_Rural_Area_Nk du lieu co nam trong NDS"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select [Urban_or_Rural_Area_NK]from [Urban_or_Rural_Area_NDS]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select [Urban_or_Rural_Area_NK]from [Urban_or_Rural_Area_NDS]) [refTable]
+where [refTable].[Urban_or_Rural_Area_NK] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="Urban_or_Rural_Area_NK" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Load du lieu Urban_or_Rural_Area trong Stage.Outputs[OLE DB Source Output].Columns[Urban_or_Rural_Area_ID]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Xem xet Urban_or_Rural_Area_Nk du lieu co nam trong NDS.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.UCA_NDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.UCA_NDS]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Xem xet Urban_or_Rural_Area_Nk du lieu co nam trong NDS.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Xem xet Urban_or_Rural_Area_Nk du lieu co nam trong NDS.Inputs[Lookup Input].Columns[Urban_or_Rural_Area_ID]"
+                      cachedDataType="i4"
+                      cachedName="Urban_or_Rural_Area_ID"
+                      lineageId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Load du lieu Urban_or_Rural_Area trong Stage.Outputs[OLE DB Source Output].Columns[Urban_or_Rural_Area_ID]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">Urban_or_Rural_Area_NK</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Xem xet Urban_or_Rural_Area_Nk du lieu co nam trong NDS.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  errorRowDisposition="RedirectRow"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Xem xet Urban_or_Rural_Area_Nk du lieu co nam trong NDS.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Xem xet Urban_or_Rural_Area_Nk du lieu co nam trong NDS.Outputs[Lookup Match Output].Columns[Urban_or_Rural_Area_NKTrongNDS]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Xem xet Urban_or_Rural_Area_Nk du lieu co nam trong NDS.Outputs[Lookup Match Output].Columns[Urban_or_Rural_Area_NKTrongNDS]"
+                      name="Urban_or_Rural_Area_NKTrongNDS"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">Urban_or_Rural_Area_NK</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Xem xet Urban_or_Rural_Area_Nk du lieu co nam trong NDS.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Xem xet Urban_or_Rural_Area_Nk du lieu co nam trong NDS.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Xem xet Urban_or_Rural_Area_Nk du lieu co nam trong NDS.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Xem xet Urban_or_Rural_Area_Nk du lieu co nam trong NDS.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Xem xet Urban_or_Rural_Area_Nk du lieu co nam trong NDS.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Xem xet Urban_or_Rural_Area_Nk du lieu co nam trong NDS.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Xem xet Urban_or_Rural_Area_Nk du lieu co nam trong NDS.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Xem xet Urban_or_Rural_Area_Nk du lieu co nam trong NDS.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS.Paths[Derived Column Output]"
+              endId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Them du lieu Urban_or_Rural_Area.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Them CreatedDate, UpdatedDate.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS.Paths[Derived Column Output1]"
+              endId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Cap nhat du lieu Urban_or_Rural_Area.Inputs[OLE DB Command Input]"
+              name="Derived Column Output"
+              startId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Them UpdatedDate.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS.Paths[Lookup Error Output]"
+              endId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Them CreatedDate, UpdatedDate.Inputs[Derived Column Input]"
+              name="Lookup Error Output"
+              startId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Xem xet Urban_or_Rural_Area_Nk du lieu co nam trong NDS.Outputs[Lookup Error Output]" />
+            <path
+              refId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS.Paths[Lookup Match Output]"
+              endId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Them UpdatedDate.Inputs[Derived Column Input]"
+              name="Lookup Match Output"
+              startId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Xem xet Urban_or_Rural_Area_Nk du lieu co nam trong NDS.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS.Paths[OLE DB Source Output]"
+              endId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Xem xet Urban_or_Rural_Area_Nk du lieu co nam trong NDS.Inputs[Lookup Input]"
+              name="OLE DB Source Output"
+              startId="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Load du lieu Urban_or_Rural_Area trong Stage.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
       DTS:refId="Package\Load dữ liệu từ Vehicle_Type_Stage To Vehicle_Type_NDS"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
@@ -12693,6 +13648,40 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
         </pipeline>
       </DTS:ObjectData>
     </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Update Age_Group in Casualties_NDS"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{49f77668-5467-4be2-b172-0cc999f4054c}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Update Age_Group in Casualties_NDS"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{0BA4E358-639B-45D8-AC54-5BE160524115}"
+          SQLTask:SqlStatementSource="UPDATE dbo.[Casualties_NDS]&#xA;SET [Age_Group] = 1&#xA;WHERE [Age_of_Casualty]&lt;= 15 and [Age_of_Casualty] &gt; 0&#xA;&#xA;UPDATE dbo.[Casualties_NDS]&#xA;SET [Age_Group] = 2&#xA;WHERE [Age_of_Casualty]&lt;= 17 and [Age_of_Casualty] &gt; 15&#xA;&#xA;UPDATE dbo.[Casualties_NDS]&#xA;SET [Age_Group] = 3&#xA;WHERE [Age_of_Casualty]&lt;= 59 and [Age_of_Casualty] &gt; 17&#xA;&#xA;UPDATE dbo.[Casualties_NDS]&#xA;SET [Age_Group] = 4&#xA;WHERE [Age_of_Casualty] &gt; 59 " xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Update Built_up_Road_Type in Accidents_NDS"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{9FC68483-BD3F-4BA6-BD8C-5B2DB41DDCA1}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Update Built_up_Road_Type in Accidents_NDS"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{0BA4E358-639B-45D8-AC54-5BE160524115}"
+          SQLTask:SqlStatementSource="UPDATE dbo.[Accidents_NDS]&#xA;SET [Built_up_Road_Type] = 1&#xA;WHERE [Speed_limit] &lt; 50&#xA;&#xA;UPDATE dbo.[Accidents_NDS]&#xA;SET [Built_up_Road_Type] = 2&#xA;WHERE [Speed_limit] &gt;= 50" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
   </DTS:Executables>
   <DTS:PrecedenceConstraints>
     <DTS:PrecedenceConstraint
@@ -12720,6 +13709,30 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
       DTS:ObjectName="Constraint 10"
       DTS:To="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS" />
     <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 11]"
+      DTS:CreationName=""
+      DTS:DTSID="{38055A58-8D40-4801-81E2-932BAA3053C2}"
+      DTS:From="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 11"
+      DTS:To="Package\Load dữ liệu từ Accidents Stage To NDS" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 12]"
+      DTS:CreationName=""
+      DTS:DTSID="{1AA40F96-A9C4-4BBA-B625-FCAA0E9825B2}"
+      DTS:From="Package\Update Built_up_Road_Type in Accidents_NDS"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 12"
+      DTS:To="Package\Load dữ liệu từ Accident_location_Stage To  Accident_location_NDS" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 13]"
+      DTS:CreationName=""
+      DTS:DTSID="{91BA5035-FA97-4010-A467-C469FDB69329}"
+      DTS:From="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 13"
+      DTS:To="Package\Update Age_Group in Casualties_NDS" />
+    <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
       DTS:CreationName=""
       DTS:DTSID="{D537EDEC-3BBF-46C1-A28B-FD1F64DB16BB}"
@@ -12738,19 +13751,19 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 4]"
       DTS:CreationName=""
-      DTS:DTSID="{64D98DF1-7618-499D-8F9D-D54CEC181757}"
+      DTS:DTSID="{B4FE8FFA-2880-4042-850F-3E345F4A6F67}"
       DTS:From="Package\Load dữ liệu từ Road_Type_Stage To Road_Type_NDS"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 4"
-      DTS:To="Package\Load dữ liệu từ Accidents Stage To NDS" />
+      DTS:To="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 5]"
       DTS:CreationName=""
-      DTS:DTSID="{FF2AAC78-8216-40AA-937D-F17E2C94BE36}"
+      DTS:DTSID="{6471B030-B5EE-4A99-8E4B-B93C14E38785}"
       DTS:From="Package\Load dữ liệu từ Accidents Stage To NDS"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 5"
-      DTS:To="Package\Load dữ liệu từ Accident_location_Stage To  Accident_location_NDS" />
+      DTS:To="Package\Update Built_up_Road_Type in Accidents_NDS" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 6]"
       DTS:CreationName=""
@@ -12799,65 +13812,77 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
         <NodeLayout
           Size="266.666666666667,42.6666666666667"
           Id="Package\Load dữ liệu từ  Vehicles Stage To NDS"
-          TopLeft="341.708330064392,659.037717015424" />
+          TopLeft="405.458329114443,659.037717015424" />
         <NodeLayout
           Size="402.666666666667,42.6666666666667"
           Id="Package\Load dữ liệu từ Accident_location_Stage To  Accident_location_NDS"
-          TopLeft="276.374993378296,400.661403440065" />
+          TopLeft="343.249992381781,411.711403242476" />
         <NodeLayout
           Size="269.333333333334,42.6666666666667"
           Id="Package\Load dữ liệu từ Accidents Stage To NDS"
-          TopLeft="340.249993350357,316.623680894585" />
+          TopLeft="385.874992670491,332.223680615635" />
         <NodeLayout
           Size="442.666666666667,42.6666666666667"
           Id="Package\Load dữ liệu từ Age_Band_of_Casualty Stage To Age_Band_of_Casualty NDS"
-          TopLeft="249.874994458631,743.998240778842" />
+          TopLeft="313.624993508682,743.998240778842" />
         <NodeLayout
           Size="332,42.6666666666667"
           Id="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS"
-          TopLeft="296.749994132668,1018.51228094568" />
+          TopLeft="360.499993182719,1018.51228094568" />
         <NodeLayout
           Size="369.333333333334,42.6666666666667"
           Id="Package\Load dữ liệu từ Casualty_Type_Stage To Casualty_Type_NDS"
-          TopLeft="275.874994309619,930.314909758467" />
+          TopLeft="339.62499335967,930.314909758467" />
         <NodeLayout
           Size="392,42.6666666666667"
           Id="Package\Load dữ liệu từ Journey_Purpose_Stage To Journey_Purpose_NDS"
-          TopLeft="278.499993853271,482.88158216685" />
+          TopLeft="342.249992903322,482.88158216685" />
         <NodeLayout
           Size="377.333333333334,42.6666666666667"
           Id="Package\Load dữ liệu từ Local_Authority _Stage To Local_Authority NDS"
-          TopLeft="289.374994123355,48.9008780053946" />
+          TopLeft="334.374993452803,15.7508785981628" />
         <NodeLayout
           Size="337.333333333334,42.6666666666667"
           Id="Package\Load dữ liệu từ Road_Type_Stage To Road_Type_NDS"
-          TopLeft="308.249993573874,227.428074825631" />
+          TopLeft="331.374993229285,176.078075743841" />
         <NodeLayout
           Size="306.666666666667,42.6666666666667"
           Id="Package\Load dữ liệu từ Severity_Stage To Severity_NDS"
-          TopLeft="322.124993694946,136.594741608527" />
+          TopLeft="340.874993415549,100.19474225941" />
         <NodeLayout
           Size="365.333333333334,42.6666666666667"
           Id="Package\Load dữ liệu từ Sex_of_Person Stage To Sex_of_Person NDS"
-          TopLeft="284.124994290993,836.164907794196" />
+          TopLeft="347.874993341044,836.164907794196" />
         <NodeLayout
           Size="356,42.6666666666667"
           Id="Package\Load dữ liệu từ Vehicle_Type_Stage To Vehicle_Type_NDS"
-          TopLeft="297.249995213002,576.548249065974" />
+          TopLeft="360.999994263053,576.548249065974" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="476.74999390915,91.9008780053946">
+          TopLeft="523.041660119469,58.4175452648294">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,44.6938636031325"
+              EndConnector="-28.8333333705867,41.7771969945803"
               Start="0,0"
-              End="0,37.1938636031325">
+              End="-28.8333333705867,34.2771969945803">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,37.1938636031325" />
+                    End="0,16.8885984972901" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16.8885984972901"
+                    Point2="0,20.8885984972901"
+                    Point3="-4,20.8885984972901" />
+                  <mssgle:LineSegment
+                    End="-24.8333333705867,20.8885984972901" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-24.8333333705867,20.8885984972901"
+                    Point2="-28.8333333705867,20.8885984972901"
+                    Point3="-28.8333333705867,24.8885984972901" />
+                  <mssgle:LineSegment
+                    End="-28.8333333705867,34.2771969945803" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -12868,18 +13893,18 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="476.18749363441,179.261408275194">
+          TopLeft="497.124993322417,142.861408926076">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,48.1666665504374"
+              EndConnector="0,33.2166668177642"
               Start="0,0"
-              End="0,40.6666665504374">
+              End="0,25.7166668177642">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,40.6666665504374" />
+                    End="0,25.7166668177642" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -12890,7 +13915,7 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 10]"
-          TopLeft="461.562494221144,973.314909758467">
+          TopLeft="525.312493271195,973.314909758467">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -12912,7 +13937,7 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
-          TopLeft="475.229162638697,619.548249065974">
+          TopLeft="538.979161688748,619.548249065974">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -12934,7 +13959,7 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 3]"
-          TopLeft="473.291662261511,702.037717015424">
+          TopLeft="537.041661311562,702.037717015424">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -12955,63 +13980,19 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 4]"
-          TopLeft="475.916660128782,270.094741492298">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,46.5289394022873"
-              Start="0,0"
-              End="0,39.0289394022873">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,39.0289394022873" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 5]"
-          TopLeft="476.312493364327,359.623680894585">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,41.03772254548"
-              Start="0,0"
-              End="0,33.53772254548">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,33.53772254548" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 6]"
-          TopLeft="476.187493615784,443.661403440065">
+          TopLeft="541.416659309218,454.378069909142">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,39.220178726785"
+              EndConnector="0,28.5035122577077"
               Start="0,0"
-              End="0,31.720178726785">
+              End="0,21.0035122577077">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,31.720178726785" />
+                    End="0,21.0035122577077" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -13022,18 +14003,18 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 7]"
-          TopLeft="474.874994533136,525.88158216685">
+          TopLeft="538.624993583187,525.548248833517">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,50.666666899124"
+              EndConnector="0,51.0000002324573"
               Start="0,0"
-              End="0,43.166666899124">
+              End="0,43.5000002324573">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,43.166666899124" />
+                    End="0,43.5000002324573" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -13044,7 +14025,7 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 8]"
-          TopLeft="468.999994374812,786.998240778842">
+          TopLeft="532.749993424863,786.998240778842">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -13066,7 +14047,7 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 9]"
-          TopLeft="463.499994300306,879.164907794196">
+          TopLeft="527.249993350357,879.164907794196">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -13078,6 +14059,164 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,43.650001964271" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="434.666666666667,42.6666666666667"
+          Id="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS"
+          TopLeft="276.124994067475,256.028963082434" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 4]"
+          TopLeft="496.74999364838,218.744742410507">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,37.2842206719266"
+              Start="0,0"
+              End="0,29.7842206719266">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.7842206719266" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 11]"
+          TopLeft="493.458327400809,298.6956297491">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="27.0833319363495,33.5280508665347"
+              Start="0,0"
+              End="27.0833319363495,26.0280508665347">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,12.7640254332674" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,12.7640254332674"
+                    Point2="0,16.7640254332674"
+                    Point3="4,16.7640254332674" />
+                  <mssgle:LineSegment
+                    End="23.0833319363495,16.7640254332674" />
+                  <mssgle:CubicBezierSegment
+                    Point1="23.0833319363495,16.7640254332674"
+                    Point2="27.0833319363495,16.7640254332674"
+                    Point3="27.0833319363495,20.7640254332674" />
+                  <mssgle:LineSegment
+                    End="27.0833319363495,26.0280508665347" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="298.666666666667,42.6666666666667"
+          Id="Package\Update Built_up_Road_Type in Accidents_NDS"
+          TopLeft="0,411.249996222556" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 5]"
+          TopLeft="520.541659337158,374.890347282302">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-371.208326003825,36.3596489402537"
+              Start="0,0"
+              End="-371.208326003825,28.8596489402537">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,14.1798244701269" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,14.1798244701269"
+                    Point2="0,18.1798244701269"
+                    Point3="-4,18.1798244701269" />
+                  <mssgle:LineSegment
+                    End="-367.208326003825,18.1798244701269" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-367.208326003825,18.1798244701269"
+                    Point2="-371.208326003825,18.1798244701269"
+                    Point3="-371.208326003825,22.1798244701269" />
+                  <mssgle:LineSegment
+                    End="-371.208326003825,28.8596489402537" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 12]"
+          TopLeft="298.666666666667,432.814033065849">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="44.583325715114,0"
+              Start="0,0"
+              End="37.083325715114,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="37.083325715114,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="257.333333333334,42.6666666666667"
+          Id="Package\Update Age_Group in Casualties_NDS"
+          TopLeft="372.499994449317,1105.5789478913" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 13]"
+          TopLeft="526.499993182719,1061.17894761235">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-25.3333320667349,44.4000002789496"
+              Start="0,0"
+              End="-25.3333320667349,36.9000002789496">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.2000001394748" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,18.2000001394748"
+                    Point2="0,22.2000001394748"
+                    Point3="-4,22.2000001394748" />
+                  <mssgle:LineSegment
+                    End="-21.3333320667349,22.2000001394748" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-21.3333320667349,22.2000001394748"
+                    Point2="-25.3333320667349,22.2000001394748"
+                    Point3="-25.3333320667349,26.2000001394748" />
+                  <mssgle:LineSegment
+                    End="-25.3333320667349,36.9000002789496" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -13172,7 +14311,7 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,9.53303235202401,96.3827734375,11.609375"
+              BoundingBox="-48.19138671875,9.533032352024,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -13292,7 +14431,7 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="39.5919465493909,28.3319520679603,91.7327734375,11.609375"
+              BoundingBox="39.591946549391,28.3319520679603,91.7327734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -13608,7 +14747,7 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="14.5294455295929,37.6001245377043,91.7327734375,11.609375"
+              BoundingBox="14.529445529593,37.6001245377043,91.7327734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -13755,7 +14894,7 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
         <NodeLayout
           Size="185.333333333334,42.6666666666667"
           Id="Package\Load dữ liệu từ Accidents Stage To NDS\Them du lieu Accident"
-          TopLeft="967.874998556449,533.835961936913" />
+          TopLeft="968.874998556449,533.835961936913" />
         <NodeLayout
           Size="238.666666666667,42.6666666666667"
           Id="Package\Load dữ liệu từ Accidents Stage To NDS\Them CreatedDate, UpdatedDate"
@@ -13892,18 +15031,18 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Load dữ liệu từ Accidents Stage To NDS.Paths[Derived Column Output]"
-          TopLeft="1062.99999862164,496.888593309804">
+          TopLeft="1063.49999862164,496.555259976471">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,36.947368627109"
+              EndConnector="0,37.2807019604423"
               Start="0,0"
-              End="0,29.447368627109">
+              End="0,29.7807019604423">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,29.447368627109" />
+                    End="0,29.7807019604423" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -13935,50 +15074,90 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Load dữ liệu từ Accidents Stage To NDS.Paths[Lookup Match Output3]"
-          TopLeft="740.749996069819,299.324564363969">
+          Id="Package\Load dữ liệu từ Accidents Stage To NDS.Paths[Lookup Match Output2]"
+          TopLeft="740.749992940575,214.30789884797">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,55.492977680704"
+              EndConnector="0,42.0166655159993"
               Start="0,0"
-              End="0,47.992977680704">
+              End="0,34.5166655159993">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,47.992977680704" />
+                    End="0,34.5166655159993" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,18.191801340352,96.3827734375,11.609375"
+              BoundingBox="-48.19138671875,11.4536452579997,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="534.666666666667,42.6666666666667"
+          Id="Package\Load dữ liệu từ Accidents Stage To NDS\Xem xet Urban_or_Rural_Area trong tung dong du lieu co nam trong Urban_or_Rural_Area_NDS"
+          TopLeft="1040.16666580985,261.824559366119" />
+        <EdgeLayout
+          Id="Package\Load dữ liệu từ Accidents Stage To NDS.Paths[Lookup Match Output3]"
+          TopLeft="946.583326013138,280.407895198378">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="93.5833397967115,0"
+              Start="0,0"
+              End="86.0833397967115,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="86.0833397967115,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-5.14971682039427,5,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Load dữ liệu từ Accidents Stage To NDS.Paths[Lookup Match Output2]"
-          TopLeft="740.749992940575,214.641232181303">
+          Id="Package\Load dữ liệu từ Accidents Stage To NDS.Paths[Lookup Match Output4]"
+          TopLeft="1307.49999914318,304.491226032786">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,41.6833321826661"
+              EndConnector="-569.583333016683,50.3263160118869"
               Start="0,0"
-              End="0,34.1833321826661">
+              End="-569.583333016683,42.8263160118869">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,34.1833321826661" />
+                    End="0,21.1631580059435" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,21.1631580059435"
+                    Point2="0,25.1631580059435"
+                    Point3="-4,25.1631580059435" />
+                  <mssgle:LineSegment
+                    End="-565.583333016683,25.1631580059435" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-565.583333016683,25.1631580059435"
+                    Point2="-569.583333016683,25.1631580059435"
+                    Point3="-569.583333016683,29.1631580059435" />
+                  <mssgle:LineSegment
+                    End="-569.583333016683,42.8263160118869" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,11.286978591333,96.3827734375,11.609375"
+              BoundingBox="-332.983053227092,30.1631580059435,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -14334,47 +15513,47 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="223,43"
+          Size="222.666666666667,42.6666666666667"
           Id="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Them du lieu Casualties_NDS"
           TopLeft="845.999997839331,825.578947059335" />
         <NodeLayout
-          Size="464,43"
+          Size="464,42.6666666666667"
           Id="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Xem xet du lieu Age_Band_of_Casualty_NK co trong Age_Band_of_Casualty_NDS"
           TopLeft="499.874999823049,287.245613726002" />
         <NodeLayout
-          Size="241,43"
+          Size="241.333333333334,42.6666666666667"
           Id="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Cap nhat du lieu  Casualties_NDS"
           TopLeft="430.874999823049,825.789473040282" />
         <NodeLayout
-          Size="319,43"
+          Size="318.666666666667,42.6666666666667"
           Id="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Xem xet du lieu Accident_Index co nam trong NDS"
           TopLeft="581,608" />
         <NodeLayout
-          Size="343,43"
+          Size="342.666666666667,42.6666666666667"
           Id="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Xem xet du lieu Accident_Index co trong Accident_NDS"
           TopLeft="553.874999823049,88.2456137260017" />
         <NodeLayout
-          Size="321,43"
+          Size="321.333333333334,42.6666666666667"
           Id="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Xem xet du lieu Severity_Nk co trong Severity_NDS"
           TopLeft="578.874999823049,488.245613726002" />
         <NodeLayout
-          Size="239,43"
+          Size="238.666666666667,42.6666666666667"
           Id="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Them CreatedDate, UpdatedDate"
           TopLeft="839.624997830019,746.894736275449" />
         <NodeLayout
-          Size="384,43"
+          Size="384,42.6666666666667"
           Id="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Xem xet du lieu Casualty_Type_NK co trong Casualty_Type_NDS"
           TopLeft="542.874999823049,382.245613726002" />
         <NodeLayout
-          Size="248,43"
+          Size="248,42.6666666666667"
           Id="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Load du lieu Casualties trong Stage"
           TopLeft="607.749997783452,0" />
         <NodeLayout
-          Size="172,43"
+          Size="172,42.6666666666667"
           Id="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Them UpdatedDate"
           TopLeft="458.374999264255,737.789473284975" />
         <NodeLayout
-          Size="387,43"
+          Size="386.666666666667,42.6666666666667"
           Id="Package\Load dữ liệu từ Casualties Stage To  Casualties_NDS\Xem xet du lieu Sex_of_Person_NK co trong Sex_of_Person_NDS"
           TopLeft="531.874999823049,179.245613726002" />
         <EdgeLayout
@@ -14469,7 +15648,7 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,22.9453125000002,96.3827734375,11.609375"
+              BoundingBox="-48.19138671875,22.9453125000001,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -14565,7 +15744,7 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="37.5294455295928,43.6450403206114,91.7327734375,11.609375"
+              BoundingBox="37.529445529593,43.6450403206114,91.7327734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -14588,9 +15767,7 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -14612,9 +15789,7 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -14636,9 +15811,7 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -14818,17 +15991,9 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
           Id="Package\Load dữ liệu từ Casualty_Type_Stage To Casualty_Type_NDS\Them UpdatedDate"
           TopLeft="117.374999264255,266.789473284975" />
         <NodeLayout
-          Size="341.333333333334,42.6666666666667"
-          Id="Package\Load dữ liệu từ Casualty_Type_Stage To Casualty_Type_NDS\Xem xet du lieu Casualty_Type _NK  co nam trong NDS"
-          TopLeft="254.303568101089,128.210529406645" />
-        <NodeLayout
           Size="238.666666666667,42.6666666666667"
           Id="Package\Load dữ liệu từ Casualty_Type_Stage To Casualty_Type_NDS\Them CreatedDate, UpdatedDate"
           TopLeft="504.624997830019,259.894736275449" />
-        <NodeLayout
-          Size="233.333333333334,42.6666666666667"
-          Id="Package\Load dữ liệu từ Casualty_Type_Stage To Casualty_Type_NDS\Cap nhat du lieu  Sex_of_Person"
-          TopLeft="82.8749998230488,349.789473040282" />
         <NodeLayout
           Size="268,42.6666666666667"
           Id="Package\Load dữ liệu từ Casualty_Type_Stage To Casualty_Type_NDS\Load du lieu Casualty_Type trong Stage"
@@ -14837,6 +16002,14 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
           Size="214.666666666667,42.6666666666667"
           Id="Package\Load dữ liệu từ Casualty_Type_Stage To Casualty_Type_NDS\Them du lieu Sex_of_Person"
           TopLeft="520.999997839331,356.578947059335" />
+        <NodeLayout
+          Size="233.333333333334,42.6666666666667"
+          Id="Package\Load dữ liệu từ Casualty_Type_Stage To Casualty_Type_NDS\Cap nhat du lieu  Sex_of_Person"
+          TopLeft="82.8749998230488,349.789473040282" />
+        <NodeLayout
+          Size="341.333333333334,42.6666666666667"
+          Id="Package\Load dữ liệu từ Casualty_Type_Stage To Casualty_Type_NDS\Xem xet du lieu Casualty_Type _NK  co nam trong NDS"
+          TopLeft="254.303568101089,128.210529406645" />
         <EdgeLayout
           Id="Package\Load dữ liệu từ Casualty_Type_Stage To Casualty_Type_NDS.Paths[OLE DB Source Output]"
           TopLeft="423.276782942271,56">
@@ -14979,29 +16152,6 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Load dữ liệu từ Casualty_Type_Stage To Casualty_Type_NDS\Xem xet du lieu Casualty_Type _NK  co nam trong NDS">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string"></Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Load dữ liệu từ Casualty_Type_Stage To Casualty_Type_NDS\Load du lieu Casualty_Type trong Stage">
     <Properties>
       <Property>
@@ -15027,6 +16177,29 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load dữ liệu từ Casualty_Type_Stage To Casualty_Type_NDS\Xem xet du lieu Casualty_Type _NK  co nam trong NDS">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string"></Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Load dữ liệu từ Journey_Purpose_Stage To Journey_Purpose_NDS">
     <LayoutInfo>
@@ -15037,17 +16210,9 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
           Id="Package\Load dữ liệu từ Journey_Purpose_Stage To Journey_Purpose_NDS\Them UpdatedDate"
           TopLeft="55.2500001303852,264.368419854925" />
         <NodeLayout
-          Size="345.333333333334,42.6666666666667"
-          Id="Package\Load dữ liệu từ Journey_Purpose_Stage To Journey_Purpose_NDS\Xem xet Journey_Purpose_Nk du lieu co nam trong NDS"
-          TopLeft="106.375000009313,118.684209315731" />
-        <NodeLayout
           Size="238.666666666667,42.6666666666667"
           Id="Package\Load dữ liệu từ Journey_Purpose_Stage To Journey_Purpose_NDS\Them CreatedDate, UpdatedDate"
           TopLeft="353.749999869615,279.84210416848" />
-        <NodeLayout
-          Size="241.333333333334,42.6666666666667"
-          Id="Package\Load dữ liệu từ Journey_Purpose_Stage To Journey_Purpose_NDS\Cap nhat du lieu Journey_Purpose"
-          TopLeft="15.375000083819,374.157893629285" />
         <NodeLayout
           Size="278.666666666667,42.6666666666667"
           Id="Package\Load dữ liệu từ Journey_Purpose_Stage To Journey_Purpose_NDS\Load du lieu Journey_Purpose trong Stage"
@@ -15056,6 +16221,14 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
           Size="225.333333333334,42.6666666666667"
           Id="Package\Load dữ liệu từ Journey_Purpose_Stage To Journey_Purpose_NDS\Them du lieu Journey_Purpose"
           TopLeft="356.999999776482,383.263157109144" />
+        <NodeLayout
+          Size="241.333333333334,42.6666666666667"
+          Id="Package\Load dữ liệu từ Journey_Purpose_Stage To Journey_Purpose_NDS\Cap nhat du lieu Journey_Purpose"
+          TopLeft="15.375000083819,374.157893629285" />
+        <NodeLayout
+          Size="345.333333333334,42.6666666666667"
+          Id="Package\Load dữ liệu từ Journey_Purpose_Stage To Journey_Purpose_NDS\Xem xet Journey_Purpose_Nk du lieu co nam trong NDS"
+          TopLeft="106.375000009313,118.684209315731" />
         <EdgeLayout
           Id="Package\Load dữ liệu từ Journey_Purpose_Stage To Journey_Purpose_NDS.Paths[OLE DB Source Output]"
           TopLeft="280.187500004657,63">
@@ -15198,29 +16371,6 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Load dữ liệu từ Journey_Purpose_Stage To Journey_Purpose_NDS\Xem xet Journey_Purpose_Nk du lieu co nam trong NDS">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string"></Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Load dữ liệu từ Journey_Purpose_Stage To Journey_Purpose_NDS\Load du lieu Journey_Purpose trong Stage">
     <Properties>
       <Property>
@@ -15243,6 +16393,29 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load dữ liệu từ Journey_Purpose_Stage To Journey_Purpose_NDS\Xem xet Journey_Purpose_Nk du lieu co nam trong NDS">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string"></Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -15475,17 +16648,9 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
           Id="Package\Load dữ liệu từ Road_Type_Stage To Road_Type_NDS\Them UpdatedDate"
           TopLeft="36.2500001303852,264.368419854925" />
         <NodeLayout
-          Size="302.666666666667,42.6666666666667"
-          Id="Package\Load dữ liệu từ Road_Type_Stage To Road_Type_NDS\Xem xet Severity_Nk du lieu co nam trong NDS"
-          TopLeft="126.375000009313,115.684209315731" />
-        <NodeLayout
           Size="238.666666666667,42.6666666666667"
           Id="Package\Load dữ liệu từ Road_Type_Stage To Road_Type_NDS\Them CreatedDate, UpdatedDate"
           TopLeft="320.749999869615,279.84210416848" />
-        <NodeLayout
-          Size="197.333333333334,42.6666666666667"
-          Id="Package\Load dữ liệu từ Road_Type_Stage To Road_Type_NDS\Cap nhat du lieu Severity"
-          TopLeft="28.375000083819,375.157893629285" />
         <NodeLayout
           Size="252,42.6666666666667"
           Id="Package\Load dữ liệu từ Road_Type_Stage To Road_Type_NDS\Load du lieu Road_Type trong Stage"
@@ -15494,6 +16659,14 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
           Size="182.666666666667,42.6666666666667"
           Id="Package\Load dữ liệu từ Road_Type_Stage To Road_Type_NDS\Them du lieu Severity"
           TopLeft="344.999999776482,376.263157109144" />
+        <NodeLayout
+          Size="197.333333333334,42.6666666666667"
+          Id="Package\Load dữ liệu từ Road_Type_Stage To Road_Type_NDS\Cap nhat du lieu Severity"
+          TopLeft="28.375000083819,375.157893629285" />
+        <NodeLayout
+          Size="302.666666666667,42.6666666666667"
+          Id="Package\Load dữ liệu từ Road_Type_Stage To Road_Type_NDS\Xem xet Severity_Nk du lieu co nam trong NDS"
+          TopLeft="126.375000009313,115.684209315731" />
         <EdgeLayout
           Id="Package\Load dữ liệu từ Road_Type_Stage To Road_Type_NDS.Paths[OLE DB Source Output]"
           TopLeft="281.437500004657,59">
@@ -15513,7 +16686,9 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -15607,7 +16782,9 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -15629,35 +16806,14 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Load dữ liệu từ Road_Type_Stage To Road_Type_NDS\Xem xet Severity_Nk du lieu co nam trong NDS">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string"></Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Load dữ liệu từ Road_Type_Stage To Road_Type_NDS\Load du lieu Road_Type trong Stage">
     <Properties>
@@ -15684,6 +16840,29 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load dữ liệu từ Road_Type_Stage To Road_Type_NDS\Xem xet Severity_Nk du lieu co nam trong NDS">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string"></Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Load dữ liệu từ Severity_Stage To Severity_NDS">
     <LayoutInfo>
@@ -15694,17 +16873,9 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
           Id="Package\Load dữ liệu từ Severity_Stage To Severity_NDS\Them UpdatedDate"
           TopLeft="34.2500001303852,268.368419854925" />
         <NodeLayout
-          Size="302.666666666667,42.6666666666667"
-          Id="Package\Load dữ liệu từ Severity_Stage To Severity_NDS\Xem xet Severity_Nk du lieu co nam trong NDS"
-          TopLeft="87.3750000093131,120.684209315731" />
-        <NodeLayout
           Size="238.666666666667,42.6666666666667"
           Id="Package\Load dữ liệu từ Severity_Stage To Severity_NDS\Them CreatedDate, UpdatedDate"
           TopLeft="322.749999869615,269.84210416848" />
-        <NodeLayout
-          Size="197.333333333334,42.6666666666667"
-          Id="Package\Load dữ liệu từ Severity_Stage To Severity_NDS\Cap nhat du lieu Severity"
-          TopLeft="27.375000083819,386.157893629285" />
         <NodeLayout
           Size="236,42.6666666666667"
           Id="Package\Load dữ liệu từ Severity_Stage To Severity_NDS\Load du lieu Severity trong Stage"
@@ -15713,6 +16884,14 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
           Size="182.666666666667,42.6666666666667"
           Id="Package\Load dữ liệu từ Severity_Stage To Severity_NDS\Them du lieu Severity"
           TopLeft="355.999999776482,382.263157109144" />
+        <NodeLayout
+          Size="197.333333333334,42.6666666666667"
+          Id="Package\Load dữ liệu từ Severity_Stage To Severity_NDS\Cap nhat du lieu Severity"
+          TopLeft="27.375000083819,386.157893629285" />
+        <NodeLayout
+          Size="302.666666666667,42.6666666666667"
+          Id="Package\Load dữ liệu từ Severity_Stage To Severity_NDS\Xem xet Severity_Nk du lieu co nam trong NDS"
+          TopLeft="87.3750000093131,120.684209315731" />
         <EdgeLayout
           Id="Package\Load dữ liệu từ Severity_Stage To Severity_NDS.Paths[OLE DB Source Output]"
           TopLeft="236.437500004657,58">
@@ -15831,18 +17010,18 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Load dữ liệu từ Severity_Stage To Severity_NDS.Paths[Derived Column Output]"
-          TopLeft="444.874999823048,312.84210416848">
+          TopLeft="444.708333156382,312.508770835147">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,69.421052940664"
+              EndConnector="0,69.7543862739973"
               Start="0,0"
-              End="0,61.921052940664">
+              End="0,62.2543862739973">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,61.921052940664" />
+                    End="0,62.2543862739973" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -15854,29 +17033,6 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Load dữ liệu từ Severity_Stage To Severity_NDS\Xem xet Severity_Nk du lieu co nam trong NDS">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string"></Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Load dữ liệu từ Severity_Stage To Severity_NDS\Load du lieu Severity trong Stage">
     <Properties>
@@ -15903,6 +17059,29 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load dữ liệu từ Severity_Stage To Severity_NDS\Xem xet Severity_Nk du lieu co nam trong NDS">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string"></Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Load dữ liệu từ Sex_of_Person Stage To Sex_of_Person NDS">
     <LayoutInfo>
@@ -15913,17 +17092,9 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
           Id="Package\Load dữ liệu từ Sex_of_Person Stage To Sex_of_Person NDS\Them UpdatedDate"
           TopLeft="117.374999264255,265.789473284975" />
         <NodeLayout
-          Size="338.666666666667,42.6666666666667"
-          Id="Package\Load dữ liệu từ Sex_of_Person Stage To Sex_of_Person NDS\Xem xet du lieu Sex_of_Person_NK  co nam trong NDS"
-          TopLeft="250.303568101089,138.210529406645" />
-        <NodeLayout
           Size="238.666666666667,42.6666666666667"
           Id="Package\Load dữ liệu từ Sex_of_Person Stage To Sex_of_Person NDS\Them CreatedDate, UpdatedDate"
           TopLeft="472.624997830019,264.894736275449" />
-        <NodeLayout
-          Size="233.333333333334,42.6666666666667"
-          Id="Package\Load dữ liệu từ Sex_of_Person Stage To Sex_of_Person NDS\Cap nhat du lieu  Sex_of_Person"
-          TopLeft="88.8749998230488,362.789473040282" />
         <NodeLayout
           Size="276,42.6666666666667"
           Id="Package\Load dữ liệu từ Sex_of_Person Stage To Sex_of_Person NDS\Load du lieu Sex_of_Casualty trong Stage"
@@ -15932,6 +17103,14 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
           Size="214.666666666667,42.6666666666667"
           Id="Package\Load dữ liệu từ Sex_of_Person Stage To Sex_of_Person NDS\Them du lieu Sex_of_Person"
           TopLeft="487.999997839331,359.578947059335" />
+        <NodeLayout
+          Size="233.333333333334,42.6666666666667"
+          Id="Package\Load dữ liệu từ Sex_of_Person Stage To Sex_of_Person NDS\Cap nhat du lieu  Sex_of_Person"
+          TopLeft="88.8749998230488,362.789473040282" />
+        <NodeLayout
+          Size="338.666666666667,42.6666666666667"
+          Id="Package\Load dữ liệu từ Sex_of_Person Stage To Sex_of_Person NDS\Xem xet du lieu Sex_of_Person_NK  co nam trong NDS"
+          TopLeft="250.303568101089,138.210529406645" />
         <EdgeLayout
           Id="Package\Load dữ liệu từ Sex_of_Person Stage To Sex_of_Person NDS.Paths[OLE DB Source Output]"
           TopLeft="421.276782942271,77">
@@ -15951,7 +17130,9 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -16045,7 +17226,9 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -16067,35 +17250,14 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Load dữ liệu từ Sex_of_Person Stage To Sex_of_Person NDS\Xem xet du lieu Sex_of_Person_NK  co nam trong NDS">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string"></Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Load dữ liệu từ Sex_of_Person Stage To Sex_of_Person NDS\Load du lieu Sex_of_Casualty trong Stage">
     <Properties>
@@ -16122,6 +17284,29 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load dữ liệu từ Sex_of_Person Stage To Sex_of_Person NDS\Xem xet du lieu Sex_of_Person_NK  co nam trong NDS">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string"></Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Load dữ liệu từ Vehicle_Type_Stage To Vehicle_Type_NDS">
     <LayoutInfo>
@@ -16132,17 +17317,9 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
           Id="Package\Load dữ liệu từ Vehicle_Type_Stage To Vehicle_Type_NDS\Them UpdatedDate"
           TopLeft="37.2500001303852,266.368419854925" />
         <NodeLayout
-          Size="326.666666666667,42.6666666666667"
-          Id="Package\Load dữ liệu từ Vehicle_Type_Stage To Vehicle_Type_NDS\Xem xet Vehicle_Type_Nk du lieu co nam trong NDS"
-          TopLeft="134.375000009313,145.684209315731" />
-        <NodeLayout
           Size="238.666666666667,42.6666666666667"
           Id="Package\Load dữ liệu từ Vehicle_Type_Stage To Vehicle_Type_NDS\Them CreatedDate, UpdatedDate"
           TopLeft="374.749999869615,279.84210416848" />
-        <NodeLayout
-          Size="222.666666666667,42.6666666666667"
-          Id="Package\Load dữ liệu từ Vehicle_Type_Stage To Vehicle_Type_NDS\Cap nhat du lieu Vehicle_Type"
-          TopLeft="12.375000083819,371.157893629285" />
         <NodeLayout
           Size="261.333333333334,42.6666666666667"
           Id="Package\Load dữ liệu từ Vehicle_Type_Stage To Vehicle_Type_NDS\Load du lieu Vehicle_Type trong Stage"
@@ -16151,6 +17328,14 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
           Size="206.666666666667,42.6666666666667"
           Id="Package\Load dữ liệu từ Vehicle_Type_Stage To Vehicle_Type_NDS\Them du lieu Vehicle_Type"
           TopLeft="385.999999776482,381.263157109144" />
+        <NodeLayout
+          Size="222.666666666667,42.6666666666667"
+          Id="Package\Load dữ liệu từ Vehicle_Type_Stage To Vehicle_Type_NDS\Cap nhat du lieu Vehicle_Type"
+          TopLeft="12.375000083819,371.157893629285" />
+        <NodeLayout
+          Size="326.666666666667,42.6666666666667"
+          Id="Package\Load dữ liệu từ Vehicle_Type_Stage To Vehicle_Type_NDS\Xem xet Vehicle_Type_Nk du lieu co nam trong NDS"
+          TopLeft="134.375000009313,145.684209315731" />
         <EdgeLayout
           Id="Package\Load dữ liệu từ Vehicle_Type_Stage To Vehicle_Type_NDS.Paths[OLE DB Source Output]"
           TopLeft="296.687500004657,89">
@@ -16241,7 +17426,7 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="25.7377798780676,41.7294743715885,91.7327734375,11.609375"
+              BoundingBox="25.7377798780675,41.7294743715885,91.7327734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -16293,29 +17478,6 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Load dữ liệu từ Vehicle_Type_Stage To Vehicle_Type_NDS\Xem xet Vehicle_Type_Nk du lieu co nam trong NDS">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string"></Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Load dữ liệu từ Vehicle_Type_Stage To Vehicle_Type_NDS\Load du lieu Vehicle_Type trong Stage">
     <Properties>
       <Property>
@@ -16338,6 +17500,295 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load dữ liệu từ Vehicle_Type_Stage To Vehicle_Type_NDS\Xem xet Vehicle_Type_Nk du lieu co nam trong NDS">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string"></Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="172,42.6666666666667"
+          Id="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Them UpdatedDate"
+          TopLeft="36.2500001303852,264.368419854925" />
+        <NodeLayout
+          Size="238.666666666667,42.6666666666667"
+          Id="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Them CreatedDate, UpdatedDate"
+          TopLeft="320.749999869615,279.84210416848" />
+        <NodeLayout
+          Size="300,42.6666666666667"
+          Id="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Load du lieu Urban_or_Rural_Area trong Stage"
+          TopLeft="159,16" />
+        <NodeLayout
+          Size="245.333333333334,42.6666666666667"
+          Id="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Them du lieu Urban_or_Rural_Area"
+          TopLeft="344.999999776482,376.263157109144" />
+        <NodeLayout
+          Size="261.333333333334,42.6666666666667"
+          Id="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Cap nhat du lieu Urban_or_Rural_Area"
+          TopLeft="28.375000083819,375.157893629285" />
+        <NodeLayout
+          Size="365.333333333334,42.6666666666667"
+          Id="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Xem xet Urban_or_Rural_Area_Nk du lieu co nam trong NDS"
+          TopLeft="126.375000009313,115.684209315731" />
+        <EdgeLayout
+          Id="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS.Paths[OLE DB Source Output]"
+          TopLeft="309.02083333799,58.6666666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,57.0175426490643"
+              Start="0,0"
+              End="0,49.5175426490643">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,49.5175426490643" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS.Paths[Lookup Match Output]"
+          TopLeft="249.486111120424,158.350875982398">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-127.236110990039,106.017543872527"
+              Start="0,0"
+              End="-127.236110990039,98.5175438725273">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,38.6843890300728" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,38.6843890300728"
+                    Point2="0,42.6843890300728"
+                    Point3="-4,42.6843890300728" />
+                  <mssgle:LineSegment
+                    End="-123.236110990039,42.6843890300728" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-123.236110990039,42.6843890300728"
+                    Point2="-127.236110990039,42.6843890300728"
+                    Point3="-127.236110990039,46.6843890300728" />
+                  <mssgle:LineSegment
+                    End="-127.236110990039,98.5175438725273" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-111.809442213769,47.6843890300728,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS.Paths[Lookup Error Output]"
+          TopLeft="368.597222231535,158.350875982398">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="71.4861109714131,121.491228186082"
+              Start="0,0"
+              End="71.4861109714131,113.991228186082">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,44.9143462318965" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,44.9143462318965"
+                    Point2="0,48.9143462318965"
+                    Point3="4,48.9143462318965" />
+                  <mssgle:LineSegment
+                    End="67.4861109714131,48.9143462318965" />
+                  <mssgle:CubicBezierSegment
+                    Point1="67.4861109714131,48.9143462318965"
+                    Point2="71.4861109714131,48.9143462318965"
+                    Point3="71.4861109714131,52.9143462318965" />
+                  <mssgle:LineSegment
+                    End="71.4861109714131,113.991228186082" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-10.1233312330435,53.9143462318965,91.7327734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS.Paths[Derived Column Output1]"
+          TopLeft="122.250000130385,307.035086521592">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="36.7916666201005,68.1228071076933"
+              Start="0,0"
+              End="36.7916666201005,60.6228071076933">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30.0614035538467" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,30.0614035538467"
+                    Point2="0,34.0614035538467"
+                    Point3="4,34.0614035538467" />
+                  <mssgle:LineSegment
+                    End="32.7916666201005,34.0614035538467" />
+                  <mssgle:CubicBezierSegment
+                    Point1="32.7916666201005,34.0614035538467"
+                    Point2="36.7916666201005,34.0614035538467"
+                    Point3="36.7916666201005,38.0614035538467" />
+                  <mssgle:LineSegment
+                    End="36.7916666201005,60.6228071076933" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS.Paths[Derived Column Output]"
+          TopLeft="440.083333202948,322.508770835147">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="27.5833332402004,53.7543862739973"
+              Start="0,0"
+              End="27.5833332402004,46.2543862739973">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22.8771931369987" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,22.8771931369987"
+                    Point2="0,26.8771931369987"
+                    Point3="4,26.8771931369987" />
+                  <mssgle:LineSegment
+                    End="23.5833332402004,26.8771931369987" />
+                  <mssgle:CubicBezierSegment
+                    Point1="23.5833332402004,26.8771931369987"
+                    Point2="27.5833332402004,26.8771931369987"
+                    Point3="27.5833332402004,30.8771931369987" />
+                  <mssgle:LineSegment
+                    End="27.5833332402004,46.2543862739973" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Load du lieu Urban_or_Rural_Area trong Stage">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Them du lieu Urban_or_Rural_Area">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS\Xem xet Urban_or_Rural_Area_Nk du lieu co nam trong NDS">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string"></Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load dữ liệu từ Accidents Stage To NDS\Xem xet Urban_or_Rural_Area trong tung dong du lieu co nam trong Urban_or_Rural_Area_NDS">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string"></Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
