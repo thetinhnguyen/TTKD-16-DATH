@@ -35,20 +35,20 @@ GO
 CREATE TABLE [dbo].[Accidents_Stage](
     [Accident_Index] varchar(50),
     [Accident_Severity] int,
-    [Number_of_Vehicles] int,
+    [Number_of_Vehicles] int, --no
     [Number_of_Casualties] int,
     [Date] datetime,
     [Day_of_Week] int,
     [Time] datetime,
     [Local_Authority_(District)] int,
-    [Local_Authority_(Highway)] varchar(50),
+    [Local_Authority_(Highway)] varchar(50), --no
     [Road_Type] int,
     [Speed_limit] int,
-    [Road_Surface_Conditions] int,
-    [Special_Conditions_at_Site] int,
-    [Carriageway_Hazards] int,
+    [Road_Surface_Conditions] int, --no
+    [Special_Conditions_at_Site] int, -- no
+    [Carriageway_Hazards] int, --no
     [Urban_or_Rural_Area] int,
-    [LSOA_of_Accident_Location] varchar(50),
+    [LSOA_of_Accident_Location] varchar(50),--no
 ) ON [PRIMARY]
 GO
 
@@ -86,6 +86,8 @@ CREATE TABLE [Casualties_Stage] (
     [Casualty_Type] int
 ) ON [PRIMARY]
 GO
+
+--select * from Accident_location_Stage where country_name= 'Wales'
 
 /****** Object:  Table [dbo].[Accident_location_Stage]    Script Date: 10/21/2021 12:19:23 PM ******/
 SET ANSI_NULLS ON
@@ -203,5 +205,18 @@ GO
 CREATE TABLE [dbo].[Vehicle_Type_Stage](
   [Vehicle_Type_ID] int,
   [Vehicle_Type_Name] nvarchar(255)
+) ON [PRIMARY]
+GO
+
+/****** Object:  Table [dbo].[Urban_or_Rural_Area_Stage]    Script Date: 10/21/2021 12:19:23 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Urban_or_Rural_Area_Stage](
+  [Urban_or_Rural_Area_ID] int,
+  [Urban_or_Rural_Area_Name] nvarchar(255)
 ) ON [PRIMARY]
 GO
