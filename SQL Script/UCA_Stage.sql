@@ -23,7 +23,6 @@ CREATE DATABASE [UCA_STAGE]
 GO
 USE [UCA_STAGE]
 
---select a.*, b.Location_ID from [dbo].[Accidents_Stage] a, [dbo].[Accident_Location_Stage] b where a.Accident_Index=b.Accident_Index
 --select Accident_Index, Time, CAST(DATEPART(HOUR, Time) AS int) as hour, dbo.get_type_time(Time) as Type from Accidents_Stage
 
 /****** Object:  Table [dbo].[Accidents_Stage]    Script Date: 10/21/2021 12:19:23 PM ******/

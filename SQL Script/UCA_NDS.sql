@@ -6,6 +6,10 @@ CREATE DATABASE [UCA_NDS]
 GO
 USE [UCA_NDS]
 
+--select a.Age_of_Casualty, b.Age_Group_Name, c.Age_Band_of_Casualty_Name
+--from Casualties_NDS a, Age_Group_NDS b, Age_Band_of_Casualty_NDS c
+--where a.Age_Band_of_Casualty=c.Age_Band_of_Casualty_NK and a.Age_Group = b.Age_Group_Id
+
 /****** Object:  Table [dbo].[Accidents_NDS]    Script Date: 10/21/2021 12:19:23 PM ******/
 SET ANSI_NULLS ON
 GO
@@ -421,6 +425,7 @@ GO
 
 --data
 --AGE_GROUP
+INSERT INTO Age_Group_NDS (Age_Group_ID, Age_Group_Name) VALUES (-1, 'Unknow');
 INSERT INTO Age_Group_NDS (Age_Group_ID, Age_Group_Name) VALUES (1, 'Children');
 INSERT INTO Age_Group_NDS (Age_Group_ID, Age_Group_Name) VALUES (2, 'Young adult');
 INSERT INTO Age_Group_NDS (Age_Group_ID, Age_Group_Name) VALUES (3, 'Adult');

@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="43"
-  DTS:VersionGUID="{850BDE20-08B6-4343-BC20-D947A658EA69}">
+  DTS:VersionBuild="44"
+  DTS:VersionGUID="{79947096-0AD6-4ACC-A36E-8057B8377799}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -13691,7 +13691,7 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{0BA4E358-639B-45D8-AC54-5BE160524115}"
-          SQLTask:SqlStatementSource="UPDATE dbo.[Casualties_NDS]&#xA;SET [Age_Group] = 1&#xA;WHERE [Age_of_Casualty]&lt;= 15 and [Age_of_Casualty] &gt; 0&#xA;&#xA;UPDATE dbo.[Casualties_NDS]&#xA;SET [Age_Group] = 2&#xA;WHERE [Age_of_Casualty]&lt;= 17 and [Age_of_Casualty] &gt; 15&#xA;&#xA;UPDATE dbo.[Casualties_NDS]&#xA;SET [Age_Group] = 3&#xA;WHERE [Age_of_Casualty]&lt;= 59 and [Age_of_Casualty] &gt; 17&#xA;&#xA;UPDATE dbo.[Casualties_NDS]&#xA;SET [Age_Group] = 4&#xA;WHERE [Age_of_Casualty] &gt; 59 " xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="UPDATE dbo.[Casualties_NDS]&#xA;SET [Age_Group] = 1&#xA;WHERE [Age_of_Casualty]&lt;= 15 and [Age_of_Casualty] &gt; 0&#xA;&#xA;UPDATE dbo.[Casualties_NDS]&#xA;SET [Age_Group] = 2&#xA;WHERE [Age_of_Casualty]&lt;= 17 and [Age_of_Casualty] &gt; 15&#xA;&#xA;UPDATE dbo.[Casualties_NDS]&#xA;SET [Age_Group] = 3&#xA;WHERE [Age_of_Casualty]&lt;= 59 and [Age_of_Casualty] &gt; 17&#xA;&#xA;UPDATE dbo.[Casualties_NDS]&#xA;SET [Age_Group] = 4&#xA;WHERE [Age_of_Casualty] &gt; 59 &#xA;&#xA;UPDATE dbo.[Casualties_NDS]&#xA;SET [Age_Group] = -1&#xA;WHERE [Age_of_Casualty]=-1" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -13923,6 +13923,10 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
           Size="298,42"
           Id="Package\Update Built_up_Road_Type in Accidents_NDS"
           TopLeft="345,508.249996222556" />
+        <NodeLayout
+          Size="275,42"
+          Id="Package\Update Session_in_Day in Accidents_NDS"
+          TopLeft="358,582" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="491.624993434176,146.750878598163">
@@ -14003,6 +14007,28 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,27.694717533201" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 12]"
+          TopLeft="493.374996451661,624">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,48.88158216685"
+              Start="0,0"
+              End="0,41.38158216685">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,41.38158216685" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -14144,6 +14170,28 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 6]"
+          TopLeft="494.75,550.249996222556">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,31.750003777444"
+              Start="0,0"
+              End="0,24.250003777444">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.250003777444" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 7]"
           TopLeft="492.624993583187,714.88158216685">
           <EdgeLayout.Curve>
@@ -14201,54 +14249,6 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,43.6500019642701" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="275,42"
-          Id="Package\Update Session_in_Day in Accidents_NDS"
-          TopLeft="358,582" />
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 6]"
-          TopLeft="494.75,550.249996222556">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,31.750003777444"
-              Start="0,0"
-              End="0,24.250003777444">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,24.250003777444" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 12]"
-          TopLeft="493.374996451661,624">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,48.88158216685"
-              Start="0,0"
-              End="0,41.38158216685">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,41.38158216685" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -14943,7 +14943,7 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Load dữ liệu từ Accidents Stage To NDS\Xem xet Accident_NK trong tung dong du lieu co nam trong NDS">
+    design-time-name="Package\Load dữ liệu từ Accidents Stage To NDS\Xem xet Urban_or_Rural_Area trong tung dong du lieu co nam trong Urban_or_Rural_Area_NDS">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
@@ -14962,6 +14962,19 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load dữ liệu từ Accidents Stage To NDS\Load du lieu Accidents trong Stage">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -14989,43 +15002,7 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Load dữ liệu từ Accidents Stage To NDS\Xem xet Urban_or_Rural_Area trong tung dong du lieu co nam trong Urban_or_Rural_Area_NDS">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string"></Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Load dữ liệu từ Accidents Stage To NDS\Load du lieu Accidents trong Stage">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Load dữ liệu từ Accidents Stage To NDS\Xem xet Severity trong tung dong du lieu co nam trong Severity NDS">
+    design-time-name="Package\Load dữ liệu từ Accidents Stage To NDS\Xem xet Local_Authority_District trong tung dong du lieu co nam trong Local_Authority_District_NDS">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
@@ -15061,7 +15038,53 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Load dữ liệu từ Accidents Stage To NDS\Xem xet Local_Authority_District trong tung dong du lieu co nam trong Local_Authority_District_NDS">
+    design-time-name="Package\Load dữ liệu từ Accidents Stage To NDS\Xem xet Accident_NK trong tung dong du lieu co nam trong NDS">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string"></Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load dữ liệu từ Accidents Stage To NDS\Xem xet Location trong tung dong du lieu co nam trong Location_NDS">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string"></Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load dữ liệu từ Accidents Stage To NDS\Xem xet Severity trong tung dong du lieu co nam trong Severity NDS">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
@@ -15626,30 +15649,7 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Load dữ liệu từ Casualties Stage To Casualties_NDS\Xem xet du lieu Casualty_Type_NK co trong Casualty_Type_NDS">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string"></Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Load dữ liệu từ Casualties Stage To Casualties_NDS\Xem xet du lieu Severity_Nk co trong Severity_NDS">
+    design-time-name="Package\Load dữ liệu từ Casualties Stage To Casualties_NDS\Xem xet du lieu Age_Band_of_Casualty_NK co trong Age_Band_of_Casualty_NDS">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
@@ -15695,7 +15695,7 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Load dữ liệu từ Casualties Stage To Casualties_NDS\Xem xet du lieu Age_Band_of_Casualty_NK co trong Age_Band_of_Casualty_NDS">
+    design-time-name="Package\Load dữ liệu từ Casualties Stage To Casualties_NDS\Xem xet du lieu Casualty_Type_NK co trong Casualty_Type_NDS">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
@@ -15741,6 +15741,29 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
+    design-time-name="Package\Load dữ liệu từ Casualties Stage To Casualties_NDS\Xem xet du lieu Accident_Index co trong Accident_NDS">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string"></Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
     design-time-name="Package\Load dữ liệu từ Casualties Stage To Casualties_NDS\Load du lieu Casualties trong Stage">
     <Properties>
       <Property>
@@ -15754,7 +15777,7 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Load dữ liệu từ Casualties Stage To Casualties_NDS\Xem xet du lieu Accident_Index co trong Accident_NDS">
+    design-time-name="Package\Load dữ liệu từ Casualties Stage To Casualties_NDS\Xem xet du lieu Severity_Nk co trong Severity_NDS">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
@@ -16610,6 +16633,32 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
+    design-time-name="Package\Load dữ liệu từ Localtion_Stage To Location_NDS\Load du lieu Location trong Stage">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load dữ liệu từ Localtion_Stage To Location_NDS\Them du lieu Location">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
     design-time-name="Package\Load dữ liệu từ Localtion_Stage To Location_NDS\Xem xet Location du lieu co nam trong NDS">
     <Properties>
       <Property>
@@ -16629,32 +16678,6 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Load dữ liệu từ Localtion_Stage To Location_NDS\Them du lieu Location">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Load dữ liệu từ Localtion_Stage To Location_NDS\Load du lieu Location trong Stage">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -17582,27 +17605,27 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="172,42.6666666666667"
+          Size="172,43"
           Id="Package\Load dữ liệu từ Vehicle_Type_Stage To Vehicle_Type_NDS\Them UpdatedDate"
           TopLeft="37.2500001303852,266.368419854925" />
         <NodeLayout
-          Size="238.666666666667,42.6666666666667"
+          Size="239,43"
           Id="Package\Load dữ liệu từ Vehicle_Type_Stage To Vehicle_Type_NDS\Them CreatedDate, UpdatedDate"
           TopLeft="374.749999869615,279.84210416848" />
         <NodeLayout
-          Size="261.333333333334,42.6666666666667"
+          Size="261,43"
           Id="Package\Load dữ liệu từ Vehicle_Type_Stage To Vehicle_Type_NDS\Load du lieu Vehicle_Type trong Stage"
           TopLeft="165,46" />
         <NodeLayout
-          Size="206.666666666667,42.6666666666667"
+          Size="207,43"
           Id="Package\Load dữ liệu từ Vehicle_Type_Stage To Vehicle_Type_NDS\Them du lieu Vehicle_Type"
           TopLeft="385.999999776482,381.263157109144" />
         <NodeLayout
-          Size="222.666666666667,42.6666666666667"
+          Size="223,43"
           Id="Package\Load dữ liệu từ Vehicle_Type_Stage To Vehicle_Type_NDS\Cap nhat du lieu Vehicle_Type"
           TopLeft="12.375000083819,371.157893629285" />
         <NodeLayout
-          Size="326.666666666667,42.6666666666667"
+          Size="327,43"
           Id="Package\Load dữ liệu từ Vehicle_Type_Stage To Vehicle_Type_NDS\Xem xet Vehicle_Type_Nk du lieu co nam trong NDS"
           TopLeft="134.375000009313,145.684209315731" />
         <EdgeLayout
@@ -17624,9 +17647,7 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -17720,9 +17741,7 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -17744,9 +17763,7 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -17795,29 +17812,6 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Load dữ liệu từ Accidents Stage To NDS\Xem xet Location trong tung dong du lieu co nam trong Location_NDS">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string"></Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>

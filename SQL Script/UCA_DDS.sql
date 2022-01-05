@@ -5,20 +5,19 @@ GO
 USE [UCA_DDS]
 GO
 
+--select * from dimTime
 CREATE TABLE dimDate(
 	[Date] DATE PRIMARY KEY,
-	[Day] AS (DATEPART(DAY,[Date])),
-	[DayOfWeek] AS (DATEPART(WEEKDAY,[Date])),
-	[Month] AS (DATEPART(MONTH,[Date])),
-	[Quarter] AS (DATEPART(QUARTER,[Date])),
-	[Year] AS (DATEPART(YEAR,[Date])),
-	[CreatedDate] DATETIME,
-	[UpdatedDate] DATETIME,
+	[Day] int,
+	[DayOfWeek] int,
+	[Month] int,
+	[Quarter] int,
+	[Year] int
 )
 
 CREATE TABLE dimTime(
 	[Time] Time PRIMARY KEY,
-	[Hour] AS CAST(DATEPART(HOUR, [Time]) AS int),
+	[Hour] int,
 	[SessionOfDay] nvarchar(255),
 )
 
@@ -27,9 +26,7 @@ CREATE TABLE [dimLocation] (
 	[city] varchar(50),
     [county] varchar(50),
     [country_name] varchar(50),
-    [region_name] varchar(50),
-	[CreatedDate] [datetime] NULL,
-	[UpdatedDate] [datetime] NULL,
+    [region_name] varchar(50)
 )
 
 
@@ -50,7 +47,9 @@ CREATE TABLE [dbo].[dimLocalAuthorityDistrict](
 -- Dim cho Fact_Accidents
 CREATE TABLE [dbo].[dimBuiltUpRoadType](
 	[Built_up_Road_Type_ID] [int] PRIMARY KEY,
-	[Built_up_Road_Type_Name] nvarchar(255)
+	[Built_up_Road_Type_Name] nvarchar(255),
+	[CreatedDate] [datetime] NULL,
+	[UpdatedDate] [datetime] NULL,
 )
 
 CREATE TABLE [dbo].[dimUrbanOrRural](
@@ -85,9 +84,7 @@ CREATE TABLE [dbo].[dimJourneyPurpose](
 CREATE TABLE [dimAge] (
 	[Age] [int] PRIMARY KEY,
     [Age_Band] nvarchar(255),
-	[Age_Group] nvarchar(255),
-	[CreatedDate] [datetime] NULL,
-	[UpdatedDate] [datetime] NULL,
+	[Age_Group] nvarchar(255)
 ) 
 
 CREATE TABLE [dbo].[dimSexOfPerson](
@@ -122,8 +119,6 @@ CREATE TABLE Fact_Accidents(
 	NumOfAccidents INT, --So luong TNGT cho cau 4,5,9
 	TotalAccidents INT, --Tong so luong TNGT cho cau 7
 	Variance FLOAT, -- Do tang giam TNGT
-	Created_timestamp DATETIME,
-	Update_timestamp DATETIME,
 	PRIMARY KEY (Fact_Accidents_ID)
 )
 
@@ -140,7 +135,6 @@ CREATE TABLE Fact_Casualities(
 	[Location_NK] [int] FOREIGN KEY REFERENCES dimLocation, 
 	NumOfCasualities INT, --So luong nan nhan cho cau 1,2,6
 	NumOfDead INT, --Tong so luong nguoi tu vong cho cau 3
-	Created_timestamp DATETIME,
 	Update_timestamp DATETIME,
 	PRIMARY KEY (Fact_Casualities_ID)
 )

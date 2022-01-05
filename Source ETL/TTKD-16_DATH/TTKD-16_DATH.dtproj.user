@@ -10,6 +10,7 @@
         <WinAuthDomain />
         <ServerName />
         <PathOnServer />
+        <StartObjectID>NDSToDim.dtsx</StartObjectID>
         <Run64BitRuntime>false</Run64BitRuntime>
         <UserIDs />
         <UserPasswords />
