@@ -6,12 +6,12 @@ USE [UCA_DDS]
 GO
 
 CREATE TABLE dimDate(
-	[DateTime] DATE PRIMARY KEY,
-	[Day] AS (DATEPART(DAY,[DateTime])),
-	[DayOfWeek] AS (DATEPART(WEEKDAY,[DateTime])),
-	[Month] AS (DATEPART(MONTH,[DateTime])),
-	[Quarter] AS (DATEPART(QUARTER,[DateTime])),
-	[Year] AS (DATEPART(YEAR,[DateTime])),
+	[Date] DATE PRIMARY KEY,
+	[Day] AS (DATEPART(DAY,[Date])),
+	[DayOfWeek] AS (DATEPART(WEEKDAY,[Date])),
+	[Month] AS (DATEPART(MONTH,[Date])),
+	[Quarter] AS (DATEPART(QUARTER,[Date])),
+	[Year] AS (DATEPART(YEAR,[Date])),
 	[CreatedDate] DATETIME,
 	[UpdatedDate] DATETIME,
 )

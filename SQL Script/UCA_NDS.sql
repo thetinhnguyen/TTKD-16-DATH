@@ -6,7 +6,6 @@ CREATE DATABASE [UCA_NDS]
 GO
 USE [UCA_NDS]
 
--- select * from [Accidents_NDS]
 /****** Object:  Table [dbo].[Accidents_NDS]    Script Date: 10/21/2021 12:19:23 PM ******/
 SET ANSI_NULLS ON
 GO
