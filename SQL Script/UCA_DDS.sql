@@ -5,10 +5,8 @@ GO
 USE [UCA_DDS]
 GO
 
-CREATE TABLE dimDateTime(
-	[DateTime] DATETIME PRIMARY KEY,
-	[Hour] int,
-	[SessionOfDay] nvarchar(255),
+CREATE TABLE dimDate(
+	[DateTime] DATE PRIMARY KEY,
 	[Day] AS (DATEPART(DAY,[DateTime])),
 	[DayOfWeek] AS (DATEPART(WEEKDAY,[DateTime])),
 	[Month] AS (DATEPART(MONTH,[DateTime])),
@@ -18,6 +16,11 @@ CREATE TABLE dimDateTime(
 	[UpdatedDate] DATETIME,
 )
 
+CREATE TABLE dimTime(
+	[Time] Time PRIMARY KEY,
+	[Hour] AS CAST(DATEPART(HOUR, [Time]) AS int),
+	[SessionOfDay] nvarchar(255),
+)
 
 CREATE TABLE [dimLocation] (
 	[Location_NK]  int PRIMARY KEY,
@@ -106,7 +109,8 @@ CREATE TABLE [dbo].[dimCasualtyType](
 ---Fact
 CREATE TABLE Fact_Accidents(
 	[Fact_Accidents_ID] int IDENTITY(1, 1) NOT NULL,
-	[DateTime] DATETIME FOREIGN KEY REFERENCES dimDateTime,
+	[Date] DATE FOREIGN KEY REFERENCES dimDate,
+	[Time] TIME FOREIGN KEY REFERENCES dimTime,
 	[Severity_NK] [int] FOREIGN KEY REFERENCES dimSeverity,
 	[Local_Authority_District_NK] [int] FOREIGN KEY REFERENCES dimLocalAuthorityDistrict,
 	[Built_up_Road_Type_ID] [int] FOREIGN KEY REFERENCES dimBuiltUpRoadType,
@@ -126,7 +130,8 @@ CREATE TABLE Fact_Accidents(
 
 CREATE TABLE Fact_Casualities(
 	[Fact_Casualities_ID] int IDENTITY(1, 1) NOT NULL,
-	[DateTime] DATETIME FOREIGN KEY REFERENCES dimDateTime,
+	[Date] DATE FOREIGN KEY REFERENCES dimDate,
+	[Time] TIME FOREIGN KEY REFERENCES dimTime,
 	[Severity_NK] [int] FOREIGN KEY REFERENCES dimSeverity,
 	[Local_Authority_District_NK] [int] FOREIGN KEY REFERENCES dimLocalAuthorityDistrict,
 	[Age] [int] FOREIGN KEY REFERENCES dimAge,

@@ -1,10 +1,11 @@
-use UCA_STAGE
+use UCA_NDS
 go
-create or alter FUNCTION dbo.get_type_time(@dateTime datetime)
+
+create or alter FUNCTION dbo.getSession_in_Day(@Time time)
 returns int
 as
 begin
-	declare @hour int = CAST(DATEPART(HOUR, @dateTime) AS int);
+	declare @hour int = CAST(DATEPART(HOUR, @Time) AS int);
 	declare @type int = 4;
 	if @hour >= 5 and @hour < 12
 		set @type = 1;

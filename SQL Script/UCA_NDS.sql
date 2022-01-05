@@ -5,24 +5,26 @@ GO
 CREATE DATABASE [UCA_NDS]
 GO
 USE [UCA_NDS]
+
+-- select * from [Accidents_NDS]
 /****** Object:  Table [dbo].[Accidents_NDS]    Script Date: 10/21/2021 12:19:23 PM ******/
 SET ANSI_NULLS ON
 GO
 
 SET QUOTED_IDENTIFIER ON
 GO
--- select Accident_Index, Time, RIGHT('00' + CAST(DATEPART(HOUR, Time) AS VARCHAR),2) from Accidents_NDS
+
 CREATE TABLE [dbo].[Accidents_NDS](
 	[Accident_Index] [int] IDENTITY(1,1) NOT NULL,
     [Accident_NK] varchar(50),
     [Accident_Severity] int,
     [Number_of_Vehicles] int, --no
     [Number_of_Casualties] int,
-    [Date] datetime,
+    [Date] date,
     [Day_of_Week] int,
-    [Time] int,
+    [Time] time,
 	[Session_in_Day] int NULL,  -- Viet Function
-	[Location_ID] int,
+	[Location_ID] int, --FK
     [Local_Authority_District] int,	
 	[Local_Authority_Highway] varchar(50), --no
     [Road_Type] int,
@@ -365,8 +367,8 @@ GO
 ALTER TABLE [dbo].[Accidents_NDS] CHECK CONSTRAINT [FK_Accidents_NDS_Accident_Severity]
 GO
 
-ALTER TABLE [dbo].[Accident_location_NDS]  WITH CHECK ADD  CONSTRAINT [FK_Accident_Location_Accident] FOREIGN KEY([Accident_Index])
-REFERENCES [dbo].[Accidents_NDS] ([Accident_Index])
+ALTER TABLE [dbo].[Accidents_NDS]  WITH CHECK ADD  CONSTRAINT [FK_Accidents_Location] FOREIGN KEY([Location_ID])
+REFERENCES [dbo].[Location_NDS] ([Location_ID])
 GO
 
 ALTER TABLE [dbo].[Vehicles_NDS]  WITH CHECK ADD  CONSTRAINT [FK_Vehicles_Accident] FOREIGN KEY([Accident_Index])

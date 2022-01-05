@@ -23,7 +23,7 @@ CREATE DATABASE [UCA_STAGE]
 GO
 USE [UCA_STAGE]
 
---select * from [dbo].[Accidents_Stage]
+--select a.*, b.Location_ID from [dbo].[Accidents_Stage] a, [dbo].[Accident_Location_Stage] b where a.Accident_Index=b.Accident_Index
 --select Accident_Index, Time, CAST(DATEPART(HOUR, Time) AS int) as hour, dbo.get_type_time(Time) as Type from Accidents_Stage
 
 /****** Object:  Table [dbo].[Accidents_Stage]    Script Date: 10/21/2021 12:19:23 PM ******/
@@ -38,9 +38,9 @@ CREATE TABLE [dbo].[Accidents_Stage](
     [Accident_Severity] int,
     [Number_of_Vehicles] int, --no
     [Number_of_Casualties] int,
-    [Date] datetime,
+    [Date] date,
     [Day_of_Week] int,
-    [Time] datetime,
+    [Time] time,
     [Local_Authority_(District)] int,
     [Local_Authority_(Highway)] varchar(50), --no
     [Road_Type] int,
@@ -90,20 +90,20 @@ GO
 
 --select * from Accident_location_Stage where country_name= 'Wales'
 
-/****** Object:  Table [dbo].[Accident_location_Stage]    Script Date: 10/21/2021 12:19:23 PM ******/
+/****** Object:  Table [dbo].[Accident_Location_Stage]    Script Date: 10/21/2021 12:19:23 PM ******/
 SET ANSI_NULLS ON
 GO
 
 SET QUOTED_IDENTIFIER ON
 GO
-CREATE TABLE [Accident_location_Stage] (
+CREATE TABLE [Accident_Location_Stage] (
 	[Accident_Index] varchar(50),
 	[Location_ID] int
 ) ON [PRIMARY]
 GO
 --Selct
 
-/****** Object:  Table [dbo].[Accident_location_Stage]    Script Date: 10/21/2021 12:19:23 PM ******/
+/****** Object:  Table [dbo].Location_Stage]    Script Date: 10/21/2021 12:19:23 PM ******/
 SET ANSI_NULLS ON
 GO
 

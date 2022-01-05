@@ -10,7 +10,6 @@
         <WinAuthDomain />
         <ServerName />
         <PathOnServer />
-        <StartObjectID>Package1.dtsx</StartObjectID>
         <Run64BitRuntime>false</Run64BitRuntime>
         <UserIDs />
         <UserPasswords />
