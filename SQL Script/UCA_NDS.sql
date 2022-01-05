@@ -20,8 +20,9 @@ CREATE TABLE [dbo].[Accidents_NDS](
     [Number_of_Casualties] int,
     [Date] datetime,
     [Day_of_Week] int,
-    [Time] datetime,
+    [Time] int,
 	[Session_in_Day] int NULL,  -- Viet Function
+	[Location_ID] int,
     [Local_Authority_District] int,	
 	[Local_Authority_Highway] varchar(50), --no
     [Road_Type] int,
@@ -150,15 +151,15 @@ PRIMARY KEY CLUSTERED
 ) ON [PRIMARY]
 GO
 
-/****** Object:  Table [dbo].[Accident_location_NDS]    Script Date: 10/21/2021 12:19:23 PM ******/
+/****** Object:  Table [dbo].[Location_NDS]    Script Date: 10/21/2021 12:19:23 PM ******/
 SET ANSI_NULLS ON
 GO
 
 SET QUOTED_IDENTIFIER ON
 GO
-CREATE TABLE [Accident_location_NDS] (
-	[Accident_location_Id] [int] IDENTITY(1,1) NOT NULL,
-	[Accident_Index] int,
+CREATE TABLE [Location_NDS] (
+	[Location_Id] [int] IDENTITY(1,1) NOT NULL,
+	[Location_NK] int,
 	[city] varchar(50),
     [county] varchar(50),
     [country_name] varchar(50),
@@ -167,7 +168,7 @@ CREATE TABLE [Accident_location_NDS] (
 	[UpdatedDate] [datetime] NULL,
 PRIMARY KEY CLUSTERED 
 (
-	[Accident_location_Id] ASC
+	[Location_Id] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO

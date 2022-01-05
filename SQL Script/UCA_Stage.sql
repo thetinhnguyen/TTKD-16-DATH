@@ -24,6 +24,7 @@ GO
 USE [UCA_STAGE]
 
 --select * from [dbo].[Accidents_Stage]
+--select Accident_Index, Time, CAST(DATEPART(HOUR, Time) AS int) as hour, dbo.get_type_time(Time) as Type from Accidents_Stage
 
 /****** Object:  Table [dbo].[Accidents_Stage]    Script Date: 10/21/2021 12:19:23 PM ******/
 SET ANSI_NULLS ON
@@ -97,6 +98,19 @@ SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [Accident_location_Stage] (
 	[Accident_Index] varchar(50),
+	[Location_ID] int
+) ON [PRIMARY]
+GO
+--Selct
+
+/****** Object:  Table [dbo].[Accident_location_Stage]    Script Date: 10/21/2021 12:19:23 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [Location_Stage] (
+	[Location_ID] int,
 	[city] varchar(50),
     [county] varchar(50),
     [country_name] varchar(50),

@@ -7,7 +7,7 @@ GO
 
 CREATE TABLE dimDateTime(
 	[DateTime] DATETIME PRIMARY KEY,
-	[Hour] AS (DATEPART(HOUR,[DateTime])),
+	[Hour] int,
 	[SessionOfDay] nvarchar(255),
 	[Day] AS (DATEPART(DAY,[DateTime])),
 	[DayOfWeek] AS (DATEPART(WEEKDAY,[DateTime])),
@@ -20,7 +20,7 @@ CREATE TABLE dimDateTime(
 
 
 CREATE TABLE [dimLocation] (
-	[Accident_Index]  varchar(50) PRIMARY KEY,
+	[Location_NK]  int PRIMARY KEY,
 	[city] varchar(50),
     [county] varchar(50),
     [country_name] varchar(50),
@@ -114,7 +114,7 @@ CREATE TABLE Fact_Accidents(
 	[Vehicle_Type_NK] [int] FOREIGN KEY REFERENCES dimVehicleType,
 	[Road_Type_NK] [int] FOREIGN KEY REFERENCES dimRoadType,
 	[Journey_Purpose_NK] [int] FOREIGN KEY REFERENCES dimJourneyPurpose,
-	[Accident_Index]  varchar(50) NULL, -- FK Location or PK???
+	[Location_NK] [int] FOREIGN KEY REFERENCES dimLocation, 
 	NumOfAccidents INT, --So luong TNGT cho cau 4,5,9
 	TotalAccidents INT, --Tong so luong TNGT cho cau 7
 	Variance FLOAT, -- Do tang giam TNGT
@@ -132,7 +132,7 @@ CREATE TABLE Fact_Casualities(
 	[Age] [int] FOREIGN KEY REFERENCES dimAge,
 	[Sex_of_Person_NK] [int] FOREIGN KEY REFERENCES dimSexOfPerson,
 	[Casualty_Type_NK] [int] FOREIGN KEY REFERENCES dimCasualtyType,
-	[Accident_Index]  varchar(50) NULL, -- FK Location or PK???
+	[Location_NK] [int] FOREIGN KEY REFERENCES dimLocation, 
 	NumOfCasualities INT, --So luong nan nhan cho cau 1,2,6
 	NumOfDead INT, --Tong so luong nguoi tu vong cho cau 3
 	Created_timestamp DATETIME,
