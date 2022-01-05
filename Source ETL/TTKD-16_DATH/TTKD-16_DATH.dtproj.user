@@ -10,7 +10,8 @@
         <WinAuthDomain />
         <ServerName />
         <PathOnServer />
-        <StartObjectID>StageToNDS.dtsx</StartObjectID>
+        <StartObjectID>Package1.dtsx</StartObjectID>
+        <Run64BitRuntime>false</Run64BitRuntime>
         <UserIDs />
         <UserPasswords />
         <OfflineMode>false</OfflineMode>

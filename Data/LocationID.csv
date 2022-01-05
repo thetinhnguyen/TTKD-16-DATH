@@ -1,0 +1,1387 @@
+city,county,country_name,region_name,LocationID
+Wandsworth,Greater London,England,London ,1
+Westminster,London,England,London,2
+Kensington,Greater London,England,London ,3
+Brent,Greater London,England,London ,4
+Hammersmith,Greater London,England,London ,5
+NAN,NAN,NAN,NAN,6
+Islington,Greater London,England,London ,7
+Camden Town,Greater London,England,London ,8
+Poplar,Greater London,England,London ,9
+NAN,City of London,England,London,10
+Paddington,Greater London,England,London ,11
+Camberwell,Greater London,England,London ,12
+Bishops Stortford,Hertfordshire,England,East of England,13
+Tottenham,Greater London,England,London ,14
+Hackney,Greater London,England,London ,15
+Hillingdon,Greater London,England,London ,16
+Enfield,Greater London,England,London ,17
+Ealing,Greater London,England,London ,18
+Hounslow,Greater London,England,London ,19
+Stratford,Greater London,England,London ,20
+Walthamstow,Greater London,England,London ,21
+Ilford,Greater London,England,London ,22
+Loughton,Essex,England,East of England,23
+Barking,Greater London,England,London ,24
+East Ham,Greater London,England,London ,25
+Romford,Greater London,England,London ,26
+Brentwood,Essex,England,East of England,27
+NAN,Thurrock,England,East of England,28
+Lambeth,Greater London,England,London ,29
+Croydon,Greater London,England,London ,30
+Bromley,Greater London,England,London ,31
+Merton,Greater London,England,London ,32
+Lewisham,Greater London,England,London ,33
+Greenwich,Greater London,England,London ,34
+Eltham,Greater London,England,London ,35
+Whyteleafe,Surrey,England,South East ,36
+NAN,Greater London,England,London ,37
+Dunton Green,Kent,England,South East ,38
+Bexley,Greater London,England,London ,39
+Harrow,Greater London,England,London ,40
+Barnet,Greater London,England,London ,41
+Dartford,Kent,England,South East ,42
+Crayford,Greater London,England,London ,43
+Richmond,Greater London,England,London ,44
+West Molesey,Surrey,England,South East ,45
+Kingston Upon Thames,Greater London,England,London ,46
+Sutton,Greater London,England,London ,47
+Southall,Greater London,England,London ,48
+NAN,Surrey,England,South East ,49
+Epsom,Surrey,England,South East ,50
+Denham Green,Buckinghamshire,England,South East ,51
+Chorleywood,Hertfordshire,England,East of England,52
+Milnthorpe,Cumbria,England,North West ,53
+Cliburn,Cumbria,England,North West ,54
+Catterlen,Cumbria,England,North West ,55
+Millom,Cumbria,England,North West ,56
+Dalton-in-Furness,Cumbria,England,North West ,57
+Sedbergh,Cumbria,England,North West ,58
+Carlisle,Cumbria,England,North West ,59
+Grange-over-Sands,Cumbria,England,North West ,60
+Workington,Cumbria,England,North West ,61
+Kirklinton,Cumbria,England,North West ,62
+Appleby-in-Westmorland,Cumbria,England,North West ,63
+Lakes,Cumbria,England,North West ,64
+Orton,Cumbria,England,North West ,65
+Whitehaven,Cumbria,England,North West ,66
+Maryport,Cumbria,England,North West ,67
+Keswick,Cumbria,England,North West ,68
+Cleator Moor,Cumbria,England,North West ,69
+Muncaster,Cumbria,England,North West ,70
+Ulverston,Cumbria,England,North West ,71
+Egremont,Cumbria,England,North West ,72
+Cockermouth,Cumbria,England,North West ,73
+Kendal,Cumbria,England,North West ,74
+Wetheral,Cumbria,England,North West ,75
+Gosforth,Cumbria,England,North West ,76
+Kirkby Ireleth,Cumbria,England,North West ,77
+Waverton,Cumbria,England,North West ,78
+Kirkby Stephen,Cumbria,England,North West ,79
+Whittingham,Lancashire,England,North West ,80
+Arlecdon,Cumbria,England,North West ,81
+Alston,Cumbria,England,North West ,82
+Broughton West,Cumbria,England,North West ,83
+Coniston,Cumbria,England,North West ,84
+Brampton,Cumbria,England,North West ,85
+Windermere,Cumbria,England,North West ,86
+Dalton Town with Newton,Cumbria,England,North West ,87
+Beckermet,Cumbria,England,North West ,88
+Ireleth,Cumbria,England,North West ,89
+Warton,Lancashire,England,North West ,90
+Freckleton,Lancashire,England,North West ,91
+Hardhorn and Thornton,Lancashire,England,North West ,92
+NAN,Blackpool,England,North West ,93
+Lytham Saint Annes,Lancashire,England,North West ,94
+Lancaster,Lancashire,England,North West ,95
+Caton,Lancashire,England,North West ,96
+Claughton,Lancashire,England,North West ,97
+Preston,Lancashire,England,North West ,98
+Chorley,Lancashire,England,North West ,99
+Horwich,Bolton,England,North West ,100
+Bamber Bridge,Lancashire,England,North West ,101
+Leyland,Lancashire,England,North West ,102
+Darwen,Blackburn with Darwen,England,North West ,103
+Burscough,Lancashire,England,North West ,104
+Pemberton,Wigan,England,North West ,105
+Ormskirk,Lancashire,England,North West ,106
+Maghull,Sefton,England,North West ,107
+Southport,Sefton,England,North West ,108
+Burnley,Lancashire,England,North West ,109
+NAN,Bolton,England,North West ,110
+Accrington,Lancashire,England,North West ,111
+Ramsbottom,Bury,England,North West ,112
+Rawtenstall,Lancashire,England,North West ,113
+Clitheroe,Lancashire,England,North West ,114
+Ightenhill,Lancashire,England,North West ,115
+Newchurch,Lancashire,England,North West ,116
+Salterforth,Lancashire,England,North West ,117
+NAN,Rochdale,England,North West ,118
+Birkenhead,Wirral,England,North West ,119
+Heswall,Wirral,England,North West ,120
+Hoylake,Wirral,England,North West ,121
+Wallasey,Wirral,England,North West ,122
+Crosby,Liverpool,England,North West ,123
+Aintree,Sefton,England,North West ,124
+Kirkby,Knowsley,England,North West ,125
+NAN,Knowsley,England,North West ,126
+Hyton,Knowsley,England,North West ,127
+Rainhill,St Helens,England,North West ,128
+Garston,Liverpool,England,North West ,129
+Halewood,Knowsley,England,North West ,130
+NAN,Liverpool,England,North West ,131
+Runcorn,Halton,England,North West ,132
+NAN,St Helens,England,North West ,133
+Great Sankey,Warrington,England,North West ,134
+NAN,Salford,England,North West ,135
+Manchester,Greater Manchester,England,North West ,136
+Middleton,Rochdale,England,North West ,137
+Ashton-under-Lyne,Tameside,England,North West ,138
+NAN,Bury,England,North West ,139
+Walkden,Salford,England,North West ,140
+Urmston,Trafford,England,North West ,141
+Mossley,Tameside,England,North West ,142
+NAN,Oldham,England,North West ,143
+NAN,Tameside,England,North West ,144
+Glossop,Derbyshire,England,East Midlands ,145
+NAN,Stockport,England,North West ,146
+Cheadle,Stockport,England,North West ,147
+Poynton,Cheshire East,England,North West ,148
+New Mills,Derbyshire,England,East Midlands ,149
+Westhoughton,Bolton,England,North West ,150
+Leigh,Wigan,England,North West ,151
+Croft,Warrington,England,North West ,152
+Partington,Trafford,England,North West ,153
+Lymm,Warrington,England,North West ,154
+NAN,Trafford,England,North West ,155
+Heywood,Rochdale,England,North West ,156
+Todmorden,Calderdale,England,Yorkshire and the Humber ,157
+Shaw,Oldham,England,North West ,158
+Saddleworth,Oldham,England,North West ,159
+Middlewich,Cheshire East,England,North West ,160
+Birchwood,Warrington,England,North West ,161
+Macclesfield,Cheshire East,England,North West ,162
+Ellesmere Port,Cheshire West and Chester,England,North West ,163
+Winsford,Cheshire West and Chester,England,North West ,164
+Weaverham,Cheshire West and Chester,England,North West ,165
+Sandbach,Cheshire East,England,North West ,166
+Upton,Cheshire West and Chester,England,North West ,167
+Northwich,Cheshire West and Chester,England,North West ,168
+Appleton,Warrington,England,North West ,169
+Congleton,Cheshire East,England,North West ,170
+Chester,Cheshire West and Chester,England,North West ,171
+Tarporley,Cheshire West and Chester,England,North West ,172
+Crewe,Cheshire East,England,North West ,173
+Waverton,Cheshire West and Chester,England,North West ,174
+Frodsham,Cheshire West and Chester,England,North West ,175
+Nantwich,Cheshire East,England,North West ,176
+Knutsford,Cheshire East,England,North West ,177
+Saltney,Flintshire,England,NAN,178
+Kidsgrove,Staffordshire,England,West Midlands ,179
+Bridgemere,Cheshire East,England,North West ,180
+Holmes Chapel,Cheshire East,England,North West ,181
+Whitchurch Rural,Shropshire,England,West Midlands ,182
+Blyth,Northumberland,England,North East ,183
+NAN,North Tyneside,England,North East ,184
+Newton on the Moor,Northumberland,England,North East ,185
+NAN,Gateshead,England,North East ,186
+Wansbeck,Northumberland,England,North East ,187
+Denwick,Northumberland,England,North East ,188
+Houghton-le-Spring,Sunderland,England,North East ,189
+Morpeth,Northumberland,England,North East ,190
+NAN,South Tyneside,England,North East ,191
+Belford,Northumberland,England,North East ,192
+Chester-le-Street,County Durham,England,North East ,193
+Brunswick,Newcastle Upon Tyne,England,North East ,194
+Washington,Sunderland,England,North East ,195
+Byker,Newcastle Upon Tyne,England,North East ,196
+Berwick-upon-Tweed,Northumberland,Scotland,Scotland,197
+NAN,Newcastle Upon Tyne,England,North East ,198
+Cornhill-on-Tweed,Northumberland,Scotland,Scotland,199
+Newburn,Newcastle Upon Tyne,England,North East ,200
+Castletown,Sunderland,England,North East ,201
+Longbenton,North Tyneside,England,North East ,202
+Wickham and Dunston,Gateshead,England,North East ,203
+NAN,Sunderland,England,North East ,204
+Blaydon,Gateshead,England,North East ,205
+North Lodge,County Durham,England,North East ,206
+Elsdon,Northumberland,England,North East ,207
+Prudhoe,Northumberland,England,North East ,208
+Hexham,Northumberland,England,North East ,209
+Ellingham,Northumberland,England,North East ,210
+Ponteland,Northumberland,England,North East ,211
+Stocksfield,Northumberland,England,North East ,212
+Burnhope,County Durham,England,North East ,213
+Hetton,Sunderland,England,North East ,214
+Allendale,Northumberland,England,North East ,215
+Stamfordham,Northumberland,England,North East ,216
+Corbridge,Northumberland,England,North East ,217
+Akeld,Northumberland,England,North East ,218
+Esh,County Durham,England,North East ,219
+Durham,County Durham,England,North East ,220
+Shadforth,County Durham,England,North East ,221
+Monk Hesleden,County Durham,England,North East ,222
+Peterlee,County Durham,England,North East ,223
+Hutton Henry,County Durham,England,North East ,224
+Trimdon,County Durham,England,North East ,225
+Dalton-le-Dale,County Durham,England,North East ,226
+Stanley,County Durham,England,North East ,227
+Stanhope,County Durham,England,North East ,228
+Lcp Stanhope and Wolsingham Parishes And,County Durham,England,North East ,229
+NAN,Darlington,England,North East ,230
+Cotherstone,County Durham,England,North East ,231
+Marske,North Yorkshire,England,Yorkshire and the Humber ,232
+Halnaby Ave,Darlington,England,North East ,233
+Great Aycliffe,County Durham,England,North East ,234
+Shildon,County Durham,England,North East ,235
+Ferryhill,County Durham,England,North East ,236
+Sedgefield,County Durham,England,North East ,237
+Spennymoor,County Durham,England,North East ,238
+NAN,York,England,Yorkshire and the Humber ,239
+Clint,North Yorkshire,England,Yorkshire and the Humber ,240
+Scarborough,North Yorkshire,England,Yorkshire and the Humber ,241
+Pickering,North Yorkshire,England,Yorkshire and the Humber ,242
+Skeeby,North Yorkshire,England,Yorkshire and the Humber ,243
+Selby,North Yorkshire,England,Yorkshire and the Humber ,244
+Settrington,North Yorkshire,England,Yorkshire and the Humber ,245
+Upper Poppleton,York,England,Yorkshire and the Humber ,246
+North Stainley,North Yorkshire,England,Yorkshire and the Humber ,247
+Micklefield,Leeds,England,Yorkshire and the Humber ,248
+Sowerby,North Yorkshire,England,Yorkshire and the Humber ,249
+Muston,North Yorkshire,England,Yorkshire and the Humber ,250
+Grimston,North Yorkshire,England,Yorkshire and the Humber ,251
+Harrogate,North Yorkshire,England,Yorkshire and the Humber ,252
+Wetherby,Leeds,England,Yorkshire and the Humber ,253
+Winton,North Yorkshire,England,Yorkshire and the Humber ,254
+Airmyn,East Riding of Yorkshire,England,Yorkshire and the Humber ,255
+Rawcliffe,York,England,Yorkshire and the Humber ,256
+Stainton Dale,North Yorkshire,England,Yorkshire and the Humber ,257
+Spennithorne,North Yorkshire,England,Yorkshire and the Humber ,258
+Thorlby,North Yorkshire,England,Yorkshire and the Humber ,259
+Langcliffe,North Yorkshire,England,Yorkshire and the Humber ,260
+Colburn,North Yorkshire,England,Yorkshire and the Humber ,261
+Hutton Mulgrave,North Yorkshire,England,Yorkshire and the Humber ,262
+Wheldrake,York,England,Yorkshire and the Humber ,263
+Steeton,Bradford,England,Yorkshire and the Humber ,264
+NAN,Wakefield,England,Yorkshire and the Humber ,265
+Great and Little Broughton,North Yorkshire,England,Yorkshire and the Humber ,266
+Yafforth,North Yorkshire,England,Yorkshire and the Humber ,267
+Knaresborough,North Yorkshire,England,Yorkshire and the Humber ,268
+Loftus,Redcar and Cleveland,England,North East ,269
+Burringham,North Lincolnshire,England,Yorkshire and the Humber ,270
+Snainton,North Yorkshire,England,Yorkshire and the Humber ,271
+NAN,Middlesbrough,England,North East ,272
+NAN,Leeds,England,Yorkshire and the Humber ,273
+Brierley,Barnsley,England,North West ,274
+Queensbury,Bradford,England,Yorkshire and the Humber ,275
+Huddersfield,Kirklees,England,Yorkshire and the Humber ,276
+Bingley,Bradford,England,Yorkshire and the Humber ,277
+Guiseley,Leeds,England,Yorkshire and the Humber ,278
+North Elmsall,Wakefield,England,Yorkshire and the Humber ,279
+Halifax,Calderdale,England,Yorkshire and the Humber ,280
+Dewsbury,Kirklees,England,Yorkshire and the Humber ,281
+Crigglestone,Wakefield,England,Yorkshire and the Humber ,282
+Boston Spa,Leeds,England,Yorkshire and the Humber ,283
+Otley,Leeds,England,Yorkshire and the Humber ,284
+Mirfield,Kirklees,England,Yorkshire and the Humber ,285
+Featherstone,Wakefield,England,Yorkshire and the Humber ,286
+Gildersome,Leeds,England,Yorkshire and the Humber ,287
+Ilkley,Bradford,England,Yorkshire and the Humber ,288
+Harewood,Leeds,England,Yorkshire and the Humber ,289
+Rothwell,Leeds,England,Yorkshire and the Humber ,290
+Kirkburton,Kirklees,England,Yorkshire and the Humber ,291
+NAN,Barnsley,England,North West ,292
+Keighley,Bradford,England,Yorkshire and the Humber ,293
+Normanton,Wakefield,England,Yorkshire and the Humber ,294
+Hebden Royd,Calderdale,England,Yorkshire and the Humber ,295
+Brodsworth,Doncaster,England,Yorkshire and the Humber ,296
+Tickhill,Doncaster,England,Yorkshire and the Humber ,297
+NAN,Doncaster,England,Yorkshire and the Humber ,298
+Thorne,Doncaster,England,Yorkshire and the Humber ,299
+Hatfield,Doncaster,England,Yorkshire and the Humber ,300
+Conisbrough,Doncaster,England,Yorkshire and the Humber ,301
+Edenthorpe,Doncaster,England,Yorkshire and the Humber ,302
+Owston,Doncaster,England,Yorkshire and the Humber ,303
+NAN,Rotherham,England,Yorkshire and the Humber ,304
+Haxey,North Lincolnshire,England,Yorkshire and the Humber ,305
+Everton,Nottinghamshire,England,East Midlands ,306
+Darfield,Barnsley,England,North West ,307
+Hoyland,Barnsley,England,North West ,308
+Bramley,Rotherham,England,Yorkshire and the Humber ,309
+Norton,Sheffield,England,Yorkshire and the Humber ,310
+Dinnington,Rotherham,England,Yorkshire and the Humber ,311
+Todwick,Rotherham,England,Yorkshire and the Humber ,312
+Rawmarsh,Rotherham,England,Yorkshire and the Humber ,313
+Clumber and Hardwick,Nottinghamshire,England,East Midlands ,314
+Ecclesfield,Sheffield,England,Yorkshire and the Humber ,315
+Bradley,North East Lincolnshire,England,Yorkshire and the Humber ,316
+Immingham,North East Lincolnshire,England,Yorkshire and the Humber ,317
+NAN,North East Lincolnshire,England,Yorkshire and the Humber ,318
+Cleethorpes,North East Lincolnshire,England,Yorkshire and the Humber ,319
+Tetney,Lincolnshire,England,East Midlands ,320
+NAN,North Lincolnshire,England,Yorkshire and the Humber ,321
+Barton-Upon-Humber,North Lincolnshire,England,Yorkshire and the Humber ,322
+Broughton,North Lincolnshire,England,Yorkshire and the Humber ,323
+Bigby,Lincolnshire,England,East Midlands ,324
+Ulceby,North Lincolnshire,England,Yorkshire and the Humber ,325
+Corringham,Lincolnshire,England,East Midlands ,326
+Barrow-Upon-Humber,North Lincolnshire,England,Yorkshire and the Humber ,327
+Ellerker,East Riding of Yorkshire,England,Yorkshire and the Humber ,328
+Ellerby,East Riding of Yorkshire,England,Yorkshire and the Humber ,329
+Burstwick,East Riding of Yorkshire,England,Yorkshire and the Humber ,330
+Cottingham,East Riding of Yorkshire,England,Yorkshire and the Humber ,331
+Bridlington,East Riding of Yorkshire,England,Yorkshire and the Humber ,332
+North Ferriby,East Riding of Yorkshire,England,Yorkshire and the Humber ,333
+Driffield,East Riding of Yorkshire,England,Yorkshire and the Humber ,334
+Hull,City of Kingston-upon-Hull,England,Yorkshire and the Humber ,335
+Hessle,East Riding of Yorkshire,England,Yorkshire and the Humber ,336
+Hornsea,East Riding of Yorkshire,England,Yorkshire and the Humber ,337
+Withernsea,East Riding of Yorkshire,England,Yorkshire and the Humber ,338
+NAN,Stockton-on-Tees,England,North East ,339
+NAN,Hartlepool,England,North East ,340
+Grindon,Stockton-on-Tees,England,North East ,341
+Skelton,Redcar and Cleveland,England,North East ,342
+Guisborough,Redcar and Cleveland,England,North East ,343
+Saltburn Marske and New Marske,Redcar and Cleveland,England,North East ,344
+Redcar,Redcar and Cleveland,England,North East ,345
+Thornaby,Stockton-on-Tees,England,North East ,346
+Stainton,Middlesbrough,England,North East ,347
+Egglescliffe,Stockton-on-Tees,England,North East ,348
+Kirklevington,Stockton-on-Tees,England,North East ,349
+Wednesfield,Wolverhampton,England,West Midlands ,350
+NAN,Wolverhampton,England,West Midlands ,351
+Willenhall,Walsall,England,West Midlands ,352
+NAN,Dudley,England,West Midlands ,353
+Chetton,Shropshire,England,West Midlands ,354
+Bilbrook,Staffordshire,England,West Midlands ,355
+West Bromwich,Sandwell,England,West Midlands ,356
+NAN,Walsall,England,West Midlands ,357
+NAN,Birmingham,England,West Midlands ,358
+Aldridge,Walsall,England,West Midlands ,359
+Brownhills,Walsall,England,West Midlands ,360
+Hurst Green,Dudley,England,West Midlands ,361
+Kinver,Staffordshire,England,West Midlands ,362
+Kidderminster,Worcestershire,England,West Midlands ,363
+NAN,Solihull,England,West Midlands ,364
+Chelmsley Wood,Solihull,England,West Midlands ,365
+Castle Bromwich,Solihull,England,West Midlands ,366
+Tanworth-in-Arden,Warwickshire,England,West Midlands ,367
+Hawkes End,Coventry,England,East Midlands ,368
+NAN,Coventry,England,East Midlands ,369
+Dorridge,Solihull,England,West Midlands ,370
+Tees Grove,Birmingham,England,West Midlands ,371
+Cheadle,Staffordshire,England,West Midlands ,372
+Burton upon Trent,Staffordshire,England,West Midlands ,373
+Stafford,Staffordshire,England,West Midlands ,374
+Cannock,Staffordshire,England,West Midlands ,375
+Branston,Staffordshire,England,West Midlands ,376
+NAN,Stoke-on-Trent,England,West Midlands ,377
+Brereton,Staffordshire,England,West Midlands ,378
+Stone,Staffordshire,England,West Midlands ,379
+Barlaston,Staffordshire,England,West Midlands ,380
+Hopton,Staffordshire,England,West Midlands ,381
+Penkridge,Staffordshire,England,West Midlands ,382
+Lichfield,Staffordshire,England,West Midlands ,383
+Wombourne,Staffordshire,England,West Midlands ,384
+Gnosall,Staffordshire,England,West Midlands ,385
+Tamworth,Staffordshire,England,West Midlands ,386
+Osmaston,Derbyshire,England,East Midlands ,387
+Forsbrook,Staffordshire,England,West Midlands ,388
+Leek,Staffordshire,England,West Midlands ,389
+Newcastle-under-Lyme,Staffordshire,England,West Midlands ,390
+Uttoxeter,Staffordshire,England,West Midlands ,391
+Wigginton,Staffordshire,England,West Midlands ,392
+Sutton upon Tern,Shropshire,England,West Midlands ,393
+Biddulph,Staffordshire,England,West Midlands ,394
+Burntwood,Staffordshire,England,West Midlands ,395
+NAN,Derby,England,East Midlands ,396
+Swinfen and Packington,Staffordshire,England,West Midlands ,397
+Great Wyrley,Staffordshire,England,West Midlands ,398
+Bagnall,Staffordshire,England,West Midlands ,399
+Albrighton,Shropshire,England,West Midlands ,400
+Eccleshall,Staffordshire,England,West Midlands ,401
+King Sterndale,Derbyshire,England,East Midlands ,402
+Shifnal,Shropshire,England,West Midlands ,403
+NAN,Worcester,England,West Midlands ,404
+Evesham,Worcestershire,England,West Midlands ,405
+Bromyard,County of Herefordshire,England,West Midlands ,406
+Bromsgrove,Worcestershire,England,West Midlands ,407
+Stourport-on-Severn,Worcestershire,England,West Midlands ,408
+Upper Arley,Worcestershire,England,West Midlands ,409
+Great Malvern,Worcestershire,England,West Midlands ,410
+Bidford-on-Avon,Warwickshire,England,West Midlands ,411
+Colwall,County of Herefordshire,England,West Midlands ,412
+Droitwich,Worcestershire,England,West Midlands ,413
+Wick,Worcestershire,England,West Midlands ,414
+Ashleworth,Gloucestershire,England,South West ,415
+Cleobury Mortimer,Shropshire,England,West Midlands ,416
+Tenbury,Worcestershire,England,West Midlands ,417
+Martley,Worcestershire,England,West Midlands ,418
+Ashchurch,Gloucestershire,England,South West ,419
+Broadway,Worcestershire,England,West Midlands ,420
+Alcester,Warwickshire,England,West Midlands ,421
+Ledbury,County of Herefordshire,England,West Midlands ,422
+North Piddle,Worcestershire,England,West Midlands ,423
+Worcester,Worcestershire,England,West Midlands ,424
+Redditch,Worcestershire,England,West Midlands ,425
+Wythall,Worcestershire,England,West Midlands ,426
+Alvechurch,Worcestershire,England,West Midlands ,427
+Studley,Warwickshire,England,West Midlands ,428
+Ross-on-Wye,County of Herefordshire,England,West Midlands ,429
+Hampton Bishop,County of Herefordshire,England,West Midlands ,430
+Shrewsbury,Shropshire,England,West Midlands ,431
+Burghill,County of Herefordshire,England,West Midlands ,432
+Leominster,County of Herefordshire,England,West Midlands ,433
+Clifford,County of Herefordshire,England,West Midlands ,434
+Allensmore,County of Herefordshire,England,West Midlands ,435
+Kington Rural,County of Herefordshire,England,West Midlands ,436
+Drybrook,Gloucestershire,England,South West ,437
+Ludlow,Shropshire,England,West Midlands ,438
+Ellesmere,Shropshire,England,West Midlands ,439
+Myddle,Shropshire,England,West Midlands ,440
+Wellington,Telford and Wrekin,England,West Midlands ,441
+Church Stretton,Shropshire,England,West Midlands ,442
+Oswestry Rural,Shropshire,England,West Midlands ,443
+Oswestry,Shropshire,England,West Midlands ,444
+Longden,Shropshire,England,West Midlands ,445
+Montgomery,Powys,Wales,Wales,446
+Castle Caereinion,Powys,Wales,Wales,447
+Ruabon,Wrexham,Wales,Wales,448
+Hopesay,Shropshire,England,West Midlands ,449
+Newport,Telford and Wrekin,England,West Midlands ,450
+Knighton,Powys,Wales,Wales,451
+Broseley,Shropshire,England,West Midlands ,452
+Bridgnorth,Shropshire,England,West Midlands ,453
+Lydham,Shropshire,England,West Midlands ,454
+Madeley,Telford and Wrekin,England,West Midlands ,455
+Much Wenlock,Shropshire,England,West Midlands ,456
+Hollinswood,Telford and Wrekin,England,West Midlands ,457
+St Georges and Priorslee,Telford and Wrekin,England,West Midlands ,458
+Dursley,Gloucestershire,England,South West ,459
+Telford,Telford and Wrekin,England,West Midlands ,460
+Wasperton,Warwickshire,England,West Midlands ,461
+Leamington Spa,Warwickshire,England,West Midlands ,462
+Warwick,Warwickshire,England,West Midlands ,463
+Stratford-Upon-Avon,Warwickshire,England,West Midlands ,464
+Kenilworth,Warwickshire,England,West Midlands ,465
+Radford Semele,Warwickshire,England,West Midlands ,466
+Henley-in-Arden,Warwickshire,England,West Midlands ,467
+Dunchurch,Warwickshire,England,West Midlands ,468
+Rugby,Warwickshire,England,West Midlands ,469
+Shipston-on-Stour,Warwickshire,England,West Midlands ,470
+Atherstone,Warwickshire,England,West Midlands ,471
+Coleshill,Warwickshire,England,West Midlands ,472
+Bedworth,Warwickshire,England,West Midlands ,473
+Nuneaton,Warwickshire,England,West Midlands ,474
+Matlock Bath,Derbyshire,England,East Midlands ,475
+Ripley,Derbyshire,England,East Midlands ,476
+Staveley,Derbyshire,England,East Midlands ,477
+Clay Cross,Derbyshire,England,East Midlands ,478
+Wingerworth,Derbyshire,England,East Midlands ,479
+Chesterfield,Derbyshire,England,East Midlands ,480
+Alfreton,Derbyshire,England,East Midlands ,481
+Eckington,Derbyshire,England,East Midlands ,482
+Warsop,Nottinghamshire,England,East Midlands ,483
+Mansfield,Nottinghamshire,England,East Midlands ,484
+Dronfield,Derbyshire,England,East Midlands ,485
+Bolsover,Derbyshire,England,East Midlands ,486
+Greasley,Nottinghamshire,England,East Midlands ,487
+Ilkeston,Derbyshire,England,East Midlands ,488
+Belper,Derbyshire,England,East Midlands ,489
+Swadlincote,Derbyshire,England,East Midlands ,490
+Mickleover,Derby,England,East Midlands ,491
+Overseal,Derbyshire,England,East Midlands ,492
+Sutton in Ashfield,Nottinghamshire,England,East Midlands ,493
+Clifton,Nottingham,England,East Midlands ,494
+Rainworth,Nottinghamshire,England,East Midlands ,495
+Newark-on-Trent,Nottinghamshire,England,East Midlands ,496
+Ompton,Nottinghamshire,England,East Midlands ,497
+Burton,Lincolnshire,England,East Midlands ,498
+Lowdham,Nottinghamshire,England,East Midlands ,499
+Carlton in Lindrick,Nottinghamshire,England,East Midlands ,500
+North Muskham,Nottinghamshire,England,East Midlands ,501
+Southwell,Nottinghamshire,England,East Midlands ,502
+Bingham,Nottinghamshire,England,East Midlands ,503
+Lincoln,Lincolnshire,England,East Midlands ,504
+NAN,Nottingham,England,East Midlands ,505
+West Bridgford,Nottinghamshire,England,East Midlands ,506
+Beeston,Nottinghamshire,England,East Midlands ,507
+Cotgrave,Nottinghamshire,England,East Midlands ,508
+Loughborough,Leicestershire,England,East Midlands ,509
+Carlton,Nottinghamshire,England,East Midlands ,510
+Melton Mowbray,Leicestershire,England,East Midlands ,511
+Fleet,Lincolnshire,England,East Midlands ,512
+Deeping St James,Lincolnshire,England,East Midlands ,513
+Pinchbeck,Lincolnshire,England,East Midlands ,514
+Grantham,Lincolnshire,England,East Midlands ,515
+Burton Coggles,Lincolnshire,England,East Midlands ,516
+Bourne,Lincolnshire,England,East Midlands ,517
+Stamford,Lincolnshire,England,East Midlands ,518
+Sleaford,Lincolnshire,England,East Midlands ,519
+Great Gonerby,Lincolnshire,England,East Midlands ,520
+Dunston,Lincolnshire,England,East Midlands ,521
+Swineshead,Lincolnshire,England,East Midlands ,522
+Boston,Lincolnshire,England,East Midlands ,523
+Old Leake,Lincolnshire,England,East Midlands ,524
+NAN,Peterborough,England,East of England,525
+Louth,Lincolnshire,England,East Midlands ,526
+Alford,Lincolnshire,England,East Midlands ,527
+Horncastle,Lincolnshire,England,East Midlands ,528
+Burgh Le Marsh,Lincolnshire,England,East Midlands ,529
+Woodhall Spa,Lincolnshire,England,East Midlands ,530
+Spilsby,Lincolnshire,England,East Midlands ,531
+Skegness,Lincolnshire,England,East Midlands ,532
+Mablethorpe,Lincolnshire,England,East Midlands ,533
+Fiskerton,Lincolnshire,England,East Midlands ,534
+Waddington,Lincolnshire,England,East Midlands ,535
+Nettleham,Lincolnshire,England,East Midlands ,536
+Caistor,Lincolnshire,England,East Midlands ,537
+Linwood,Lincolnshire,England,East Midlands ,538
+NAN,Leicester,England,East Midlands ,539
+Oadby,Leicester,England,East Midlands ,540
+Wigston,Leicestershire,England,East Midlands ,541
+Hinckley,Leicestershire,England,East Midlands ,542
+Hambleton,Rutland,England,East Midlands ,543
+Market Bosworth,Leicestershire,England,East Midlands ,544
+Kilby,Leicestershire,England,East Midlands ,545
+Gilmorton,Leicestershire,England,East Midlands ,546
+Groby,Leicestershire,England,East Midlands ,547
+Barkby,Leicestershire,England,East Midlands ,548
+Dingley,Northamptonshire,England,East Midlands ,549
+Corby,Northamptonshire,England,East Midlands ,550
+Warkton,Northamptonshire,England,East Midlands ,551
+Tansor,Northamptonshire,England,East Midlands ,552
+Irthlingborough,Northamptonshire,England,East Midlands ,553
+Wollaston,Northamptonshire,England,East Midlands ,554
+Rushden,Northamptonshire,England,East Midlands ,555
+Wilden,Bedford Borough,England,East of England,556
+Wellingborough,Northamptonshire,England,East Midlands ,557
+Kettering,Northamptonshire,England,East Midlands ,558
+Spratton,Northamptonshire,England,East Midlands ,559
+Northampton,Northamptonshire,England,East Midlands ,560
+Duston,Northamptonshire,England,East Midlands ,561
+Badby,Northamptonshire,England,East Midlands ,562
+Brackley,Northamptonshire,England,East Midlands ,563
+Banbury,Oxfordshire,England,South East ,564
+Towcester,Northamptonshire,England,East Midlands ,565
+Cosgrove,Northamptonshire,England,East Midlands ,566
+Newport Pagnell,Milton Keynes,England,South East ,567
+Middleton Cheney,Northamptonshire,England,East Midlands ,568
+Soham,Cambridgeshire,England,East of England,569
+Bygrave,Hertfordshire,England,East of England,570
+Great Shelford,Cambridgeshire,England,East of England,571
+Fulbourn,Cambridgeshire,England,East of England,572
+Hardwick,Cambridgeshire,England,East of England,573
+St Neots,Cambridgeshire,England,East of England,574
+Lode,Cambridgeshire,England,East of England,575
+Stow cum Quy,Cambridgeshire,England,East of England,576
+March,Cambridgeshire,England,East of England,577
+Farcet,Cambridgeshire,England,East of England,578
+Chatteris,Cambridgeshire,England,East of England,579
+Impington,Cambridgeshire,England,East of England,580
+Highfields,Cambridgeshire,England,East of England,581
+Wisbech,Cambridgeshire,England,East of England,582
+Melbourn,Cambridgeshire,England,East of England,583
+Woodditton,Cambridgeshire,England,East of England,584
+Downham,Cambridgeshire,England,East of England,585
+Saffron Walden,Essex,England,East of England,586
+Over,Cambridgeshire,England,East of England,587
+Emneth,Norfolk,England,East of England,588
+Everton,Central Bedfordshire,England,East of England,589
+Norwich,Norfolk,England,East of England,590
+King's Lynn,Norfolk,England,East of England,591
+Old Buckenham,Norfolk,England,East of England,592
+Hempnall,Norfolk,England,East of England,593
+Wells-next-the-Sea,Norfolk,England,East of England,594
+West Acre,Norfolk,England,East of England,595
+Great Yarmouth,Norfolk,England,East of England,596
+Bungay,Suffolk,England,East of England,597
+Shouldham,Norfolk,England,East of England,598
+Hevingham,Norfolk,England,East of England,599
+Blofield,Norfolk,England,East of England,600
+Scarning,Norfolk,England,East of England,601
+Attleborough,Norfolk,England,East of England,602
+Methwold,Norfolk,England,East of England,603
+Taverham,Norfolk,England,East of England,604
+Brandon,Suffolk,England,East of England,605
+Ovington,Norfolk,England,East of England,606
+Wortham,Suffolk,England,East of England,607
+Syleham,Suffolk,England,East of England,608
+Harleston,Norfolk,England,East of England,609
+Erpingham,Norfolk,England,East of England,610
+Thetford,Norfolk,England,East of England,611
+Alpington,Norfolk,England,East of England,612
+Sheringham,Norfolk,England,East of England,613
+Fakenham,Norfolk,England,East of England,614
+Snettisham,Norfolk,England,East of England,615
+Wymondham,Norfolk,England,East of England,616
+Cromer,Norfolk,England,East of England,617
+Weston,Suffolk,England,East of England,618
+Swanton Morley,Norfolk,England,East of England,619
+Smallburgh,Norfolk,England,East of England,620
+Marlingford,Norfolk,England,East of England,621
+North Walsham,Norfolk,England,East of England,622
+Holt,Norfolk,England,East of England,623
+Wiggenhall St Germans,Norfolk,England,East of England,624
+Denver,Norfolk,England,East of England,625
+Old Hunstanton,Norfolk,England,East of England,626
+Swaffham,Norfolk,England,East of England,627
+Briston,Norfolk,England,East of England,628
+Oulton Broad,Suffolk,England,East of England,629
+Tuddenham,Suffolk,England,East of England,630
+Kettleburgh,Suffolk,England,East of England,631
+Kelsale,Suffolk,England,East of England,632
+Ipswich,Suffolk,England,East of England,633
+Pakenham,Suffolk,England,East of England,634
+Holbrook,Suffolk,England,East of England,635
+Sudbury,Suffolk,England,East of England,636
+Hessett,Suffolk,England,East of England,637
+Stowupland,Suffolk,England,East of England,638
+Hemingstone,Suffolk,England,East of England,639
+Eye,Suffolk,England,East of England,640
+Levington,Suffolk,England,East of England,641
+Bury St Edmunds,Suffolk,England,East of England,642
+Southwold,Suffolk,England,East of England,643
+Halesworth,Suffolk,England,East of England,644
+Felixstowe,Suffolk,England,East of England,645
+Aldham,Suffolk,England,East of England,646
+Haverhill,Suffolk,England,East of England,647
+Leiston,Suffolk,England,East of England,648
+Elmstead,Essex,England,East of England,649
+Whepstead,Suffolk,England,East of England,650
+Aldeburgh,Suffolk,England,East of England,651
+Sproughton,Suffolk,England,East of England,652
+Bromeswell,Suffolk,England,East of England,653
+Fordham,Essex,England,East of England,654
+Mistley,Essex,England,East of England,655
+Kesgrave,Suffolk,England,East of England,656
+Redbourn,Hertfordshire,England,East of England,657
+Biggleswade,Central Bedfordshire,England,East of England,658
+Bow Brickhill,Milton Keynes,England,South East ,659
+Bedford,Bedford Borough,England,East of England,660
+Kempston,Bedford Borough,England,East of England,661
+Leighton-Linslade,Central Bedfordshire,England,East of England,662
+Kempston Rural,Bedford Borough,England,East of England,663
+Maulden,Central Bedfordshire,England,East of England,664
+Shefford,Central Bedfordshire,England,East of England,665
+Thorn,Central Bedfordshire,England,East of England,666
+NAN,Luton,England,East of England,667
+Harpenden,Hertfordshire,England,East of England,668
+Tring,Hertfordshire,England,East of England,669
+Dunstable,Central Bedfordshire,England,East of England,670
+Ickleford,Hertfordshire,England,East of England,671
+Henlow,Central Bedfordshire,England,East of England,672
+Berkhamsted,Hertfordshire,England,East of England,673
+Arlesey,Central Bedfordshire,England,East of England,674
+Buntingford,Hertfordshire,England,East of England,675
+Ware,Hertfordshire,England,East of England,676
+NAN,Hertford,England,East of England,677
+Hatfield,Hertfordshire,England,East of England,678
+Standon,Hertfordshire,England,East of England,679
+Harlow,Essex,England,East of England,680
+Great Hallingbury,Essex,England,East of England,681
+Welwyn,Hertfordshire,England,East of England,682
+Stevenage,Hertfordshire,England,East of England,683
+Hoddesdon,Hertfordshire,England,East of England,684
+Much Hadham,Hertfordshire,England,East of England,685
+Sawbridgeworth,Hertfordshire,England,East of England,686
+Broxbourne,Hertfordshire,England,East of England,687
+Welwyn Garden City,Hertfordshire,England,East of England,688
+Potters Bar,Hertfordshire,England,East of England,689
+Watford,Hertfordshire,England,East of England,690
+Hemel Hempstead,Hertfordshire,England,East of England,691
+Abbots Langley,Hertfordshire,England,East of England,692
+Chalfont St Peter,Buckinghamshire,England,South East ,693
+Kings Langley,Hertfordshire,England,East of England,694
+Chalfont St Giles,Buckinghamshire,England,South East ,695
+St Albans,Hertfordshire,England,East of England,696
+Hitchin,Hertfordshire,England,East of England,697
+Sandridge,Hertfordshire,England,East of England,698
+Ippollitts,Hertfordshire,England,East of England,699
+Knebworth,Hertfordshire,England,East of England,700
+Borehamwood,Hertfordshire,England,East of England,701
+Radlett,Hertfordshire,England,East of England,702
+Watford Rural,Hertfordshire,England,East of England,703
+Epping,Essex,England,East of England,704
+Colchester,Essex,England,East of England,705
+Newport,Essex,England,East of England,706
+NAN,Southend-on-Sea,England,East of England,707
+Canvey Island,Essex,England,East of England,708
+Billericay,Essex,England,East of England,709
+Clacton-on-Sea,Essex,England,East of England,710
+Danbury,Essex,England,East of England,711
+Chelmsford,Essex,England,East of England,712
+Sible Hedingham,Essex,England,East of England,713
+Great Baddow,Essex,England,East of England,714
+Harwich,Essex,England,East of England,715
+Little Clacton,Essex,England,East of England,716
+Heybridge,Essex,England,East of England,717
+Basildon,Essex,England,East of England,718
+Witham,Essex,England,East of England,719
+Braintree,Essex,England,East of England,720
+Great Dunmow,Essex,England,East of England,721
+Wickford,Essex,England,East of England,722
+Rayleigh,Essex,England,East of England,723
+NAN,Essex,England,East of England,724
+Southminster,Essex,England,East of England,725
+Hockley,Essex,England,East of England,726
+Layer Breton,Essex,England,East of England,727
+Frinton and Walton,Essex,England,East of England,728
+Corringham,Thurrock,England,East of England,729
+Waltham Abbey,Essex,England,East of England,730
+Ongar,Essex,England,East of England,731
+Rochford,Essex,England,East of England,732
+Ingatestone,Essex,England,East of England,733
+Chepping Wycombe,Buckinghamshire,England,South East ,734
+Iver,Buckinghamshire,England,South East ,735
+Aylesbury,Buckinghamshire,England,South East ,736
+Marlow,Buckinghamshire,England,South East ,737
+Bledlow-cum-Saunderton,Buckinghamshire,England,South East ,738
+High Wycombe,Buckinghamshire,England,South East ,739
+Windsor,Windsor and Maidenhead,England,South East ,740
+NAN,Buckingham,England,NAN,741
+Ashendon,Buckinghamshire,England,South East ,742
+Colnbrook with Poyle,Slough,England,South East ,743
+Weston Turville,Buckinghamshire,England,South East ,744
+Amersham,Buckinghamshire,England,South East ,745
+Wooburn,Buckinghamshire,England,South East ,746
+Great Missenden,Buckinghamshire,England,South East ,747
+Hazlemere,Buckinghamshire,England,South East ,748
+Chesham,Buckinghamshire,England,South East ,749
+Dinton,Buckinghamshire,England,South East ,750
+Beaconsfield,Buckinghamshire,England,South East ,751
+Thame,Oxfordshire,England,South East ,752
+Fringford,Oxfordshire,England,South East ,753
+Eynsham,Oxfordshire,England,South East ,754
+Oxford,Oxfordshire,England,South East ,755
+Wantage,Oxfordshire,England,South East ,756
+Carterton,Oxfordshire,England,South East ,757
+Kidlington,Oxfordshire,England,South East ,758
+Marcham,Oxfordshire,England,South East ,759
+Cuddesdon,Oxfordshire,England,South East ,760
+Didcot,Oxfordshire,England,South East ,761
+Culham,Oxfordshire,England,South East ,762
+Woodstock,Oxfordshire,England,South East ,763
+NAN,Reading,England,South East ,764
+Rotherfield Greys,Oxfordshire,England,South East ,765
+Chesterton,Oxfordshire,England,South East ,766
+Shellingford,Oxfordshire,England,South East ,767
+Witney,Oxfordshire,England,South East ,768
+Tadmarton,Oxfordshire,England,South East ,769
+Holton,Oxfordshire,England,South East ,770
+Wallingford,Oxfordshire,England,South East ,771
+Chadlington,Oxfordshire,England,South East ,772
+Bicester,Oxfordshire,England,South East ,773
+Watlington,Oxfordshire,England,South East ,774
+Ampney St Mary,Gloucestershire,England,South West ,775
+Stanton Fitzwarren,Swindon,England,South West ,776
+Moreton-in-Marsh,Gloucestershire,England,South West ,777
+Whitchurch-on-Thames,Oxfordshire,England,South East ,778
+Chinnor,Oxfordshire,England,South East ,779
+Bracknell,Bracknell Forest,England,South East ,780
+Twyford,Wokingham,England,South East ,781
+Windlesham,Surrey,England,South East ,782
+Sunninghill,Windsor and Maidenhead,England,South East ,783
+Maidenhead,Windsor and Maidenhead,England,South East ,784
+Camberley,Surrey,England,South East ,785
+Blackwater and Hawley,Hampshire,England,South East ,786
+Staines,Surrey,England,South East ,787
+Earley,Wokingham,England,South East ,788
+Woodley,Wokingham,England,South East ,789
+Stony Stratford,Milton Keynes,England,South East ,790
+Stantonbury,Milton Keynes,England,South East ,791
+Bletchley,Milton Keynes,England,South East ,792
+Woughton On The Green,Milton Keynes,England,South East ,793
+NAN,Milton Keynes,England,South East ,794
+Shenley Church End,Milton Keynes,England,South East ,795
+Bradwell Abbey,Milton Keynes,England,South East ,796
+Walton,Milton Keynes,England,South East ,797
+Shenley Brook End,Milton Keynes,England,South East ,798
+Clifton Reynes,Milton Keynes,England,South East ,799
+Bradwell,Milton Keynes,England,South East ,800
+Willen,Milton Keynes,England,South East ,801
+Pamber,Hampshire,England,South East ,802
+Newbury,West Berkshire,England,South East ,803
+Hungerford,West Berkshire,England,South East ,804
+Sulhamstead,West Berkshire,England,South East ,805
+Gosport,Hampshire,England,South East ,806
+Basingstoke,Hampshire,England,South East ,807
+Aldershot,Hampshire,England,South East ,808
+NAN,Hampshire,England,South East ,809
+Alton,Hampshire,England,South East ,810
+NAN,Portsmouth,England,South East ,811
+Fleet,Hampshire,England,South East ,812
+Farnborough,Hampshire,England,South East ,813
+Newport,Isle Of Wight,England,South East ,814
+Sandown,Isle Of Wight,England,South East ,815
+Dummer,Hampshire,England,South East ,816
+Winchester,Hampshire,England,South East ,817
+Burton,Dorset,England,South West ,818
+NAN,Southampton,England,South East ,819
+Ringwood,Hampshire,England,South East ,820
+Andover,Hampshire,England,South East ,821
+Amesbury,Wiltshire,England,South West ,822
+Southwick,Hampshire,England,South East ,823
+Horndean,Hampshire,England,South East ,824
+Haslemere,Surrey,England,South East ,825
+New Milton,Hampshire,England,South East ,826
+Whitchurch,Hampshire,England,South East ,827
+Charlton,Hampshire,England,South East ,828
+Petersfield,Hampshire,England,South East ,829
+Downton,Wiltshire,England,South West ,830
+Farnham,Surrey,England,South East ,831
+Hook,Hampshire,England,South East ,832
+Liss,Hampshire,England,South East ,833
+Colehill,Dorset,England,South West ,834
+Liphook,Hampshire,England,South East ,835
+Stroud,Hampshire,England,South East ,836
+Longstock,Hampshire,England,South East ,837
+Havant,Hampshire,England,South East ,838
+Ash,Surrey,England,South East ,839
+Cowes,Isle Of Wight,England,South East ,840
+Fordingbridge,Hampshire,England,South East ,841
+9 Arcadia Close,Southampton,England,South East ,842
+Yarmouth,Isle Of Wight,England,South East ,843
+Wickham,Hampshire,England,South East ,844
+Totland,Isle Of Wight,England,South East ,845
+Ventnor,Isle Of Wight,England,South East ,846
+Shanklin,Isle Of Wight,England,South East ,847
+Hermitage,West Sussex,England,South East ,848
+South Hayling,Hampshire,England,South East ,849
+Bembridge,Isle Of Wight,England,South East ,850
+Lindford,Hampshire,England,South East ,851
+Bishops Sutton,Hampshire,England,South East ,852
+Freshwater,Isle Of Wight,England,South East ,853
+Esher,Surrey,England,South East ,854
+Cobham,Surrey,England,South East ,855
+Ripley,Surrey,England,South East ,856
+Leatherhead,Surrey,England,South East ,857
+Addlestone,Surrey,England,South East ,858
+Reigate and Banstead,Surrey,England,South East ,859
+Guildford,Surrey,England,South East ,860
+Worplesdon,Surrey,England,South East ,861
+Woking,Surrey,England,South East ,862
+Wonersh,Surrey,England,South East ,863
+East Horsley,Surrey,England,South East ,864
+Witley,Surrey,England,South East ,865
+Bisley,Surrey,England,South East ,866
+Godalming,Surrey,England,South East ,867
+Cranleigh,Surrey,England,South East ,868
+Capel,Surrey,England,South East ,869
+Dorking,Surrey,England,South East ,870
+Brockham,Surrey,England,South East ,871
+Horsham,West Sussex,England,South East ,872
+Limpsfield,Surrey,England,South East ,873
+Horley,Surrey,England,South East ,874
+Crawley,West Sussex,England,South East ,875
+Lingfield,Surrey,England,South East ,876
+Virginia Water,Surrey,England,South East ,877
+Egham,Surrey,England,South East ,878
+East Grinstead,West Sussex,England,South East ,879
+Godstone,Surrey,England,South East ,880
+Margate,Kent,England,South East ,881
+Meopham Station,Kent,England,South East ,882
+Broadstairs,Kent,England,South East ,883
+Darenth,Kent,England,South East ,884
+Wingham,Kent,England,South East ,885
+Gravesend,Kent,England,South East ,886
+Rochester,Medway,England,South East ,887
+Leeds,Kent,England,South East ,888
+Strood,Medway,England,South East ,889
+Gillingham,Medway,England,South East ,890
+Edenbridge,Kent,England,South East ,891
+Canterbury,Kent,England,South East ,892
+Tonbridge,Kent,England,South East ,893
+Wrotham,Kent,England,South East ,894
+Folkestone,Kent,England,South East ,895
+Maidstone,Kent,England,South East ,896
+Ashford,Kent,England,South East ,897
+Royal Tunbridge Wells,Kent,England,South East ,898
+Sittingbourne,Kent,England,South East ,899
+Four Throws,Kent,England,South East ,900
+Swanley,Kent,England,South East ,901
+Sevenoaks,Kent,England,South East ,902
+Queenborough,Kent,England,South East ,903
+Faversham,Kent,England,South East ,904
+Cranbrook,Kent,England,South East ,905
+Dover,Kent,England,South East ,906
+Yalding,Kent,England,South East ,907
+West Farleigh,Kent,England,South East ,908
+Sandwich,Kent,England,South East ,909
+Manston,Kent,England,South East ,910
+Hoo St Werburgh,Medway,England,South East ,911
+Shadoxhurst,Kent,England,South East ,912
+Hartley,Kent,England,South East ,913
+Swanscombe,Kent,England,South East ,914
+Birchington,Kent,England,South East ,915
+Tenterden,Kent,England,South East ,916
+St Mary In The Marsh,Kent,England,South East ,917
+Smarden,Kent,England,South East ,918
+West Malling,Kent,England,South East ,919
+Wye,Kent,England,South East ,920
+New Romney,Kent,England,South East ,921
+Snodland,Kent,England,South East ,922
+Hythe,Kent,England,South East ,923
+Stone,Kent,England,South East ,924
+Whitfield,Kent,England,South East ,925
+Lower Hardres,Kent,England,South East ,926
+Horton Kirby,Kent,England,South East ,927
+Ditton,Kent,England,South East ,928
+Hawkinge,Kent,England,South East ,929
+Funtington,West Sussex,England,South East ,930
+Brighton,Brighton and Hove,England,South East ,931
+Worthing,West Sussex,England,South East ,932
+Long Man,East Sussex,England,South East ,933
+NAN,East Sussex,England,South East ,934
+Mayfield,East Sussex,England,South East ,935
+Hastings,East Sussex,England,South East ,936
+Eastbourne,East Sussex,England,South East ,937
+Lewes,East Sussex,England,South East ,938
+Peacehaven,East Sussex,England,South East ,939
+Peasmarsh,East Sussex,England,South East ,940
+Hartfield,East Sussex,England,South East ,941
+Salehurst,East Sussex,England,South East ,942
+Bexhill,East Sussex,England,South East ,943
+Haywards Heath,West Sussex,England,South East ,944
+Rustington,West Sussex,England,South East ,945
+Lancing,West Sussex,England,South East ,946
+Ringmer,East Sussex,England,South East ,947
+Westham,East Sussex,England,South East ,948
+Cuckfield Rural,West Sussex,England,South East ,949
+Chichester,West Sussex,England,South East ,950
+Newhaven,East Sussex,England,South East ,951
+Southwater,West Sussex,England,South East ,952
+Battle,East Sussex,England,South East ,953
+Seaford,East Sussex,England,South East ,954
+Burwash,East Sussex,England,South East ,955
+Littlehampton,West Sussex,England,South East ,956
+Aldwick,West Sussex,England,South East ,957
+Burgess Hill,West Sussex,England,South East ,958
+Wisborough Green,West Sussex,England,South East ,959
+Henfield,West Sussex,England,South East ,960
+Sidlesham,West Sussex,England,South East ,961
+Uckfield,East Sussex,England,South East ,962
+Arundel,West Sussex,England,South East ,963
+Storrington,West Sussex,England,South East ,964
+Icklesham,East Sussex,England,South East ,965
+Hailsham,East Sussex,England,South East ,966
+Tillington,West Sussex,England,South East ,967
+Midhurst,West Sussex,England,South East ,968
+Heathfield,East Sussex,England,South East ,969
+Steyning,West Sussex,England,South East ,970
+Crowborough,East Sussex,England,South East ,971
+Clayton,West Sussex,England,South East ,972
+Felpham,West Sussex,England,South East ,973
+Forest Row,East Sussex,England,South East ,974
+Wadhurst,East Sussex,England,South East ,975
+NAN,Plymouth,England,South West ,976
+Camborne,Cornwall,England,South West ,977
+Redruth,Cornwall,England,South West ,978
+Newton Abbot,Devon,England,South West ,979
+Penryn,Cornwall,England,South West ,980
+Helston,Cornwall,England,South West ,981
+Marazion,Cornwall,England,South West ,982
+St Keverne,Cornwall,England,South West ,983
+Falmouth,Cornwall,England,South West ,984
+St Ives,Cornwall,England,South West ,985
+Ludgvan,Cornwall,England,South West ,986
+Penzance,Cornwall,England,South West ,987
+Sancreed,Cornwall,England,South West ,988
+Isles of Scilly,Isles Of Scilly,England,South West ,989
+Hayle,Cornwall,England,South West ,990
+Helland,Cornwall,England,South West ,991
+Bodmin,Cornwall,England,South West ,992
+St Mewan,Cornwall,England,South West ,993
+Lostwithiel,Cornwall,England,South West ,994
+St Endellion,Cornwall,England,South West ,995
+Bude,Cornwall,England,South West ,996
+Tintagel,Cornwall,England,South West ,997
+St Teath,Cornwall,England,South West ,998
+Liskeard,Cornwall,England,South West ,999
+Looe,Cornwall,England,South West ,1000
+Callington,Cornwall,England,South West ,1001
+South Petherwin,Cornwall,England,South West ,1002
+Calstock,Cornwall,England,South West ,1003
+Saltash,Cornwall,England,South West ,1004
+Antony,Cornwall,England,South West ,1005
+Rame,Cornwall,England,South West ,1006
+Holsworthy Hamlets,Devon,England,South West ,1007
+Padstow,Cornwall,England,South West ,1008
+St Breock,Cornwall,England,South West ,1009
+Colan,Cornwall,England,South West ,1010
+St Austell,Cornwall,England,South West ,1011
+Barnstaple,Devon,England,South West ,1012
+Abbotsham,Devon,England,South West ,1013
+Little Torrington,Devon,England,South West ,1014
+Black Torrington,Devon,England,South West ,1015
+Okehampton Hamlets,Devon,England,South West ,1016
+Braunton,Devon,England,South West ,1017
+Ilfracombe,Devon,England,South West ,1018
+Chawleigh,Devon,England,South West ,1019
+Tiverton,Devon,England,South West ,1020
+Bishops Nympton,Devon,England,South West ,1021
+Sandford,Devon,England,South West ,1022
+Dowland,Devon,England,South West ,1023
+Exeter,Devon,England,South West ,1024
+Tavistock,Devon,England,South West ,1025
+Plymstock,Plymouth,England,South West ,1026
+Plympton,Plymouth,England,South West ,1027
+NAN,Torbay,England,South West ,1028
+Torquay,Torbay,England,South West ,1029
+St Blaise,Cornwall,England,South West ,1030
+St Columb Major,Cornwall,England,South West ,1031
+Truro,Cornwall,England,South West ,1032
+Tregoney,Cornwall,England,South West ,1033
+Newquay,Cornwall,England,South West ,1034
+Perranarworthal,Cornwall,England,South West ,1035
+Kenwyn,Cornwall,England,South West ,1036
+Perranporth,Cornwall,England,South West ,1037
+St Agnes,Cornwall,England,South West ,1038
+Fowey,Cornwall,England,South West ,1039
+Buckfast,Devon,England,South West ,1040
+Bovey Tracey,Devon,England,South West ,1041
+Horrabridge,Devon,England,South West ,1042
+Doddiscombsleigh,Devon,England,South West ,1043
+Dawlish,Devon,England,South West ,1044
+Teignmouth,Devon,England,South West ,1045
+Dartmouth,Devon,England,South West ,1046
+Ivybridge,Devon,England,South West ,1047
+Kingsbridge,Devon,England,South West ,1048
+South Brent,Devon,England,South West ,1049
+Totnes,Devon,England,South West ,1050
+Lyme Regis,Dorset,England,South West ,1051
+Axminster,Devon,England,South West ,1052
+Seaton,Devon,England,South West ,1053
+Exmouth,Devon,England,South West ,1054
+Budleigh Salterton,Devon,England,South West ,1055
+Sidmouth,Devon,England,South West ,1056
+Broad Clyst,Devon,England,South West ,1057
+Honiton,Devon,England,South West ,1058
+Ottery St Mary,Devon,England,South West ,1059
+Kentisbeare,Devon,England,South West ,1060
+Bridgwater,Somerset,England,South West ,1061
+Yeovil,Somerset,England,South West ,1062
+Merriott,Somerset,England,South West ,1063
+Taunton,Somerset,England,South West ,1064
+Spaxton,Somerset,England,South West ,1065
+Ilminster,Somerset,England,South West ,1066
+Weare,Somerset,England,South West ,1067
+Hutton,North Somerset,England,South West ,1068
+Staplegrove,Somerset,England,South West ,1069
+Williton,Somerset,England,South West ,1070
+Mudford,Somerset,England,South West ,1071
+Lydeard St Lawrence,Somerset,England,South West ,1072
+Glastonbury,Somerset,England,South West ,1073
+Wellington,Somerset,England,South West ,1074
+Cheddar,Somerset,England,South West ,1075
+Bruton,Somerset,England,South West ,1076
+Burnham-on-Sea,Somerset,England,South West ,1077
+Frome,Somerset,England,South West ,1078
+Chard,Somerset,England,South West ,1079
+Wootton Courtenay,Somerset,England,South West ,1080
+Crewkerne,Somerset,England,South West ,1081
+Kilmersdon,Somerset,England,South West ,1082
+St Cuthbert Out,Somerset,England,South West ,1083
+Langport,Somerset,England,South West ,1084
+Street,Somerset,England,South West ,1085
+Wincanton,Somerset,England,South West ,1086
+Stawell,Somerset,England,South West ,1087
+Beaminster,Dorset,England,South West ,1088
+Shepton Mallet,Somerset,England,South West ,1089
+Norton Sub Hamdon,Somerset,England,South West ,1090
+South Petherton,Somerset,England,South West ,1091
+Martock,Somerset,England,South West ,1092
+Stoke St Mary,Somerset,England,South West ,1093
+Burnham Without,Somerset,England,South West ,1094
+Winscombe,North Somerset,England,South West ,1095
+Castleton,Dorset,England,South West ,1096
+Somerton,Somerset,England,South West ,1097
+Lynton,Devon,England,South West ,1098
+Wedmore,Somerset,England,South West ,1099
+Templecombe,Somerset,England,South West ,1100
+Castle Cary,Somerset,England,South West ,1101
+Bath,Bath and North East Somerset,England,South West ,1102
+Bristol,City of Bristol,England,South West ,1103
+Kingswood,South Gloucestershire,England,South West ,1104
+Weston-Super-Mare,North Somerset,England,South West ,1105
+Kingswood,Gloucestershire,England,South West ,1106
+Clevedon,North Somerset,England,South West ,1107
+Portbury,North Somerset,England,South West ,1108
+Naunton,Gloucestershire,England,South West ,1109
+Gloucester,Gloucestershire,England,South West ,1110
+Rodborough,Gloucestershire,England,South West ,1111
+Cheltenham,Gloucestershire,England,South West ,1112
+Lydney,Gloucestershire,England,South West ,1113
+Oxenhall,Gloucestershire,England,South West ,1114
+Hucclecote,Gloucestershire,England,South West ,1115
+Prestbury,Gloucestershire,England,South West ,1116
+Stonehouse,Gloucestershire,England,South West ,1117
+St Arvans,Monmouthshire,Wales,Wales,1118
+Littledean,Gloucestershire,England,South West ,1119
+Thrupp,Gloucestershire,England,South West ,1120
+Coleford,Gloucestershire,England,South West ,1121
+Chipping Campden,Gloucestershire,England,South West ,1122
+Berkeley,Gloucestershire,England,South West ,1123
+Tetbury,Gloucestershire,England,South West ,1124
+Yatton Keynell,Wiltshire,England,South West ,1125
+Salisbury,Wiltshire,England,South West ,1126
+Bremhill,Wiltshire,England,South West ,1127
+NAN,Swindon,England,South West ,1128
+Trowbridge,Wiltshire,England,South West ,1129
+Wroughton,Swindon,England,South West ,1130
+Dinton,Wiltshire,England,South West ,1131
+Savernake,Wiltshire,England,South West ,1132
+Melksham,Wiltshire,England,South West ,1133
+Longbridge Deverill,Wiltshire,England,South West ,1134
+Corsham,Wiltshire,England,South West ,1135
+Malmesbury,Wiltshire,England,South West ,1136
+Calne,Wiltshire,England,South West ,1137
+Bradford-on-Avon,Wiltshire,England,South West ,1138
+Westbury,Wiltshire,England,South West ,1139
+Hawkesbury,South Gloucestershire,England,South West ,1140
+Roundway,Wiltshire,England,South West ,1141
+Manningford,Wiltshire,England,South West ,1142
+Haydon Wick,Swindon,England,South West ,1143
+South Tidworth,Hampshire,England,South East ,1144
+NAN,Poole,England,South West ,1145
+NAN,Bournemouth,England,South West ,1146
+Upton,Dorset,England,South West ,1147
+Ferndown,Dorset,England,South West ,1148
+Charminster,Dorset,England,South West ,1149
+Bryanston,Dorset,England,South West ,1150
+Swanage,Dorset,England,South West ,1151
+Allington,Dorset,England,South West ,1152
+Dorchester,Dorset,England,South West ,1153
+Portland,Dorset,England,South West ,1154
+Wareham,Dorset,England,South West ,1155
+Gillingham,Dorset,England,South West ,1156
+Weymouth,Dorset,England,South West ,1157
+Sturminster Newton,Dorset,England,South West ,1158
+Shaftesbury,Dorset,England,South West ,1159
+Rhosybol,Isle of Anglesey,Wales,Wales,1160
+Abenbury,Wrexham,Wales,Wales,1161
+Flint,Flintshire,England,NAN,1162
+Aberffraw,Isle of Anglesey,Wales,Wales,1163
+Llandudno,Conwy,Wales,Wales,1164
+Broughton,Wrexham,Wales,Wales,1165
+Mold,Flintshire,England,NAN,1166
+Gresford,Wrexham,Wales,Wales,1167
+Holywell,Flintshire,England,NAN,1168
+Rhyl,Denbighshire,Wales,Wales,1169
+Shotton,Flintshire,England,NAN,1170
+Denbigh,Denbighshire,Wales,Wales,1171
+Prestatyn,Denbighshire,Wales,Wales,1172
+Llandygai,Gwynedd,Wales,Wales,1173
+Bodorgan,Isle of Anglesey,Wales,Wales,1174
+Llanfairfechan,Conwy,Wales,Wales,1175
+St Asaph,Denbighshire,Wales,Wales,1176
+Valley,Isle of Anglesey,Wales,Wales,1177
+Mochdre,Conwy,Wales,Wales,1178
+Ruthin,Denbighshire,Wales,Wales,1179
+Brithdir,Gwynedd,Wales,Wales,1180
+Llanllyfni,Gwynedd,Wales,Wales,1181
+Llanrwst,Conwy,Wales,Wales,1182
+Bala,Gwynedd,Wales,Wales,1183
+Old Colwyn,Conwy,Wales,Wales,1184
+Henryd,Conwy,Wales,Wales,1185
+Llanidan,Isle of Anglesey,Wales,Wales,1186
+Moelfre,Isle of Anglesey,Wales,Wales,1187
+Betws-yn-Rhos,Conwy,Wales,Wales,1188
+Buan,Gwynedd,Wales,Wales,1189
+Llanrug,Gwynedd,Wales,Wales,1190
+Penmaenmawr,Conwy,Wales,Wales,1191
+Cwm Cadnant,Isle of Anglesey,Wales,Wales,1192
+Deganwy,Conwy,Wales,Wales,1193
+Penrhyndeudraeth,Gwynedd,Wales,Wales,1194
+Barmouth,Gwynedd,Wales,Wales,1195
+Harlech,Gwynedd,Wales,Wales,1196
+Dolbenmaen,Gwynedd,Wales,Wales,1197
+Glantwymyn,Powys,Wales,Wales,1198
+Y Felinheli,Gwynedd,Wales,Wales,1199
+Ffestiniog,Gwynedd,Wales,Wales,1200
+Bro Machno,Conwy,Wales,Wales,1201
+Bryncrug,Gwynedd,Wales,Wales,1202
+Aberdovey,Gwynedd,Wales,Wales,1203
+Llannerch-Y-Medd,Isle of Anglesey,Wales,Wales,1204
+Criccieth,Gwynedd,Wales,Wales,1205
+Beaumaris,Isle of Anglesey,Wales,Wales,1206
+Llanfair-Mathafarn-Eithaf,Isle of Anglesey,Wales,Wales,1207
+Porthmadog,Gwynedd,Wales,Wales,1208
+Llangelynin,Gwynedd,Wales,Wales,1209
+Corwen,Denbighshire,Wales,Wales,1210
+Llanfihangel Ysgeifiog,Isle of Anglesey,Wales,Wales,1211
+Llangefni,Isle of Anglesey,Wales,Wales,1212
+Llangollen,Denbighshire,Wales,Wales,1213
+Llanllwchaiarn,Powys,Wales,Wales,1214
+Llaneugrad,Isle of Anglesey,Wales,Wales,1215
+Llanbedr,Gwynedd,Wales,Wales,1216
+Trevethin,Torfaen,Wales,Wales,1217
+Ebbw Vale,Blaenau Gwent,Wales,Wales,1218
+Rogiet,Monmouthshire,Wales,Wales,1219
+Pentwyn,Cardiff,Wales,Wales,1220
+Abertillery,Blaenau Gwent,Wales,Wales,1221
+Gwehelog Fawr,Monmouthshire,Wales,Wales,1222
+Alway,Newport,Wales,Wales,1223
+Caerleon,Newport,Wales,Wales,1224
+Allt-yr-yn,Newport,Wales,Wales,1225
+Abergavenny,Monmouthshire,Wales,Wales,1226
+NAN,Caerphilly,Wales,Wales,1227
+Cwmbran,Torfaen,Wales,Wales,1228
+Blackwood,Caerphilly,Wales,Wales,1229
+Treharris,Merthyr Tydfil,Wales,Wales,1230
+Pentyrch,Cardiff,Wales,Wales,1231
+Monmouth,Monmouthshire,Wales,Wales,1232
+Graig,Newport,Wales,Wales,1233
+Rhiwbina,Cardiff,Wales,Wales,1234
+Town,Merthyr Tydfil,Wales,Wales,1235
+Pontypridd,Rhondda Cynon Taff,Wales,Wales,1236
+Llantwit Fardre,Rhondda Cynon Taff,Wales,Wales,1237
+Garw Valley,Bridgend,Wales,Wales,1238
+Aberdare,Rhondda Cynon Taff,Wales,Wales,1239
+Ferndale,Rhondda Cynon Taff,Wales,Wales,1240
+Ystrad,Rhondda Cynon Taff,Wales,Wales,1241
+Penrhiwceiber,Rhondda Cynon Taff,Wales,Wales,1242
+Sketty,Swansea,Wales,Wales,1243
+Tonypandy,Rhondda Cynon Taff,Wales,Wales,1244
+Landore,Swansea,Wales,Wales,1245
+Tonna,Neath Port Talbot,Wales,Wales,1246
+Morriston,Swansea,Wales,Wales,1247
+Baglan,Neath Port Talbot,Wales,Wales,1248
+Penderry,Swansea,Wales,Wales,1249
+Bryn,Neath Port Talbot,Wales,Wales,1250
+NAN,Bridgend,Wales,Wales,1251
+Gorseinon,Swansea,Wales,Wales,1252
+Cymmer,Rhondda Cynon Taff,Wales,Wales,1253
+Pontardawe,Neath Port Talbot,Wales,Wales,1254
+Ely,Cardiff,Wales,Wales,1255
+Cynffig,Bridgend,Wales,Wales,1256
+Trowbridge,Cardiff,Wales,Wales,1257
+Blaenhonddan,Neath Port Talbot,Wales,Wales,1258
+Pencoed,Bridgend,Wales,Wales,1259
+Bishopston,Swansea,Wales,Wales,1260
+Llansamlet,Swansea,Wales,Wales,1261
+Porthcawl,Bridgend,Wales,Wales,1262
+Treorchy,Rhondda Cynon Taff,Wales,Wales,1263
+Maesteg,Bridgend,Wales,Wales,1264
+Betws,Carmarthenshire,Wales,Wales,1265
+Ystradgynlais,Powys,Wales,Wales,1266
+Grangetown,Cardiff,Wales,Wales,1267
+Llannon,Carmarthenshire,Wales,Wales,1268
+Carmarthen,Carmarthenshire,Wales,Wales,1269
+Kidwelly,Carmarthenshire,Wales,Wales,1270
+Llanelli Rural,Carmarthenshire,Wales,Wales,1271
+Llandovery,Carmarthenshire,Wales,Wales,1272
+Meidrim,Carmarthenshire,Wales,Wales,1273
+Talley,Carmarthenshire,Wales,Wales,1274
+Cefn Sidan,Carmarthenshire,Wales,Wales,1275
+Llanfihangel-Ar-Arth,Carmarthenshire,Wales,Wales,1276
+Llanegwad,Carmarthenshire,Wales,Wales,1277
+Llanwenog,Ceredigion,Wales,Wales,1278
+Troedyraur,Ceredigion,Wales,Wales,1279
+Llanfarian,Ceredigion,Wales,Wales,1280
+Llangoedmor,Ceredigion,Wales,Wales,1281
+Llangybi,Ceredigion,Wales,Wales,1282
+Aberaeron,Ceredigion,Wales,Wales,1283
+Newcastle Emlyn,Carmarthenshire,Wales,Wales,1284
+Eglwyswrw,Pembrokeshire,Wales,Wales,1285
+New Quay,Ceredigion,Wales,Wales,1286
+Clydau,Pembrokeshire,Wales,Wales,1287
+Tregaron,Ceredigion,Wales,Wales,1288
+Nolton,Pembrokeshire,Wales,Wales,1289
+Llanfallteg,Carmarthenshire,Wales,Wales,1290
+Fishguard,Pembrokeshire,Wales,Wales,1291
+Pembroke,Pembrokeshire,Wales,Wales,1292
+Haverfordwest,Pembrokeshire,Wales,Wales,1293
+Penally,Pembrokeshire,Wales,Wales,1294
+Saundersfoot,Pembrokeshire,Wales,Wales,1295
+Jeffreyston,Pembrokeshire,Wales,Wales,1296
+Wiston,Pembrokeshire,Wales,Wales,1297
+Pembroke Dock,Pembrokeshire,Wales,Wales,1298
+Milford Haven,Pembrokeshire,Wales,Wales,1299
+Maenclochog,Pembrokeshire,Wales,Wales,1300
+Newport,Pembrokeshire,Wales,Wales,1301
+Boncath,Pembrokeshire,Wales,Wales,1302
+Narberth,Pembrokeshire,Wales,Wales,1303
+Pencaer,Pembrokeshire,Wales,Wales,1304
+Llanddew,Powys,Wales,Wales,1305
+Llandrindod Wells,Powys,Wales,Wales,1306
+Llanbrynmair,Powys,Wales,Wales,1307
+Caersws,Powys,Wales,Wales,1308
+Duhonw,Powys,Wales,Wales,1309
+Llangattock,Powys,Wales,Wales,1310
+Llansantffraid,Powys,Wales,Wales,1311
+Presteigne,Powys,Wales,Wales,1312
+Llanidloes,Powys,Wales,Wales,1313
+Rhayader,Powys,Wales,Wales,1314
+Malpas,Cheshire West and Chester,England,North West ,1315
+Broomhaugh and Riding,Northumberland,England,North East ,1316
+North Sunderland,Northumberland,England,North East ,1317
+Haltwhistle,Northumberland,England,North East ,1318
+Eastleigh,Hampshire,England,South East ,1319
+Stansted Mountfitchet,Essex,England,East of England,1320
+Yealmpton,Devon,England,South West ,1321
+Geneur Glyn,Ceredigion,Wales,Wales,1322
+NAN,Cornwall,England,South West ,1323
+NAN,Gwynedd,Wales,Wales,1324
+NAN,Highland,Scotland,Scotland,1325
+NAN,Orkney Islands,Scotland,Scotland,1326
+NAN,Shetland Islands,Scotland,Scotland,1327
+NAN,Aberdeen City,Scotland,Scotland,1328
+NAN,Aberdeenshire,Scotland,Scotland,1329
+NAN,Moray,Scotland,Scotland,1330
+NAN,Dundee City,Scotland,Scotland,1331
+NAN,Perth and Kinross,Scotland,Scotland,1332
+NAN,Angus,Scotland,Scotland,1333
+NAN,Fife,Scotland,Scotland,1334
+NAN,Midlothian,Scotland,Scotland,1335
+NAN,West Lothian,Scotland,Scotland,1336
+NAN,East Lothian,Scotland,Scotland,1337
+NAN,Stirling,Scotland,Scotland,1338
+NAN,Falkirk,Scotland,Scotland,1339
+NAN,Clackmannanshire,Scotland,Scotland,1340
+NAN,Glasgow City,Scotland,Scotland,1341
+NAN,East Dunbartonshire,Scotland,Scotland,1342
+NAN,East Renfrewshire,Scotland,Scotland,1343
+NAN,East Ayrshire,Scotland,Scotland,1344
+NAN,Renfrewshire,Scotland,Scotland,1345
+NAN,Inverclyde,Scotland,Scotland,1346
+NAN,Argyll and Bute,Scotland,Scotland,1347
+NAN,West Dunbartonshire,Scotland,Scotland,1348
+NAN,North Lanarkshire,Scotland,Scotland,1349
+NAN,South Lanarkshire,Scotland,Scotland,1350
+NAN,North Ayrshire,Scotland,Scotland,1351
+NAN,South Ayrshire,Scotland,Scotland,1352
+NAN,Dumfries and Galloway,Scotland,Scotland,1353
+NAN,Wirral,England,North West ,1354
+NAN,Sefton,England,North West ,1355
+NAN,Wigan,England,North West ,1356
+NAN,Warrington,England,North West ,1357
+NAN,Halton,England,North West ,1358
+NAN,Cheshire East,England,North West ,1359
+NAN,Northumberland,England,North East ,1360
+NAN,County Durham,England,North East ,1361
+NAN,Bradford,England,Yorkshire and the Humber ,1362
+NAN,Kirklees,England,Yorkshire and the Humber ,1363
+NAN,Calderdale,England,Yorkshire and the Humber ,1364
+NAN,Sheffield,England,Yorkshire and the Humber ,1365
+NAN,Redcar and Cleveland,England,North East ,1366
+NAN,Sandwell,England,West Midlands ,1367
+NAN,Slough,England,South East ,1368
+NAN,Wokingham,England,South East ,1369
+NAN,Brighton and Hove,England,South East ,1370
+NAN,South Gloucestershire,England,South West ,1371
+NAN,North Somerset,England,South West ,1372
+NAN,Wiltshire,England,South West ,1373
+NAN,Flintshire,England,NAN,1374
+NAN,Newport,Wales,Wales,1375
+NAN,Cardiff,Wales,Wales,1376
+NAN,Swansea,Wales,Wales,1377
+NAN,Cheshire West and Chester,England,North West ,1378
+NAN,Central Bedfordshire,England,East of England,1379
+NAN,Windsor and Maidenhead,England,South East ,1380
+NAN,Bath and North East Somerset,England,South West ,1381
+NAN,Conwy,Wales,Wales,1382
+NAN,Denbighshire,Wales,Wales,1383
+NAN,Wrexham,Wales,Wales,1384
+NAN,The Vale of Glamorgan,Wales,Wales,1385
+NAN,Ceredigion,Wales,Wales,1386

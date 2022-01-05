@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Casualties"
   DTS:PackageType="5"
-  DTS:VersionBuild="28"
-  DTS:VersionGUID="{A203D38E-530A-43C6-A3DD-1559B134F114}">
+  DTS:VersionBuild="29"
+  DTS:VersionGUID="{66873B01-6574-4A76-8EB7-C59D4660362F}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -327,6 +327,161 @@
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 1]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{FA61FB9B-7B69-4A8C-8DB2-6F654B540782}"
+      DTS:ObjectName="Flat File Connection Manager 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\Admin\Desktop\BI\Đồ án thực hành\Github\TTKD-16-DATH\Data\Casualties1114.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Accident_Index"
+              DTS:DTSID="{C45E7A43-A113-4EF6-84F1-48D2FCA27208}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Vehicle_Reference"
+              DTS:DTSID="{2D92523E-739B-4C15-831F-B0F7539AA9A5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Casualty_Reference"
+              DTS:DTSID="{C68DA822-FB24-4124-B5B9-C96957F96D9B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Casualty_Class"
+              DTS:DTSID="{7AF7A7BD-47AA-49F4-8833-5A1C1B6495FC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Sex_of_Casualty"
+              DTS:DTSID="{14A0047D-0DF7-4B5E-B613-CFD543A11F52}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Age_of_Casualty"
+              DTS:DTSID="{E8D04B87-4BA2-423A-93C8-EBFC753B834E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Age_Band_of_Casualty"
+              DTS:DTSID="{FFF1C4B2-F83E-4738-843F-17164A91A17B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Casualty_Severity"
+              DTS:DTSID="{24946CB6-0E20-4B5B-A2CA-70DD9DBC8990}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Pedestrian_Location"
+              DTS:DTSID="{20D6AA64-080B-4E62-BC45-1CBE2FBF22F9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Pedestrian_Movement"
+              DTS:DTSID="{803F582E-05FA-4DA1-A29D-1DC98C575F68}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Car_Passenger"
+              DTS:DTSID="{38D2793B-B642-4341-84E8-FADFF788BF11}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Bus_or_Coach_Passenger"
+              DTS:DTSID="{0FB8E530-6E7F-4EC8-9A36-9D7FC3BC0F46}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Pedestrian_Road_Maintenance_Worker"
+              DTS:DTSID="{1600F9A8-327E-4F75-AE21-799F54DAA148}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Casualty_Type"
+              DTS:DTSID="{9992F9EC-75B7-4697-9043-24D8B9CD6500}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Casualty_Home_Area_Type"
+              DTS:DTSID="{EF390E68-C49E-4923-BDD6-BA2751B79BAF}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[LocalHost.UCA_LSET_CET]"
       DTS:CreationName="OLEDB"
       DTS:DTSID="{24945EC9-6537-4353-BA4B-A4753FC98551}"
@@ -470,8 +625,8 @@
               <connections>
                 <connection
                   refId="Package\Load Data Casualties\Casualties File csv.Connections[FlatFileConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager]"
-                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager 1]"
                   name="FlatFileConnection" />
               </connections>
               <outputs>
@@ -1115,19 +1270,19 @@
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="146.666666666667,41.3333333333334"
+          Size="146.4,41.6"
           Id="Package\GET LSET,CET"
           TopLeft="271,130" />
         <NodeLayout
-          Size="178.666666666667,42.6666666666667"
+          Size="178.4,42.4"
           Id="Package\Load Data Casualties"
           TopLeft="256,225" />
         <NodeLayout
-          Size="178.666666666667,41.3333333333334"
+          Size="178.4,41.6"
           Id="Package\TRUNCATE STAGE"
           TopLeft="262,48" />
         <NodeLayout
-          Size="145.333333333334,41.3333333333334"
+          Size="145.6,41.6"
           Id="Package\UPDATE LSET"
           TopLeft="272,313" />
         <EdgeLayout
@@ -1205,15 +1360,15 @@
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="158.666666666667,41.3333333333334"
+          Size="158.4,41.6"
           Id="Package\Load Data Casualties\Casualties_Stage"
           TopLeft="275,265" />
         <NodeLayout
-          Size="164,41.3333333333334"
+          Size="164,41.6"
           Id="Package\Load Data Casualties\Casualties File csv"
           TopLeft="277,55" />
         <NodeLayout
-          Size="156,41.3333333333334"
+          Size="156,41.6"
           Id="Package\Load Data Casualties\Data Conversion"
           TopLeft="278,170" />
         <EdgeLayout
