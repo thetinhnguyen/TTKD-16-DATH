@@ -5,7 +5,7 @@ GO
 USE [UCA_DDS]
 GO
 
---select * from dimTime
+--select * from dimAge
 CREATE TABLE dimDate(
 	[Date] DATE PRIMARY KEY,
 	[Day] int,
@@ -18,7 +18,7 @@ CREATE TABLE dimDate(
 CREATE TABLE dimTime(
 	[Time] Time PRIMARY KEY,
 	[Hour] int,
-	[SessionOfDay] nvarchar(255),
+	[Session_in_Day] nvarchar(255),
 )
 
 CREATE TABLE [dimLocation] (

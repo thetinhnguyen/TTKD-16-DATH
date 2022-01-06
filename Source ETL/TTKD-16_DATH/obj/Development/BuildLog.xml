@@ -2,7 +2,7 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>TTKD-16_DATH</Name>
-    <LastWriteTime>2022-01-05T17:53:37.3404537Z</LastWriteTime>
+    <LastWriteTime>2022-01-06T02:37:01.405369Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
@@ -28,7 +28,7 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>StageToNDS.dtsx</Name>
-      <LastWriteTime>2022-01-05T16:52:39.252657Z</LastWriteTime>
+      <LastWriteTime>2022-01-06T02:39:39.6117965Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
@@ -43,7 +43,17 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>NDSToDim.dtsx</Name>
-      <LastWriteTime>2022-01-05T18:06:23.4940544Z</LastWriteTime>
+      <LastWriteTime>2022-01-06T02:35:33.7325315Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>NDSToDimAge.dtsx</Name>
+      <LastWriteTime>2022-01-06T02:33:59.948718Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>NDSToDimTime.dtsx</Name>
+      <LastWriteTime>2022-01-06T02:42:58.7969527Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>
