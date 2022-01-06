@@ -18,18 +18,19 @@ begin
 	return @type;
 end
 
--- TAO FUNCTION GOP NGAY-THANG-NAM DE TAO KHOA
---CREATE FUNCTION f_Hour_Day_Month_Year
---(@day TINYINT,@month TINYINT,@year INTEGER)
---RETURNS Date
---AS
---BEGIN
-
---RETURN DATEADD(day, @day -1, DateAdd(month, @month -1, DateAdd(Year, @year-1900, 0)))
---END
+-- Tinh Variance de  tinh muc do  tang gia, cua TNGT qua cac nam
+select table1.Y as 'Year 1', table2.Y as 'Year 2',
+	CAST((table2.NumOfAcc - table1.NumOfAcc) as float) / CAST(table1.NumOfAcc as float) * 100 as 'Variance (%)'
+from (select DATEPART(YEAR,Date) as Y, COUNT(*) AS NumOfAcc
+		from Accidents_NDS
+		GROUP BY DATEPART(YEAR,Date)) as table1,
+	 (select DATEPART(YEAR,Date) as Y, COUNT(*) AS NumOfAcc 
+		from Accidents_NDS
+		GROUP BY DATEPART(YEAR,Date)) as table2
+where table1.Y < table2.Y
+order by table1.Y, table2.Y
 
 -- Thong ke so luong TNGT theo Mức Độ Nghiêm Trọng và Thời Điểm Trong Ngày trong các năm
-
 SELECT Accident_Severity, Session_in_Day,DATEPART(YEAR,Date) as Year, COUNT(*) AS NumOfAcc_Sev_Sess 
 FROM Accidents_NDS
 GROUP BY Accident_Severity, Session_in_Day,DATEPART(YEAR,Date)

@@ -101,7 +101,7 @@ CREATE TABLE [dbo].[dimCasualtyType](
 	[UpdatedDate] [datetime] NULL,
 ) 
 
-
+GO
 
 ---Fact
 CREATE TABLE Fact_Accidents(
@@ -120,7 +120,7 @@ CREATE TABLE Fact_Accidents(
 	NumOfAcc_Sev_Area_RoadType INT, --So luong TNGT cho cau 5
 	NumOfAcc_JourP_VehicleType INT, --Tong so luong TNGT cho cau 7
 	NumOfAcc_JourP_VehicleType_BUR INT, --Tong so luong TNGT cho cau 9
-	Variance FLOAT, -- Do tang giam TNGT
+	--Variance FLOAT, -- Do tang giam TNGT
 	PRIMARY KEY (Fact_Accidents_ID)
 )
 
