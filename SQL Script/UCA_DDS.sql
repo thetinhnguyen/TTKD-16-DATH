@@ -112,12 +112,14 @@ CREATE TABLE Fact_Accidents(
 	[Local_Authority_District_NK] [int] FOREIGN KEY REFERENCES dimLocalAuthorityDistrict,
 	[Built_up_Road_Type_ID] [int] FOREIGN KEY REFERENCES dimBuiltUpRoadType,
 	[Urban_Rural_NK] [int] FOREIGN KEY REFERENCES dimUrbanOrRural,
-	[Vehicle_Type_NK] [int] FOREIGN KEY REFERENCES dimVehicleType,
+	[Vehicle_Type_NK] [int] FOREIGN KEY REFERENCES dimVehicleType, --FK Vehicles_NDS
 	[Road_Type_NK] [int] FOREIGN KEY REFERENCES dimRoadType,
-	[Journey_Purpose_NK] [int] FOREIGN KEY REFERENCES dimJourneyPurpose,
+	[Journey_Purpose_NK] [int] FOREIGN KEY REFERENCES dimJourneyPurpose, --FK Vehicles_NDS
 	[Location_NK] [int] FOREIGN KEY REFERENCES dimLocation, 
-	NumOfAccidents INT, --So luong TNGT cho cau 4,5,9
-	TotalAccidents INT, --Tong so luong TNGT cho cau 7
+	NumOfAcc_Sev_Sess INT, --So luong TNGT cho cau 4
+	NumOfAcc_Sev_Area_RoadType INT, --So luong TNGT cho cau 5
+	NumOfAcc_JourP_VehicleType INT, --Tong so luong TNGT cho cau 7
+	NumOfAcc_JourP_VehicleType_BUR INT, --Tong so luong TNGT cho cau 9
 	Variance FLOAT, -- Do tang giam TNGT
 	PRIMARY KEY (Fact_Accidents_ID)
 )
