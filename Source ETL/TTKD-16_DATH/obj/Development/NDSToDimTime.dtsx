@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="NDSToDimTime"
   DTS:PackageType="5"
-  DTS:VersionBuild="11"
-  DTS:VersionGUID="{90ECAFC2-2BEE-4078-98D2-569229B07663}">
+  DTS:VersionBuild="18"
+  DTS:VersionGUID="{BD631A71-AAA1-40BB-88C5-3E278AA6D597}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -58,6 +58,96 @@
           version="1">
           <components>
             <component
+              refId="Package\dimTime\Conditional Split"
+              componentClassID="Microsoft.ConditionalSplit"
+              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
+              name="Conditional Split"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\dimTime\Conditional Split.Inputs[Conditional Split Input]"
+                  description="Input to the Conditional Split Transformation"
+                  name="Conditional Split Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\dimTime\Conditional Split.Inputs[Conditional Split Input].Columns[Time]"
+                      cachedDataType="dbTime2"
+                      cachedName="Time"
+                      cachedScale="7"
+                      lineageId="Package\dimTime\OLE DB Source.Outputs[OLE DB Source Output].Columns[Time]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\dimTime\Conditional Split.Outputs[Case 1]"
+                  description="Output 2 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Case 1"
+                  synchronousInputId="Package\dimTime\Conditional Split.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">[ISNULL](#{Package\dimTime\OLE DB Source.Outputs[OLE DB Source Output].Columns[Time]})</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">ISNULL(Time)</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\dimTime\Conditional Split.Outputs[Conditional Split Default Output]"
+                  description="Default Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  name="Conditional Split Default Output"
+                  synchronousInputId="Package\dimTime\Conditional Split.Inputs[Conditional Split Input]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\dimTime\Conditional Split.Outputs[Conditional Split Error Output]"
+                  description="Error Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Conditional Split Error Output"
+                  synchronousInputId="Package\dimTime\Conditional Split.Inputs[Conditional Split Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\dimTime\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\dimTime\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\dimTime\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\dimTime\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
               refId="Package\dimTime\Insert Destination"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
@@ -99,15 +189,15 @@
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepIdentity">false</property>
+                  name="FastLoadKeepIdentity">true</property>
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepNulls">false</property>
+                  name="FastLoadKeepNulls">true</property>
                 <property
                   dataType="System.String"
                   description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                  name="FastLoadOptions"></property>
                 <property
                   dataType="System.Int32"
                   description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
@@ -345,8 +435,13 @@
           </components>
           <paths>
             <path
-              refId="Package\dimTime.Paths[OLE DB Source Output]"
+              refId="Package\dimTime.Paths[Conditional Split Default Output]"
               endId="Package\dimTime\Insert Destination.Inputs[OLE DB Destination Input]"
+              name="Conditional Split Default Output"
+              startId="Package\dimTime\Conditional Split.Outputs[Conditional Split Default Output]" />
+            <path
+              refId="Package\dimTime.Paths[OLE DB Source Output]"
+              endId="Package\dimTime\Conditional Split.Inputs[Conditional Split Input]"
               name="OLE DB Source Output"
               startId="Package\dimTime\OLE DB Source.Outputs[OLE DB Source Output]" />
           </paths>
@@ -369,7 +464,7 @@
         <NodeLayout
           Size="120,42"
           Id="Package\dimTime"
-          TopLeft="264,96" />
+          TopLeft="265.249999981374,96" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -377,35 +472,87 @@
     design-time-name="Package\dimTime">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="150,42"
+          Size="150.666666666667,42.6666666666667"
           Id="Package\dimTime\OLE DB Source"
           TopLeft="236.9,31.4999999999998" />
         <NodeLayout
-          Size="163,42"
+          Size="162.666666666667,42"
           Id="Package\dimTime\Insert Destination"
           TopLeft="233.5,144.7" />
+        <NodeLayout
+          Size="156,42.6666666666667"
+          Id="Package\dimTime\Conditional Split"
+          TopLeft="469.999992996454,76.6999986284971" />
         <EdgeLayout
           Id="Package\dimTime.Paths[OLE DB Source Output]"
-          TopLeft="313.45,73.4999999999998">
+          TopLeft="387.566666666667,52.8333333333331">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,71.2000000000002"
+              EndConnector="82.4333263297876,45.1999986284973"
               Start="0,0"
-              End="0,63.7000000000002">
+              End="74.9333263297876,45.1999986284973">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,63.7000000000002" />
+                    End="37.2166631648938,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="37.2166631648938,0"
+                    Point2="41.2166631648938,0"
+                    Point3="41.2166631648938,4" />
+                  <mssgle:LineSegment
+                    End="41.2166631648938,41.1999986284973" />
+                  <mssgle:CubicBezierSegment
+                    Point1="41.2166631648938,41.1999986284973"
+                    Point2="41.2166631648938,45.1999986284973"
+                    Point3="45.2166631648938,45.1999986284973" />
+                  <mssgle:LineSegment
+                    End="74.9333263297876,45.1999986284973" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\dimTime.Paths[Conditional Split Default Output]"
+          TopLeft="547.999992996454,119.366665295164">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-233.166659663121,25.3333347048362"
+              Start="0,0"
+              End="-233.166659663121,17.8333347048362">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,8.66666735241809" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,8.66666735241809"
+                    Point2="0,12.6666673524181"
+                    Point3="-4,12.6666673524181" />
+                  <mssgle:LineSegment
+                    End="-229.166659663121,12.6666673524181" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-229.166659663121,12.6666673524181"
+                    Point2="-233.166659663121,12.6666673524181"
+                    Point3="-233.166659663121,16.6666673524181" />
+                  <mssgle:LineSegment
+                    End="-233.166659663121,17.8333347048362" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-187.197236081561,17.6666673524181,141.2278125,11.658203125"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
