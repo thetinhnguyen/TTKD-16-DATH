@@ -135,7 +135,9 @@ CREATE TABLE Fact_Casualities(
 	[Sex_of_Person_NK] [int] FOREIGN KEY REFERENCES dimSexOfPerson,
 	[Casualty_Type_NK] [int] FOREIGN KEY REFERENCES dimCasualtyType,
 	[Location_NK] [int] FOREIGN KEY REFERENCES dimLocation, 
-	NumOfCasualities INT, --So luong nan nhan cho cau 1,2,6
+	[NumOfAcc_Severity_Local_Year] INT, --So luong nan nhan cho cau 1,2,6
+	[NumOfAcc_Severity_Local_Quarter] int,
+	[NumOfAcc_Severity_Casualty_Group] int,
 	NumOfDead INT, --Tong so luong nguoi tu vong cho cau 3
 	Update_timestamp DATETIME,
 	PRIMARY KEY (Fact_Casualities_ID)

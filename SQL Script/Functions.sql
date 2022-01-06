@@ -54,3 +54,26 @@ FROM Vehicles_NDS a join Accidents_NDS b on a.Accident_Index=b.Accident_Index
 GROUP BY Accident_Severity, Vehicle_Type, Built_up_Road_Type,  DATEPART(YEAR,Date)
 ORDER BY NumOfAcc_JourP_VehicleType DESC
 
+
+-----1.Thống kê số lượng nạn nhân theo Mức Độ Nghiêm Trọng (Fatal, Serious, Slight) ở các Địa phương (Local_Authority_(District)) trong tất cả các năm.
+SELECT [Accident_Severity] ,[Local_Authority_District], COUNT(*) AS NumOfAcc_Severity_Local_Year
+FROM [Accidents_NDS] a join [Casualties_NDS] b on a.[Accident_Index]=b.[Accident_Index]
+GROUP BY [Accident_Severity],[Local_Authority_District]
+ORDER BY NumOfAcc_Severity_Local_Year DESC
+------2.Thống kê số lượng nạn nhân theo Mức Độ Nghiêm Trọng ở các Địa Phương (Local_Authority_(District)) theo các Quý trong từng năm.
+SELECT [Accident_Severity],[Local_Authority_District] ,DATEPART(Quarter,Date) as Quarter, COUNT(*) AS NumOfAcc_Severity_Local_Quarter
+FROM [Accidents_NDS] a join [Casualties_NDS] b on a.[Accident_Index]=b.[Accident_Index]
+GROUP BY [Accident_Severity],[Local_Authority_District] , DATEPART(Quarter,Date)
+ORDER BY NumOfAcc_Severity_Local_Quarter DESC
+-----6.Thống kê số lượng nạn nhân theo Mức Độ Nghiêm Trọng, Loại Nạn Nhân (Casualty Type) và Độ Tuổi trong các năm, Độ Tuổi được định nghĩa như sau:
+SELECT [Accident_Severity],[Casualty_Type],[Age_Group] ,DATEPART(YEAR,Date) as Year, COUNT(*) AS NumOfAcc_Severity_Casualty_Group
+FROM [Accidents_NDS] a join [Casualties_NDS] b on a.[Accident_Index]=b.[Accident_Index]
+GROUP BY [Accident_Severity],[Casualty_Type],[Age_Group] ,DATEPART(YEAR,Date)
+ORDER BY NumOfAcc_Severity_Casualty_Group DESC
+----3. Thống kê số lượng người tử vong theo Giới Tính, Loại Nạn Nhân (Casualty Type) và Nhóm Tuổi (Age_Band_of_Casualty) theo các năm.
+
+SELECT [Sex_of_Casualty],[Casualty_Type],[Age_Band_of_Casualty] ,DATEPART(YEAR,Date) as Year, COUNT(*) AS NumOfDead
+FROM [Accidents_NDS] a join [Casualties_NDS] b on a.[Accident_Index]=b.[Accident_Index]
+where [Accident_Severity]=1
+GROUP BY [Sex_of_Casualty],[Casualty_Type],[Age_Band_of_Casualty] ,DATEPART(YEAR,Date)
+ORDER BY NumOfDead DESC
