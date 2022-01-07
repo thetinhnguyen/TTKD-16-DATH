@@ -10,7 +10,11 @@
         <WinAuthDomain />
         <ServerName />
         <PathOnServer />
+<<<<<<< HEAD
         <StartObjectID>Fact_Casualities.dtsx</StartObjectID>
+=======
+        <StartObjectID>Fact_Variance.dtsx</StartObjectID>
+>>>>>>> 61eef78b913c0d68eeabe2ce6ba8b79e30eaea84
         <Run64BitRuntime>false</Run64BitRuntime>
         <UserIDs />
         <UserPasswords />
