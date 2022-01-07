@@ -103,8 +103,9 @@ CREATE TABLE [dbo].[dimCasualtyType](
 GO
 
 ---Fact
+
+--drop TABLE Fact_Accidents
 CREATE TABLE Fact_Accidents(
-	[Fact_Accidents_ID] int IDENTITY(1, 1) NOT NULL,
 	[Date] DATE FOREIGN KEY REFERENCES dimDate,
 	[Session_In_Day] INT FOREIGN KEY REFERENCES dimSessionInDay,
 	[Severity_NK] [int] FOREIGN KEY REFERENCES dimSeverity,
@@ -114,39 +115,48 @@ CREATE TABLE Fact_Accidents(
 	[Road_Type_NK] [int] FOREIGN KEY REFERENCES dimRoadType,
 	[Vehicle_Type_NK] [int] FOREIGN KEY REFERENCES dimVehicleType, --FK Vehicles_NDS
 	[Journey_Purpose_NK] [int] FOREIGN KEY REFERENCES dimJourneyPurpose, --FK Vehicles_NDS
-	NumOfAcc_Sev_Sess INT, --So luong TNGT cho cau 4
-	NumOfAcc_Sev_Area_RoadType INT, --So luong TNGT cho cau 5
-	NumOfAcc_JourP_VehicleType INT, --Tong so luong TNGT cho cau 7
-	NumOfAcc_JourP_VehicleType_BUR INT, --Tong so luong TNGT cho cau 9
-	PRIMARY KEY (Fact_Accidents_ID)
+	[NumOfAcc] int,
+	--NumOfAcc_Sev_Sess INT, --So luong TNGT cho cau 4
+	--NumOfAcc_Sev_Area_RoadType INT, --So luong TNGT cho cau 5
+	--NumOfAcc_JourP_VehicleType INT, --Tong so luong TNGT cho cau 7
+	--NumOfAcc_JourP_VehicleType_BUR INT, --Tong so luong TNGT cho cau 9
+	PRIMARY KEY ([Date], 
+				Session_in_Day, 
+				Severity_NK, 
+				Built_up_Road_Type_ID,
+				Urban_Rural_NK,
+				Location_NK,
+				Road_Type_NK,
+				Journey_Purpose_NK,
+				Vehicle_Type_NK)
 )
 
-
+--select * from Fact_Casualities ORDER BY NumOfDead DESC
+-- drop TABLE Fact_Casualities
 CREATE TABLE Fact_Casualities(
-	[Fact_Casualities_ID] int IDENTITY(1, 1) NOT NULL,
 	[Date] DATE FOREIGN KEY REFERENCES dimDate,
 	[Severity_NK] [int] FOREIGN KEY REFERENCES dimSeverity,
 	[Local_Authority_District_NK] [int] FOREIGN KEY REFERENCES dimLocalAuthorityDistrict,
+	[Location_NK] [int] FOREIGN KEY REFERENCES dimLocation,
 	[Age] [int] FOREIGN KEY REFERENCES dimAge,
 	[Sex_of_Person_NK] [int] FOREIGN KEY REFERENCES dimSexOfPerson,
 	[Casualty_Type_NK] [int] FOREIGN KEY REFERENCES dimCasualtyType,
-	[Location_NK] [int] FOREIGN KEY REFERENCES dimLocation, 
-	[NumOfAcc_Severity_Local_Year] INT, --So luong nan nhan cho cau 1,2,6
-	[NumOfAcc_Severity_Local_Quarter] int,
-	[NumOfAcc_Severity_Casualty_Group] int,
-	NumOfDead INT, --Tong so luong nguoi tu vong cho cau 3
-	Update_timestamp DATETIME,
-	PRIMARY KEY (Fact_Casualities_ID)
+	[NumOfCas]INT,
+	[NumOfDead] INT, --Tong so luong nguoi tu vong cho cau 3
+	--[NumOfCas_Severity_Local_AllYear] INT, --So luong nan nhan cho cau 1
+	--[NumOfCas_Severity_Local_Date] int,--So luong nan nhan cho cau 2
+	--[NumOfCas_Severity_CasType_AgeGroup] int, --So luong nan nhan cho cau 6
+	PRIMARY KEY ([Date], Local_Authority_District_NK, Location_NK, Severity_NK, Age, Sex_of_Person_NK, Casualty_Type_NK )
 )
 
+-- drop TABLE Fact_Variance
 CREATE  TABLE [dbo].[Fact_Variance](
-	[Fact_Variance_ID]  int IDENTITY(1, 1) NOT NULL,
-	[Year_1]  Int,
-	[Year_2] Int,
+	[Year_1]  Int NOT NULL,
+	[Year_2] Int NOT NULL,
 	[Count_in_Year1] [int] NULL,
 	[Count_in_Year2] [int] NULL,
 	[Variance] float NULL,
 	[CreatedDate] [datetime] NULL,
 	[UpdatedDate] [datetime] NULL,
-	PRIMARY KEY (Fact_Variance_ID)
+	PRIMARY KEY (Year_1, Year_2)
 )

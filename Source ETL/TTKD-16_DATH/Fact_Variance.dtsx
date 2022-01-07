@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="2"
-  DTS:VersionGUID="{8D392EAD-85A0-45DE-ADE4-A43698EE6014}">
+  DTS:VersionBuild="3"
+  DTS:VersionGUID="{3EDC6918-5BE6-4A73-8868-8A2FA234638C}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -174,10 +174,6 @@
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Fact_Variance\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[Fact_Variance_ID]"
-                      dataType="i4"
-                      name="Fact_Variance_ID" />
                     <externalMetadataColumn
                       refId="Package\Fact_Variance\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[Year_1]"
                       dataType="i4"
@@ -558,39 +554,17 @@ order by table1.Y, table2.Y</property>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="163,42"
-          Id="Package\Fact_Variance\Insert Destination"
-          TopLeft="220.5,222.7" />
-        <NodeLayout
           Size="150,42"
           Id="Package\Fact_Variance\OLE DB Source"
           TopLeft="218.9,36.4999999999998" />
         <NodeLayout
+          Size="163,42"
+          Id="Package\Fact_Variance\Insert Destination"
+          TopLeft="220.5,222.7" />
+        <NodeLayout
           Size="239,43"
           Id="Package\Fact_Variance\Them CreatedDate, UpdatedDate"
           TopLeft="176.5,126.7" />
-        <EdgeLayout
-          Id="Package\Fact_Variance.Paths[OLE DB Source Output]"
-          TopLeft="294.95,78.4999999999998">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,48.2000000000002"
-              Start="0,0"
-              End="0,40.7000000000002">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,40.7000000000002" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <EdgeLayout
           Id="Package\Fact_Variance.Paths[Derived Column Output]"
           TopLeft="299,169.7">
@@ -613,9 +587,39 @@ order by table1.Y, table2.Y</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Fact_Variance.Paths[OLE DB Source Output]"
+          TopLeft="294.95,78.4999999999998">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,48.2000000000002"
+              Start="0,0"
+              End="0,40.7000000000002">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,40.7000000000002" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Fact_Variance\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Fact_Variance\Insert Destination">
     <Properties>
@@ -626,14 +630,6 @@ order by table1.Y, table2.Y</property>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Fact_Variance\OLE DB Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

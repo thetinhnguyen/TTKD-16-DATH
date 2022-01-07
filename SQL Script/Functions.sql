@@ -1,7 +1,7 @@
 ﻿use UCA_NDS
 go
 
--- Ham xac dinh thoi diem trong ngay
+ -- Ham xac dinh thoi diem trong ngay
 create or alter FUNCTION dbo.getSession_in_Day(@Time time)
 returns int
 as
@@ -27,16 +27,21 @@ from Local_Authority_District_NDS a join Location_NDS l on a.Local_Authority_Dis
 
 select * from Location_NDS
 -- Query Du lieu de nap bang Fact Accidents
-SELECT distinct [Date], Session_in_Day, Accident_Severity, Built_up_Road_Type, Urban_or_Rural_Area, Location_ID, Road_Type, Journey_Purpose_of_Driver, Vehicle_Type, COUNT(*) AS NumOfAcc
-FROM Vehicles_NDS v join Accidents_NDS a on v.Accident_Index=a.Accident_Index
+SELECT [Date], Session_in_Day, Accident_Severity, Built_up_Road_Type, Urban_or_Rural_Area, Location_ID, Road_Type, Journey_Purpose_of_Driver, Vehicle_Type, COUNT(*) AS NumOfAcc
+FROM Accidents_NDS a  left join Vehicles_NDS v on v.Accident_Index=a.Accident_Index
 GROUP BY [Date], Session_in_Day, Accident_Severity, Built_up_Road_Type, Urban_or_Rural_Area, Location_ID, Road_Type, Journey_Purpose_of_Driver, Vehicle_Type
 ORDER BY  NumOfAcc DESC
 
 -- Query Du lieu de nap bang Fact Casualties
-SELECT distinct [Date], Session_in_Day, Accident_Severity, Built_up_Road_Type, Urban_or_Rural_Area, Location_ID, Road_Type, Journey_Purpose_of_Driver, Vehicle_Type, COUNT(*) AS NumOfAcc
-FROM Vehicles_NDS v join Accidents_NDS a on v.Accident_Index=a.Accident_Index
-GROUP BY [Date], Session_in_Day, Accident_Severity, Built_up_Road_Type, Urban_or_Rural_Area, Location_ID, Road_Type, Journey_Purpose_of_Driver, Vehicle_Type
-ORDER BY  NumOfAcc DESC
+SELECT [Date], Local_Authority_District, Location_ID, Casualty_Severity, Age_of_Casualty, Sex_of_Casualty, Casualty_Type , COUNT(*) AS NumOfCas
+FROM Casualties_NDS c join Accidents_NDS a on c.Accident_Index=a.Accident_Index
+GROUP BY [Date], Local_Authority_District, Location_ID, Casualty_Severity, Age_of_Casualty, Sex_of_Casualty, Casualty_Type
+ORDER BY  NumOfCas DESC
+
+SELECT [Date], Local_Authority_District, Location_ID, Casualty_Severity, Age_of_Casualty, Sex_of_Casualty, Casualty_Type, SUM(Number_of_Casualties) AS NumOfDead
+FROM Casualties_NDS c join Accidents_NDS a on c.Accident_Index=a.Accident_Index
+GROUP BY [Date], Local_Authority_District, Location_ID, Casualty_Severity, Age_of_Casualty, Sex_of_Casualty, Casualty_Type
+ORDER BY  NumOfDead DESC
 
 -- Tinh Variance de  tinh muc do  tang gia, cua TNGT qua cac nam
 select table1.Y as 'Year 1', table2.Y as 'Year 2', table1.NumOfAccY1, table2.NumOfAccY2,
@@ -88,10 +93,10 @@ ORDER BY NumOfAcc_JourP_VehicleType DESC
 
 
 -----1.Thống kê số lượng nạn nhân theo Mức Độ Nghiêm Trọng (Fatal, Serious, Slight) ở các Địa phương (Local_Authority_(District)) trong tất cả các năm.
-SELECT [Accident_Severity],[Local_Authority_District], Number_of_Casualties , COUNT(*) AS NumOfCas_Severity_Local_AllYear
+SELECT [Accident_Severity],[Local_Authority_District], COUNT(*) AS NumOfCas_Severity_Local_AllYear
 FROM [Accidents_NDS] a join [Casualties_NDS] b on a.[Accident_Index]=b.[Accident_Index]
-GROUP BY [Accident_Severity],[Local_Authority_District]
-ORDER BY NumOfCas_Severity_Local_AllYear, Number_of_Casualties DESC
+GROUP BY [Accident_Severity],[Local_Authority_District] 
+ORDER BY NumOfCas_Severity_Local_AllYear DESC
 
 ------2.Thống kê số lượng nạn nhân theo Mức Độ Nghiêm Trọng ở các Địa Phương (Local_Authority_(District)) theo các Quý trong từng năm.
 SELECT [Accident_Severity],[Local_Authority_District], Date, COUNT(*) AS NumOfAcc_Severity_Local_Quarter
@@ -110,3 +115,7 @@ SELECT [Sex_of_Casualty],[Casualty_Type],[Age_Band_of_Casualty], Date, SUM(Numbe
 FROM [Accidents_NDS] a join [Casualties_NDS] b on a.[Accident_Index]=b.[Accident_Index]
 GROUP BY [Sex_of_Casualty],[Casualty_Type], [Age_Band_of_Casualty], Date
 ORDER BY NumOfDead DESC
+
+select c.Accident_Index, a.Accident_Severity, c.Casualty_Severity
+from Casualties_NDS c join Accidents_NDS a on c.Accident_Index=a.Accident_Index
+Where a.Accident_Severity != c.Casualty_Severity
