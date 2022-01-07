@@ -1,0 +1,29 @@
+﻿---- Thong ke so luong TNGT theo Mức Độ Nghiêm Trọng và Thời Điểm Trong Ngày
+select {[Dim Severity].[Hierarchy].[Severity Name],[Dim Severity].[Hierarchy]} on columns,
+({[Dim Date].[Hierarchy].[Year],[Dim Date].[Hierarchy]},
+{[Dim Session In Day].[Hierarchy].[Session In Day],[Dim Session In Day].[Hierarchy]}) on rows
+from [UCA DDS]
+where[Measures].[Num Of Acc]
+
+
+---- Thong ke so luong TNGT theo Mức Độ Nghiêm Trọng, Vùng (Urban_or_Rural_Area), và Kiểu Đường (Road Type)
+select ({[Dim Date].[Hierarchy].[Year],[Dim Date].[Hierarchy]},
+{[Dim Severity].[Hierarchy].[Severity Name],[Dim Severity].[Hierarchy]}) on columns,
+({[Dim Urban Or Rural].[Hierarchy].[Urban Rural Name],[Dim Urban Or Rural].[Hierarchy]},
+{[Dim Road Type].[Hierarchy].[Road Type Name],[Dim Road Type].[Hierarchy]}) on rows
+from [UCA DDS]
+where[Measures].[Num Of Acc]
+
+---- Thong ke so luong TNGT theo Mục Đích Hành Trình (Journey Purpose) và Loại Phương Tiện (Vehicle_Type)
+select {[Dim Journey Purpose].[Hierarchy].[Journey Purpose Name],[Dim Journey Purpose].[Hierarchy]} on columns,
+{[Dim Vehicle Type].[Hierarchy].[Vehicle Type Name],[Dim Vehicle Type].[Hierarchy]} on rows
+from [UCA DDS]
+where[Measures].[Num Of Acc]
+
+---- Thong ke so luong TNGT theo Mức Độ Nghiêm Trọng, Loại Phương Tiện (Vehicle_Type), Built-up Road
+select ({[Dim Date].[Hierarchy].[Year],[Dim Date].[Hierarchy]},
+{[Dim Severity].[Hierarchy].[Severity Name],[Dim Severity].[Hierarchy]}) on columns,
+({[Dim Road Type].[Hierarchy].[Road Type Name],[Dim Road Type].[Hierarchy]},
+{[Dim Built Up Road Type].[Hierarchy].[Built Up Road Type Name], [Dim Built Up Road Type].[Hierarchy]}) on rows
+from [UCA DDS]
+where[Measures].[Num Of Acc]
