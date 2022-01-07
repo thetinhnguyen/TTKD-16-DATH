@@ -1,0 +1,311 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="1e598d47-dbca-4f24-90c8-6c0c240eaf66" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>UCA DDS</ID>
+  <Name>UCA DDS</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+      <Value></Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout />
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>0</DiagramViewPortLeft>
+            <DiagramViewPortTop>0</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>100</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>UCA DDS</DataSourceID>
+  <Schema>
+    <xs:schema id="UCA_x0020_DDS" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="UCA_x0020_DDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="b380a05c-3686-46cc-86ea-e83614af766c">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="dbo_Fact_Accidents" msprop:design-time-name="e9cb02f9-7b2b-41c8-8606-4d30840e7c80" msprop:DbTableName="Fact_Accidents" msprop:FriendlyName="Fact_Accidents" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Date" msprop:design-time-name="8b4ccb13-9fe6-49af-b125-81af6e8a7150" msprop:DbColumnName="Date" msprop:FriendlyName="Date" type="xs:dateTime" />
+                  <xs:element name="Session_In_Day" msprop:design-time-name="e4461bd6-5d2c-4c2d-8218-2ca79b414fa9" msprop:DbColumnName="Session_In_Day" msprop:FriendlyName="Session_In_Day" type="xs:int" />
+                  <xs:element name="Severity_NK" msprop:design-time-name="b00f4523-2b50-400b-9567-b578f5c8a1f7" msprop:DbColumnName="Severity_NK" msprop:FriendlyName="Severity_NK" type="xs:int" />
+                  <xs:element name="Built_up_Road_Type_ID" msprop:design-time-name="ff3bf8b3-6959-4e51-bd87-22bbe8a7b3fd" msprop:DbColumnName="Built_up_Road_Type_ID" msprop:FriendlyName="Built_up_Road_Type_ID" type="xs:int" />
+                  <xs:element name="Urban_Rural_NK" msprop:design-time-name="a7de3001-a848-4b6f-8d96-95ebcf22821f" msprop:DbColumnName="Urban_Rural_NK" msprop:FriendlyName="Urban_Rural_NK" type="xs:int" />
+                  <xs:element name="Location_NK" msprop:design-time-name="31f16c17-6eb4-4d85-9a4f-62468788ef25" msprop:DbColumnName="Location_NK" msprop:FriendlyName="Location_NK" type="xs:int" />
+                  <xs:element name="Road_Type_NK" msprop:design-time-name="e5ad6eb6-a137-49e3-9f3a-b59be70ab5a7" msprop:DbColumnName="Road_Type_NK" msprop:FriendlyName="Road_Type_NK" type="xs:int" />
+                  <xs:element name="Vehicle_Type_NK" msprop:design-time-name="fd0dd587-66ee-400a-abdf-c03f00834530" msprop:DbColumnName="Vehicle_Type_NK" msprop:FriendlyName="Vehicle_Type_NK" type="xs:int" />
+                  <xs:element name="Journey_Purpose_NK" msprop:design-time-name="3eac252c-57ca-4c93-9557-b5fa1bc1016b" msprop:DbColumnName="Journey_Purpose_NK" msprop:FriendlyName="Journey_Purpose_NK" type="xs:int" />
+                  <xs:element name="NumOfAcc" msprop:design-time-name="7028fbb9-ed5e-4ea9-a04f-a2f0efa46e14" msprop:DbColumnName="NumOfAcc" msprop:FriendlyName="NumOfAcc" type="xs:int" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_dimDate" msprop:design-time-name="84f9c7ec-5d2e-4296-9809-cf5e134dd087" msprop:DbTableName="dimDate" msprop:FriendlyName="dimDate" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Date" msprop:design-time-name="8cc44a4b-af4f-422e-b9b8-902cc185d6c4" msprop:DbColumnName="Date" msprop:FriendlyName="Date" type="xs:dateTime" />
+                  <xs:element name="Day" msprop:design-time-name="d2101893-38f2-4316-8d59-11f784a1c247" msprop:DbColumnName="Day" msprop:FriendlyName="Day" type="xs:int" minOccurs="0" />
+                  <xs:element name="DayOfWeek" msprop:design-time-name="bf10779e-cbdb-442f-899a-71ac4f319d1e" msprop:DbColumnName="DayOfWeek" msprop:FriendlyName="DayOfWeek" type="xs:int" minOccurs="0" />
+                  <xs:element name="Month" msprop:design-time-name="76a180ce-3ec2-497a-af7a-9a01dc71fb58" msprop:DbColumnName="Month" msprop:FriendlyName="Month" type="xs:int" minOccurs="0" />
+                  <xs:element name="Quarter" msprop:design-time-name="7b7d7915-70c6-4d23-b17a-d9431d6ca88c" msprop:DbColumnName="Quarter" msprop:FriendlyName="Quarter" type="xs:int" minOccurs="0" />
+                  <xs:element name="Year" msprop:design-time-name="c40819ff-8545-4793-aba4-b7a0549c783d" msprop:DbColumnName="Year" msprop:FriendlyName="Year" type="xs:int" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_dimVehicleType" msprop:design-time-name="015006af-f3ca-4d96-9f0b-5f5dfd9f60a8" msprop:DbTableName="dimVehicleType" msprop:FriendlyName="dimVehicleType" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Vehicle_Type_NK" msprop:design-time-name="cd7e610b-57cf-4374-bbda-1dd425ca614c" msprop:DbColumnName="Vehicle_Type_NK" msprop:FriendlyName="Vehicle_Type_NK" type="xs:int" />
+                  <xs:element name="Vehicle_Type_Name" msprop:design-time-name="b38ba682-a235-46c1-a4b9-142d2c744bd2" msprop:DbColumnName="Vehicle_Type_Name" msprop:FriendlyName="Vehicle_Type_Name" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="CreatedDate" msprop:design-time-name="191cbb3c-1709-43b2-876d-1fec85898e2f" msprop:DbColumnName="CreatedDate" msprop:FriendlyName="CreatedDate" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="UpdatedDate" msprop:design-time-name="8e0a5aa4-c160-4ac9-adc1-ed3f876126e6" msprop:DbColumnName="UpdatedDate" msprop:FriendlyName="UpdatedDate" type="xs:dateTime" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_dimBuiltUpRoadType" msprop:design-time-name="03c06c23-db9c-4f08-b3cc-2338357c37b3" msprop:DbTableName="dimBuiltUpRoadType" msprop:FriendlyName="dimBuiltUpRoadType" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Built_up_Road_Type_ID" msprop:design-time-name="d5d474bd-501f-4519-9b96-2dca88736fc1" msprop:DbColumnName="Built_up_Road_Type_ID" msprop:FriendlyName="Built_up_Road_Type_ID" type="xs:int" />
+                  <xs:element name="Built_up_Road_Type_Name" msprop:design-time-name="a459bec8-bc48-4dce-9be6-d571bdc069ee" msprop:DbColumnName="Built_up_Road_Type_Name" msprop:FriendlyName="Built_up_Road_Type_Name" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="CreatedDate" msprop:design-time-name="c8dda636-61c8-4f0d-9a90-da5c3835a4cc" msprop:DbColumnName="CreatedDate" msprop:FriendlyName="CreatedDate" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="UpdatedDate" msprop:design-time-name="dae1919a-1c09-4532-92d5-28d56847da83" msprop:DbColumnName="UpdatedDate" msprop:FriendlyName="UpdatedDate" type="xs:dateTime" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_dimSessionInDay" msprop:design-time-name="4d4e278f-cdc1-4fdf-b3a0-7f4146d4f3ed" msprop:DbTableName="dimSessionInDay" msprop:FriendlyName="dimSessionInDay" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Session_in_Day_ID" msprop:design-time-name="8d01ac5f-a1b2-425a-b570-a1787f0c14f9" msprop:DbColumnName="Session_in_Day_ID" msprop:FriendlyName="Session_in_Day_ID" type="xs:int" />
+                  <xs:element name="Session_in_Day" msprop:design-time-name="44074186-ffeb-4685-945f-7e9d0fa82f62" msprop:DbColumnName="Session_in_Day" msprop:FriendlyName="Session_in_Day" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_dimSeverity" msprop:design-time-name="0b6638b0-72f8-41c8-beb8-a20ab924e1a6" msprop:DbTableName="dimSeverity" msprop:FriendlyName="dimSeverity" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Severity_NK" msprop:design-time-name="30635528-6e8e-4ad1-87eb-1d3f08c2e94c" msprop:DbColumnName="Severity_NK" msprop:FriendlyName="Severity_NK" type="xs:int" />
+                  <xs:element name="Severity_Name" msprop:design-time-name="15c21c44-f0e6-46bc-94e2-d3dd723ecb91" msprop:DbColumnName="Severity_Name" msprop:FriendlyName="Severity_Name" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="CreatedDate" msprop:design-time-name="ba9830ba-df5b-4bff-85b4-70029b79b296" msprop:DbColumnName="CreatedDate" msprop:FriendlyName="CreatedDate" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="UpdatedDate" msprop:design-time-name="2f311e30-71f3-49ef-8aaa-2c9428b98cea" msprop:DbColumnName="UpdatedDate" msprop:FriendlyName="UpdatedDate" type="xs:dateTime" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_dimJourneyPurpose" msprop:design-time-name="e6809c32-dd8a-44b7-8352-32af8e59fe52" msprop:DbTableName="dimJourneyPurpose" msprop:FriendlyName="dimJourneyPurpose" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Journey_Purpose_NK" msprop:design-time-name="26aa46c3-de8a-4b93-9378-165c700f9092" msprop:DbColumnName="Journey_Purpose_NK" msprop:FriendlyName="Journey_Purpose_NK" type="xs:int" />
+                  <xs:element name="Journey_Purpose_Name" msprop:design-time-name="3e1465f0-2193-4829-ac60-d38fdcaa98ec" msprop:DbColumnName="Journey_Purpose_Name" msprop:FriendlyName="Journey_Purpose_Name" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="CreatedDate" msprop:design-time-name="725d82ba-8aed-4448-babd-62852a462d7f" msprop:DbColumnName="CreatedDate" msprop:FriendlyName="CreatedDate" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="UpdatedDate" msprop:design-time-name="1dce79e0-d973-4e7d-9fd8-a6cc9c7c2461" msprop:DbColumnName="UpdatedDate" msprop:FriendlyName="UpdatedDate" type="xs:dateTime" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_dimLocation" msprop:design-time-name="798f9b5d-4b1b-4410-bf61-808ab4a9ec46" msprop:DbTableName="dimLocation" msprop:FriendlyName="dimLocation" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Location_NK" msprop:design-time-name="15119d22-92d5-4c32-8726-9879e7afdf6c" msprop:DbColumnName="Location_NK" msprop:FriendlyName="Location_NK" type="xs:int" />
+                  <xs:element name="city" msprop:design-time-name="36583f85-9d4c-46c5-8d25-aaf0f67ae2fb" msprop:DbColumnName="city" msprop:FriendlyName="city" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="county" msprop:design-time-name="c2e475bd-32a4-40df-891d-e8d8fd89ba41" msprop:DbColumnName="county" msprop:FriendlyName="county" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="country_name" msprop:design-time-name="bbf643cc-1d1b-4e4b-9920-e97a27b4bd06" msprop:DbColumnName="country_name" msprop:FriendlyName="country_name" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="region_name" msprop:design-time-name="afe91e46-3fc0-4947-91f4-fcde8f986fe1" msprop:DbColumnName="region_name" msprop:FriendlyName="region_name" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_dimRoadType" msprop:design-time-name="c5dd97a7-221f-4244-ba29-7cb196801fc0" msprop:DbTableName="dimRoadType" msprop:FriendlyName="dimRoadType" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Road_Type_NK" msprop:design-time-name="7394344c-4ef8-4826-8a19-c4d297befad4" msprop:DbColumnName="Road_Type_NK" msprop:FriendlyName="Road_Type_NK" type="xs:int" />
+                  <xs:element name="Road_Type_Name" msprop:design-time-name="cebfa068-a0a9-41f8-bed5-4c63e07af80a" msprop:DbColumnName="Road_Type_Name" msprop:FriendlyName="Road_Type_Name" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="CreatedDate" msprop:design-time-name="2aa4c091-7846-46d6-b8c9-652c613cad40" msprop:DbColumnName="CreatedDate" msprop:FriendlyName="CreatedDate" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="UpdatedDate" msprop:design-time-name="ac2946cc-e6f9-49dc-bdb8-e9f452618cd5" msprop:DbColumnName="UpdatedDate" msprop:FriendlyName="UpdatedDate" type="xs:dateTime" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_dimUrbanOrRural" msprop:design-time-name="44893cef-c484-41ba-b2aa-aa67eeec1db8" msprop:DbTableName="dimUrbanOrRural" msprop:FriendlyName="dimUrbanOrRural" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Urban_Rural_NK" msprop:design-time-name="a777a7ea-4513-4420-a1c9-07dd260b6789" msprop:DbColumnName="Urban_Rural_NK" msprop:FriendlyName="Urban_Rural_NK" type="xs:int" />
+                  <xs:element name="Urban_Rural_Name" msprop:design-time-name="291220a5-b85d-44fa-8cab-b4fcc1535617" msprop:DbColumnName="Urban_Rural_Name" msprop:FriendlyName="Urban_Rural_Name" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="CreatedDate" msprop:design-time-name="56e04309-97de-483e-8bd7-5a2d9b03ef24" msprop:DbColumnName="CreatedDate" msprop:FriendlyName="CreatedDate" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="UpdatedDate" msprop:design-time-name="7f9ec006-dc99-40a3-813a-23f3cf7a1946" msprop:DbColumnName="UpdatedDate" msprop:FriendlyName="UpdatedDate" type="xs:dateTime" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Fact_Accidents" />
+          <xs:field xpath="Date" />
+          <xs:field xpath="Session_In_Day" />
+          <xs:field xpath="Severity_NK" />
+          <xs:field xpath="Built_up_Road_Type_ID" />
+          <xs:field xpath="Urban_Rural_NK" />
+          <xs:field xpath="Location_NK" />
+          <xs:field xpath="Road_Type_NK" />
+          <xs:field xpath="Vehicle_Type_NK" />
+          <xs:field xpath="Journey_Purpose_NK" />
+        </xs:unique>
+        <xs:unique name="dbo_dimDate_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_dimDate" />
+          <xs:field xpath="Date" />
+        </xs:unique>
+        <xs:unique name="dbo_dimVehicleType_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_dimVehicleType" />
+          <xs:field xpath="Vehicle_Type_NK" />
+        </xs:unique>
+        <xs:unique name="dbo_dimBuiltUpRoadType_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_dimBuiltUpRoadType" />
+          <xs:field xpath="Built_up_Road_Type_ID" />
+        </xs:unique>
+        <xs:unique name="dbo_dimSessionInDay_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_dimSessionInDay" />
+          <xs:field xpath="Session_in_Day_ID" />
+        </xs:unique>
+        <xs:unique name="dbo_dimSeverity_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_dimSeverity" />
+          <xs:field xpath="Severity_NK" />
+        </xs:unique>
+        <xs:unique name="dbo_dimJourneyPurpose_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_dimJourneyPurpose" />
+          <xs:field xpath="Journey_Purpose_NK" />
+        </xs:unique>
+        <xs:unique name="dbo_dimLocation_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_dimLocation" />
+          <xs:field xpath="Location_NK" />
+        </xs:unique>
+        <xs:unique name="dbo_dimRoadType_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_dimRoadType" />
+          <xs:field xpath="Road_Type_NK" />
+        </xs:unique>
+        <xs:unique name="dbo_dimUrbanOrRural_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_dimUrbanOrRural" />
+          <xs:field xpath="Urban_Rural_NK" />
+        </xs:unique>
+        <xs:keyref name="FK__Fact_Acci__Journ__44FF419A" refer="dbo_dimJourneyPurpose_Constraint1">
+          <xs:selector xpath=".//dbo_Fact_Accidents" />
+          <xs:field xpath="Journey_Purpose_NK" />
+        </xs:keyref>
+        <xs:keyref name="FK__Fact_Acci__Vehic__440B1D61" refer="dbo_dimVehicleType_Constraint1">
+          <xs:selector xpath=".//dbo_Fact_Accidents" />
+          <xs:field xpath="Vehicle_Type_NK" />
+        </xs:keyref>
+        <xs:keyref name="FK__Fact_Acci__Built__403A8C7D" refer="dbo_dimBuiltUpRoadType_Constraint1">
+          <xs:selector xpath=".//dbo_Fact_Accidents" />
+          <xs:field xpath="Built_up_Road_Type_ID" />
+        </xs:keyref>
+        <xs:keyref name="FK__Fact_Acci__Sever__3F466844" refer="dbo_dimSeverity_Constraint1">
+          <xs:selector xpath=".//dbo_Fact_Accidents" />
+          <xs:field xpath="Severity_NK" />
+        </xs:keyref>
+        <xs:keyref name="FK__Fact_Acci__Locat__4222D4EF" refer="dbo_dimLocation_Constraint1">
+          <xs:selector xpath=".//dbo_Fact_Accidents" />
+          <xs:field xpath="Location_NK" />
+        </xs:keyref>
+        <xs:keyref name="FK__Fact_Acci__Sessi__3E52440B" refer="dbo_dimSessionInDay_Constraint1">
+          <xs:selector xpath=".//dbo_Fact_Accidents" />
+          <xs:field xpath="Session_In_Day" />
+        </xs:keyref>
+        <xs:keyref name="FK__Fact_Acci__Road___4316F928" refer="dbo_dimRoadType_Constraint1">
+          <xs:selector xpath=".//dbo_Fact_Accidents" />
+          <xs:field xpath="Road_Type_NK" />
+        </xs:keyref>
+        <xs:keyref name="FK__Fact_Accid__Date__3D5E1FD2" refer="dbo_dimDate_Constraint1">
+          <xs:selector xpath=".//dbo_Fact_Accidents" />
+          <xs:field xpath="Date" />
+        </xs:keyref>
+        <xs:keyref name="FK__Fact_Acci__Urban__412EB0B6" refer="dbo_dimUrbanOrRural_Constraint1">
+          <xs:selector xpath=".//dbo_Fact_Accidents" />
+          <xs:field xpath="Urban_Rural_NK" />
+        </xs:keyref>
+      </xs:element>
+    </xs:schema>
+    <UCA_x0020_DDS xmlns="" />
+  </Schema>
+</DataSourceView>
