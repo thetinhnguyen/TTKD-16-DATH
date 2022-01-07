@@ -10,7 +10,7 @@
         <WinAuthDomain />
         <ServerName />
         <PathOnServer />
-        <StartObjectID>NDSToDim.dtsx</StartObjectID>
+        <StartObjectID>Fact_Variance.dtsx</StartObjectID>
         <Run64BitRuntime>false</Run64BitRuntime>
         <UserIDs />
         <UserPasswords />

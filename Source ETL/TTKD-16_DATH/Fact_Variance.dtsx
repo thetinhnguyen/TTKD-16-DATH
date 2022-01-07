@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="3"
-  DTS:VersionGUID="{3EDC6918-5BE6-4A73-8868-8A2FA234638C}">
+  DTS:VersionBuild="4"
+  DTS:VersionGUID="{C081EE30-C742-4595-927E-7BA8A2AB21DE}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -542,7 +542,7 @@ order by table1.Y, table2.Y</property>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="145,42"
+          Size="145.333333333334,42"
           Id="Package\Fact_Variance"
           TopLeft="224,83" />
       </GraphLayout>
@@ -558,35 +558,13 @@ order by table1.Y, table2.Y</property>
           Id="Package\Fact_Variance\OLE DB Source"
           TopLeft="218.9,36.4999999999998" />
         <NodeLayout
-          Size="163,42"
+          Size="162.666666666667,42"
           Id="Package\Fact_Variance\Insert Destination"
           TopLeft="220.5,222.7" />
         <NodeLayout
-          Size="239,43"
+          Size="238.666666666667,42.6666666666667"
           Id="Package\Fact_Variance\Them CreatedDate, UpdatedDate"
           TopLeft="176.5,126.7" />
-        <EdgeLayout
-          Id="Package\Fact_Variance.Paths[Derived Column Output]"
-          TopLeft="299,169.7">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,53"
-              Start="0,0"
-              End="0,45.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,45.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <EdgeLayout
           Id="Package\Fact_Variance.Paths[OLE DB Source Output]"
           TopLeft="294.95,78.4999999999998">
@@ -601,6 +579,28 @@ order by table1.Y, table2.Y</property>
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,40.7000000000002" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Fact_Variance.Paths[Derived Column Output]"
+          TopLeft="299,169.7">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,53"
+              Start="0,0"
+              End="0,45.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,45.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="55"
-  DTS:VersionGUID="{E2D22185-A9B6-4496-B10E-0B365F5FA079}">
+  DTS:VersionBuild="56"
+  DTS:VersionGUID="{48DA1F07-F71E-41A9-B96F-0372CA7AD555}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -12924,63 +12924,63 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="265.6,41.6"
+          Size="265.333333333334,41.3333333333334"
           Id="Package\Load dữ liệu từ  Vehicles Stage To NDS"
           TopLeft="360.458329114443,842.037717015424" />
         <NodeLayout
-          Size="270.4,41.6"
+          Size="268,42.6666666666667"
           Id="Package\Load dữ liệu từ Accidents Stage To NDS"
           TopLeft="361.874992670491,422.223680615635" />
         <NodeLayout
-          Size="323.2,41.6"
+          Size="323.333333333334,41.3333333333334"
           Id="Package\Load dữ liệu từ Casualties Stage To Casualties_NDS"
           TopLeft="327.499993182719,1125.51228094568" />
         <NodeLayout
-          Size="369.6,41.6"
+          Size="369.333333333334,41.3333333333334"
           Id="Package\Load dữ liệu từ Casualty_Type_Stage To Casualty_Type_NDS"
           TopLeft="305.62499335967,1030.31490975847" />
         <NodeLayout
-          Size="392,41.6"
+          Size="392,41.3333333333334"
           Id="Package\Load dữ liệu từ Journey_Purpose_Stage To Journey_Purpose_NDS"
           TopLeft="295.249992903322,672.88158216685" />
         <NodeLayout
-          Size="464,41.6"
+          Size="464,41.3333333333334"
           Id="Package\Load dữ liệu từ Local_Authority_District  _Stage To Local_Authority_District _NDS"
           TopLeft="257.374993452803,104.750878598163" />
         <NodeLayout
-          Size="312,41.6"
+          Size="312,41.3333333333334"
           Id="Package\Load dữ liệu từ Localtion_Stage To Location_NDS"
           TopLeft="335,11" />
         <NodeLayout
-          Size="337.6,41.6"
+          Size="337.333333333334,41.3333333333334"
           Id="Package\Load dữ liệu từ Road_Type_Stage To Road_Type_NDS"
           TopLeft="331.374993229285,265.078075743841" />
         <NodeLayout
-          Size="305.6,41.6"
+          Size="305.333333333334,41.3333333333334"
           Id="Package\Load dữ liệu từ Severity_Stage To Severity_NDS"
           TopLeft="340.874993415549,189.19474225941" />
         <NodeLayout
-          Size="366.4,41.6"
+          Size="366.666666666667,41.3333333333334"
           Id="Package\Load dữ liệu từ Sex_of_Person Stage To Sex_of_Person NDS"
           TopLeft="304.874993341044,935.1649077942" />
         <NodeLayout
-          Size="433.6,41.6"
+          Size="433.333333333334,41.3333333333334"
           Id="Package\Load dữ liệu từ Urban_or_Rural_Area_Stage To Urban_or_Rural_Area_NDS"
           TopLeft="276.124994067475,345.028963082434" />
         <NodeLayout
-          Size="356,41.6"
+          Size="356,41.3333333333334"
           Id="Package\Load dữ liệu từ Vehicle_Type_Stage To Vehicle_Type_NDS"
           TopLeft="315.999994263053,759.548249065974" />
         <NodeLayout
-          Size="257.6,41.6"
+          Size="257.333333333334,41.3333333333334"
           Id="Package\Update Age_Group in Casualties_NDS"
           TopLeft="355.499994449317,1218.5789478913" />
         <NodeLayout
-          Size="297.6,41.6"
+          Size="297.333333333334,41.3333333333334"
           Id="Package\Update Built_up_Road_Type in Accidents_NDS"
           TopLeft="345,508.249996222556" />
         <NodeLayout
-          Size="275.2,41.6"
+          Size="275.333333333334,41.3333333333334"
           Id="Package\Update Session_in_Day in Accidents_NDS"
           TopLeft="359,583" />
         <EdgeLayout
@@ -13051,18 +13051,18 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 11]"
-          TopLeft="494.999993368983,387.028963082434">
+          TopLeft="494.333326702316,386.362296415767">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,35.194717533201"
+              EndConnector="0,35.8613841998676"
               Start="0,0"
-              End="0,27.694717533201">
+              End="0,28.3613841998676">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,27.694717533201" />
+                    End="0,28.3613841998676" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -13205,18 +13205,18 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 5]"
-          TopLeft="495.437496335246,464.223680615635">
+          TopLeft="494.770829668579,464.890347282302">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,44.026315606921"
+              EndConnector="0,43.3596489402543"
               Start="0,0"
-              End="0,36.526315606921">
+              End="0,35.8596489402543">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,36.526315606921" />
+                    End="0,35.8596489402543" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -13678,47 +13678,47 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="534.4,41.6"
+          Size="534.666666666667,41.3333333333334"
           Id="Package\Load dữ liệu từ Accidents Stage To NDS\Xem xet Urban_or_Rural_Area trong tung dong du lieu co nam trong Urban_or_Rural_Area_NDS"
           TopLeft="455.16666580985,351.824559366119" />
         <NodeLayout
-          Size="244.8,43.2"
+          Size="244.666666666667,43.3333333333334"
           Id="Package\Load dữ liệu từ Accidents Stage To NDS\Load du lieu Accidents trong Stage"
           TopLeft="588,0" />
         <NodeLayout
-          Size="435.2,43.2"
+          Size="435.333333333334,43.3333333333334"
           Id="Package\Load dữ liệu từ Accidents Stage To NDS\Xem xet Road_Type trong tung dong du lieu co nam trong Road_Type NDS"
           TopLeft="494.249993201345,169.641232181303" />
         <NodeLayout
-          Size="239.2,43.2"
+          Size="239.333333333334,43.3333333333334"
           Id="Package\Load dữ liệu từ Accidents Stage To NDS\Them CreatedDate, UpdatedDate"
           TopLeft="910.124998686835,624.888593309804" />
         <NodeLayout
-          Size="555.2,43.2"
+          Size="555.333333333334,43.3333333333334"
           Id="Package\Load dữ liệu từ Accidents Stage To NDS\Xem xet Local_Authority_District trong tung dong du lieu co nam trong Local_Authority_District_NDS"
           TopLeft="438.374993974343,88.0912315652889" />
         <NodeLayout
-          Size="184.8,43.2"
+          Size="184.666666666667,43.3333333333334"
           Id="Package\Load dữ liệu từ Accidents Stage To NDS\Them du lieu Accident"
           TopLeft="931.874998556449,712.835961936913" />
         <NodeLayout
-          Size="384.8,43.2"
+          Size="384.666666666667,43.3333333333334"
           Id="Package\Load dữ liệu từ Accidents Stage To NDS\Xem xet Accident_NK trong tung dong du lieu co nam trong NDS"
           TopLeft="525.249999459833,521.817542044673" />
         <NodeLayout
-          Size="409.6,41.6"
+          Size="409.333333333334,41.3333333333334"
           Id="Package\Load dữ liệu từ Accidents Stage To NDS\Xem xet Location trong tung dong du lieu co nam trong Location_NDS"
           TopLeft="513.374993974343,438.491226032786" />
         <NodeLayout
-          Size="404,41.6"
+          Size="404,41.3333333333334"
           Id="Package\Load dữ liệu từ Accidents Stage To NDS\Xem xet Severity trong tung dong du lieu co nam trong Severity NDS"
           TopLeft="515.249992679805,254.324564363969" />
         <NodeLayout
-          Size="200.8,44.8"
+          Size="200.666666666667,44.6666666666667"
           Id="Package\Load dữ liệu từ Accidents Stage To NDS\Cap nhat du lieu Accident"
           TopLeft="391.499999143183,709.491226032786" />
         <NodeLayout
-          Size="172,43.2"
+          Size="172,43.3333333333334"
           Id="Package\Load dữ liệu từ Accidents Stage To NDS\Them UpdatedDate"
           TopLeft="410.124998537824,612.051752502507" />
         <EdgeLayout
@@ -14152,43 +14152,43 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="321,43"
+          Size="321.333333333334,42.6666666666667"
           Id="Package\Load dữ liệu từ Casualties Stage To Casualties_NDS\Xem xet du lieu Severity_Nk co trong Severity_NDS"
           TopLeft="569.874999823049,475.245613726002" />
         <NodeLayout
-          Size="233,42"
+          Size="233.333333333334,42"
           Id="Package\Load dữ liệu từ Casualties Stage To Casualties_NDS\Cap nhat du lieu Casualties_NDS"
           TopLeft="430.874999823049,826.789473040282" />
         <NodeLayout
-          Size="319,43"
+          Size="318.666666666667,42.6666666666667"
           Id="Package\Load dữ liệu từ Casualties Stage To Casualties_NDS\Xem xet du lieu Accident_Index co nam trong NDS"
           TopLeft="574,601" />
         <NodeLayout
-          Size="387,43"
+          Size="386.666666666667,42.6666666666667"
           Id="Package\Load dữ liệu từ Casualties Stage To Casualties_NDS\Xem xet du lieu Sex_of_Person_NK co trong Sex_of_Person_NDS"
           TopLeft="534.874999823049,198.245613726002" />
         <NodeLayout
-          Size="384,43"
+          Size="384,42.6666666666667"
           Id="Package\Load dữ liệu từ Casualties Stage To Casualties_NDS\Xem xet du lieu Casualty_Type_NK co trong Casualty_Type_NDS"
           TopLeft="537.874999823049,321.245613726002" />
         <NodeLayout
-          Size="239,43"
+          Size="238.666666666667,42.6666666666667"
           Id="Package\Load dữ liệu từ Casualties Stage To Casualties_NDS\Them CreatedDate, UpdatedDate"
           TopLeft="839.624997830019,746.894736275449" />
         <NodeLayout
-          Size="343,43"
+          Size="342.666666666667,42.6666666666667"
           Id="Package\Load dữ liệu từ Casualties Stage To Casualties_NDS\Xem xet du lieu Accident_Index co trong Accident_NDS"
           TopLeft="553.874999823049,88.2456137260017" />
         <NodeLayout
-          Size="172,43"
+          Size="172,42.6666666666667"
           Id="Package\Load dữ liệu từ Casualties Stage To Casualties_NDS\Them UpdatedDate"
           TopLeft="458.374999264255,737.789473284975" />
         <NodeLayout
-          Size="248,43"
+          Size="248,42.6666666666667"
           Id="Package\Load dữ liệu từ Casualties Stage To Casualties_NDS\Load du lieu Casualties trong Stage"
           TopLeft="607.749997783452,0" />
         <NodeLayout
-          Size="223,43"
+          Size="222.666666666667,42.6666666666667"
           Id="Package\Load dữ liệu từ Casualties Stage To Casualties_NDS\Them du lieu Casualties_NDS"
           TopLeft="846.999997839331,825.578947059335" />
         <EdgeLayout
@@ -14210,9 +14210,7 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -14402,9 +14400,7 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -14426,9 +14422,7 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -16198,9 +16192,7 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -16306,9 +16298,7 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -16342,9 +16332,7 @@ where [refTable].[Vehicle_Type_NK] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
