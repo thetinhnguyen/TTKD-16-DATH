@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="13"
-  DTS:VersionGUID="{E0DBBD78-A6A2-43C5-9E7C-0E6725543838}">
+  DTS:VersionBuild="14"
+  DTS:VersionGUID="{19ACA9B1-A943-45C2-8544-6F0D8C321B98}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -30,7 +30,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="D:\TTKD-16-DATH\Data\Location.csv">
+          DTS:ConnectionString="C:\Users\Admin\Desktop\BI\Đồ án thực hành\Github\TTKD-16-DATH\Data\Location.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -39,7 +39,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="city"
-              DTS:DTSID="{EC069AF8-4D04-4916-BF9D-FF1F54D13760}"
+              DTS:DTSID="{E61CE57E-6AE5-4F71-87FE-0145B3686521}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -48,7 +48,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="county"
-              DTS:DTSID="{E7953220-557B-46B7-89F8-1AF954626A44}"
+              DTS:DTSID="{7771E963-F413-4A39-83BE-2EACE4849E38}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -57,7 +57,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="country_name"
-              DTS:DTSID="{862233B7-2511-40CA-805A-8B234C5D8499}"
+              DTS:DTSID="{D7A10DCE-7842-4881-85CA-EF4FF8EF4ECA}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -66,7 +66,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="region_name"
-              DTS:DTSID="{C497E9FD-CAA5-4C00-99BA-6FA042B96894}"
+              DTS:DTSID="{A4F5AE96-AFCF-4CB5-8795-3E151919C7FF}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -75,7 +75,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="LocationID"
-              DTS:DTSID="{0A26AAB7-E044-444F-86C0-E08CCA6E45F7}"
+              DTS:DTSID="{70983FE6-087D-43AE-8A7F-2CAD2D129C12}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -636,19 +636,19 @@
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="147,41"
+          Size="147.2,40.8"
           Id="Package\GET LSET,CET"
           TopLeft="272,163" />
         <NodeLayout
-          Size="170,42"
+          Size="169.6,41.6"
           Id="Package\Load Data Location"
           TopLeft="253,253" />
         <NodeLayout
-          Size="165,41"
+          Size="164.8,40.8"
           Id="Package\TRUNCATE STAGE"
           TopLeft="262,72" />
         <NodeLayout
-          Size="145,41"
+          Size="144.8,40.8"
           Id="Package\UPDATE LSET"
           TopLeft="271,339" />
         <EdgeLayout
@@ -724,13 +724,13 @@
     design-time-name="Package\Load Data Location">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="151,42"
+          Size="151.2,41.6"
           Id="Package\Load Data Location\Location_Stage"
           TopLeft="265,301" />
         <NodeLayout
-          Size="168,42"
+          Size="168,41.6"
           Id="Package\Load Data Location\Load data Location"
           TopLeft="258,182" />
         <EdgeLayout
@@ -752,9 +752,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>

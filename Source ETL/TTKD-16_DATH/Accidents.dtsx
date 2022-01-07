@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="36"
-  DTS:VersionGUID="{6C566088-3B84-4FE7-90DA-2CBADBE488F9}">
+  DTS:VersionBuild="37"
+  DTS:VersionGUID="{0BB2B4D9-D308-4B5C-9E34-6A34ACB5B1CE}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -325,6 +325,314 @@
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{D3D9B1CF-85D8-439B-B22B-45C0260656C2}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\Admin\Desktop\BI\Đồ án thực hành\Github\TTKD-16-DATH\Data\Accidents1114.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Accident_Index"
+              DTS:DTSID="{CDB0397E-8A33-4626-880F-998E0DFD5051}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Location_Easting_OSGR"
+              DTS:DTSID="{D83D4EC7-B8CC-47D5-B08C-6728CDB7337F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Location_Northing_OSGR"
+              DTS:DTSID="{E00D1DB4-9897-46AB-B8EC-BB115461B4E7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Longitude"
+              DTS:DTSID="{811DBE23-EFED-4072-85D9-08CDCDDE4116}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Latitude"
+              DTS:DTSID="{F058BDF1-0760-41CB-9CC8-318649CAF0C2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Police_Force"
+              DTS:DTSID="{1CE2AFB9-D00A-47C7-8874-0A157714AFB4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Accident_Severity"
+              DTS:DTSID="{38EAC75E-41D9-4526-8C71-696D8F854F2F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Number_of_Vehicles"
+              DTS:DTSID="{5A52F06D-CA25-4E8C-BCA2-0BC374C37D39}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Number_of_Casualties"
+              DTS:DTSID="{EC80F139-E1B0-4F07-9946-C703952CDC55}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Date"
+              DTS:DTSID="{79A27B6F-DA6C-4EFD-A2C8-920E8507C6BB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Day_of_Week"
+              DTS:DTSID="{CB5FCD5D-2555-44FC-AA7A-AED7A24896E5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Time"
+              DTS:DTSID="{AACF5B54-FD05-4F9A-9B42-FAC0548CAC2E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Local_Authority_(District)"
+              DTS:DTSID="{AB9A2B95-5361-4561-B5DF-CB0D13F4F67E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Local_Authority_(Highway)"
+              DTS:DTSID="{A7DB7FA5-8B4A-4917-AE3D-60D7F75F9DF2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="1st_Road_Class"
+              DTS:DTSID="{183420B8-D047-4165-9C13-4963A60B4040}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="1st_Road_Number"
+              DTS:DTSID="{EC5C53B5-3FC2-4F23-93AF-2B8DDD93BF03}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Road_Type"
+              DTS:DTSID="{53C9E6B5-8DF2-432A-95EC-485DE7C69D8A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Speed_limit"
+              DTS:DTSID="{BF09693D-7C18-47DE-B538-69C382CF831E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Junction_Detail"
+              DTS:DTSID="{2195C905-AD43-4ADF-9A7A-B9F2194D040A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Junction_Control"
+              DTS:DTSID="{756CBD69-4275-4BDA-89FE-AFDB6E39073E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="2nd_Road_Class"
+              DTS:DTSID="{DE4B3972-00C0-4C79-A70E-C067CCE3A570}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="2nd_Road_Number"
+              DTS:DTSID="{36B54C76-5657-4A6E-85B8-DA1F397FFF2E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Pedestrian_Crossing-Human_Control"
+              DTS:DTSID="{C237E084-545D-4246-8AAF-C62C4F7C925E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Pedestrian_Crossing-Physical_Facilities"
+              DTS:DTSID="{F305B193-185F-45F9-8C38-30EBD674327E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Light_Conditions"
+              DTS:DTSID="{6E513359-39A2-4386-9D5B-95D31E2DCCC4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Weather_Conditions"
+              DTS:DTSID="{C070F69B-268D-431A-87F9-D730AC0CB052}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Road_Surface_Conditions"
+              DTS:DTSID="{60AD68EC-6BC2-44DD-A14A-58402E9BEEDA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Special_Conditions_at_Site"
+              DTS:DTSID="{15715A9C-BD4B-4295-B53C-8DFD4FA0554B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Carriageway_Hazards"
+              DTS:DTSID="{25307EA7-A03A-444C-A126-E30C553B4CD4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Urban_or_Rural_Area"
+              DTS:DTSID="{32904A28-4059-4369-86CB-E77A37C91BE7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Did_Police_Officer_Attend_Scene_of_Accident"
+              DTS:DTSID="{3570659F-44AC-4769-B279-2C8E2F8689F1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="LSOA_of_Accident_Location"
+              DTS:DTSID="{751386A5-4A5F-4516-A13E-782E7C5B0BCD}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[LocalHost.UCA_LSET_CET]"
       DTS:CreationName="OLEDB"
       DTS:DTSID="{0A314706-F721-4978-8DED-AE39C38B2B05}"
@@ -468,8 +776,8 @@
               <connections>
                 <connection
                   refId="Package\Load Data Accidents\Accidents File csv.Connections[FlatFileConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Accidents File csv]"
-                  connectionManagerRefId="Package.ConnectionManagers[Accidents File csv]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager]"
                   name="FlatFileConnection" />
               </connections>
               <outputs>
@@ -1584,19 +1892,19 @@
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="146,42"
+          Size="145.6,41.6"
           Id="Package\GET LSET,CET"
           TopLeft="270,136" />
         <NodeLayout
-          Size="174,42"
+          Size="174.4,41.6"
           Id="Package\Load Data Accidents"
           TopLeft="262,217" />
         <NodeLayout
-          Size="166,42"
+          Size="166.4,41.6"
           Id="Package\TRUNCATE STAGE"
           TopLeft="256,40" />
         <NodeLayout
-          Size="146,42"
+          Size="145.6,41.6"
           Id="Package\UPDATE LSET"
           TopLeft="272,316" />
         <EdgeLayout
@@ -1674,15 +1982,15 @@
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="156,42"
+          Size="156,41.6"
           Id="Package\Load Data Accidents\Data Conversion"
           TopLeft="278.749999944121,167.789473284975" />
         <NodeLayout
-          Size="162,42"
+          Size="161.6,41.6"
           Id="Package\Load Data Accidents\Accidents File csv"
           TopLeft="278,86" />
         <NodeLayout
-          Size="156,42"
+          Size="156,41.6"
           Id="Package\Load Data Accidents\Accidents_Stage"
           TopLeft="275.249999981373,266.52631519706" />
         <EdgeLayout

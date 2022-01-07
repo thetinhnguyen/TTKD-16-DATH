@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="12"
-  DTS:VersionGUID="{D5F0781F-33B3-4D62-A951-8F0042640E0F}">
+  DTS:VersionBuild="14"
+  DTS:VersionGUID="{AC735A39-23EF-4841-85A7-9BEBA29CB6EF}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -49,6 +49,44 @@
               DTS:TextQualified="True"
               DTS:ObjectName="LocationID"
               DTS:DTSID="{A4D42189-866B-4FA8-87DF-64C5FD7E04F7}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{F76DAB56-337D-4C5E-8940-E04993C972E6}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\Admin\Desktop\BI\Đồ án thực hành\Github\TTKD-16-DATH\Data\Accident_location.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Accident_Index"
+              DTS:DTSID="{6FD30295-685E-4566-B370-5B887D0B1914}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="LocationID"
+              DTS:DTSID="{1E09F51C-4BFB-4E40-9FC5-C8FD3A24A8C5}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -378,8 +416,8 @@
               <connections>
                 <connection
                   refId="Package\Load Data Accident_Location\Load File csv.Connections[FlatFileConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Flat File Accident_Location_Stage]"
-                  connectionManagerRefId="Package.ConnectionManagers[Flat File Accident_Location_Stage]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager]"
                   name="FlatFileConnection" />
               </connections>
               <outputs>
@@ -567,19 +605,19 @@
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="147,41"
+          Size="147.2,40.8"
           Id="Package\GET LSET,CET"
           TopLeft="272,163" />
         <NodeLayout
-          Size="215,42"
+          Size="215.2,41.6"
           Id="Package\Load Data Accident_Location"
           TopLeft="240,252" />
         <NodeLayout
-          Size="165,41"
+          Size="164.8,40.8"
           Id="Package\TRUNCATE STAGE"
           TopLeft="262,72" />
         <NodeLayout
-          Size="145,41"
+          Size="144.8,40.8"
           Id="Package\UPDATE LSET"
           TopLeft="271,339" />
         <EdgeLayout
@@ -657,39 +695,17 @@
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="139,42"
+          Size="139.2,41.6"
           Id="Package\Load Data Accident_Location\Load File csv"
           TopLeft="278,64" />
         <NodeLayout
-          Size="156,41"
+          Size="156,40.8"
           Id="Package\Load Data Accident_Location\Data Conversion"
           TopLeft="277,171" />
         <NodeLayout
-          Size="196,42"
+          Size="196,41.6"
           Id="Package\Load Data Accident_Location\Accident_Location_Stage"
           TopLeft="257,300" />
-        <EdgeLayout
-          Id="Package\Load Data Accident_Location.Paths[Data Conversion Output]"
-          TopLeft="355,212">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,88"
-              Start="0,0"
-              End="0,80.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,80.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <EdgeLayout
           Id="Package\Load Data Accident_Location.Paths[Flat File Source Output]"
           TopLeft="351.25,106">
@@ -704,6 +720,28 @@
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,57.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load Data Accident_Location.Paths[Data Conversion Output]"
+          TopLeft="355,212">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,88"
+              Start="0,0"
+              End="0,80.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,80.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
