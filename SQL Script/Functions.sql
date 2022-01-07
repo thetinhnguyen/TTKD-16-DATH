@@ -22,26 +22,34 @@ end
 	return @type;
 end
 
-select distinct a.Local_Authority_District_NK, a.Local_Authority_District_Name, l.city, l.county, l.region_name, l.country_name 
-from Local_Authority_District_NDS a join Location_NDS l on a.Local_Authority_District_Name=l.county
-
-select * from Location_NDS
 -- Query Du lieu de nap bang Fact Accidents
-SELECT [Date], Session_in_Day, Accident_Severity, Built_up_Road_Type, Urban_or_Rural_Area, Location_ID, Road_Type, Journey_Purpose_of_Driver, Vehicle_Type, COUNT(*) AS NumOfAcc
-FROM Accidents_NDS a  left join Vehicles_NDS v on v.Accident_Index=a.Accident_Index
-GROUP BY [Date], Session_in_Day, Accident_Severity, Built_up_Road_Type, Urban_or_Rural_Area, Location_ID, Road_Type, Journey_Purpose_of_Driver, Vehicle_Type
+SELECT [Date], Session_in_Day, Accident_Severity, Built_up_Road_Type, Urban_or_Rural_Area, Location_NK, Road_Type_NK, Journey_Purpose_NK, Vehicle_Type_NK, COUNT(*) AS NumOfAcc
+FROM ((((Accidents_NDS a  left join Vehicles_NDS v on v.Accident_Index=a.Accident_Index)
+join Location_NDS lo on a.Location_ID = lo.Location_Id) 
+join Road_Type_NDS rt on a.Road_Type = rt.Road_Type_ID)
+join Vehicle_Type_NDS vt on v.Vehicle_Type = vt.Vehicle_Type_ID) 
+join Journey_Purpose_NDS jp on v.Journey_Purpose_of_Driver = jp.Journey_Purpose_ID
+GROUP BY [Date], Session_in_Day, Accident_Severity, Built_up_Road_Type, Urban_or_Rural_Area, Location_NK, rt.Road_Type_NK, Journey_Purpose_NK, Vehicle_Type_NK
 ORDER BY  NumOfAcc DESC
 
 -- Query Du lieu de nap bang Fact Casualties
-SELECT [Date], Local_Authority_District, Location_ID, Casualty_Severity, Age_of_Casualty, Sex_of_Casualty, Casualty_Type , COUNT(*) AS NumOfCas
-FROM Casualties_NDS c join Accidents_NDS a on c.Accident_Index=a.Accident_Index
-GROUP BY [Date], Local_Authority_District, Location_ID, Casualty_Severity, Age_of_Casualty, Sex_of_Casualty, Casualty_Type
+SELECT [Date], l_a.Local_Authority_District_NK, l.Location_NK, Casualty_Severity, Age_of_Casualty, s_p.Sex_of_Person_NK, c_t.Casualty_Type_NK , COUNT(*) AS NumOfCas
+FROM ((((Casualties_NDS c join Accidents_NDS a on c.Accident_Index=a.Accident_Index)
+join [Local_Authority_District_NDS] l_a on a.Local_Authority_District=l_a.Local_Authority_District_Id) 
+join [Location_NDS] l on a.Location_ID=l.Location_Id) 
+join [Casualty_Type_NDS] c_t on c.Casualty_Type=c_t.Casualty_Type_ID) 
+join [Sex_of_Person_NDS] s_p on c.Sex_of_Casualty=s_p.Sex_of_Person_ID
+GROUP BY [Date], l_a.Local_Authority_District_NK, l.Location_NK, Casualty_Severity, Age_of_Casualty, s_p.Sex_of_Person_NK, c_t.Casualty_Type_NK
 ORDER BY  NumOfCas DESC
 
-SELECT [Date], Local_Authority_District, Location_ID, Casualty_Severity, Age_of_Casualty, Sex_of_Casualty, Casualty_Type, SUM(Number_of_Casualties) AS NumOfDead
-FROM Casualties_NDS c join Accidents_NDS a on c.Accident_Index=a.Accident_Index
-GROUP BY [Date], Local_Authority_District, Location_ID, Casualty_Severity, Age_of_Casualty, Sex_of_Casualty, Casualty_Type
-ORDER BY  NumOfDead DESC
+SELECT [Date], l_a.Local_Authority_District_NK, l.Location_NK, Casualty_Severity, Age_of_Casualty, s_p.Sex_of_Person_NK, c_t.Casualty_Type_NK , SUM(Number_of_Casualties) AS NumOfDead
+FROM ((((Casualties_NDS c join Accidents_NDS a on c.Accident_Index=a.Accident_Index)
+join [Local_Authority_District_NDS] l_a on a.Local_Authority_District=l_a.Local_Authority_District_Id) 
+join [Location_NDS] l on a.Location_ID=l.Location_Id) 
+join [Casualty_Type_NDS] c_t on c.Casualty_Type=c_t.Casualty_Type_ID) 
+join [Sex_of_Person_NDS] s_p on c.Sex_of_Casualty=s_p.Sex_of_Person_ID
+GROUP BY [Date], l_a.Local_Authority_District_NK, l.Location_NK, Casualty_Severity, Age_of_Casualty, s_p.Sex_of_Person_NK, c_t.Casualty_Type_NK
+ORDER BY NumOfDead DESC
 
 -- Tinh Variance de  tinh muc do  tang gia, cua TNGT qua cac nam
 select table1.Y as 'Year 1', table2.Y as 'Year 2', table1.NumOfAccY1, table2.NumOfAccY2,
