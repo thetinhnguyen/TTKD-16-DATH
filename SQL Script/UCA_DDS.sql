@@ -108,13 +108,12 @@ CREATE TABLE Fact_Accidents(
 	[Date] DATE FOREIGN KEY REFERENCES dimDate,
 	[Session_In_Day] INT FOREIGN KEY REFERENCES dimSessionInDay,
 	[Severity_NK] [int] FOREIGN KEY REFERENCES dimSeverity,
-	[Local_Authority_District_NK] [int] FOREIGN KEY REFERENCES dimLocalAuthorityDistrict,
 	[Built_up_Road_Type_ID] [int] FOREIGN KEY REFERENCES dimBuiltUpRoadType,
 	[Urban_Rural_NK] [int] FOREIGN KEY REFERENCES dimUrbanOrRural,
-	[Vehicle_Type_NK] [int] FOREIGN KEY REFERENCES dimVehicleType, --FK Vehicles_NDS
-	[Road_Type_NK] [int] FOREIGN KEY REFERENCES dimRoadType,
-	[Journey_Purpose_NK] [int] FOREIGN KEY REFERENCES dimJourneyPurpose, --FK Vehicles_NDS
 	[Location_NK] [int] FOREIGN KEY REFERENCES dimLocation, 
+	[Road_Type_NK] [int] FOREIGN KEY REFERENCES dimRoadType,
+	[Vehicle_Type_NK] [int] FOREIGN KEY REFERENCES dimVehicleType, --FK Vehicles_NDS
+	[Journey_Purpose_NK] [int] FOREIGN KEY REFERENCES dimJourneyPurpose, --FK Vehicles_NDS
 	NumOfAcc_Sev_Sess INT, --So luong TNGT cho cau 4
 	NumOfAcc_Sev_Area_RoadType INT, --So luong TNGT cho cau 5
 	NumOfAcc_JourP_VehicleType INT, --Tong so luong TNGT cho cau 7

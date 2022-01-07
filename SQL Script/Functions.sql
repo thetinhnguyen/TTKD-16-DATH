@@ -22,7 +22,21 @@ end
 	return @type;
 end
 
+select distinct a.Local_Authority_District_NK, a.Local_Authority_District_Name, l.city, l.county, l.region_name, l.country_name 
+from Local_Authority_District_NDS a join Location_NDS l on a.Local_Authority_District_Name=l.county
+
+select * from Location_NDS
 -- Query Du lieu de nap bang Fact Accidents
+SELECT distinct [Date], Session_in_Day, Accident_Severity, Built_up_Road_Type, Urban_or_Rural_Area, Location_ID, Road_Type, Journey_Purpose_of_Driver, Vehicle_Type, COUNT(*) AS NumOfAcc
+FROM Vehicles_NDS v join Accidents_NDS a on v.Accident_Index=a.Accident_Index
+GROUP BY [Date], Session_in_Day, Accident_Severity, Built_up_Road_Type, Urban_or_Rural_Area, Location_ID, Road_Type, Journey_Purpose_of_Driver, Vehicle_Type
+ORDER BY  NumOfAcc DESC
+
+-- Query Du lieu de nap bang Fact Casualties
+SELECT distinct [Date], Session_in_Day, Accident_Severity, Built_up_Road_Type, Urban_or_Rural_Area, Location_ID, Road_Type, Journey_Purpose_of_Driver, Vehicle_Type, COUNT(*) AS NumOfAcc
+FROM Vehicles_NDS v join Accidents_NDS a on v.Accident_Index=a.Accident_Index
+GROUP BY [Date], Session_in_Day, Accident_Severity, Built_up_Road_Type, Urban_or_Rural_Area, Location_ID, Road_Type, Journey_Purpose_of_Driver, Vehicle_Type
+ORDER BY  NumOfAcc DESC
 
 -- Tinh Variance de  tinh muc do  tang gia, cua TNGT qua cac nam
 select table1.Y as 'Year 1', table2.Y as 'Year 2', table1.NumOfAccY1, table2.NumOfAccY2,
@@ -80,20 +94,19 @@ GROUP BY [Accident_Severity],[Local_Authority_District]
 ORDER BY NumOfCas_Severity_Local_AllYear, Number_of_Casualties DESC
 
 ------2.Thống kê số lượng nạn nhân theo Mức Độ Nghiêm Trọng ở các Địa Phương (Local_Authority_(District)) theo các Quý trong từng năm.
-SELECT [Accident_Severity],[Local_Authority_District] ,DATEPART(Quarter,Date) as Quarter, COUNT(*) AS NumOfAcc_Severity_Local_Quarter
+SELECT [Accident_Severity],[Local_Authority_District], Date, COUNT(*) AS NumOfAcc_Severity_Local_Quarter
 FROM [Accidents_NDS] a join [Casualties_NDS] b on a.[Accident_Index]=b.[Accident_Index]
-GROUP BY [Accident_Severity],[Local_Authority_District] , DATEPART(Quarter,Date)
+GROUP BY [Accident_Severity],[Local_Authority_District] , Date
 ORDER BY NumOfAcc_Severity_Local_Quarter DESC
 
 -----6.Thống kê số lượng nạn nhân theo Mức Độ Nghiêm Trọng, Loại Nạn Nhân (Casualty Type) và Độ Tuổi trong các năm, Độ Tuổi được định nghĩa như sau:
-SELECT [Accident_Severity],[Casualty_Type],[Age_Group] ,DATEPART(YEAR,Date) as Year, COUNT(*) AS NumOfAcc_Severity_Casualty_Group
+SELECT [Accident_Severity],[Casualty_Type],[Age_Group], Date, COUNT(*) AS NumOfAcc_Severity_Casualty_Group
 FROM [Accidents_NDS] a join [Casualties_NDS] b on a.[Accident_Index]=b.[Accident_Index]
-GROUP BY [Accident_Severity],[Casualty_Type],[Age_Group] ,DATEPART(YEAR,Date)
+GROUP BY [Accident_Severity],[Casualty_Type],[Age_Group], Date
 ORDER BY NumOfAcc_Severity_Casualty_Group DESC
 
 ----3. Thống kê số lượng người tử vong theo Giới Tính, Loại Nạn Nhân (Casualty Type) và Nhóm Tuổi (Age_Band_of_Casualty) theo các năm.
-SELECT [Sex_of_Casualty],[Casualty_Type],[Age_Band_of_Casualty] ,DATEPART(YEAR,Date) as Year, COUNT(*) AS NumOfDead
+SELECT [Sex_of_Casualty],[Casualty_Type],[Age_Band_of_Casualty], Date, SUM(Number_of_Casualties) AS NumOfDead
 FROM [Accidents_NDS] a join [Casualties_NDS] b on a.[Accident_Index]=b.[Accident_Index]
-where [Accident_Severity]=1
-GROUP BY [Sex_of_Casualty],[Casualty_Type],[Age_Band_of_Casualty] ,DATEPART(YEAR,Date)
+GROUP BY [Sex_of_Casualty],[Casualty_Type], [Age_Band_of_Casualty], Date
 ORDER BY NumOfDead DESC
