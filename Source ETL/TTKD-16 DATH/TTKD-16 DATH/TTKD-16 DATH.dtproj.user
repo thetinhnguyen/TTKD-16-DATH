@@ -8,25 +8,11 @@
         <UseWinAuth>false</UseWinAuth>
         <WinAuthUserName />
         <WinAuthDomain />
-        <ServerName />
-        <PathOnServer />
-<<<<<<< HEAD
-        <StartObjectID>Fact_Casualities.dtsx</StartObjectID>
-=======
-        <StartObjectID>Fact_Variance.dtsx</StartObjectID>
->>>>>>> 61eef78b913c0d68eeabe2ce6ba8b79e30eaea84
-        <Run64BitRuntime>false</Run64BitRuntime>
         <UserIDs />
         <UserPasswords />
         <OfflineMode>false</OfflineMode>
         <ProgressReporting>true</ProgressReporting>
-        <ParameterConfigurationSensitiveValues>
-          <ConfigurationSetting>
-            <Id>LastModifiedTime</Id>
-            <Name>LastModifiedTime</Name>
-            <Value xsi:type="xsd:dateTime">2021-10-21T04:59:42.9214415Z</Value>
-          </ConfigurationSetting>
-        </ParameterConfigurationSensitiveValues>
+        <ParameterConfigurationSensitiveValues />
       </Options>
     </Configuration>
   </Configurations>

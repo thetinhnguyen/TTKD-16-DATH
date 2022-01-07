@@ -3,20 +3,20 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31702.278
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "TTKD-16_DATH", "TTKD-16_DATH\TTKD-16_DATH.dtproj", "{2A342976-92A9-4C50-88BC-F1FB6F36D83C}"
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "TTKD-16 DATH", "TTKD-16 DATH\TTKD-16 DATH.dtproj", "{C01616A6-F684-490C-B91E-734AF51286BA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Development|Default = Development|Default
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{2A342976-92A9-4C50-88BC-F1FB6F36D83C}.Development|Default.ActiveCfg = Development
-		{2A342976-92A9-4C50-88BC-F1FB6F36D83C}.Development|Default.Build.0 = Development
+		{C01616A6-F684-490C-B91E-734AF51286BA}.Development|Default.ActiveCfg = Development
+		{C01616A6-F684-490C-B91E-734AF51286BA}.Development|Default.Build.0 = Development
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {C66DC57B-A2A1-40D5-A690-BFA6DB9C74DB}
+		SolutionGuid = {844DD18C-9CBF-465E-994E-C9DE17C74F12}
 	EndGlobalSection
 EndGlobal

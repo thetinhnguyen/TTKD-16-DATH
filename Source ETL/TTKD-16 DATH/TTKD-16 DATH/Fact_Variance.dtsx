@@ -1,25 +1,25 @@
-﻿<?xml version="1.0"?>
+<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="1/7/2022 7:23:32 AM"
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="PHUONGVY"
   DTS:CreatorName="PHUONGVY\ADMIN"
-  DTS:DTSID="{E4FE7C77-1046-4194-AF5F-FBDCDFF8CF0B}"
+  DTS:DTSID="{BD7AA36E-2571-459B-95DB-9DFA8F263318}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="15.0.2000.170"
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
   DTS:VersionBuild="4"
-  DTS:VersionGUID="{C081EE30-C742-4595-927E-7BA8A2AB21DE}">
+  DTS:VersionGUID="{4E5B1350-13FB-435D-B488-258F7CFBB277}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[LocalHost.UCA_DDS]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{635F28B2-ED5C-4E37-97F0-74D9AA7C1FDF}"
+      DTS:DTSID="{954397BB-1988-473E-AB3A-B834C60E5E7F}"
       DTS:ObjectName="LocalHost.UCA_DDS">
       <DTS:ObjectData>
         <DTS:ConnectionManager
@@ -31,7 +31,7 @@
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[LocalHost.UCA_NDS]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{20F5A7F8-406D-453B-AEDF-A975AD608594}"
+      DTS:DTSID="{9A96CB3F-4907-4489-BE3E-132CA0FBA891}"
       DTS:ObjectName="LocalHost.UCA_NDS">
       <DTS:ObjectData>
         <DTS:ConnectionManager
@@ -47,7 +47,7 @@
       DTS:refId="Package\Fact_Variance"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:DTSID="{54758585-2d1a-44f9-aa30-e136fc6f4dd1}"
+      DTS:DTSID="{F9FCD563-2794-442F-B1C9-613A214AEE33}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
       DTS:ObjectName="Fact_Variance"

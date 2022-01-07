@@ -5,26 +5,21 @@
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="DESKTOP-B09AIR6"
   DTS:CreatorName="DESKTOP-B09AIR6\Admin"
-  DTS:DTSID="{6121AFD7-3174-48E7-91AB-F5CCD2543FB8}"
+  DTS:DTSID="{95B7071F-7F23-4EC7-9166-8086539D09A5}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="15.0.2000.170"
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-<<<<<<< HEAD
-  DTS:VersionBuild="53"
-  DTS:VersionGUID="{2D62C949-2FBD-4A13-A36A-A4F76D2C92F4}">
-=======
-  DTS:VersionBuild="55"
-  DTS:VersionGUID="{15E63E2C-0B09-418F-A378-25F1771F4E76}">
->>>>>>> 61eef78b913c0d68eeabe2ce6ba8b79e30eaea84
+  DTS:VersionBuild="56"
+  DTS:VersionGUID="{69033774-E09F-4B3F-B4B3-08C4E8463E9D}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[LocalHost.UCA_DDS]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{635F28B2-ED5C-4E37-97F0-74D9AA7C1FDF}"
+      DTS:DTSID="{F09AA282-60B2-4BE7-AB9A-52305BA7CB45}"
       DTS:ObjectName="LocalHost.UCA_DDS">
       <DTS:ObjectData>
         <DTS:ConnectionManager
@@ -36,7 +31,7 @@
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[LocalHost.UCA_NDS]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{20F5A7F8-406D-453B-AEDF-A975AD608594}"
+      DTS:DTSID="{B5A9FA9E-B5FB-4AAC-9DAB-08E3BE9B8A64}"
       DTS:ObjectName="LocalHost.UCA_NDS">
       <DTS:ObjectData>
         <DTS:ConnectionManager
@@ -52,7 +47,7 @@
       DTS:refId="Package\Build up road type"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:DTSID="{f885972e-bc79-446e-b1b9-9bae6eec0e34}"
+      DTS:DTSID="{DE362B85-3864-4ED7-9188-44C338E085DB}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
       DTS:ObjectName="Build up road type"
@@ -845,7 +840,7 @@
       DTS:refId="Package\Casualty type"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:DTSID="{db0c9906-9184-445a-98bb-8564dbd34b3e}"
+      DTS:DTSID="{AB8A9BB3-DBE3-4239-8E6B-50AEA6FEFE65}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
       DTS:ObjectName="Casualty type"
@@ -1878,7 +1873,7 @@
       DTS:refId="Package\dimAge"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:DTSID="{fdda47ef-717d-4822-8c13-fb1035ebdc94}"
+      DTS:DTSID="{A11504BB-B3C6-4BCB-8738-E5DCF8AD7DE9}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
       DTS:ObjectName="dimAge"
@@ -2188,7 +2183,7 @@
       DTS:refId="Package\dimDate"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:DTSID="{ecae9b0d-9374-481a-a7f0-fb0dd762b07f}"
+      DTS:DTSID="{A12C0D5D-62FE-4295-9F25-7FB1570EC148}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
       DTS:ObjectName="dimDate"
@@ -2572,7 +2567,7 @@
       DTS:refId="Package\Journey purpose"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:DTSID="{8908679c-dab8-4c8a-9468-39ba9a332861}"
+      DTS:DTSID="{585D0A37-49BB-4B58-8E59-A8A57CE8F782}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
       DTS:ObjectName="Journey purpose"
@@ -3617,7 +3612,7 @@
       DTS:refId="Package\LDA"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:DTSID="{cddf5a85-c4de-4874-b383-8a13a661633c}"
+      DTS:DTSID="{9DCB0FE9-436A-4CB9-89BD-C7813D1210D8}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
       DTS:ObjectName="LDA"
@@ -4662,7 +4657,7 @@
       DTS:refId="Package\Location"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:DTSID="{9bf58515-b8b4-4962-8e91-c617b3e831a3}"
+      DTS:DTSID="{DE331E5E-0424-4DE2-AD40-42C202E018AA}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
       DTS:ObjectName="Location"
@@ -5967,7 +5962,7 @@
       DTS:refId="Package\RoadType"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:DTSID="{96408a33-fe95-4516-ac69-aa71ff3d38fb}"
+      DTS:DTSID="{B8B76113-9550-4477-85A9-CE7396F3C2EC}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
       DTS:ObjectName="RoadType"
@@ -7012,7 +7007,7 @@
       DTS:refId="Package\Session In Day"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:DTSID="{ee90b9e9-8130-4c6a-8abd-ed43494823d6}"
+      DTS:DTSID="{AC9BDED5-096E-4506-A58B-39E50D2A5B40}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
       DTS:ObjectName="Session In Day"
@@ -7072,7 +7067,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions">TABLOCK</property>
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
@@ -7310,7 +7305,7 @@
       DTS:refId="Package\Severity"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:DTSID="{47a7aaae-274f-4c43-b8a9-8a3e7159dc1a}"
+      DTS:DTSID="{3C7878F1-D926-454C-B4C5-D763219D9B23}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
       DTS:ObjectName="Severity"
@@ -8355,7 +8350,7 @@
       DTS:refId="Package\Sex of person"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:DTSID="{d6526928-4bdb-4bb5-8a72-689a8ab4f1c3}"
+      DTS:DTSID="{9F8E7CD2-3D3A-4F1B-8C73-BE28043C1B5E}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
       DTS:ObjectName="Sex of person"
@@ -9400,7 +9395,7 @@
       DTS:refId="Package\Urban or Rural"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:DTSID="{febfc0a7-4c3b-473b-9ae5-f8153be3a5e1}"
+      DTS:DTSID="{457C1108-2F3E-4C0D-894B-956F58D93708}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
       DTS:ObjectName="Urban or Rural"
@@ -10445,7 +10440,7 @@
       DTS:refId="Package\Vehicle type"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:DTSID="{9d52d264-854d-462a-9ab2-b163016bff0b}"
+      DTS:DTSID="{EB0DCF88-4AB3-4641-974D-68FFA3F4F996}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
       DTS:ObjectName="Vehicle type"
@@ -11500,107 +11495,55 @@
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-<<<<<<< HEAD
-          Size="165,42"
+          Size="165,41"
           Id="Package\Build up road type"
           TopLeft="269.857148355368,45.8823535846591" />
         <NodeLayout
-          Size="142,42"
+          Size="143,41"
           Id="Package\Casualty type"
           TopLeft="281.285719978567,123.117648785502" />
         <NodeLayout
-          Size="114,44"
+          Size="123,44"
           Id="Package\dimAge"
           TopLeft="47,258.411767740976" />
         <NodeLayout
-          Size="118,42"
-          Id="Package\dimDate"
-          TopLeft="45.1428615219741,179.411767740976" />
-        <NodeLayout
-          Size="156,42"
-          Id="Package\Journey purpose"
-          TopLeft="279.857148525667,211.294120596355" />
-        <NodeLayout
-          Size="98,42"
-          Id="Package\LDA"
-          TopLeft="482.714294837446,210.294120596355" />
-        <NodeLayout
-          Size="118,42"
-          Id="Package\Location"
-          TopLeft="44.8571442681917,31.4117640945737" />
-        <NodeLayout
-          Size="126,42"
-          Id="Package\RoadType"
-          TopLeft="469.142866034898,126.941178250891" />
-        <NodeLayout
-          Size="149,42"
-          Id="Package\Session In Day"
-          TopLeft="41,105.411767740976" />
-        <NodeLayout
-          Size="116,42"
-          Id="Package\Severity"
-          TopLeft="476.285723299397,49.7058830500474" />
-        <NodeLayout
-          Size="143,42"
-          Id="Package\Sex of person"
-          TopLeft="650.571440553179,49.7058830500474" />
-        <NodeLayout
-          Size="147,42"
-          Id="Package\Urban or Rural"
-          TopLeft="652.000012006078,129.235295930123" />
-        <NodeLayout
-          Size="135,42"
-=======
-          Size="164.666666666667,41.3333333333334"
-          Id="Package\Build up road type"
-          TopLeft="269.857148355368,45.8823535846591" />
-        <NodeLayout
-          Size="142.666666666667,41.3333333333334"
-          Id="Package\Casualty type"
-          TopLeft="281.285719978567,123.117648785502" />
-        <NodeLayout
-          Size="113.333333333334,44"
-          Id="Package\dimAge"
-          TopLeft="47,258.411767740976" />
-        <NodeLayout
-          Size="118.666666666667,41.3333333333334"
+          Size="119,41"
           Id="Package\dimDate"
           TopLeft="43.1428615219741,182.411767740976" />
         <NodeLayout
-          Size="156,41.3333333333334"
+          Size="156,41"
           Id="Package\Journey purpose"
           TopLeft="279.857148525667,211.294120596355" />
         <NodeLayout
-          Size="97.3333333333334,41.3333333333334"
+          Size="97,41"
           Id="Package\LDA"
           TopLeft="482.714294837446,210.294120596355" />
         <NodeLayout
-          Size="117.333333333334,41.3333333333334"
+          Size="141,41"
           Id="Package\Location"
-          TopLeft="82.8571442681917,49.4117640945737" />
+          TopLeft="37.8571442681917,32.4117640945737" />
         <NodeLayout
-          Size="126.666666666667,41.3333333333334"
+          Size="127,41"
           Id="Package\RoadType"
           TopLeft="469.142866034898,126.941178250891" />
         <NodeLayout
-          Size="148.666666666667,41.3333333333334"
+          Size="149,41"
           Id="Package\Session In Day"
           TopLeft="41,105.411767740976" />
         <NodeLayout
-          Size="116,41.3333333333334"
+          Size="116,41"
           Id="Package\Severity"
           TopLeft="476.285723299397,49.7058830500474" />
         <NodeLayout
-          Size="143.333333333334,41.3333333333334"
+          Size="143,41"
           Id="Package\Sex of person"
           TopLeft="650.571440553179,49.7058830500474" />
         <NodeLayout
-          Size="147.333333333334,41.3333333333334"
+          Size="147,41"
           Id="Package\Urban or Rural"
           TopLeft="652.000012006078,129.235295930123" />
         <NodeLayout
-          Size="135.333333333334,41.3333333333334"
->>>>>>> 61eef78b913c0d68eeabe2ce6ba8b79e30eaea84
+          Size="135,41"
           Id="Package\Vehicle type"
           TopLeft="657.000012091229,209.529414703277" />
       </GraphLayout>
@@ -11612,27 +11555,27 @@
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="208,42"
+          Size="208,41.6"
           Id="Package\Build up road type\Slowly Changing Dimension"
           TopLeft="259.7,107.1" />
         <NodeLayout
-          Size="239,43"
+          Size="239.2,43.2"
           Id="Package\Build up road type\Them CreatedDate, UpdatedDate"
           TopLeft="3.5000000000001,209.7" />
         <NodeLayout
-          Size="165,42"
+          Size="164.8,41.6"
           Id="Package\Build up road type\OLE DB Command"
           TopLeft="281.3,208.7" />
         <NodeLayout
-          Size="174,42"
+          Size="174.4,41.6"
           Id="Package\Build up road type\OLE DB Command 1"
           TopLeft="498.5,210.7" />
         <NodeLayout
-          Size="150,42"
+          Size="150.4,41.6"
           Id="Package\Build up road type\OLE DB Source"
           TopLeft="288.9,5.49999999999984" />
         <NodeLayout
-          Size="162,42"
+          Size="161.6,41.6"
           Id="Package\Build up road type\Insert Destination"
           TopLeft="41.5000000000001,300.7" />
         <EdgeLayout
@@ -12016,154 +11959,13 @@
           Id="Package\dimAge\OLE DB Source"
           TopLeft="235.9,30.4999999999998" />
         <NodeLayout
-<<<<<<< HEAD
           Size="163,42"
-=======
-          Size="162.666666666667,42"
->>>>>>> 61eef78b913c0d68eeabe2ce6ba8b79e30eaea84
           Id="Package\dimAge\Insert Destination"
           TopLeft="233.5,147.7" />
         <EdgeLayout
           Id="Package\dimAge.Paths[OLE DB Source Output]"
           TopLeft="312.95,72.4999999999998">
           <EdgeLayout.Curve>
-<<<<<<< HEAD
-=======
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,75.2000000000002"
-              Start="0,0"
-              End="0,67.7000000000002">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,67.7000000000002" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\dimAge\Insert Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\dimDate">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="150,42"
-          Id="Package\dimDate\OLE DB Source"
-          TopLeft="235.9,30.4999999999998" />
-        <NodeLayout
-          Size="162.666666666667,42"
-          Id="Package\dimDate\Insert Destination"
-          TopLeft="233.5,144.7" />
-        <EdgeLayout
-          Id="Package\dimDate.Paths[OLE DB Source Output]"
-          TopLeft="312.95,72.4999999999998">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,72.2000000000001"
-              Start="0,0"
-              End="0,64.7000000000001">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,64.7000000000001" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\dimDate\Insert Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\dimDate\OLE DB Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\Journey purpose">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="174.4,41.6"
-          Id="Package\Journey purpose\OLE DB Command 1"
-          TopLeft="459.5,372.7" />
-        <NodeLayout
-          Size="150.4,41.6"
-          Id="Package\Journey purpose\OLE DB Source"
-          TopLeft="266.5,5.49999999999984" />
-        <NodeLayout
-          Size="137.6,41.6"
-          Id="Package\Journey purpose\Update Date"
-          TopLeft="476,219.2" />
-        <NodeLayout
-          Size="208,41.6"
-          Id="Package\Journey purpose\Slowly Changing Dimension"
-          TopLeft="237.7,107.1" />
-        <NodeLayout
-          Size="146.4,41.6"
-          Id="Package\Journey purpose\Update Date 1"
-          TopLeft="467,293.2" />
-        <NodeLayout
-          Size="162.4,41.6"
-          Id="Package\Journey purpose\Insert Destination"
-          TopLeft="39.5000000000001,301.7" />
-        <NodeLayout
-          Size="164.8,41.6"
-          Id="Package\Journey purpose\OLE DB Command"
-          TopLeft="259.3,208.7" />
-        <NodeLayout
-          Size="235.2,41.6"
-          Id="Package\Journey purpose\Them CreatedDate, UpdatedDate"
-          TopLeft="7.50000000000011,209.3" />
-        <EdgeLayout
-          Id="Package\Journey purpose.Paths[Derived Column Output1]"
-          TopLeft="542.5,260.8">
-          <EdgeLayout.Curve>
->>>>>>> 61eef78b913c0d68eeabe2ce6ba8b79e30eaea84
             <mssgle:Curve
               StartConnector="{assembly:Null}"
               EndConnector="0,75.2000000000002"
@@ -12727,271 +12529,35 @@
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="208,42"
+          Size="208,41"
           Id="Package\Location\Slowly Changing Dimension"
           TopLeft="243.128572048946,107.1" />
         <NodeLayout
-          Size="235,42"
+          Size="235,41"
           Id="Package\Location\Them CreatedDate, UpdatedDate"
           TopLeft="0.499999914850676,217.005881044526" />
         <NodeLayout
-          Size="165,42"
+          Size="165,41"
           Id="Package\Location\OLE DB Command"
           TopLeft="284.728572389544,210.229411786155" />
         <NodeLayout
-          Size="150,42"
+          Size="151,41"
           Id="Package\Location\OLE DB Source"
           TopLeft="271.214286322496,5.49999999999984" />
         <NodeLayout
-          Size="138,42"
+          Size="137,41"
           Id="Package\Location\Update Date"
           TopLeft="501.928571112302,174.947056925256" />
         <NodeLayout
-          Size="146,42"
+          Size="147,41"
           Id="Package\Location\Update Date 1"
           TopLeft="492.928571112302,248.947056925256" />
         <NodeLayout
-          Size="174,42"
+          Size="175,41"
           Id="Package\Location\OLE DB Command 1"
           TopLeft="482.071429057997,335.64117825089" />
         <NodeLayout
-          Size="162,42"
-          Id="Package\Location\Insert Destination"
-          TopLeft="32.6428576050974,311.935295565483" />
-        <EdgeLayout
-          Id="Package\Location.Paths[Inferred Member Updates Output]"
-          TopLeft="313.795238715613,148.7">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="53.3333336739314,61.5294117861553"
-              Start="0,0"
-              End="53.3333336739314,54.0294117861553">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,20.893578814246" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,20.893578814246"
-                    Point2="0,24.893578814246"
-                    Point3="4,24.893578814246" />
-                  <mssgle:LineSegment
-                    End="49.3333336739314,24.893578814246" />
-                  <mssgle:CubicBezierSegment
-                    Point1="49.3333336739314,24.893578814246"
-                    Point2="53.3333336739314,24.893578814246"
-                    Point3="53.3333336739314,28.893578814246" />
-                  <mssgle:LineSegment
-                    End="53.3333336739314,54.0294117861553" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-47.7363214442843,29.893578814246,148.8059765625,11.658203125"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Location.Paths[Derived Column Output2]"
-          TopLeft="567.70000008515,290.547056925256">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,45.0941213256347"
-              Start="0,0"
-              End="0,37.5941213256347">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,37.5941213256347" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Location.Paths[Derived Column Output1]"
-          TopLeft="568.428571112302,216.547056925256">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,32.4000000000001"
-              Start="0,0"
-              End="0,24.9000000000001">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,24.9000000000001" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Location.Paths[Derived Column Output]"
-          TopLeft="115.971428759974,258.605881044526">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,53.3294145209567"
-              Start="0,0"
-              End="0,45.8294145209567">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,45.8294145209567" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Location.Paths[Changing Attribute Updates Output]"
-          TopLeft="397.128572048946,148.7">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="173.599999063356,26.2470569252556"
-              Start="0,0"
-              End="173.599999063356,18.7470569252556">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,4.97051312635319" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,4.97051312635319"
-                    Point2="0,8.97051312635319"
-                    Point3="4,8.97051312635319" />
-                  <mssgle:LineSegment
-                    End="169.599999063356,8.97051312635319" />
-                  <mssgle:CubicBezierSegment
-                    Point1="169.599999063356,8.97051312635319"
-                    Point2="173.599999063356,8.97051312635319"
-                    Point3="173.599999063356,12.9705131263532" />
-                  <mssgle:LineSegment
-                    End="173.599999063356,18.7470569252556" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="8.2660932816778,13.9705131263532,157.0678125,11.6630859375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Location.Paths[OLE DB Source Output]"
-          TopLeft="346.771429185721,47.0999999999998">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Location.Paths[New Output]"
-          TopLeft="297.128572048946,148.7">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-179.028572134096,68.3058810445265"
-              Start="0,0"
-              End="-179.028572134096,60.8058810445265">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,19.3450479519268" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,19.3450479519268"
-                    Point2="0,23.3450479519268"
-                    Point3="-4,23.3450479519268" />
-                  <mssgle:LineSegment
-                    End="-175.028572134096,23.3450479519268" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-175.028572134096,23.3450479519268"
-                    Point2="-179.028572134096,23.3450479519268"
-                    Point3="-179.028572134096,27.3450479519268" />
-                  <mssgle:LineSegment
-                    End="-179.028572134096,60.8058810445265" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-116.605672785798,28.3450479519268,54.1827734375,11.43359375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <TaskHost
-    design-time-name="Package\Location">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="208,41.3333333333334"
-          Id="Package\Location\Slowly Changing Dimension"
-          TopLeft="243.128572048946,107.1" />
-        <NodeLayout
-          Size="235.333333333334,41.3333333333334"
-          Id="Package\Location\Them CreatedDate, UpdatedDate"
-          TopLeft="0.499999914850676,217.005881044526" />
-        <NodeLayout
-          Size="164.666666666667,41.3333333333334"
-          Id="Package\Location\OLE DB Command"
-          TopLeft="284.728572389544,210.229411786155" />
-        <NodeLayout
-          Size="150.666666666667,41.3333333333334"
-          Id="Package\Location\OLE DB Source"
-          TopLeft="271.214286322496,5.49999999999984" />
-        <NodeLayout
-          Size="137.333333333334,41.3333333333334"
-          Id="Package\Location\Update Date"
-          TopLeft="501.928571112302,174.947056925256" />
-        <NodeLayout
-          Size="146.666666666667,41.3333333333334"
-          Id="Package\Location\Update Date 1"
-          TopLeft="492.928571112302,248.947056925256" />
-        <NodeLayout
-          Size="174.666666666667,41.3333333333334"
-          Id="Package\Location\OLE DB Command 1"
-          TopLeft="482.071429057997,335.64117825089" />
-        <NodeLayout
-          Size="162.666666666667,41.3333333333334"
+          Size="163,41"
           Id="Package\Location\Insert Destination"
           TopLeft="32.6428576050974,311.935295565483" />
         <EdgeLayout
@@ -13459,24 +13025,11 @@
           Id="Package\Session In Day\OLE DB Source"
           TopLeft="249.9,48.4999999999998" />
         <NodeLayout
-<<<<<<< HEAD
-          Size="163,42"
-=======
-          Size="164,42.6666666666667"
->>>>>>> 61eef78b913c0d68eeabe2ce6ba8b79e30eaea84
+          Size="164,43"
           Id="Package\Session In Day\Insert Destination"
           TopLeft="239.5,186.7" />
         <EdgeLayout
           Id="Package\Session In Day.Paths[OLE DB Source Output]"
-<<<<<<< HEAD
-          TopLeft="322.95,90.4999999999998">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,96.2000000000001"
-              Start="0,0"
-              End="0,88.7000000000001">
-=======
           TopLeft="323.2,90.4999999999998">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -13484,16 +13037,11 @@
               EndConnector="0,96.2000000000002"
               Start="0,0"
               End="0,88.7000000000002">
->>>>>>> 61eef78b913c0d68eeabe2ce6ba8b79e30eaea84
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-<<<<<<< HEAD
-                    End="0,88.7000000000001" />
-=======
                     End="0,88.7000000000002" />
->>>>>>> 61eef78b913c0d68eeabe2ce6ba8b79e30eaea84
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

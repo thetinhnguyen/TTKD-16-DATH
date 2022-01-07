@@ -1,25 +1,25 @@
-﻿<?xml version="1.0"?>
+<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="1/7/2022 7:24:11 AM"
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="PHUONGVY"
   DTS:CreatorName="PHUONGVY\ADMIN"
-  DTS:DTSID="{60ACB464-4AF8-4BB0-A8D4-12B9074693D8}"
+  DTS:DTSID="{FC79A1FD-47D5-49B3-BF9F-A1C31122C052}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="15.0.2000.170"
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
   DTS:VersionBuild="14"
-  DTS:VersionGUID="{9A6A86FF-4E0F-4B56-B022-91614326CCFF}">
+  DTS:VersionGUID="{7A9B3BD6-A4DF-4FC9-89CF-CBB280C61C03}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[LocalHost.UCA_DDS]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{635F28B2-ED5C-4E37-97F0-74D9AA7C1FDF}"
+      DTS:DTSID="{4B3107CC-4DC7-4A63-9C5B-840A96D92628}"
       DTS:ObjectName="LocalHost.UCA_DDS">
       <DTS:ObjectData>
         <DTS:ConnectionManager
@@ -31,7 +31,7 @@
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[LocalHost.UCA_NDS]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{20F5A7F8-406D-453B-AEDF-A975AD608594}"
+      DTS:DTSID="{0F377370-F5CB-4938-A2DA-C7D9DA4BCDFB}"
       DTS:ObjectName="LocalHost.UCA_NDS">
       <DTS:ObjectData>
         <DTS:ConnectionManager
@@ -47,7 +47,7 @@
       DTS:refId="Package\Fact_Casualities"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:DTSID="{7728cfb2-9cbe-4eea-bd73-6c8cf4c18784}"
+      DTS:DTSID="{7F5B964C-C372-46B4-A0DF-7EDC5BABBDB9}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
       DTS:ObjectName="Fact_Casualities"
@@ -498,7 +498,7 @@ ORDER BY  NumOfCas DESC</property>
       DTS:refId="Package\Load Measure NumofDead"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:DTSID="{AE57C371-FCC4-443B-BF80-04B281541415}"
+      DTS:DTSID="{1C401F76-C5E7-4413-A409-71576DCFDE1D}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
       DTS:ObjectName="Load Measure NumofDead"
@@ -979,7 +979,7 @@ ORDER BY NumOfDead DESC</property>
       DTS:refId="Package\TRUNCATE Fact"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
-      DTS:DTSID="{f94dc866-850f-4799-bf8e-ef287607f05c}"
+      DTS:DTSID="{885D1319-922C-4726-81A5-0BB9378C6A37}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="TRUNCATE Fact"
@@ -988,7 +988,7 @@ ORDER BY NumOfDead DESC</property>
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{635F28B2-ED5C-4E37-97F0-74D9AA7C1FDF}"
+          SQLTask:Connection="{4B3107CC-4DC7-4A63-9C5B-840A96D92628}"
           SQLTask:SqlStatementSource="TRUNCATE TABLE Fact_Casualities" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
@@ -997,7 +997,7 @@ ORDER BY NumOfDead DESC</property>
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint]"
       DTS:CreationName=""
-      DTS:DTSID="{D2BAE930-BDC6-43E0-B742-DA823094C577}"
+      DTS:DTSID="{6C7D81FB-8824-43AB-82A1-D19443058608}"
       DTS:From="Package\Fact_Casualities"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
@@ -1005,7 +1005,7 @@ ORDER BY NumOfDead DESC</property>
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
       DTS:CreationName=""
-      DTS:DTSID="{7CF5667E-A9E9-4EC6-B24D-F447F9BF0494}"
+      DTS:DTSID="{5EB12775-8B15-4A9A-BDC0-E20646677072}"
       DTS:From="Package\TRUNCATE Fact"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 1"

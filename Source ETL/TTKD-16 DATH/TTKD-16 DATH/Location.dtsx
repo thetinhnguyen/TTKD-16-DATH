@@ -1,25 +1,25 @@
-﻿<?xml version="1.0"?>
+<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="11/16/2021 10:20:12 PM"
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="DESKTOP-B09AIR6"
   DTS:CreatorName="DESKTOP-B09AIR6\Admin"
-  DTS:DTSID="{2B6E9F0A-E48D-47DF-B1FB-519EE3252F86}"
+  DTS:DTSID="{2B642232-9C08-43E5-9677-272A62C91E6B}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="15.0.2000.170"
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
   DTS:VersionBuild="14"
-  DTS:VersionGUID="{19ACA9B1-A943-45C2-8544-6F0D8C321B98}">
+  DTS:VersionGUID="{26516B92-83A5-46E1-B8FE-F5460F823BE5}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
       DTS:CreationName="FLATFILE"
-      DTS:DTSID="{7BB5C9E0-A9E7-4EE4-9295-DAD4B1DCC6FD}"
+      DTS:DTSID="{FBB86D55-31E1-4CF4-BAC7-C16151C42275}"
       DTS:ObjectName="Flat File Connection Manager">
       <DTS:ObjectData>
         <DTS:ConnectionManager
@@ -39,7 +39,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="city"
-              DTS:DTSID="{E61CE57E-6AE5-4F71-87FE-0145B3686521}"
+              DTS:DTSID="{0272E954-51E0-4BC7-A14A-45BE07E22EA9}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -48,7 +48,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="county"
-              DTS:DTSID="{7771E963-F413-4A39-83BE-2EACE4849E38}"
+              DTS:DTSID="{2ADA40F0-5BAF-4BB1-B345-CA4982207021}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -57,7 +57,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="country_name"
-              DTS:DTSID="{D7A10DCE-7842-4881-85CA-EF4FF8EF4ECA}"
+              DTS:DTSID="{6EAA676D-60B5-4B81-B1AE-F8AC7160D41D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -66,7 +66,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="region_name"
-              DTS:DTSID="{A4F5AE96-AFCF-4CB5-8795-3E151919C7FF}"
+              DTS:DTSID="{B3E86C4E-5E63-4E18-B596-F8F730325271}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -75,7 +75,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="LocationID"
-              DTS:DTSID="{70983FE6-087D-43AE-8A7F-2CAD2D129C12}"
+              DTS:DTSID="{CE3A3E94-7CDD-4169-A439-66C62BE5526B}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -84,7 +84,7 @@
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[LocalHost.UCA_LSET_CET]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{D30C8229-D822-4E31-8C12-7AB60A3612BA}"
+      DTS:DTSID="{A4424B88-F31D-47FE-A632-20B05C1D6D38}"
       DTS:ObjectName="LocalHost.UCA_LSET_CET">
       <DTS:ObjectData>
         <DTS:ConnectionManager
@@ -96,7 +96,7 @@
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[LocalHost.UCA_STAGE]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{C4077997-2361-490D-AC03-9819D1BBC088}"
+      DTS:DTSID="{10DA4F61-7F86-4616-B5DD-C129E4A7E247}"
       DTS:ObjectName="LocalHost.UCA_STAGE">
       <DTS:ObjectData>
         <DTS:ConnectionManager
@@ -109,7 +109,7 @@
   <DTS:Variables>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{7C339954-FBB0-4A90-9F95-20AB7D5B9E23}"
+      DTS:DTSID="{C01493E7-A0A9-4473-B156-3EA696E468ED}"
       DTS:IncludeInDebugDump="6789"
       DTS:Namespace="User"
       DTS:ObjectName="CCET_Result">
@@ -118,7 +118,7 @@
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{D3274B69-3630-4BAB-A67E-9FB1A5EEAF2A}"
+      DTS:DTSID="{0AC74634-1587-42A2-BF1A-2D0512C88050}"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="LSET_Result">
@@ -127,7 +127,7 @@
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{AC7DF31A-710D-4585-8081-9528396D2949}"
+      DTS:DTSID="{2EB959B5-EDEC-4128-A3C3-76416A3B23F1}"
       DTS:IncludeInDebugDump="6789"
       DTS:Namespace="User"
       DTS:ObjectName="LSET_Result1">
@@ -140,7 +140,7 @@
       DTS:refId="Package\GET LSET,CET"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
-      DTS:DTSID="{F3525DBD-E36C-4AD9-BFF6-0797DEC9EE05}"
+      DTS:DTSID="{0806E52F-5540-4C48-A5CB-403E8A770B07}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="GET LSET,CET"
@@ -149,7 +149,7 @@
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{D30C8229-D822-4E31-8C12-7AB60A3612BA}"
+          SQLTask:Connection="{A4424B88-F31D-47FE-A632-20B05C1D6D38}"
           SQLTask:SqlStatementSource="UPDATE LSET_CET&#xA;SET CET = GETDATE()&#xA;&#xA;SELECT LSET,CET&#xA;FROM LSET_CET"
           SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
           <SQLTask:ResultBinding
@@ -165,7 +165,7 @@
       DTS:refId="Package\Load Data Location"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:DTSID="{B263102E-EE9C-4A32-9D71-A11880E3CFE1}"
+      DTS:DTSID="{5BC10679-FE0B-415E-88F1-13407EB5BEE8}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
       DTS:ObjectName="Load Data Location"
@@ -566,7 +566,7 @@
       DTS:refId="Package\TRUNCATE STAGE"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
-      DTS:DTSID="{47F008F6-8DAE-485D-8486-8B73E0DFBCE4}"
+      DTS:DTSID="{0D4DF675-7335-464E-8CDF-2B44E0BD603E}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="TRUNCATE STAGE"
@@ -575,7 +575,7 @@
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{C4077997-2361-490D-AC03-9819D1BBC088}"
+          SQLTask:Connection="{10DA4F61-7F86-4616-B5DD-C129E4A7E247}"
           SQLTask:SqlStatementSource="TRUNCATE TABLE Location_Stage" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
@@ -583,7 +583,7 @@
       DTS:refId="Package\UPDATE LSET"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
-      DTS:DTSID="{F9ACAFF3-E773-47AD-B49E-20C6693FF93B}"
+      DTS:DTSID="{26D4DEA2-32A1-4445-8FA6-2085AFB9B692}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="UPDATE LSET"
@@ -592,7 +592,7 @@
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{D30C8229-D822-4E31-8C12-7AB60A3612BA}"
+          SQLTask:Connection="{A4424B88-F31D-47FE-A632-20B05C1D6D38}"
           SQLTask:SqlStatementSource="UPDATE LSET_CET&#xA;SET LSET = CET" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
@@ -601,7 +601,7 @@
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint]"
       DTS:CreationName=""
-      DTS:DTSID="{1D1A42AE-A3C8-434E-8A3D-BBF0B3CF87D4}"
+      DTS:DTSID="{683D4864-2FAA-4736-9453-C2CE45D8BB98}"
       DTS:From="Package\TRUNCATE STAGE"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
@@ -609,7 +609,7 @@
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
       DTS:CreationName=""
-      DTS:DTSID="{BC7EC388-78E8-424B-A66B-A42D90CE8BE5}"
+      DTS:DTSID="{0FC8CC3E-A7A6-49B0-96E4-9CC85EAF2045}"
       DTS:From="Package\GET LSET,CET"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 1"
@@ -617,7 +617,7 @@
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
       DTS:CreationName=""
-      DTS:DTSID="{27F5B6BB-8520-4901-A93E-B4E355646F0D}"
+      DTS:DTSID="{3E597CBE-2BE1-48D4-A2A4-CBBA3897942C}"
       DTS:From="Package\Load Data Location"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 2"
