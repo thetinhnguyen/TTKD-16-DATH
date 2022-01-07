@@ -5,7 +5,7 @@ GO
 USE [UCA_DDS]
 GO
 
---select * from dimAge
+--select * from dimAge where age=-1
 CREATE TABLE dimDate(
 	[Date] DATE PRIMARY KEY,
 	[Day] int,
@@ -15,9 +15,8 @@ CREATE TABLE dimDate(
 	[Year] int
 )
 
-CREATE TABLE dimTime(
-	[Time] Time PRIMARY KEY,
-	[Hour] int,
+CREATE TABLE dimSessionInDay(
+	[Session_in_Day_ID] int PRIMARY KEY,
 	[Session_in_Day] nvarchar(255),
 )
 
@@ -107,7 +106,7 @@ GO
 CREATE TABLE Fact_Accidents(
 	[Fact_Accidents_ID] int IDENTITY(1, 1) NOT NULL,
 	[Date] DATE FOREIGN KEY REFERENCES dimDate,
-	[Time] TIME FOREIGN KEY REFERENCES dimTime,
+	[Session_In_Day] INT FOREIGN KEY REFERENCES dimSessionInDay,
 	[Severity_NK] [int] FOREIGN KEY REFERENCES dimSeverity,
 	[Local_Authority_District_NK] [int] FOREIGN KEY REFERENCES dimLocalAuthorityDistrict,
 	[Built_up_Road_Type_ID] [int] FOREIGN KEY REFERENCES dimBuiltUpRoadType,
@@ -120,7 +119,6 @@ CREATE TABLE Fact_Accidents(
 	NumOfAcc_Sev_Area_RoadType INT, --So luong TNGT cho cau 5
 	NumOfAcc_JourP_VehicleType INT, --Tong so luong TNGT cho cau 7
 	NumOfAcc_JourP_VehicleType_BUR INT, --Tong so luong TNGT cho cau 9
-	--Variance FLOAT, -- Do tang giam TNGT
 	PRIMARY KEY (Fact_Accidents_ID)
 )
 
@@ -128,7 +126,6 @@ CREATE TABLE Fact_Accidents(
 CREATE TABLE Fact_Casualities(
 	[Fact_Casualities_ID] int IDENTITY(1, 1) NOT NULL,
 	[Date] DATE FOREIGN KEY REFERENCES dimDate,
-	[Time] TIME FOREIGN KEY REFERENCES dimTime,
 	[Severity_NK] [int] FOREIGN KEY REFERENCES dimSeverity,
 	[Local_Authority_District_NK] [int] FOREIGN KEY REFERENCES dimLocalAuthorityDistrict,
 	[Age] [int] FOREIGN KEY REFERENCES dimAge,
@@ -141,4 +138,16 @@ CREATE TABLE Fact_Casualities(
 	NumOfDead INT, --Tong so luong nguoi tu vong cho cau 3
 	Update_timestamp DATETIME,
 	PRIMARY KEY (Fact_Casualities_ID)
+)
+
+CREATE  TABLE [dbo].[Fact_Variance](
+	[Fact_Variance_ID]  int IDENTITY(1, 1) NOT NULL,
+	[Year_1]  Int,
+	[Year_2] Int,
+	[Count_in_Year1] [int] NULL,
+	[Count_in_Year2] [int] NULL,
+	[Variance] float NULL,
+	[CreatedDate] [datetime] NULL,
+	[UpdatedDate] [datetime] NULL,
+	PRIMARY KEY (Fact_Variance_ID)
 )

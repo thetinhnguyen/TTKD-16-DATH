@@ -23,7 +23,7 @@ CREATE TABLE [dbo].[Accidents_NDS](
     [Date] date,
     [Day_of_Week] int,
     [Time] time,
-	[Session_in_Day] nvarchar(255) NULL,  -- Viet Function
+	[Session_in_Day] int NULL,  -- Viet Function
 	[Location_ID] int, --FK
     [Local_Authority_District] int,	
 	[Local_Authority_Highway] varchar(50), --no
@@ -280,6 +280,22 @@ CREATE TABLE [dbo].[Built_up_Road_Type_NDS](
 ) ON [PRIMARY]
 GO
 
+/****** Object:  Table [dbo].[Session_in_Day_NDS]    Script Date: 2021/12/25 21:59:07 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Session_in_Day_NDS](
+	[Session_in_Day_ID] [int] NOT NULL,
+	[Session_in_Day_Name] nvarchar(255),
+	[Description] nvarchar(255)
+ CONSTRAINT [PK_Session_in_Day_NDS] PRIMARY KEY CLUSTERED 
+(
+	[Session_in_Day_ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
 -- Khoa ngoai
 ALTER TABLE [dbo].[Accidents_NDS]  WITH CHECK ADD  CONSTRAINT [FK_Accident_Local] FOREIGN KEY([Local_Authority_District])
 REFERENCES [dbo].[Local_Authority_District_NDS] ([Local_Authority_District_Id])
@@ -289,6 +305,12 @@ ALTER TABLE [dbo].[Accidents_NDS]  WITH CHECK ADD  CONSTRAINT [FK_Accidents_NDS_
 REFERENCES [dbo].[Built_up_Road_Type_NDS] ([Built_up_Road_Type_ID])
 GO
 ALTER TABLE [dbo].[Accidents_NDS] CHECK CONSTRAINT [FK_Accidents_NDS_Built_up_Road_Type]
+GO
+
+ALTER TABLE [dbo].[Accidents_NDS]  WITH CHECK ADD  CONSTRAINT [FK_Accidents_NDS_Session_in_day] FOREIGN KEY([Session_in_Day])
+REFERENCES [dbo].[Session_in_Day_NDS] ([Session_in_Day_ID])
+GO
+ALTER TABLE [dbo].[Accidents_NDS] CHECK CONSTRAINT [FK_Accidents_NDS_Session_in_day]
 GO
 
 ALTER TABLE [dbo].[Accidents_NDS]  WITH CHECK ADD  CONSTRAINT [FK_Accidents_NDS_Urban_or_Rural_Area] FOREIGN KEY([Urban_or_Rural_Area])
@@ -354,3 +376,11 @@ GO
 --Built_up_Road_Type
 INSERT INTO Built_up_Road_Type_NDS VALUES (1, 'Built-up road')
 INSERT INTO Built_up_Road_Type_NDS VALUES (2, 'Non Built-up road')
+
+-- Session_in_Day
+INSERT INTO Session_in_Day_NDS VALUES ('-1','Unknow','NULL')
+INSERT INTO Session_in_Day_NDS VALUES ('1','Morning','5AM-12PM')
+INSERT INTO Session_in_Day_NDS VALUES ('2','Afternoon','12PM-5PM')
+INSERT INTO Session_in_Day_NDS VALUES ('3','Evening','5PM-9PM')
+INSERT INTO Session_in_Day_NDS VALUES ('4','Night','9PM-5AM')
+
