@@ -13,31 +13,46 @@
     </DataSources>
     <Dimensions>
       <Dimension>
-        <ID>Dim Urban Or Rural</ID>
-      </Dimension>
-      <Dimension>
-        <ID>Dim Date</ID>
-      </Dimension>
-      <Dimension>
-        <ID>Dim Road Type</ID>
-      </Dimension>
-      <Dimension>
-        <ID>Dim Session In Day</ID>
-      </Dimension>
-      <Dimension>
-        <ID>Dim Location</ID>
-      </Dimension>
-      <Dimension>
-        <ID>Dim Severity</ID>
-      </Dimension>
-      <Dimension>
-        <ID>Dim Built Up Road Type</ID>
+        <ID>Dim Journey Purpose</ID>
       </Dimension>
       <Dimension>
         <ID>Dim Vehicle Type</ID>
       </Dimension>
       <Dimension>
-        <ID>Dim Journey Purpose</ID>
+        <ID>Dim Built Up Road Type</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Dim Severity</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Dim Location</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Dim Session In Day</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Dim Road Type</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Dim Urban Or Rural</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Dim Sex Of Person</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Dim Local Authority District</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Dim Casualty Type</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Fact Variance</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Dim Age</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Dim Date</ID>
       </Dimension>
     </Dimensions>
     <Cubes>
@@ -49,6 +64,22 @@
             <Partitions>
               <Partition>
                 <ID>Fact Accidents</ID>
+              </Partition>
+            </Partitions>
+          </MeasureGroup>
+          <MeasureGroup>
+            <ID>Fact Casualities</ID>
+            <Partitions>
+              <Partition>
+                <ID>Fact Casualities</ID>
+              </Partition>
+            </Partitions>
+          </MeasureGroup>
+          <MeasureGroup>
+            <ID>Fact Variance</ID>
+            <Partitions>
+              <Partition>
+                <ID>Fact Variance</ID>
               </Partition>
             </Partitions>
           </MeasureGroup>

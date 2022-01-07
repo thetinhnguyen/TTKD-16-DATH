@@ -1,6 +1,6 @@
-﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="0f41784a-b7f1-4bac-a068-86bab146394f" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
-  <ID>Dim Built Up Road Type</ID>
-  <Name>Dim Built Up Road Type</Name>
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="80b92d49-9a5f-4cc4-90eb-64e4b03451b4" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Dim Local Authority District</ID>
+  <Name>Dim Local Authority District</Name>
   <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
   <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
   <Annotations>
@@ -42,26 +42,26 @@
   </Annotations>
   <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
   <State>Unprocessed</State>
-  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="e1ad1476-45f5-4efa-bc1c-7d53838e8000">
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="eea58757-eaf7-49ae-8621-f7129543d707">
     <DataSourceViewID>UCA DDS</DataSourceViewID>
   </Source>
-  <ErrorConfiguration dwd:design-time-name="05b0e661-fe32-499c-985c-55fa3e059a99">
+  <ErrorConfiguration dwd:design-time-name="c7b044ad-19b8-444f-9ac3-356ee197f9e1">
     <KeyNotFound>ReportAndStop</KeyNotFound>
     <KeyDuplicate>ReportAndStop</KeyDuplicate>
     <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
   </ErrorConfiguration>
   <CurrentStorageMode>Molap</CurrentStorageMode>
   <Attributes>
-    <Attribute dwd:design-time-name="dbd44d55-55cf-4cae-a26d-4271ef920171">
-      <ID>Built Up Road Type ID</ID>
-      <Name>Built Up Road Type ID</Name>
+    <Attribute dwd:design-time-name="391a1b6c-2fcf-4ba8-8b7a-671e6810a8be">
+      <ID>Local Authority District NK</ID>
+      <Name>Local Authority District NK</Name>
       <Usage>Key</Usage>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="32c49ab9-3dbe-4e93-b38d-304c8e2bd1ec">
+        <KeyColumn dwd:design-time-name="5a8462bc-2f31-4aae-87b6-f7109a4b38e4">
           <DataType>Integer</DataType>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="cdfe69d6-3535-4235-8764-d52bb22ed048">
-            <TableID>dbo_dimBuiltUpRoadType</TableID>
-            <ColumnID>Built_up_Road_Type_ID</ColumnID>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="0544e862-adcc-4353-b8a6-ae962498e437">
+            <TableID>dbo_dimLocalAuthorityDistrict</TableID>
+            <ColumnID>Local_Authority_District_NK</ColumnID>
           </Source>
         </KeyColumn>
       </KeyColumns>

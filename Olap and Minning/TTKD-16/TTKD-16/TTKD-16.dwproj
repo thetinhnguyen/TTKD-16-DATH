@@ -20,40 +20,60 @@
   </Cubes>
   <Dimensions>
     <ProjectItem>
-      <Name>Dim Urban Or Rural.dim</Name>
-      <FullPath>Dim Urban Or Rural.dim</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>Dim Date.dim</Name>
-      <FullPath>Dim Date.dim</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>Dim Road Type.dim</Name>
-      <FullPath>Dim Road Type.dim</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>Dim Session In Day.dim</Name>
-      <FullPath>Dim Session In Day.dim</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>Dim Location.dim</Name>
-      <FullPath>Dim Location.dim</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>Dim Severity.dim</Name>
-      <FullPath>Dim Severity.dim</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>Dim Built Up Road Type.dim</Name>
-      <FullPath>Dim Built Up Road Type.dim</FullPath>
+      <Name>Dim Journey Purpose.dim</Name>
+      <FullPath>Dim Journey Purpose.dim</FullPath>
     </ProjectItem>
     <ProjectItem>
       <Name>Dim Vehicle Type.dim</Name>
       <FullPath>Dim Vehicle Type.dim</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>Dim Journey Purpose.dim</Name>
-      <FullPath>Dim Journey Purpose.dim</FullPath>
+      <Name>Dim Built Up Road Type.dim</Name>
+      <FullPath>Dim Built Up Road Type.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Dim Severity.dim</Name>
+      <FullPath>Dim Severity.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Dim Location.dim</Name>
+      <FullPath>Dim Location.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Dim Session In Day.dim</Name>
+      <FullPath>Dim Session In Day.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Dim Road Type.dim</Name>
+      <FullPath>Dim Road Type.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Dim Urban Or Rural.dim</Name>
+      <FullPath>Dim Urban Or Rural.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Dim Sex Of Person.dim</Name>
+      <FullPath>Dim Sex Of Person.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Dim Local Authority District.dim</Name>
+      <FullPath>Dim Local Authority District.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Dim Casualty Type.dim</Name>
+      <FullPath>Dim Casualty Type.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Fact Variance.dim</Name>
+      <FullPath>Fact Variance.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Dim Age.dim</Name>
+      <FullPath>Dim Age.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Dim Date.dim</Name>
+      <FullPath>Dim Date.dim</FullPath>
     </ProjectItem>
   </Dimensions>
   <DataSources>
