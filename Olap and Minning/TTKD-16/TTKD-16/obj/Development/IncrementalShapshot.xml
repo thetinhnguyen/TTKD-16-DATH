@@ -19,14 +19,14 @@
     <ObjectSnapshots>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
-        <TimeStamp>lK84feF+R99sYsx09o+OIR+J2nE=1/8/2022 10:50:47 PM1/8/2022 10:50:47 PM</TimeStamp>
+        <TimeStamp>lK84feF+R99sYsx09o+OIR+J2nE=1/9/2022 12:14:54 AM1/9/2022 12:14:54 AM</TimeStamp>
         <ID>
           <String>UCA DDS</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.DataSourceView</Type>
-        <TimeStamp>lSImyyOR+FQSFGzJEal/S6Fpin8=1/8/2022 10:52:05 PM1/8/2022 10:52:04 PM</TimeStamp>
+        <TimeStamp>lSImyyOR+FQSFGzJEal/S6Fpin8=1/9/2022 12:14:54 AM1/9/2022 12:14:54 AM</TimeStamp>
         <ID>
           <String>UCA DDS</String>
         </ID>
@@ -124,21 +124,21 @@
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Cube</Type>
-        <TimeStamp>5hHlo9iIF1OEhbKSuJe941+TWiY=1/8/2022 10:52:27 PM1/8/2022 10:52:27 PMezkF5BlYVSHEqRuNNKijqIKJ9hk=1/8/2022 10:52:27 PM1/8/2022 10:52:27 PM</TimeStamp>
+        <TimeStamp>5hHlo9iIF1OEhbKSuJe941+TWiY=1/9/2022 12:14:54 AM1/9/2022 12:14:54 AMezkF5BlYVSHEqRuNNKijqIKJ9hk=1/9/2022 12:14:54 AM1/9/2022 12:14:54 AM</TimeStamp>
         <ID>
           <String>UCA DDS</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.MiningStructure</Type>
-        <TimeStamp>TOK1AJGnhfyTZx7FSHad9NHqBwY=1/8/2022 10:57:25 PM1/8/2022 10:57:25 PM</TimeStamp>
+        <TimeStamp>TOK1AJGnhfyTZx7FSHad9NHqBwY=1/9/2022 12:14:54 AM1/9/2022 12:14:54 AM</TimeStamp>
         <ID>
           <String>Fact Accidents</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.MiningStructure</Type>
-        <TimeStamp>dgk8V1wpGZ06VLUptauhe9WporA=1/8/2022 11:04:46 PM1/8/2022 11:04:46 PM</TimeStamp>
+        <TimeStamp>dgk8V1wpGZ06VLUptauhe9WporA=1/9/2022 12:14:54 AM1/9/2022 12:14:54 AM</TimeStamp>
         <ID>
           <String>Fact Casualities</String>
         </ID>
@@ -155,5 +155,5 @@
   </Snapshot>
   <AssemblyLocations />
   <ProcessingComplete>true</ProcessingComplete>
-  <LastDeployed>2022-01-08T16:07:26.673333Z</LastDeployed>
+  <LastDeployed>2022-01-08T17:18:56.2Z</LastDeployed>
 </DeploymentSnapshot>
