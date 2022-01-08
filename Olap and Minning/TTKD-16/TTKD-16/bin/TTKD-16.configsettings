@@ -5,9 +5,8 @@
         <ID>UCA DDS</ID>
         <ConnectionString>Provider=SQLNCLI11.1;Data Source=.;Integrated Security=SSPI;Initial Catalog=UCA_DDS</ConnectionString>
         <ImpersonationInfo>
-          <ImpersonationMode xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">ImpersonateAccount</ImpersonationMode>
-          <Account xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">dell</Account>
-          <ImpersonationInfoSecurity xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">PasswordRemoved</ImpersonationInfoSecurity>
+          <ImpersonationMode xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">ImpersonateServiceAccount</ImpersonationMode>
+          <ImpersonationInfoSecurity xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">Unchanged</ImpersonationInfoSecurity>
         </ImpersonationInfo>
       </DataSource>
     </DataSources>
@@ -57,16 +56,8 @@
     </Dimensions>
     <Cubes>
       <Cube>
-        <ID>UCA DDS</ID>
+        <ID>UCA OLAP</ID>
         <MeasureGroups>
-          <MeasureGroup>
-            <ID>Fact Accidents</ID>
-            <Partitions>
-              <Partition>
-                <ID>Fact Accidents</ID>
-              </Partition>
-            </Partitions>
-          </MeasureGroup>
           <MeasureGroup>
             <ID>Fact Casualities</ID>
             <Partitions>
@@ -76,10 +67,10 @@
             </Partitions>
           </MeasureGroup>
           <MeasureGroup>
-            <ID>Fact Variance</ID>
+            <ID>Fact Accidents</ID>
             <Partitions>
               <Partition>
-                <ID>Fact Variance</ID>
+                <ID>Fact Accidents</ID>
               </Partition>
             </Partitions>
           </MeasureGroup>

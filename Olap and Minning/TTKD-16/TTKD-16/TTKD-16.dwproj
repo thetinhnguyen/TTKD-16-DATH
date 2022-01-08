@@ -8,12 +8,12 @@
   </Database>
   <Cubes>
     <ProjectItem>
-      <Name>UCA DDS.cube</Name>
-      <FullPath>UCA DDS.cube</FullPath>
+      <Name>UCA OLAP.cube</Name>
+      <FullPath>UCA OLAP.cube</FullPath>
       <Dependencies>
         <ProjectItem>
-          <Name>UCA DDS.partitions</Name>
-          <FullPath>UCA DDS.partitions</FullPath>
+          <Name>UCA OLAP.partitions</Name>
+          <FullPath>UCA OLAP.partitions</FullPath>
         </ProjectItem>
       </Dependencies>
     </ProjectItem>

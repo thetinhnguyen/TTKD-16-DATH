@@ -3,7 +3,7 @@
     <Configuration>
       <Name>Development</Name>
       <Options>
-        <TargetServer>localhost</TargetServer>
+        <TargetServer>PHUONGVY</TargetServer>
         <TargetDatabase>TTKD-16</TargetDatabase>
         <StartObject>
           <ObjectId></ObjectId>
