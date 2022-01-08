@@ -1,0 +1,236 @@
+﻿<MiningStructure xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="d5aca57d-ea1f-42ba-8eff-2ddb587f3668" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Fact Accidents</ID>
+  <Name>Fact Accidents</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CaseTableName</Name>
+      <Value>dbo_Fact_Accidents</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="2e7d4813-12d4-4fa3-994f-96e81c0795ab">
+    <DataSourceViewID>UCA DDS</DataSourceViewID>
+  </Source>
+  <Columns>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="625cf485-8001-4ec4-aa01-f0011e113f14">
+      <ID>Built Up Road Type ID</ID>
+      <Name>Built Up Road Type ID</Name>
+      <Type>Long</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="c82d81c3-5ccf-48fc-a462-dbdce46a73a8">
+          <DataType>Integer</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="791ad967-cfb5-477b-96c1-eb7a92acdb71">
+            <TableID>dbo_Fact_Accidents</TableID>
+            <ColumnID>Built_up_Road_Type_ID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="be8e8acb-5bc1-428d-b3e2-c20e7ab01f5e">
+      <ID>Date</ID>
+      <Name>Date</Name>
+      <IsKey>true</IsKey>
+      <Type>Date</Type>
+      <Content>Key Time</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="d21d6294-df9b-4680-8231-45f8265940fe">
+          <DataType>Date</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="61af0610-3f41-44c8-b8bf-97888312606f">
+            <TableID>dbo_Fact_Accidents</TableID>
+            <ColumnID>Date</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="7dfa47a0-6598-4bfd-b6da-cd56b987b0d7">
+      <ID>Journey Purpose NK</ID>
+      <Name>Journey Purpose NK</Name>
+      <Type>Long</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="4a6d8e88-36d6-4a1b-bfa6-ee8ba0c27c41">
+          <DataType>Integer</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="0bb93410-e576-4a82-aeba-4997aa410e67">
+            <TableID>dbo_Fact_Accidents</TableID>
+            <ColumnID>Journey_Purpose_NK</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="683285ab-5505-4596-b1a0-954279e92799">
+      <ID>Num Of Acc</ID>
+      <Name>Num Of Acc</Name>
+      <Type>Long</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="96214cdf-8b88-40c0-a93e-f0a38c5e6fe9">
+          <DataType>Integer</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="acfb97b7-2280-4ae4-a1bb-917e90d13576">
+            <TableID>dbo_Fact_Accidents</TableID>
+            <ColumnID>NumOfAcc</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="47dd94cd-d375-403a-9ff7-299ff3c61eff">
+      <ID>Road Type NK</ID>
+      <Name>Road Type NK</Name>
+      <Type>Long</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="86614ca2-3970-4388-a84a-b3ab9586be1e">
+          <DataType>Integer</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f663131a-81b9-48c8-ab09-bf3e194a5a48">
+            <TableID>dbo_Fact_Accidents</TableID>
+            <ColumnID>Road_Type_NK</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="3aaa635b-0bf3-48b4-9309-b207eb0427ed">
+      <ID>Session In Day</ID>
+      <Name>Session In Day</Name>
+      <Type>Long</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="436325a0-ebeb-476e-900c-23b2f59e7d16">
+          <DataType>Integer</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="4369e3ea-8813-4d11-82e3-69c09344f448">
+            <TableID>dbo_Fact_Accidents</TableID>
+            <ColumnID>Session_In_Day</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="73cfa742-642b-4c0e-95ed-3bfa13a0afc9">
+      <ID>Urban Rural NK</ID>
+      <Name>Urban Rural NK</Name>
+      <Type>Long</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="09ab50a2-1ce4-4750-92c9-0662d0fa76d3">
+          <DataType>Integer</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="fe5b63d8-9bb2-49ce-8b52-0870b984cff3">
+            <TableID>dbo_Fact_Accidents</TableID>
+            <ColumnID>Urban_Rural_NK</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+  </Columns>
+  <MiningModels>
+    <MiningModel dwd:design-time-name="745b9241-fd22-4c5c-8984-5f1bf2da1e34">
+      <ID>Fact Accidents</ID>
+      <Name>Fact Accidents</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Algorithm>Microsoft_Time_Series</Algorithm>
+      <Columns>
+        <Column dwd:design-time-name="7d994e85-e83c-4c70-975f-6f8b994b4f6c">
+          <ID>Built Up Road Type ID</ID>
+          <Name>Built Up Road Type ID</Name>
+          <SourceColumnID>Built Up Road Type ID</SourceColumnID>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+        <Column dwd:design-time-name="b2011fc7-e103-4ab7-abf0-4f659e8574ad">
+          <ID>Date</ID>
+          <Name>Date</Name>
+          <SourceColumnID>Date</SourceColumnID>
+          <Usage>Key</Usage>
+        </Column>
+        <Column dwd:design-time-name="4f7ccbc6-617b-4f6f-8da4-37a8e0b4259c">
+          <ID>Journey Purpose NK</ID>
+          <Name>Journey Purpose NK</Name>
+          <SourceColumnID>Journey Purpose NK</SourceColumnID>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+        <Column dwd:design-time-name="c84d734e-ebd8-4eda-a989-bde97115e1c3">
+          <ID>Num Of Acc</ID>
+          <Name>Num Of Acc</Name>
+          <SourceColumnID>Num Of Acc</SourceColumnID>
+          <Usage>PredictOnly</Usage>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+        <Column dwd:design-time-name="d6b10bb8-843f-4e88-965a-afff71a041fb">
+          <ID>Road Type NK</ID>
+          <Name>Road Type NK</Name>
+          <SourceColumnID>Road Type NK</SourceColumnID>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+        <Column dwd:design-time-name="e5979f65-edf0-41e9-9fe7-78894063844e">
+          <ID>Session In Day</ID>
+          <Name>Session In Day</Name>
+          <SourceColumnID>Session In Day</SourceColumnID>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+        <Column dwd:design-time-name="dd0f861c-4bad-4ab6-aa4c-e2f8058f8b8c">
+          <ID>Urban Rural NK</ID>
+          <Name>Urban Rural NK</Name>
+          <SourceColumnID>Urban Rural NK</SourceColumnID>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+      </Columns>
+      <AllowDrillThrough>true</AllowDrillThrough>
+    </MiningModel>
+  </MiningModels>
+</MiningStructure>

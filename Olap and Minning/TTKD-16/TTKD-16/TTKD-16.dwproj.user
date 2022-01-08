@@ -3,7 +3,7 @@
     <Configuration>
       <Name>Development</Name>
       <Options>
-        <TargetServer>PHUONGVY</TargetServer>
+        <TargetServer>DESKTOP-BR2RFI5</TargetServer>
         <TargetDatabase>TTKD-16</TargetDatabase>
         <StartObject>
           <ObjectId></ObjectId>

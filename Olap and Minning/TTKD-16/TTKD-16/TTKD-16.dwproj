@@ -84,6 +84,16 @@
       <FullPath>UCA DDS.dsv</FullPath>
     </ProjectItem>
   </DataSourceViews>
+  <MiningModels>
+    <ProjectItem>
+      <Name>Fact Accidents.dmm</Name>
+      <FullPath>Fact Accidents.dmm</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Fact Casualities.dmm</Name>
+      <FullPath>Fact Casualities.dmm</FullPath>
+    </ProjectItem>
+  </MiningModels>
   <Configurations>
     <Configuration>
       <Name>Development</Name>

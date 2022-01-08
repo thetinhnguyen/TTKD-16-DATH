@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="9"
-  DTS:VersionGUID="{A2695162-AB1C-4BD0-888B-1B20D3765153}">
+  DTS:VersionBuild="14"
+  DTS:VersionGUID="{8030B99D-B475-476F-84E7-5F293E7CEB2D}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -446,7 +446,34 @@ ORDER BY Total DESC</property>
         </pipeline>
       </DTS:ObjectData>
     </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\TRUNCATE Fact"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{3352282b-f1be-430c-bc9e-f4697bd06dcd}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="TRUNCATE Fact"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{954397BB-1988-473E-AB3A-B834C60E5E7F}"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE Fact_Variance" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
   </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{CC661E92-3546-4719-B42F-1575C037F4D7}"
+      DTS:From="Package\TRUNCATE Fact"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Fact_Variance" />
+  </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
 <!--If you manually edit this section and make a mistake, you can delete it. -->
@@ -458,11 +485,37 @@ ORDER BY Total DESC</property>
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="145,42"
+          Size="145.333333333334,42"
           Id="Package\Fact_Variance"
-          TopLeft="224,83" />
+          TopLeft="224,98.3166666550437" />
+        <NodeLayout
+          Size="154.666666666667,42.6666666666667"
+          Id="Package\TRUNCATE Fact"
+          TopLeft="221.500000037253,13.9666687355439" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="297.750000018626,56.6333354022105">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,41.6833312528332"
+              Start="0,0"
+              End="0,34.1833312528332">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,34.1833312528332" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -476,13 +529,13 @@ ORDER BY Total DESC</property>
           Id="Package\Fact_Variance\OLE DB Source"
           TopLeft="218.9,36.4999999999998" />
         <NodeLayout
-          Size="239,43"
-          Id="Package\Fact_Variance\Them CreatedDate, UpdatedDate"
-          TopLeft="176.5,126.7" />
-        <NodeLayout
-          Size="163,42"
+          Size="162.666666666667,42"
           Id="Package\Fact_Variance\Insert Destination"
           TopLeft="220.5,222.7" />
+        <NodeLayout
+          Size="238.666666666667,42.6666666666667"
+          Id="Package\Fact_Variance\Them CreatedDate, UpdatedDate"
+          TopLeft="176.5,126.7" />
         <EdgeLayout
           Id="Package\Fact_Variance.Paths[OLE DB Source Output]"
           TopLeft="294.95,78.4999999999998">
