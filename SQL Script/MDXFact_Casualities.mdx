@@ -1,0 +1,38 @@
+﻿
+----1.Thống kê số lượng nạn nhân theo Mức Độ Nghiêm Trọng (Fatal, Serious, Slight) ở các Địa phương (Local_Authority_(District)) trong tất cả các năm.
+select non empty ([Dim Date].[Hierarchy].[Year],
+{[Dim Severity].[Severity Name].[Severity Name],[Dim Severity].[Severity Name]}) on columns,
+non empty {[Dim Local Authority District].[Local Authority District Name].[Local Authority District Name],[Dim Local Authority District].[Local Authority District Name]} on rows
+from [UCA OLAP]
+where [Measures].[Num Of Cas] 
+
+select non empty ([Dim Date].[Hierarchy].[Year], 
+{[Dim Severity].[Severity Name].[Severity Name],[Dim Severity].[Severity Name]}) on columns,
+crossjoin ([Dim Location].[Hierarchy].[Country Name],[Dim Location].[County].[County]) on rows
+from [UCA OLAP]
+where [Measures].[Num Of Cas]
+
+----2.Thống kê số lượng nạn nhân theo Mức Độ Nghiêm Trọng ở các Địa Phương (Local_Authority_(District)) theo các Quý trong từng năm.
+select non empty ([Dim Date].[Hierarchy].[Year],[Dim Date].[Quarter].[Quarter],
+{[Dim Severity].[Severity Name].[Severity Name],[Dim Severity].[Severity Name]}) on columns,
+non empty ({[Dim Local Authority District].[Local Authority District Name].[Local Authority District Name],[Dim Local Authority District].[Local Authority District Name]}) on rows
+from [UCA OLAP]
+where [Measures].[Num Of Cas] 
+
+----3. Thống kê số lượng người tử vong theo Giới Tính, Loại Nạn Nhân (Casualty Type) và Nhóm Tuổi (Age_Band_of_Casualty) theo các năm.
+select non empty([Dim Date].[Hierarchy].[Year],
+{[Dim Sex Of Person].[Sex Of Person Name].[Sex Of Person Name],[Dim Sex Of Person].[Sex Of Person Name]}) on columns,
+non empty ({[Dim Age].[Hierarchy].[Age Band],[Dim Age].[Hierarchy]},
+{[Dim Casualty Type].[Casualty Type Name].[Casualty Type Name],[Dim Casualty Type].[Casualty Type Name]},
+[Dim Severity].[Severity Name].&[Serious]) on rows
+from [UCA OLAP]
+where [Measures].[Num Of Cas] 
+
+
+----6.Thống kê số lượng nạn nhân theo Mức Độ Nghiêm Trọng, Loại Nạn Nhân (Casualty Type) và Độ Tuổi trong các năm
+select non empty ([Dim Date].[Hierarchy].[Year],
+{[Dim Severity].[Severity Name].[Severity Name],[Dim Severity].[Severity Name]}) on columns,
+non empty ({[Dim Casualty Type].[Casualty Type Name].[Casualty Type Name],[Dim Casualty Type].[Casualty Type Name]},
+{[Dim Age].[Age Group].[Age Group],[Dim Age].[Age Group]})on rows
+from [UCA OLAP]
+where [Measures].[Num Of Cas] 
