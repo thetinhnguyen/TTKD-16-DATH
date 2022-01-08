@@ -8,12 +8,12 @@
   </Database>
   <Cubes>
     <ProjectItem>
-      <Name>UCA OLAP.cube</Name>
-      <FullPath>UCA OLAP.cube</FullPath>
+      <Name>UCA DDS.cube</Name>
+      <FullPath>UCA DDS.cube</FullPath>
       <Dependencies>
         <ProjectItem>
-          <Name>UCA OLAP.partitions</Name>
-          <FullPath>UCA OLAP.partitions</FullPath>
+          <Name>UCA DDS.partitions</Name>
+          <FullPath>UCA DDS.partitions</FullPath>
         </ProjectItem>
       </Dependencies>
     </ProjectItem>
@@ -62,10 +62,6 @@
     <ProjectItem>
       <Name>Dim Casualty Type.dim</Name>
       <FullPath>Dim Casualty Type.dim</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>Fact Variance.dim</Name>
-      <FullPath>Fact Variance.dim</FullPath>
     </ProjectItem>
     <ProjectItem>
       <Name>Dim Age.dim</Name>

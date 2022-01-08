@@ -45,9 +45,6 @@
         <ID>Dim Casualty Type</ID>
       </Dimension>
       <Dimension>
-        <ID>Fact Variance</ID>
-      </Dimension>
-      <Dimension>
         <ID>Dim Age</ID>
       </Dimension>
       <Dimension>
@@ -56,8 +53,16 @@
     </Dimensions>
     <Cubes>
       <Cube>
-        <ID>UCA OLAP</ID>
+        <ID>UCA DDS</ID>
         <MeasureGroups>
+          <MeasureGroup>
+            <ID>Fact Accidents</ID>
+            <Partitions>
+              <Partition>
+                <ID>Fact Accidents</ID>
+              </Partition>
+            </Partitions>
+          </MeasureGroup>
           <MeasureGroup>
             <ID>Fact Casualities</ID>
             <Partitions>
@@ -67,10 +72,10 @@
             </Partitions>
           </MeasureGroup>
           <MeasureGroup>
-            <ID>Fact Accidents</ID>
+            <ID>Fact Variance</ID>
             <Partitions>
               <Partition>
-                <ID>Fact Accidents</ID>
+                <ID>Fact Variance</ID>
               </Partition>
             </Partitions>
           </MeasureGroup>

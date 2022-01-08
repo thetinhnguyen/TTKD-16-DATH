@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="4"
-  DTS:VersionGUID="{4E5B1350-13FB-435D-B488-258F7CFBB277}">
+  DTS:VersionBuild="9"
+  DTS:VersionGUID="{A2695162-AB1C-4BD0-888B-1B20D3765153}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -130,78 +130,38 @@
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Fact_Variance\Insert Destination.Inputs[OLE DB Destination Input].Columns[CreatedDate]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="CreatedDate"
-                      externalMetadataColumnId="Package\Fact_Variance\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[CreatedDate]"
-                      lineageId="Package\Fact_Variance\Them CreatedDate, UpdatedDate.Outputs[Derived Column Output].Columns[CreatedDate]" />
+                      refId="Package\Fact_Variance\Insert Destination.Inputs[OLE DB Destination Input].Columns[Date]"
+                      cachedDataType="dbDate"
+                      cachedName="Date"
+                      externalMetadataColumnId="Package\Fact_Variance\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[Date]"
+                      lineageId="Package\Fact_Variance\OLE DB Source.Outputs[OLE DB Source Output].Columns[Date]" />
                     <inputColumn
-                      refId="Package\Fact_Variance\Insert Destination.Inputs[OLE DB Destination Input].Columns[UpdatedDate]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="UpdatedDate"
-                      externalMetadataColumnId="Package\Fact_Variance\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[UpdatedDate]"
-                      lineageId="Package\Fact_Variance\Them CreatedDate, UpdatedDate.Outputs[Derived Column Output].Columns[UpdatedDate]" />
-                    <inputColumn
-                      refId="Package\Fact_Variance\Insert Destination.Inputs[OLE DB Destination Input].Columns[Year 1]"
+                      refId="Package\Fact_Variance\Insert Destination.Inputs[OLE DB Destination Input].Columns[Location_NK]"
                       cachedDataType="i4"
-                      cachedName="Year 1"
-                      externalMetadataColumnId="Package\Fact_Variance\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[Year_1]"
-                      lineageId="Package\Fact_Variance\OLE DB Source.Outputs[OLE DB Source Output].Columns[Year 1]" />
+                      cachedName="Location_NK"
+                      externalMetadataColumnId="Package\Fact_Variance\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[Location_NK]"
+                      lineageId="Package\Fact_Variance\OLE DB Source.Outputs[OLE DB Source Output].Columns[Location_NK]" />
                     <inputColumn
-                      refId="Package\Fact_Variance\Insert Destination.Inputs[OLE DB Destination Input].Columns[Year 2]"
+                      refId="Package\Fact_Variance\Insert Destination.Inputs[OLE DB Destination Input].Columns[Total]"
                       cachedDataType="i4"
-                      cachedName="Year 2"
-                      externalMetadataColumnId="Package\Fact_Variance\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[Year_2]"
-                      lineageId="Package\Fact_Variance\OLE DB Source.Outputs[OLE DB Source Output].Columns[Year 2]" />
-                    <inputColumn
-                      refId="Package\Fact_Variance\Insert Destination.Inputs[OLE DB Destination Input].Columns[NumOfAccY1]"
-                      cachedDataType="i4"
-                      cachedName="NumOfAccY1"
-                      externalMetadataColumnId="Package\Fact_Variance\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[Count_in_Year1]"
-                      lineageId="Package\Fact_Variance\OLE DB Source.Outputs[OLE DB Source Output].Columns[NumOfAccY1]" />
-                    <inputColumn
-                      refId="Package\Fact_Variance\Insert Destination.Inputs[OLE DB Destination Input].Columns[NumOfAccY2]"
-                      cachedDataType="i4"
-                      cachedName="NumOfAccY2"
-                      externalMetadataColumnId="Package\Fact_Variance\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[Count_in_Year2]"
-                      lineageId="Package\Fact_Variance\OLE DB Source.Outputs[OLE DB Source Output].Columns[NumOfAccY2]" />
-                    <inputColumn
-                      refId="Package\Fact_Variance\Insert Destination.Inputs[OLE DB Destination Input].Columns[Variance (%)]"
-                      cachedDataType="r8"
-                      cachedName="Variance (%)"
-                      externalMetadataColumnId="Package\Fact_Variance\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[Variance]"
-                      lineageId="Package\Fact_Variance\OLE DB Source.Outputs[OLE DB Source Output].Columns[Variance (%)]" />
+                      cachedName="Total"
+                      externalMetadataColumnId="Package\Fact_Variance\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[Total]"
+                      lineageId="Package\Fact_Variance\OLE DB Source.Outputs[OLE DB Source Output].Columns[Total]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Fact_Variance\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[Year_1]"
+                      refId="Package\Fact_Variance\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[Date]"
+                      dataType="dbDate"
+                      name="Date" />
+                    <externalMetadataColumn
+                      refId="Package\Fact_Variance\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[Location_NK]"
                       dataType="i4"
-                      name="Year_1" />
+                      name="Location_NK" />
                     <externalMetadataColumn
-                      refId="Package\Fact_Variance\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[Year_2]"
+                      refId="Package\Fact_Variance\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[Total]"
                       dataType="i4"
-                      name="Year_2" />
-                    <externalMetadataColumn
-                      refId="Package\Fact_Variance\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[Count_in_Year1]"
-                      dataType="i4"
-                      name="Count_in_Year1" />
-                    <externalMetadataColumn
-                      refId="Package\Fact_Variance\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[Count_in_Year2]"
-                      dataType="i4"
-                      name="Count_in_Year2" />
-                    <externalMetadataColumn
-                      refId="Package\Fact_Variance\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[Variance]"
-                      dataType="r8"
-                      name="Variance" />
-                    <externalMetadataColumn
-                      refId="Package\Fact_Variance\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[CreatedDate]"
-                      dataType="dbTimeStamp"
-                      name="CreatedDate" />
-                    <externalMetadataColumn
-                      refId="Package\Fact_Variance\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[UpdatedDate]"
-                      dataType="dbTimeStamp"
-                      name="UpdatedDate" />
+                      name="Total" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -255,16 +215,10 @@
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select table1.Y as 'Year 1', table2.Y as 'Year 2', table1.NumOfAccY1, table2.NumOfAccY2,
-	CAST((table2.NumOfAccY2 - table1.NumOfAccY1) as float) / CAST(table1.NumOfAccY1 as float) as 'Variance (%)'
-from (select DATEPART(YEAR,Date) as Y, COUNT(*) AS NumOfAccY1
-		from Accidents_NDS
-		GROUP BY DATEPART(YEAR,Date)) as table1,
-	 (select DATEPART(YEAR,Date) as Y, COUNT(*) AS NumOfAccY2 
-		from Accidents_NDS
-		GROUP BY DATEPART(YEAR,Date)) as table2
-where table1.Y &lt; table2.Y
-order by table1.Y, table2.Y</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT [Date], Location_NK, COUNT(*) AS Total
+FROM Accidents_NDS a  left join Location_NDS lo on a.Location_ID = lo.Location_Id
+GROUP BY [Date], Location_NK
+ORDER BY Total DESC</property>
                 <property
                   dataType="System.String"
                   description="The variable that contains the SQL command to be executed."
@@ -301,73 +255,47 @@ order by table1.Y, table2.Y</property>
                   name="OLE DB Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Fact_Variance\OLE DB Source.Outputs[OLE DB Source Output].Columns[Year 1]"
+                      refId="Package\Fact_Variance\OLE DB Source.Outputs[OLE DB Source Output].Columns[Date]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fact_Variance\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Date]"
+                      lineageId="Package\Fact_Variance\OLE DB Source.Outputs[OLE DB Source Output].Columns[Date]"
+                      name="Date"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Fact_Variance\OLE DB Source.Outputs[OLE DB Source Output].Columns[Location_NK]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Fact_Variance\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Year 1]"
-                      lineageId="Package\Fact_Variance\OLE DB Source.Outputs[OLE DB Source Output].Columns[Year 1]"
-                      name="Year 1"
+                      externalMetadataColumnId="Package\Fact_Variance\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Location_NK]"
+                      lineageId="Package\Fact_Variance\OLE DB Source.Outputs[OLE DB Source Output].Columns[Location_NK]"
+                      name="Location_NK"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Fact_Variance\OLE DB Source.Outputs[OLE DB Source Output].Columns[Year 2]"
+                      refId="Package\Fact_Variance\OLE DB Source.Outputs[OLE DB Source Output].Columns[Total]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Fact_Variance\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Year 2]"
-                      lineageId="Package\Fact_Variance\OLE DB Source.Outputs[OLE DB Source Output].Columns[Year 2]"
-                      name="Year 2"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Fact_Variance\OLE DB Source.Outputs[OLE DB Source Output].Columns[NumOfAccY1]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Fact_Variance\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[NumOfAccY1]"
-                      lineageId="Package\Fact_Variance\OLE DB Source.Outputs[OLE DB Source Output].Columns[NumOfAccY1]"
-                      name="NumOfAccY1"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Fact_Variance\OLE DB Source.Outputs[OLE DB Source Output].Columns[NumOfAccY2]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Fact_Variance\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[NumOfAccY2]"
-                      lineageId="Package\Fact_Variance\OLE DB Source.Outputs[OLE DB Source Output].Columns[NumOfAccY2]"
-                      name="NumOfAccY2"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Fact_Variance\OLE DB Source.Outputs[OLE DB Source Output].Columns[Variance (%)]"
-                      dataType="r8"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Fact_Variance\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Variance (%)]"
-                      lineageId="Package\Fact_Variance\OLE DB Source.Outputs[OLE DB Source Output].Columns[Variance (%)]"
-                      name="Variance (%)"
+                      externalMetadataColumnId="Package\Fact_Variance\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Total]"
+                      lineageId="Package\Fact_Variance\OLE DB Source.Outputs[OLE DB Source Output].Columns[Total]"
+                      name="Total"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Fact_Variance\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Year 1]"
-                      dataType="i4"
-                      name="Year 1" />
+                      refId="Package\Fact_Variance\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Date]"
+                      dataType="dbDate"
+                      name="Date" />
                     <externalMetadataColumn
-                      refId="Package\Fact_Variance\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Year 2]"
+                      refId="Package\Fact_Variance\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Location_NK]"
                       dataType="i4"
-                      name="Year 2" />
+                      name="Location_NK" />
                     <externalMetadataColumn
-                      refId="Package\Fact_Variance\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[NumOfAccY1]"
+                      refId="Package\Fact_Variance\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Total]"
                       dataType="i4"
-                      name="NumOfAccY1" />
-                    <externalMetadataColumn
-                      refId="Package\Fact_Variance\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[NumOfAccY2]"
-                      dataType="i4"
-                      name="NumOfAccY2" />
-                    <externalMetadataColumn
-                      refId="Package\Fact_Variance\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Variance (%)]"
-                      dataType="r8"
-                      name="Variance (%)" />
+                      name="Total" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -376,30 +304,20 @@ order by table1.Y, table2.Y</property>
                   name="OLE DB Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Fact_Variance\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Year 1]"
-                      dataType="i4"
-                      lineageId="Package\Fact_Variance\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Year 1]"
-                      name="Year 1" />
+                      refId="Package\Fact_Variance\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Date]"
+                      dataType="dbDate"
+                      lineageId="Package\Fact_Variance\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Date]"
+                      name="Date" />
                     <outputColumn
-                      refId="Package\Fact_Variance\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Year 2]"
+                      refId="Package\Fact_Variance\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Location_NK]"
                       dataType="i4"
-                      lineageId="Package\Fact_Variance\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Year 2]"
-                      name="Year 2" />
+                      lineageId="Package\Fact_Variance\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Location_NK]"
+                      name="Location_NK" />
                     <outputColumn
-                      refId="Package\Fact_Variance\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[NumOfAccY1]"
+                      refId="Package\Fact_Variance\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Total]"
                       dataType="i4"
-                      lineageId="Package\Fact_Variance\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[NumOfAccY1]"
-                      name="NumOfAccY1" />
-                    <outputColumn
-                      refId="Package\Fact_Variance\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[NumOfAccY2]"
-                      dataType="i4"
-                      lineageId="Package\Fact_Variance\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[NumOfAccY2]"
-                      name="NumOfAccY2" />
-                    <outputColumn
-                      refId="Package\Fact_Variance\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Variance (%)]"
-                      dataType="r8"
-                      lineageId="Package\Fact_Variance\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Variance (%)]"
-                      name="Variance (%)" />
+                      lineageId="Package\Fact_Variance\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Total]"
+                      name="Total" />
                     <outputColumn
                       refId="Package\Fact_Variance\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
@@ -542,7 +460,7 @@ order by table1.Y, table2.Y</property>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="145.333333333334,42"
+          Size="145,42"
           Id="Package\Fact_Variance"
           TopLeft="224,83" />
       </GraphLayout>
@@ -558,13 +476,13 @@ order by table1.Y, table2.Y</property>
           Id="Package\Fact_Variance\OLE DB Source"
           TopLeft="218.9,36.4999999999998" />
         <NodeLayout
-          Size="162.666666666667,42"
-          Id="Package\Fact_Variance\Insert Destination"
-          TopLeft="220.5,222.7" />
-        <NodeLayout
-          Size="238.666666666667,42.6666666666667"
+          Size="239,43"
           Id="Package\Fact_Variance\Them CreatedDate, UpdatedDate"
           TopLeft="176.5,126.7" />
+        <NodeLayout
+          Size="163,42"
+          Id="Package\Fact_Variance\Insert Destination"
+          TopLeft="220.5,222.7" />
         <EdgeLayout
           Id="Package\Fact_Variance.Paths[OLE DB Source Output]"
           TopLeft="294.95,78.4999999999998">

@@ -141,14 +141,9 @@ CREATE TABLE Fact_Casualities(
 	PRIMARY KEY ([Date], Local_Authority_District_NK, Location_NK, Severity_NK, Age, Sex_of_Person_NK, Casualty_Type_NK )
 )
 
--- drop TABLE Fact_Variance
-CREATE  TABLE [dbo].[Fact_Variance](
-	[Year_1]  Int NOT NULL,
-	[Year_2] Int NOT NULL,
-	[Count_in_Year1] [int] NULL,
-	[Count_in_Year2] [int] NULL,
-	[Variance] float NULL,
-	[CreatedDate] [datetime] NULL,
-	[UpdatedDate] [datetime] NULL,
-	PRIMARY KEY (Year_1, Year_2)
+CREATE TABLE Fact_Variance(
+	[Date] DATE FOREIGN KEY REFERENCES dimDate,
+	[Location_NK] [int] FOREIGN KEY REFERENCES dimLocation, 
+	[Total] int,
+	PRIMARY KEY ([Date],[Location_NK])
 )

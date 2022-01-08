@@ -26,7 +26,7 @@
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.DataSourceView</Type>
-        <TimeStamp>/l3ytZra+BgKnIqqYFkbqzIEEy8=1/8/2022 11:16:20 AM1/8/2022 11:16:19 AM</TimeStamp>
+        <TimeStamp>n4CAPZO9k76mpU43KLDZAHUoJ/I=1/8/2022 7:03:16 PM1/8/2022 7:03:16 PM</TimeStamp>
         <ID>
           <String>UCA DDS</String>
         </ID>
@@ -110,13 +110,6 @@
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>IudrXXu3XDXGY+vC+YTZsLaE5ZA=1/8/2022 9:44:25 AM1/8/2022 9:44:25 AM</TimeStamp>
-        <ID>
-          <String>Fact Variance</String>
-        </ID>
-      </ObjectSnapshot>
-      <ObjectSnapshot>
-        <Type>Microsoft.AnalysisServices.Dimension</Type>
         <TimeStamp>qK58hYD+HvLgEaugMmq0YPqdLbY=1/8/2022 9:44:25 AM1/8/2022 9:44:25 AM</TimeStamp>
         <ID>
           <String>Dim Age</String>
@@ -131,9 +124,9 @@
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Cube</Type>
-        <TimeStamp>Bwo9s1QD8mdvfM1shUwYVVpd0HA=1/8/2022 11:17:05 AM1/8/2022 11:17:05 AMD3aAcD4oaQA4O5KIRsR7vNZQnno=1/8/2022 11:17:05 AM1/8/2022 11:17:05 AM</TimeStamp>
+        <TimeStamp>mFeKbblA2of9c9df6q4lHKOBp2Q=1/8/2022 7:04:01 PM1/8/2022 7:04:00 PM97C4t0LQ3WPzLctz3IwOH0skg0k=1/8/2022 7:04:01 PM1/8/2022 7:04:00 PM</TimeStamp>
         <ID>
-          <String>UCA OLAP</String>
+          <String>UCA DDS</String>
         </ID>
       </ObjectSnapshot>
     </ObjectSnapshots>
@@ -148,5 +141,5 @@
   </Snapshot>
   <AssemblyLocations />
   <ProcessingComplete>true</ProcessingComplete>
-  <LastDeployed>2022-01-08T04:17:23.03Z</LastDeployed>
+  <LastDeployed>2022-01-08T12:04:17.776667Z</LastDeployed>
 </DeploymentSnapshot>

@@ -2,22 +2,21 @@
 select {[Dim Severity].[Severity Name].[Severity Name],[Dim Severity].[Severity Name]} on columns,
 ({[Dim Date].[Hierarchy].[Year],[Dim Date].[Hierarchy]},
 {[Dim Session In Day].[Session In Day].[Session In Day],[Dim Session In Day].[Session In Day]}) on rows
-from [UCA OLAP]
+from [UCA DDS]
 where[Measures].[Num Of Acc]
-
 
 ---- Thong ke so luong TNGT theo Mức Độ Nghiêm Trọng, Vùng (Urban_or_Rural_Area), và Kiểu Đường (Road Type) trong các năm
 select  ({[Dim Date].[Hierarchy].[Year],[Dim Date].[Hierarchy]},
 {[Dim Severity].[Severity Name].[Severity Name],[Dim Severity].[Severity Name]}) on columns,
 ({[Dim Urban Or Rural].[Urban Rural Name].[Urban Rural Name],[Dim Urban Or Rural].[Urban Rural Name]},
 {[Dim Road Type].[Road Type Name].[Road Type Name],[Dim Road Type].[Road Type Name]}) on rows
-from [UCA OLAP]
+from [UCA DDS]
 where[Measures].[Num Of Acc]
 
 ---- Thong ke so luong TNGT theo Mục Đích Hành Trình (Journey Purpose) và Loại Phương Tiện (Vehicle_Type)
 select {[Dim Journey Purpose].[Journey Purpose Name].[Journey Purpose Name],[Dim Journey Purpose].[Journey Purpose Name]} on columns,
 {[Dim Vehicle Type].[Vehicle Type Name].[Vehicle Type Name],[Dim Vehicle Type].[Vehicle Type Name]} on rows
-from [UCA OLAP]
+from [UCA DDS]
 where[Measures].[Num Of Acc]
 
 ---- Thong ke so luong TNGT theo Mức Độ Nghiêm Trọng, Loại Phương Tiện (Vehicle_Type), Built-up Road
@@ -25,5 +24,21 @@ select ({[Dim Date].[Hierarchy].[Year],[Dim Date].[Hierarchy]},
 {[Dim Severity].[Severity Name].[Severity Name],[Dim Severity].[Severity Name]}) on columns,
 ({[Dim Vehicle Type].[Vehicle Type Name].[Vehicle Type Name],[Dim Vehicle Type].[Vehicle Type Name]},
 {[Dim Built Up Road Type].[Built Up Road Type Name].[Built Up Road Type Name],[Dim Built Up Road Type].[Built Up Road Type Name]}) on rows
-from [UCA OLAP]
+from [UCA DDS]
 where[Measures].[Num Of Acc]
+
+---- Tinh muc do tang giam TNGT qua cac nam
+WITH MEMBER [Measures].[Diff] AS 
+IIF( [Dim Date].[Year].CURRENTMEMBER.MEMBER_VALUE = 2011, 0, 
+( IIF( [Measures].[Total] = null, null, 
+([Dim Date].[Year].CURRENTMEMBER, 
+[Measures].[Total]) - ([Dim Date].[Year].CURRENTMEMBER.LAG(1), [Measures].[Total]) ) ) )
+MEMBER [Measures].[Variance] AS
+IIF( [Dim Date].[Year].CURRENTMEMBER.MEMBER_VALUE = 2011, 0, 
+IIF( [Measures].[Total] = NULL, null, 
+( ([Dim Date].[Year].CURRENTMEMBER, [Measures].[Total]) - ([Dim Date].[Year].CURRENTMEMBER.LAG(1), 
+[Measures].[Total]) ) / ([Dim Date].[Year].CURRENTMEMBER.LAG(1), [Measures].[Total]) ) ),
+FORMAT_STRING = '#,###,###,##,0 %' 
+SELECT {[Measures].[Total], [Measures].[Diff], [Measures].[Variance]} ON COLUMNS, 
+NON EMPTY( [Dim Date].[Year].[Year] )ON ROWS
+FROM [UCA DDS];

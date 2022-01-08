@@ -1,0 +1,659 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="3c81910d-a546-4ba9-a602-cd04e088704b" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>UCA DDS</ID>
+  <Name>UCA DDS</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Dimensions>
+    <Dimension dwd:design-time-name="31dc5c07-4622-4812-8fbf-9cc11a2d086f">
+      <ID>Dim Urban Or Rural</ID>
+      <Name>Dim Urban Or Rural</Name>
+      <DimensionID>Dim Urban Or Rural</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="369a6306-b40f-4b5e-90e0-e03e2b07319b">
+          <AttributeID>Urban Rural NK</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a4d5d308-c7f6-48fe-b87d-0d3f60898b7c">
+          <AttributeID>Urban Rural Name</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="4f93f325-0196-4ff1-91c5-84aeb3f7d3af">
+      <ID>Dim Date</ID>
+      <Name>Dim Date</Name>
+      <DimensionID>Dim Date</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="8f061176-bdaa-4641-a0b6-5dc1f1a3b8e9">
+          <AttributeID>Date</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="4fca14bb-5bfc-4d0e-b6dd-08686bbeec1f">
+          <AttributeID>Day</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="74456370-c2b8-4532-9366-ccd61f4fedb9">
+          <AttributeID>Month</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d2cc3202-40a9-4dba-a49f-fbf452c7c872">
+          <AttributeID>Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="eeed4ca7-6125-406c-bbe8-0e14b937e8d5">
+          <AttributeID>Quarter</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="ce38edfa-c9c9-4711-a6b3-7cae79531d1e">
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="c08ba571-d2b3-4473-9e0b-c54cb53348fb">
+      <ID>Dim Road Type</ID>
+      <Name>Dim Road Type</Name>
+      <DimensionID>Dim Road Type</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="722e14de-5dd5-4831-ba59-aae8519baffa">
+          <AttributeID>Road Type NK</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="05836adb-d9f0-4f46-8184-7b0fa0dc16f0">
+          <AttributeID>Road Type Name</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="43260c57-0459-4cae-a025-955a56b4bcaf">
+      <ID>Dim Location</ID>
+      <Name>Dim Location</Name>
+      <DimensionID>Dim Location</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="77d4b757-500b-426e-b274-5196f65251e2">
+          <AttributeID>Location NK</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c65c9939-87e7-4cf7-8372-5f7ef36c77a5">
+          <AttributeID>Region Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a0d03e2e-34be-41cc-a6e1-fcd00e975402">
+          <AttributeID>County</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="9009cd52-0de9-4f20-8caa-222b9b866c5e">
+          <AttributeID>City</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="58b42d72-c5c6-4ee7-afa2-4a47aeba0113">
+          <AttributeID>Country Name</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="b23e883a-26f9-47aa-b635-d53715e5bd81">
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="e363e645-4ef8-4ae0-b2bb-25c1c6697ec5">
+      <ID>Dim Severity</ID>
+      <Name>Dim Severity</Name>
+      <DimensionID>Dim Severity</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="6b56e6cf-4ac9-4365-9854-943b19d2bea9">
+          <AttributeID>Severity NK</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="1116ab2b-dc14-44a5-91e0-b1f87da07976">
+          <AttributeID>Severity Name</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="5a80cd4e-48df-4edd-b586-eb753f75c3c2">
+      <ID>Dim Built Up Road Type</ID>
+      <Name>Dim Built Up Road Type</Name>
+      <DimensionID>Dim Built Up Road Type</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="13bb3c99-836e-487e-9251-db5ea37ad50a">
+          <AttributeID>Built Up Road Type ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="3814b968-9ada-42e8-a55b-8921969e2412">
+          <AttributeID>Built Up Road Type Name</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="b9082036-d0b5-4224-8bd9-b94cb52acb43">
+      <ID>Dim Vehicle Type</ID>
+      <Name>Dim Vehicle Type</Name>
+      <DimensionID>Dim Vehicle Type</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="c49dd104-bb57-4c6b-8840-4bf22e824a3a">
+          <AttributeID>Vehicle Type NK</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="017196d7-7f0c-4de4-87c1-033a529c1b16">
+          <AttributeID>Vehicle Type Name</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="f68fd264-0c18-4a4d-93c5-20b9e426161d">
+      <ID>Dim Journey Purpose</ID>
+      <Name>Dim Journey Purpose</Name>
+      <DimensionID>Dim Journey Purpose</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="e43504a6-4836-4b3f-ad8e-76130653a54f">
+          <AttributeID>Journey Purpose NK</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="2293082b-a8ee-47e2-99b7-1151f6052c58">
+          <AttributeID>Journey Purpose Name</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="3f9b52ef-6d5b-49e3-b612-114d7e66ee9b">
+      <ID>Dim Casualty Type</ID>
+      <Name>Dim Casualty Type</Name>
+      <DimensionID>Dim Casualty Type</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="cd45a2f6-f737-4439-b582-aa13fc2b26df">
+          <AttributeID>Casualty Type NK</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="56e7588f-42b1-4ca5-82b7-58bec29e59c1">
+          <AttributeID>Casualty Type Name</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="99b2f832-7192-48ec-b664-3b5c1fb5d24e">
+      <ID>Dim Sex Of Person</ID>
+      <Name>Dim Sex Of Person</Name>
+      <DimensionID>Dim Sex Of Person</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="f9f07b12-00b8-4935-9bec-865b4a5fed06">
+          <AttributeID>Sex Of Person NK</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="192c41be-c103-4080-85c6-c5850f23715d">
+          <AttributeID>Sex Of Person Name</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="b09ceb35-7593-40da-a4fc-988920237139">
+      <ID>Dim Age</ID>
+      <Name>Dim Age</Name>
+      <DimensionID>Dim Age</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="dadf555f-9790-410f-86de-4755a5b008ef">
+          <AttributeID>Age</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="18068d07-d3ac-4627-80b5-e17b069c27e9">
+          <AttributeID>Age Band</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="efe0aec5-5804-4620-958d-affd90131b57">
+          <AttributeID>Age Group</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="180b858f-53bb-407a-9e16-54d0bb3c8f7b">
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="64fd4a2a-dc2b-472a-9ba5-b57fd78610df">
+      <ID>Dim Local Authority District</ID>
+      <Name>Dim Local Authority District</Name>
+      <DimensionID>Dim Local Authority District</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="92518fa0-5d6d-46da-9c7b-7dcf9f5b9d64">
+          <AttributeID>Local Authority District NK</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="9867b9ed-ca5b-46fb-bc7c-d01214f31a3f">
+          <AttributeID>Local Authority District Name</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="9cc913bb-35ee-46a8-847f-16e48223f132">
+      <ID>Dim Session In Day</ID>
+      <Name>Dim Session In Day</Name>
+      <DimensionID>Dim Session In Day</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="9ef20871-fb8d-41e9-bb3f-eaba4801223a">
+          <AttributeID>Session In Day ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="fcf73375-aa2f-4a14-9956-52fbb1c23b25">
+          <AttributeID>Session In Day</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+  </Dimensions>
+  <MeasureGroups>
+    <MeasureGroup dwd:design-time-name="60ffa5fb-23df-41ba-891b-4e7369fde789">
+      <ID>Fact Accidents</ID>
+      <Name>Fact Accidents</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="49c3e61e-38be-4d52-842c-ebd7f1806579">
+          <ID>Num Of Acc</ID>
+          <Name>Num Of Acc</Name>
+          <Source dwd:design-time-name="8936cc00-fe88-445d-9fdd-fbb399e467a9">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="473775f7-86ce-4809-b9fd-2ae08556b9bd">
+              <TableID>dbo_Fact_Accidents</TableID>
+              <ColumnID>NumOfAcc</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="8f8d11bb-5094-47e9-96a2-20caeae5c3ff">
+          <CubeDimensionID>Dim Urban Or Rural</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="1b711c0e-63fd-4c24-84a7-8248dae797ea">
+              <AttributeID>Urban Rural NK</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="f0783f00-6567-4e1a-a71e-16ad661d4f9f">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="43c6a710-de55-405d-9073-fab55f85799b">
+                    <TableID>dbo_Fact_Accidents</TableID>
+                    <ColumnID>Urban_Rural_NK</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="ed7deef2-5482-4ec7-9604-610cddb70eea">
+          <CubeDimensionID>Dim Date</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="25132b18-bf16-4f6e-aa30-d43ee2c16916">
+              <AttributeID>Date</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="7dee883a-13eb-4c81-a8c9-cd480b8bcf56">
+                  <DataType>Date</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="48a7b1ee-f8b6-47a0-85a3-57cd25869b92">
+                    <TableID>dbo_Fact_Accidents</TableID>
+                    <ColumnID>Date</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="ccd562c7-3c95-4477-beef-be133b8d0c52">
+          <CubeDimensionID>Dim Road Type</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="f0d73d33-d5ab-4cde-900f-ecdd5f7640a1">
+              <AttributeID>Road Type NK</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="819fd19c-1794-4afd-9387-079f2dd861a5">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="785608b7-02e3-41b3-950f-b329ba3fd262">
+                    <TableID>dbo_Fact_Accidents</TableID>
+                    <ColumnID>Road_Type_NK</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="b909e8b7-be30-4516-80c4-7f3991e6a347">
+          <CubeDimensionID>Dim Session In Day</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="bb260a9c-64b0-459d-81a5-db7f5008717d">
+              <AttributeID>Session In Day ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="f3fb796e-4cde-4d0a-9d75-f169d9ba9f61">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="999a7ccb-26a8-4842-833f-2a7f4ab6334e">
+                    <TableID>dbo_Fact_Accidents</TableID>
+                    <ColumnID>Session_In_Day</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="ee2dbe89-8930-4c51-81aa-008a8242945f">
+          <CubeDimensionID>Dim Location</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="e1ab34a1-311c-49bf-9e0c-e31e19d3cb84">
+              <AttributeID>Location NK</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="3e611086-9d60-4540-a178-77328fb260ff">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="38bcbfcc-4b07-4a81-814e-29fb4fdb4594">
+                    <TableID>dbo_Fact_Accidents</TableID>
+                    <ColumnID>Location_NK</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="ec9fc5de-cd51-41da-a82c-f2ef824957fc">
+          <CubeDimensionID>Dim Severity</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="210e55f3-d931-4db9-8e56-c9a4a3c06e91">
+              <AttributeID>Severity NK</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="2a447953-f737-4c4c-8df5-c9ce181a12f0">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="900ac687-8bd5-424b-8d30-c9d7956bc7e3">
+                    <TableID>dbo_Fact_Accidents</TableID>
+                    <ColumnID>Severity_NK</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="ec82bf69-5c10-4655-b0e5-79c40f6e0c4e">
+          <CubeDimensionID>Dim Built Up Road Type</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="6a52a147-389d-4939-aa30-38b88019da33">
+              <AttributeID>Built Up Road Type ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="749ae255-dbd2-4579-a84c-4d3ea83e5f5f">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="d1d4cdc1-9be4-42b0-bdf7-97fcfd171d46">
+                    <TableID>dbo_Fact_Accidents</TableID>
+                    <ColumnID>Built_up_Road_Type_ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="25333d9e-2b3e-468f-9f2a-50fb204737f1">
+          <CubeDimensionID>Dim Vehicle Type</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="5e50728e-48c9-4e93-ac6f-71cdfac70a40">
+              <AttributeID>Vehicle Type NK</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="db6c64bc-157f-4919-b1f5-222c27c49aff">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="ede0622f-5723-4a68-9be1-8aefc1378080">
+                    <TableID>dbo_Fact_Accidents</TableID>
+                    <ColumnID>Vehicle_Type_NK</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="bd39aabb-91a8-41c1-a650-16e74ff3a5b0">
+          <CubeDimensionID>Dim Journey Purpose</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="848376b7-d32b-4162-9621-1449681b903f">
+              <AttributeID>Journey Purpose NK</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="4b4c5d9c-b236-4ef2-b11c-c810e2f00ef7">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="17f9d484-93bf-440b-b0a7-cb9a06e362a2">
+                    <TableID>dbo_Fact_Accidents</TableID>
+                    <ColumnID>Journey_Purpose_NK</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="3629e2ae-d9f4-4e7a-bfa4-649f9b62418b">
+      <ID>Fact Casualities</ID>
+      <Name>Fact Casualities</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="86f819ac-0de4-4a17-878a-6f0260c816c2">
+          <ID>Num Of Cas</ID>
+          <Name>Num Of Cas</Name>
+          <Source dwd:design-time-name="20dfad1c-5306-4437-a908-9631724c1fc6">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="5b026af0-f05b-4306-bc6e-1ecb570c76b9">
+              <TableID>dbo_Fact_Casualities</TableID>
+              <ColumnID>NumOfCas</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="13e3a034-f625-4b4a-b2a4-5b952f90cd9a">
+          <CubeDimensionID>Dim Casualty Type</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="c4574bdf-2c97-4259-9280-c1188a8c5275">
+              <AttributeID>Casualty Type NK</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="faf156a6-47d9-42ee-8b28-557a309efd13">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="e3ef31bd-80ce-47c0-9ce5-01cab6cc2c04">
+                    <TableID>dbo_Fact_Casualities</TableID>
+                    <ColumnID>Casualty_Type_NK</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="7479cdc4-3c9b-49cf-9a9c-9e089b620f5b">
+          <CubeDimensionID>Dim Location</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="789c087c-22d4-4bbc-8ddc-bfb8d824188f">
+              <AttributeID>Location NK</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="5a979268-7ba7-43e9-9732-4e28ffec85f6">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="10a5e50b-2b40-4142-878c-3a94ec28b920">
+                    <TableID>dbo_Fact_Casualities</TableID>
+                    <ColumnID>Location_NK</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="5bbeaaac-dd8a-4b2c-bc29-e2f800e92bdd">
+          <CubeDimensionID>Dim Sex Of Person</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="b936d25e-19b3-4e52-9d34-14d655bc0e3c">
+              <AttributeID>Sex Of Person NK</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="a99c977c-9ccf-4db1-b634-31196006052c">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="e82a0b4f-8a18-4859-8798-c4e878294595">
+                    <TableID>dbo_Fact_Casualities</TableID>
+                    <ColumnID>Sex_of_Person_NK</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="404ba844-1b79-484b-ad3d-887df67c923c">
+          <CubeDimensionID>Dim Age</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="3d425a17-aea9-49f4-a2d7-24f510f90c72">
+              <AttributeID>Age</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="9035ed01-844c-4d7e-983a-13b3c11476b3">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="cf6c87b3-c022-4368-96c7-5a6c4521bc0f">
+                    <TableID>dbo_Fact_Casualities</TableID>
+                    <ColumnID>Age</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="40e5f3bd-e227-4c76-a850-3223f6a64ba3">
+          <CubeDimensionID>Dim Severity</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="8261e914-b6cb-4db0-bd25-fe4978a49ff8">
+              <AttributeID>Severity NK</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="71d0e06b-39cd-40d3-a885-6a50e972a3c7">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="9753da37-ed02-4984-8898-348d92d7ad7a">
+                    <TableID>dbo_Fact_Casualities</TableID>
+                    <ColumnID>Severity_NK</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="1323f842-eb18-4667-bf11-1f27e9bd15df">
+          <CubeDimensionID>Dim Date</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="4a049857-e571-4ebf-a910-cce9f1f2496f">
+              <AttributeID>Date</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="9a67274c-875e-43fc-bb39-53024e684172">
+                  <DataType>Date</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="747d6c0f-19f0-450d-b019-a645b182c368">
+                    <TableID>dbo_Fact_Casualities</TableID>
+                    <ColumnID>Date</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="bcd2edc2-a26d-450f-b4e5-81686453dbd0">
+          <CubeDimensionID>Dim Local Authority District</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="7ec2ba7b-a64b-48d1-81a3-3edb53af7ce5">
+              <AttributeID>Local Authority District NK</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="cfd06e93-0379-4b87-89bc-ec65d7d0379f">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="79dd6709-226b-4204-a127-554fd38f7815">
+                    <TableID>dbo_Fact_Casualities</TableID>
+                    <ColumnID>Local_Authority_District_NK</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="b4671509-21e7-4ecc-b891-723e71dede10">
+      <ID>Fact Variance</ID>
+      <Name>Fact Variance</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="90c655db-87fa-474c-a7ff-9cae81f4e785">
+          <ID>Total</ID>
+          <Name>Total</Name>
+          <Source dwd:design-time-name="1b5d19fb-c6bd-49de-91d0-518042d6f3ab">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="ab1a157c-e3e9-44a2-a254-cbf40fe89ba4">
+              <TableID>dbo_Fact_Variance</TableID>
+              <ColumnID>Total</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="dca384a5-040f-41d9-8d00-24fb6ddff9e5">
+          <CubeDimensionID>Dim Date</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="25a83d5b-e679-4fd1-95ab-2823dbf5447c">
+              <AttributeID>Date</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="63543ce1-ea4d-485b-a75a-d1ebb36f934c">
+                  <DataType>Date</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="0130a129-c690-433a-ba2d-241358190f0f">
+                    <TableID>dbo_Fact_Variance</TableID>
+                    <ColumnID>Date</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="6ce6c4be-c871-45b2-ae91-0312944f714c">
+          <CubeDimensionID>Dim Location</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="66e701a1-dd24-4b7e-a8a5-e74349b1b34e">
+              <AttributeID>Location NK</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="80cb7f7d-1434-4c04-be6c-a3c5db38fa97">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="41606eea-ea3d-4c5f-b630-575120d1fce6">
+                    <TableID>dbo_Fact_Variance</TableID>
+                    <ColumnID>Location_NK</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+  </MeasureGroups>
+  <Source dwd:design-time-name="81af1708-edbd-4adc-8bdc-ee4206f9f47c">
+    <DataSourceViewID>UCA DDS</DataSourceViewID>
+  </Source>
+</Cube>
