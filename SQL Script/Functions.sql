@@ -42,15 +42,6 @@ join [Sex_of_Person_NDS] s_p on c.Sex_of_Casualty=s_p.Sex_of_Person_ID
 GROUP BY [Date], l_a.Local_Authority_District_NK, l.Location_NK, Casualty_Severity, Age_of_Casualty, s_p.Sex_of_Person_NK, c_t.Casualty_Type_NK
 ORDER BY  NumOfCas DESC
 
-SELECT [Date], l_a.Local_Authority_District_NK, l.Location_NK, Casualty_Severity, Age_of_Casualty, s_p.Sex_of_Person_NK, c_t.Casualty_Type_NK , SUM(Number_of_Casualties) AS NumOfDead
-FROM ((((Casualties_NDS c join Accidents_NDS a on c.Accident_Index=a.Accident_Index)
-join [Local_Authority_District_NDS] l_a on a.Local_Authority_District=l_a.Local_Authority_District_Id) 
-join [Location_NDS] l on a.Location_ID=l.Location_Id) 
-join [Casualty_Type_NDS] c_t on c.Casualty_Type=c_t.Casualty_Type_ID) 
-join [Sex_of_Person_NDS] s_p on c.Sex_of_Casualty=s_p.Sex_of_Person_ID
-GROUP BY [Date], l_a.Local_Authority_District_NK, l.Location_NK, Casualty_Severity, Age_of_Casualty, s_p.Sex_of_Person_NK, c_t.Casualty_Type_NK
-ORDER BY NumOfDead DESC
-
 -- Tinh Variance de  tinh muc do  tang gia, cua TNGT qua cac nam
 select table1.Y as 'Year 1', table2.Y as 'Year 2', table1.NumOfAccY1, table2.NumOfAccY2,
 	CAST((table2.NumOfAccY2 - table1.NumOfAccY1) as float) / CAST(table1.NumOfAccY1 as float) as 'Variance (%)'

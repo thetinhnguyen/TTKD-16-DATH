@@ -116,10 +116,6 @@ CREATE TABLE Fact_Accidents(
 	[Vehicle_Type_NK] [int] FOREIGN KEY REFERENCES dimVehicleType, --FK Vehicles_NDS
 	[Journey_Purpose_NK] [int] FOREIGN KEY REFERENCES dimJourneyPurpose, --FK Vehicles_NDS
 	[NumOfAcc] int,
-	--NumOfAcc_Sev_Sess INT, --So luong TNGT cho cau 4
-	--NumOfAcc_Sev_Area_RoadType INT, --So luong TNGT cho cau 5
-	--NumOfAcc_JourP_VehicleType INT, --Tong so luong TNGT cho cau 7
-	--NumOfAcc_JourP_VehicleType_BUR INT, --Tong so luong TNGT cho cau 9
 	PRIMARY KEY ([Date], 
 				Session_in_Day, 
 				Severity_NK, 
@@ -142,10 +138,6 @@ CREATE TABLE Fact_Casualities(
 	[Sex_of_Person_NK] [int] FOREIGN KEY REFERENCES dimSexOfPerson,
 	[Casualty_Type_NK] [int] FOREIGN KEY REFERENCES dimCasualtyType,
 	[NumOfCas]INT,
-	[NumOfDead] INT, --Tong so luong nguoi tu vong cho cau 3
-	--[NumOfCas_Severity_Local_AllYear] INT, --So luong nan nhan cho cau 1
-	--[NumOfCas_Severity_Local_Date] int,--So luong nan nhan cho cau 2
-	--[NumOfCas_Severity_CasType_AgeGroup] int, --So luong nan nhan cho cau 6
 	PRIMARY KEY ([Date], Local_Authority_District_NK, Location_NK, Severity_NK, Age, Sex_of_Person_NK, Casualty_Type_NK )
 )
 
