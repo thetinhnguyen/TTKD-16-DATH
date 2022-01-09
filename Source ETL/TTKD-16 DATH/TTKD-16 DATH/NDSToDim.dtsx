@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="56"
-  DTS:VersionGUID="{69033774-E09F-4B3F-B4B3-08C4E8463E9D}">
+  DTS:VersionBuild="58"
+  DTS:VersionGUID="{9FF5A903-642D-4F2F-BF3B-61A8ED934B30}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1884,11 +1884,11 @@
           version="1">
           <components>
             <component
-              refId="Package\dimAge\Insert Destination"
+              refId="Package\dimAge\Insert Destination 1"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
               description="OLE DB Destination"
-              name="Insert Destination"
+              name="Insert Destination 1"
               usesDispositions="true"
               version="4">
               <properties>
@@ -1941,7 +1941,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\dimAge\Insert Destination.Connections[OleDbConnection]"
+                  refId="Package\dimAge\Insert Destination 1.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[LocalHost.UCA_DDS]"
                   connectionManagerRefId="Package.ConnectionManagers[LocalHost.UCA_DDS]"
                   description="The OLE DB runtime connection used to access the database."
@@ -1949,46 +1949,46 @@
               </connections>
               <inputs>
                 <input
-                  refId="Package\dimAge\Insert Destination.Inputs[OLE DB Destination Input]"
+                  refId="Package\dimAge\Insert Destination 1.Inputs[OLE DB Destination Input]"
                   errorOrTruncationOperation="Insert"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\dimAge\Insert Destination.Inputs[OLE DB Destination Input].Columns[Age_Group]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Age_Group"
-                      externalMetadataColumnId="Package\dimAge\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[Age_Group]"
-                      lineageId="Package\dimAge\OLE DB Source.Outputs[OLE DB Source Output].Columns[Age_Group]" />
-                    <inputColumn
-                      refId="Package\dimAge\Insert Destination.Inputs[OLE DB Destination Input].Columns[Age_of_Casualty]"
+                      refId="Package\dimAge\Insert Destination 1.Inputs[OLE DB Destination Input].Columns[Age_of_Casualty]"
                       cachedDataType="i4"
                       cachedName="Age_of_Casualty"
-                      externalMetadataColumnId="Package\dimAge\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[Age]"
+                      externalMetadataColumnId="Package\dimAge\Insert Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Age]"
                       lineageId="Package\dimAge\OLE DB Source.Outputs[OLE DB Source Output].Columns[Age_of_Casualty]" />
                     <inputColumn
-                      refId="Package\dimAge\Insert Destination.Inputs[OLE DB Destination Input].Columns[Age_Band_of_Casualty]"
+                      refId="Package\dimAge\Insert Destination 1.Inputs[OLE DB Destination Input].Columns[Age_Band_of_Casualty]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Age_Band_of_Casualty"
-                      externalMetadataColumnId="Package\dimAge\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[Age_Band]"
+                      externalMetadataColumnId="Package\dimAge\Insert Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Age_Band]"
                       lineageId="Package\dimAge\OLE DB Source.Outputs[OLE DB Source Output].Columns[Age_Band_of_Casualty]" />
+                    <inputColumn
+                      refId="Package\dimAge\Insert Destination 1.Inputs[OLE DB Destination Input].Columns[Age_Group]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Age_Group"
+                      externalMetadataColumnId="Package\dimAge\Insert Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Age_Group]"
+                      lineageId="Package\dimAge\OLE DB Source.Outputs[OLE DB Source Output].Columns[Age_Group]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\dimAge\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[Age]"
+                      refId="Package\dimAge\Insert Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Age]"
                       dataType="i4"
                       name="Age" />
                     <externalMetadataColumn
-                      refId="Package\dimAge\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[Age_Band]"
+                      refId="Package\dimAge\Insert Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Age_Band]"
                       dataType="wstr"
                       length="255"
                       name="Age_Band" />
                     <externalMetadataColumn
-                      refId="Package\dimAge\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[Age_Group]"
+                      refId="Package\dimAge\Insert Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Age_Group]"
                       dataType="wstr"
                       length="255"
                       name="Age_Group" />
@@ -1997,22 +1997,288 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\dimAge\Insert Destination.Outputs[OLE DB Destination Error Output]"
+                  refId="Package\dimAge\Insert Destination 1.Outputs[OLE DB Destination Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\dimAge\Insert Destination.Inputs[OLE DB Destination Input]">
+                  synchronousInputId="Package\dimAge\Insert Destination 1.Inputs[OLE DB Destination Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\dimAge\Insert Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      refId="Package\dimAge\Insert Destination 1.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\dimAge\Insert Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      lineageId="Package\dimAge\Insert Destination 1.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\dimAge\Insert Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      refId="Package\dimAge\Insert Destination 1.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\dimAge\Insert Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\dimAge\Insert Destination 1.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\dimAge\OLE DB Command"
+              componentClassID="Microsoft.OLEDBCommand"
+              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
+              name="OLE DB Command"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">UPDATE [dbo].[dimAge] SET [Age_Band] = ?,[Age_Group] = ? WHERE [Age] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\dimAge\OLE DB Command.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.UCA_DDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.UCA_DDS]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\dimAge\OLE DB Command.Inputs[OLE DB Command Input]"
+                  errorOrTruncationOperation="Command Execution"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Command Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\dimAge\OLE DB Command.Inputs[OLE DB Command Input].Columns[Age_of_Casualty]"
+                      cachedDataType="i4"
+                      cachedName="Age_of_Casualty"
+                      externalMetadataColumnId="Package\dimAge\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      lineageId="Package\dimAge\OLE DB Source.Outputs[OLE DB Source Output].Columns[Age_of_Casualty]" />
+                    <inputColumn
+                      refId="Package\dimAge\OLE DB Command.Inputs[OLE DB Command Input].Columns[Age_Band_of_Casualty]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Age_Band_of_Casualty"
+                      externalMetadataColumnId="Package\dimAge\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      lineageId="Package\dimAge\OLE DB Source.Outputs[OLE DB Source Output].Columns[Age_Band_of_Casualty]" />
+                    <inputColumn
+                      refId="Package\dimAge\OLE DB Command.Inputs[OLE DB Command Input].Columns[Age_Group]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Age_Group"
+                      externalMetadataColumnId="Package\dimAge\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      lineageId="Package\dimAge\OLE DB Source.Outputs[OLE DB Source Output].Columns[Age_Group]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\dimAge\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      dataType="wstr"
+                      length="255"
+                      name="Param_0">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\dimAge\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      dataType="wstr"
+                      length="255"
+                      name="Param_1">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\dimAge\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      dataType="i4"
+                      name="Param_2">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\dimAge\OLE DB Command.Outputs[OLE DB Command Output]"
+                  exclusionGroup="1"
+                  name="OLE DB Command Output"
+                  synchronousInputId="Package\dimAge\OLE DB Command.Inputs[OLE DB Command Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\dimAge\OLE DB Command.Outputs[OLE DB Command Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Command Error Output"
+                  synchronousInputId="Package\dimAge\OLE DB Command.Inputs[OLE DB Command Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\dimAge\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\dimAge\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\dimAge\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\dimAge\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\dimAge\OLE DB Command 1"
+              componentClassID="Microsoft.OLEDBCommand"
+              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
+              name="OLE DB Command 1"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">UPDATE [dbo].[dimAge] SET [Age_Band] = ?,[Age_Group] = ? WHERE [Age] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\dimAge\OLE DB Command 1.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.UCA_DDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.UCA_DDS]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\dimAge\OLE DB Command 1.Inputs[OLE DB Command Input]"
+                  errorOrTruncationOperation="Command Execution"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Command Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\dimAge\OLE DB Command 1.Inputs[OLE DB Command Input].Columns[Age_of_Casualty]"
+                      cachedDataType="i4"
+                      cachedName="Age_of_Casualty"
+                      externalMetadataColumnId="Package\dimAge\OLE DB Command 1.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      lineageId="Package\dimAge\OLE DB Source.Outputs[OLE DB Source Output].Columns[Age_of_Casualty]" />
+                    <inputColumn
+                      refId="Package\dimAge\OLE DB Command 1.Inputs[OLE DB Command Input].Columns[Age_Band_of_Casualty]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Age_Band_of_Casualty"
+                      externalMetadataColumnId="Package\dimAge\OLE DB Command 1.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      lineageId="Package\dimAge\OLE DB Source.Outputs[OLE DB Source Output].Columns[Age_Band_of_Casualty]" />
+                    <inputColumn
+                      refId="Package\dimAge\OLE DB Command 1.Inputs[OLE DB Command Input].Columns[Age_Group]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Age_Group"
+                      externalMetadataColumnId="Package\dimAge\OLE DB Command 1.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      lineageId="Package\dimAge\OLE DB Source.Outputs[OLE DB Source Output].Columns[Age_Group]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\dimAge\OLE DB Command 1.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      dataType="wstr"
+                      length="255"
+                      name="Param_0">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\dimAge\OLE DB Command 1.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      dataType="wstr"
+                      length="255"
+                      name="Param_1">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\dimAge\OLE DB Command 1.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      dataType="i4"
+                      name="Param_2">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\dimAge\OLE DB Command 1.Outputs[OLE DB Command Output]"
+                  exclusionGroup="1"
+                  name="OLE DB Command Output"
+                  synchronousInputId="Package\dimAge\OLE DB Command 1.Inputs[OLE DB Command Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\dimAge\OLE DB Command 1.Outputs[OLE DB Command Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Command Error Output"
+                  synchronousInputId="Package\dimAge\OLE DB Command 1.Inputs[OLE DB Command Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\dimAge\OLE DB Command 1.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\dimAge\OLE DB Command 1.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\dimAge\OLE DB Command 1.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\dimAge\OLE DB Command 1.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -2168,11 +2434,198 @@
                 </output>
               </outputs>
             </component>
+            <component
+              refId="Package\dimAge\Slowly Changing Dimension"
+              componentClassID="Microsoft.SCD"
+              contactInfo="Slowly Changing Dimension;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;3"
+              description="Updates a SQL Server Analysis Services data warehouse dimension. Update dimension records that are already present and  insert dimension records that aren't. For example, update the DimProduct table of the AdventureWorksDW OLAP database with data from the Products table in the AdventureWorks OLTP database."
+              name="Slowly Changing Dimension"
+              version="3">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SELECT statement used to create a schema rowset."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT [Age], [Age_Band], [Age_Group] FROM [dbo].[dimAge]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the WHERE clause in the SELECT statement that selects the current row among rows with identical business keys."
+                  name="CurrentRowWhere"></property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether historical attribute updates are directed to the transformation output for changing attribute updates."
+                  name="UpdateChangingAttributeHistory">true</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the transformation fails when columns with fixed attributes contain changes."
+                  name="FailOnFixedAttributeChange">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the column name for the inferred member."
+                  name="InferredMemberIndicator"></property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether inferred member updates are detected."
+                  name="EnableInferredMember">true</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the transformation fails when a lookup of an existing record fails."
+                  name="FailOnLookupFailure">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies that all rows in the input are new or the transformation detects the change type."
+                  name="IncomingRowChangeType"
+                  typeConverter="IncomingRowChangeType">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\dimAge\Slowly Changing Dimension.Connections[LookupConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.UCA_DDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.UCA_DDS]"
+                  description="Defines the connection to use for lookups in the dimension table"
+                  name="LookupConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\dimAge\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]"
+                  name="Slowly Changing Dimension Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\dimAge\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].Columns[Age_of_Casualty]"
+                      cachedDataType="i4"
+                      cachedName="Age_of_Casualty"
+                      externalMetadataColumnId="Package\dimAge\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[Age]"
+                      lineageId="Package\dimAge\OLE DB Source.Outputs[OLE DB Source Output].Columns[Age_of_Casualty]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          name="ColumnType"
+                          typeConverter="ColumnType">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\dimAge\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].Columns[Age_Band_of_Casualty]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Age_Band_of_Casualty"
+                      externalMetadataColumnId="Package\dimAge\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[Age_Band]"
+                      lineageId="Package\dimAge\OLE DB Source.Outputs[OLE DB Source Output].Columns[Age_Band_of_Casualty]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          name="ColumnType"
+                          typeConverter="ColumnType">2</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\dimAge\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].Columns[Age_Group]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Age_Group"
+                      externalMetadataColumnId="Package\dimAge\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[Age_Group]"
+                      lineageId="Package\dimAge\OLE DB Source.Outputs[OLE DB Source Output].Columns[Age_Group]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          name="ColumnType"
+                          typeConverter="ColumnType">2</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\dimAge\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[Age]"
+                      dataType="i4"
+                      name="Age" />
+                    <externalMetadataColumn
+                      refId="Package\dimAge\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[Age_Band]"
+                      dataType="wstr"
+                      length="255"
+                      name="Age_Band" />
+                    <externalMetadataColumn
+                      refId="Package\dimAge\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[Age_Group]"
+                      dataType="wstr"
+                      length="255"
+                      name="Age_Group" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\dimAge\Slowly Changing Dimension.Outputs[Unchanged Output]"
+                  description="Unchanged rows"
+                  exclusionGroup="1"
+                  name="Unchanged Output"
+                  synchronousInputId="Package\dimAge\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\dimAge\Slowly Changing Dimension.Outputs[New Output]"
+                  description="New rows"
+                  exclusionGroup="1"
+                  name="New Output"
+                  synchronousInputId="Package\dimAge\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\dimAge\Slowly Changing Dimension.Outputs[Fixed Attribute Output]"
+                  description="Rows with changes in columns tagged FixedAttribute"
+                  exclusionGroup="1"
+                  name="Fixed Attribute Output"
+                  synchronousInputId="Package\dimAge\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\dimAge\Slowly Changing Dimension.Outputs[Changing Attribute Updates Output]"
+                  description="These rows contain new information for ChangingAttribute (Type 1) column changes"
+                  exclusionGroup="1"
+                  name="Changing Attribute Updates Output"
+                  synchronousInputId="Package\dimAge\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\dimAge\Slowly Changing Dimension.Outputs[Historical Attribute Inserts Output]"
+                  description="HistoricalAttribute (Type 2) changes result in these new rows"
+                  exclusionGroup="2"
+                  name="Historical Attribute Inserts Output"
+                  synchronousInputId="Package\dimAge\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\dimAge\Slowly Changing Dimension.Outputs[Inferred Member Updates Output]"
+                  description="Information to update unpopulated initial dimension row"
+                  exclusionGroup="1"
+                  name="Inferred Member Updates Output"
+                  synchronousInputId="Package\dimAge\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
           </components>
           <paths>
             <path
+              refId="Package\dimAge.Paths[Changing Attribute Updates Output]"
+              endId="Package\dimAge\OLE DB Command 1.Inputs[OLE DB Command Input]"
+              name="Changing Attribute Updates Output"
+              startId="Package\dimAge\Slowly Changing Dimension.Outputs[Changing Attribute Updates Output]" />
+            <path
+              refId="Package\dimAge.Paths[Inferred Member Updates Output]"
+              endId="Package\dimAge\OLE DB Command.Inputs[OLE DB Command Input]"
+              name="Inferred Member Updates Output"
+              startId="Package\dimAge\Slowly Changing Dimension.Outputs[Inferred Member Updates Output]" />
+            <path
+              refId="Package\dimAge.Paths[New Output]"
+              endId="Package\dimAge\Insert Destination 1.Inputs[OLE DB Destination Input]"
+              name="New Output"
+              startId="Package\dimAge\Slowly Changing Dimension.Outputs[New Output]" />
+            <path
               refId="Package\dimAge.Paths[OLE DB Source Output]"
-              endId="Package\dimAge\Insert Destination.Inputs[OLE DB Destination Input]"
+              endId="Package\dimAge\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]"
               name="OLE DB Source Output"
               startId="Package\dimAge\OLE DB Source.Outputs[OLE DB Source Output]" />
           </paths>
@@ -2194,11 +2647,11 @@
           version="1">
           <components>
             <component
-              refId="Package\dimDate\Insert Destination"
+              refId="Package\dimDate\Insert Destination 1"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
               description="OLE DB Destination"
-              name="Insert Destination"
+              name="Insert Destination 1"
               usesDispositions="true"
               version="4">
               <properties>
@@ -2251,7 +2704,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\dimDate\Insert Destination.Connections[OleDbConnection]"
+                  refId="Package\dimDate\Insert Destination 1.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[LocalHost.UCA_DDS]"
                   connectionManagerRefId="Package.ConnectionManagers[LocalHost.UCA_DDS]"
                   description="The OLE DB runtime connection used to access the database."
@@ -2259,73 +2712,73 @@
               </connections>
               <inputs>
                 <input
-                  refId="Package\dimDate\Insert Destination.Inputs[OLE DB Destination Input]"
+                  refId="Package\dimDate\Insert Destination 1.Inputs[OLE DB Destination Input]"
                   errorOrTruncationOperation="Insert"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\dimDate\Insert Destination.Inputs[OLE DB Destination Input].Columns[Date]"
+                      refId="Package\dimDate\Insert Destination 1.Inputs[OLE DB Destination Input].Columns[Date]"
                       cachedDataType="dbDate"
                       cachedName="Date"
-                      externalMetadataColumnId="Package\dimDate\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[Date]"
+                      externalMetadataColumnId="Package\dimDate\Insert Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Date]"
                       lineageId="Package\dimDate\OLE DB Source.Outputs[OLE DB Source Output].Columns[Date]" />
                     <inputColumn
-                      refId="Package\dimDate\Insert Destination.Inputs[OLE DB Destination Input].Columns[Day]"
+                      refId="Package\dimDate\Insert Destination 1.Inputs[OLE DB Destination Input].Columns[Day]"
                       cachedDataType="i4"
                       cachedName="Day"
-                      externalMetadataColumnId="Package\dimDate\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[Day]"
+                      externalMetadataColumnId="Package\dimDate\Insert Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Day]"
                       lineageId="Package\dimDate\OLE DB Source.Outputs[OLE DB Source Output].Columns[Day]" />
                     <inputColumn
-                      refId="Package\dimDate\Insert Destination.Inputs[OLE DB Destination Input].Columns[DayOfWeek]"
+                      refId="Package\dimDate\Insert Destination 1.Inputs[OLE DB Destination Input].Columns[DayOfWeek]"
                       cachedDataType="i4"
                       cachedName="DayOfWeek"
-                      externalMetadataColumnId="Package\dimDate\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[DayOfWeek]"
+                      externalMetadataColumnId="Package\dimDate\Insert Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[DayOfWeek]"
                       lineageId="Package\dimDate\OLE DB Source.Outputs[OLE DB Source Output].Columns[DayOfWeek]" />
                     <inputColumn
-                      refId="Package\dimDate\Insert Destination.Inputs[OLE DB Destination Input].Columns[Month]"
+                      refId="Package\dimDate\Insert Destination 1.Inputs[OLE DB Destination Input].Columns[Month]"
                       cachedDataType="i4"
                       cachedName="Month"
-                      externalMetadataColumnId="Package\dimDate\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[Month]"
+                      externalMetadataColumnId="Package\dimDate\Insert Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Month]"
                       lineageId="Package\dimDate\OLE DB Source.Outputs[OLE DB Source Output].Columns[Month]" />
                     <inputColumn
-                      refId="Package\dimDate\Insert Destination.Inputs[OLE DB Destination Input].Columns[Quarter]"
+                      refId="Package\dimDate\Insert Destination 1.Inputs[OLE DB Destination Input].Columns[Quarter]"
                       cachedDataType="i4"
                       cachedName="Quarter"
-                      externalMetadataColumnId="Package\dimDate\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[Quarter]"
+                      externalMetadataColumnId="Package\dimDate\Insert Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Quarter]"
                       lineageId="Package\dimDate\OLE DB Source.Outputs[OLE DB Source Output].Columns[Quarter]" />
                     <inputColumn
-                      refId="Package\dimDate\Insert Destination.Inputs[OLE DB Destination Input].Columns[Year]"
+                      refId="Package\dimDate\Insert Destination 1.Inputs[OLE DB Destination Input].Columns[Year]"
                       cachedDataType="i4"
                       cachedName="Year"
-                      externalMetadataColumnId="Package\dimDate\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[Year]"
+                      externalMetadataColumnId="Package\dimDate\Insert Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Year]"
                       lineageId="Package\dimDate\OLE DB Source.Outputs[OLE DB Source Output].Columns[Year]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\dimDate\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[Date]"
+                      refId="Package\dimDate\Insert Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Date]"
                       dataType="dbDate"
                       name="Date" />
                     <externalMetadataColumn
-                      refId="Package\dimDate\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[Day]"
+                      refId="Package\dimDate\Insert Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Day]"
                       dataType="i4"
                       name="Day" />
                     <externalMetadataColumn
-                      refId="Package\dimDate\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[DayOfWeek]"
+                      refId="Package\dimDate\Insert Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[DayOfWeek]"
                       dataType="i4"
                       name="DayOfWeek" />
                     <externalMetadataColumn
-                      refId="Package\dimDate\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[Month]"
+                      refId="Package\dimDate\Insert Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Month]"
                       dataType="i4"
                       name="Month" />
                     <externalMetadataColumn
-                      refId="Package\dimDate\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[Quarter]"
+                      refId="Package\dimDate\Insert Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Quarter]"
                       dataType="i4"
                       name="Quarter" />
                     <externalMetadataColumn
-                      refId="Package\dimDate\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[Year]"
+                      refId="Package\dimDate\Insert Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Year]"
                       dataType="i4"
                       name="Year" />
                   </externalMetadataColumns>
@@ -2333,22 +2786,202 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\dimDate\Insert Destination.Outputs[OLE DB Destination Error Output]"
+                  refId="Package\dimDate\Insert Destination 1.Outputs[OLE DB Destination Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\dimDate\Insert Destination.Inputs[OLE DB Destination Input]">
+                  synchronousInputId="Package\dimDate\Insert Destination 1.Inputs[OLE DB Destination Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\dimDate\Insert Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      refId="Package\dimDate\Insert Destination 1.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\dimDate\Insert Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      lineageId="Package\dimDate\Insert Destination 1.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\dimDate\Insert Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      refId="Package\dimDate\Insert Destination 1.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\dimDate\Insert Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\dimDate\Insert Destination 1.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\dimDate\OLE DB Command"
+              componentClassID="Microsoft.OLEDBCommand"
+              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
+              name="OLE DB Command"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">UPDATE [dbo].[dimDate] SET [Day] = ?,[DayOfWeek] = ?,[Month] = ?,[Quarter] = ?,[Year] = ? WHERE [Date] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\dimDate\OLE DB Command.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.UCA_DDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.UCA_DDS]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\dimDate\OLE DB Command.Inputs[OLE DB Command Input]"
+                  errorOrTruncationOperation="Command Execution"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Command Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\dimDate\OLE DB Command.Inputs[OLE DB Command Input].Columns[Date]"
+                      cachedDataType="dbDate"
+                      cachedName="Date"
+                      externalMetadataColumnId="Package\dimDate\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_5]"
+                      lineageId="Package\dimDate\OLE DB Source.Outputs[OLE DB Source Output].Columns[Date]" />
+                    <inputColumn
+                      refId="Package\dimDate\OLE DB Command.Inputs[OLE DB Command Input].Columns[Day]"
+                      cachedDataType="i4"
+                      cachedName="Day"
+                      externalMetadataColumnId="Package\dimDate\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      lineageId="Package\dimDate\OLE DB Source.Outputs[OLE DB Source Output].Columns[Day]" />
+                    <inputColumn
+                      refId="Package\dimDate\OLE DB Command.Inputs[OLE DB Command Input].Columns[DayOfWeek]"
+                      cachedDataType="i4"
+                      cachedName="DayOfWeek"
+                      externalMetadataColumnId="Package\dimDate\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      lineageId="Package\dimDate\OLE DB Source.Outputs[OLE DB Source Output].Columns[DayOfWeek]" />
+                    <inputColumn
+                      refId="Package\dimDate\OLE DB Command.Inputs[OLE DB Command Input].Columns[Month]"
+                      cachedDataType="i4"
+                      cachedName="Month"
+                      externalMetadataColumnId="Package\dimDate\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      lineageId="Package\dimDate\OLE DB Source.Outputs[OLE DB Source Output].Columns[Month]" />
+                    <inputColumn
+                      refId="Package\dimDate\OLE DB Command.Inputs[OLE DB Command Input].Columns[Quarter]"
+                      cachedDataType="i4"
+                      cachedName="Quarter"
+                      externalMetadataColumnId="Package\dimDate\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
+                      lineageId="Package\dimDate\OLE DB Source.Outputs[OLE DB Source Output].Columns[Quarter]" />
+                    <inputColumn
+                      refId="Package\dimDate\OLE DB Command.Inputs[OLE DB Command Input].Columns[Year]"
+                      cachedDataType="i4"
+                      cachedName="Year"
+                      externalMetadataColumnId="Package\dimDate\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_4]"
+                      lineageId="Package\dimDate\OLE DB Source.Outputs[OLE DB Source Output].Columns[Year]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\dimDate\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      dataType="i4"
+                      name="Param_0">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\dimDate\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      dataType="i4"
+                      name="Param_1">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\dimDate\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      dataType="i4"
+                      name="Param_2">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\dimDate\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
+                      dataType="i4"
+                      name="Param_3">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\dimDate\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_4]"
+                      dataType="i4"
+                      name="Param_4">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\dimDate\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_5]"
+                      dataType="dbDate"
+                      name="Param_5">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\dimDate\OLE DB Command.Outputs[OLE DB Command Output]"
+                  exclusionGroup="1"
+                  name="OLE DB Command Output"
+                  synchronousInputId="Package\dimDate\OLE DB Command.Inputs[OLE DB Command Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\dimDate\OLE DB Command.Outputs[OLE DB Command Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Command Error Output"
+                  synchronousInputId="Package\dimDate\OLE DB Command.Inputs[OLE DB Command Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\dimDate\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\dimDate\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\dimDate\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\dimDate\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -2552,11 +3185,240 @@
                 </output>
               </outputs>
             </component>
+            <component
+              refId="Package\dimDate\Slowly Changing Dimension"
+              componentClassID="Microsoft.SCD"
+              contactInfo="Slowly Changing Dimension;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;3"
+              description="Updates a SQL Server Analysis Services data warehouse dimension. Update dimension records that are already present and  insert dimension records that aren't. For example, update the DimProduct table of the AdventureWorksDW OLAP database with data from the Products table in the AdventureWorks OLTP database."
+              name="Slowly Changing Dimension"
+              version="3">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SELECT statement used to create a schema rowset."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT [Date], [Day], [DayOfWeek], [Month], [Quarter], [Year] FROM [dbo].[dimDate]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the WHERE clause in the SELECT statement that selects the current row among rows with identical business keys."
+                  name="CurrentRowWhere"></property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether historical attribute updates are directed to the transformation output for changing attribute updates."
+                  name="UpdateChangingAttributeHistory">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the transformation fails when columns with fixed attributes contain changes."
+                  name="FailOnFixedAttributeChange">true</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the column name for the inferred member."
+                  name="InferredMemberIndicator"></property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether inferred member updates are detected."
+                  name="EnableInferredMember">true</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the transformation fails when a lookup of an existing record fails."
+                  name="FailOnLookupFailure">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies that all rows in the input are new or the transformation detects the change type."
+                  name="IncomingRowChangeType"
+                  typeConverter="IncomingRowChangeType">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\dimDate\Slowly Changing Dimension.Connections[LookupConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.UCA_DDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.UCA_DDS]"
+                  description="Defines the connection to use for lookups in the dimension table"
+                  name="LookupConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\dimDate\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]"
+                  name="Slowly Changing Dimension Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\dimDate\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].Columns[Date]"
+                      cachedDataType="dbDate"
+                      cachedName="Date"
+                      externalMetadataColumnId="Package\dimDate\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[Date]"
+                      lineageId="Package\dimDate\OLE DB Source.Outputs[OLE DB Source Output].Columns[Date]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          name="ColumnType"
+                          typeConverter="ColumnType">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\dimDate\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].Columns[Day]"
+                      cachedDataType="i4"
+                      cachedName="Day"
+                      externalMetadataColumnId="Package\dimDate\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[Day]"
+                      lineageId="Package\dimDate\OLE DB Source.Outputs[OLE DB Source Output].Columns[Day]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          name="ColumnType"
+                          typeConverter="ColumnType">4</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\dimDate\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].Columns[DayOfWeek]"
+                      cachedDataType="i4"
+                      cachedName="DayOfWeek"
+                      externalMetadataColumnId="Package\dimDate\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[DayOfWeek]"
+                      lineageId="Package\dimDate\OLE DB Source.Outputs[OLE DB Source Output].Columns[DayOfWeek]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          name="ColumnType"
+                          typeConverter="ColumnType">4</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\dimDate\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].Columns[Month]"
+                      cachedDataType="i4"
+                      cachedName="Month"
+                      externalMetadataColumnId="Package\dimDate\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[Month]"
+                      lineageId="Package\dimDate\OLE DB Source.Outputs[OLE DB Source Output].Columns[Month]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          name="ColumnType"
+                          typeConverter="ColumnType">4</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\dimDate\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].Columns[Quarter]"
+                      cachedDataType="i4"
+                      cachedName="Quarter"
+                      externalMetadataColumnId="Package\dimDate\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[Quarter]"
+                      lineageId="Package\dimDate\OLE DB Source.Outputs[OLE DB Source Output].Columns[Quarter]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          name="ColumnType"
+                          typeConverter="ColumnType">4</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\dimDate\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].Columns[Year]"
+                      cachedDataType="i4"
+                      cachedName="Year"
+                      externalMetadataColumnId="Package\dimDate\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[Year]"
+                      lineageId="Package\dimDate\OLE DB Source.Outputs[OLE DB Source Output].Columns[Year]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          name="ColumnType"
+                          typeConverter="ColumnType">4</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\dimDate\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[Date]"
+                      dataType="dbDate"
+                      name="Date" />
+                    <externalMetadataColumn
+                      refId="Package\dimDate\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[Day]"
+                      dataType="i4"
+                      name="Day" />
+                    <externalMetadataColumn
+                      refId="Package\dimDate\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[DayOfWeek]"
+                      dataType="i4"
+                      name="DayOfWeek" />
+                    <externalMetadataColumn
+                      refId="Package\dimDate\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[Month]"
+                      dataType="i4"
+                      name="Month" />
+                    <externalMetadataColumn
+                      refId="Package\dimDate\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[Quarter]"
+                      dataType="i4"
+                      name="Quarter" />
+                    <externalMetadataColumn
+                      refId="Package\dimDate\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[Year]"
+                      dataType="i4"
+                      name="Year" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\dimDate\Slowly Changing Dimension.Outputs[Unchanged Output]"
+                  description="Unchanged rows"
+                  exclusionGroup="1"
+                  name="Unchanged Output"
+                  synchronousInputId="Package\dimDate\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\dimDate\Slowly Changing Dimension.Outputs[New Output]"
+                  description="New rows"
+                  exclusionGroup="1"
+                  name="New Output"
+                  synchronousInputId="Package\dimDate\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\dimDate\Slowly Changing Dimension.Outputs[Fixed Attribute Output]"
+                  description="Rows with changes in columns tagged FixedAttribute"
+                  exclusionGroup="1"
+                  name="Fixed Attribute Output"
+                  synchronousInputId="Package\dimDate\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\dimDate\Slowly Changing Dimension.Outputs[Changing Attribute Updates Output]"
+                  description="These rows contain new information for ChangingAttribute (Type 1) column changes"
+                  exclusionGroup="1"
+                  name="Changing Attribute Updates Output"
+                  synchronousInputId="Package\dimDate\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\dimDate\Slowly Changing Dimension.Outputs[Historical Attribute Inserts Output]"
+                  description="HistoricalAttribute (Type 2) changes result in these new rows"
+                  exclusionGroup="2"
+                  name="Historical Attribute Inserts Output"
+                  synchronousInputId="Package\dimDate\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\dimDate\Slowly Changing Dimension.Outputs[Inferred Member Updates Output]"
+                  description="Information to update unpopulated initial dimension row"
+                  exclusionGroup="1"
+                  name="Inferred Member Updates Output"
+                  synchronousInputId="Package\dimDate\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
           </components>
           <paths>
             <path
+              refId="Package\dimDate.Paths[Inferred Member Updates Output]"
+              endId="Package\dimDate\OLE DB Command.Inputs[OLE DB Command Input]"
+              name="Inferred Member Updates Output"
+              startId="Package\dimDate\Slowly Changing Dimension.Outputs[Inferred Member Updates Output]" />
+            <path
+              refId="Package\dimDate.Paths[New Output]"
+              endId="Package\dimDate\Insert Destination 1.Inputs[OLE DB Destination Input]"
+              name="New Output"
+              startId="Package\dimDate\Slowly Changing Dimension.Outputs[New Output]" />
+            <path
               refId="Package\dimDate.Paths[OLE DB Source Output]"
-              endId="Package\dimDate\Insert Destination.Inputs[OLE DB Destination Input]"
+              endId="Package\dimDate\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]"
               name="OLE DB Source Output"
               startId="Package\dimDate\OLE DB Source.Outputs[OLE DB Source Output]" />
           </paths>
@@ -7018,11 +7880,11 @@
           version="1">
           <components>
             <component
-              refId="Package\Session In Day\Insert Destination"
+              refId="Package\Session In Day\Insert Destination 1"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
               description="OLE DB Destination"
-              name="Insert Destination"
+              name="Insert Destination 1"
               usesDispositions="true"
               version="4">
               <properties>
@@ -7055,7 +7917,7 @@
                   dataType="System.Int32"
                   description="Specifies the mode used to access the database."
                   name="AccessMode"
-                  typeConverter="AccessMode">3</property>
+                  typeConverter="AccessMode">0</property>
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
@@ -7067,7 +7929,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                  name="FastLoadOptions"></property>
                 <property
                   dataType="System.Int32"
                   description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
@@ -7075,7 +7937,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Session In Day\Insert Destination.Connections[OleDbConnection]"
+                  refId="Package\Session In Day\Insert Destination 1.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[LocalHost.UCA_DDS]"
                   connectionManagerRefId="Package.ConnectionManagers[LocalHost.UCA_DDS]"
                   description="The OLE DB runtime connection used to access the database."
@@ -7083,34 +7945,34 @@
               </connections>
               <inputs>
                 <input
-                  refId="Package\Session In Day\Insert Destination.Inputs[OLE DB Destination Input]"
+                  refId="Package\Session In Day\Insert Destination 1.Inputs[OLE DB Destination Input]"
                   errorOrTruncationOperation="Insert"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Session In Day\Insert Destination.Inputs[OLE DB Destination Input].Columns[Session_in_Day_ID]"
+                      refId="Package\Session In Day\Insert Destination 1.Inputs[OLE DB Destination Input].Columns[Session_in_Day_ID]"
                       cachedDataType="i4"
                       cachedName="Session_in_Day_ID"
-                      externalMetadataColumnId="Package\Session In Day\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[Session_in_Day_ID]"
+                      externalMetadataColumnId="Package\Session In Day\Insert Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Session_in_Day_ID]"
                       lineageId="Package\Session In Day\OLE DB Source.Outputs[OLE DB Source Output].Columns[Session_in_Day_ID]" />
                     <inputColumn
-                      refId="Package\Session In Day\Insert Destination.Inputs[OLE DB Destination Input].Columns[Session_in_Day_Name]"
+                      refId="Package\Session In Day\Insert Destination 1.Inputs[OLE DB Destination Input].Columns[Session_in_Day_Name]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Session_in_Day_Name"
-                      externalMetadataColumnId="Package\Session In Day\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[Session_in_Day]"
+                      externalMetadataColumnId="Package\Session In Day\Insert Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Session_in_Day]"
                       lineageId="Package\Session In Day\OLE DB Source.Outputs[OLE DB Source Output].Columns[Session_in_Day_Name]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Session In Day\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[Session_in_Day_ID]"
+                      refId="Package\Session In Day\Insert Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Session_in_Day_ID]"
                       dataType="i4"
                       name="Session_in_Day_ID" />
                     <externalMetadataColumn
-                      refId="Package\Session In Day\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[Session_in_Day]"
+                      refId="Package\Session In Day\Insert Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Session_in_Day]"
                       dataType="wstr"
                       length="255"
                       name="Session_in_Day" />
@@ -7119,22 +7981,250 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Session In Day\Insert Destination.Outputs[OLE DB Destination Error Output]"
+                  refId="Package\Session In Day\Insert Destination 1.Outputs[OLE DB Destination Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Session In Day\Insert Destination.Inputs[OLE DB Destination Input]">
+                  synchronousInputId="Package\Session In Day\Insert Destination 1.Inputs[OLE DB Destination Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Session In Day\Insert Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      refId="Package\Session In Day\Insert Destination 1.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Session In Day\Insert Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Session In Day\Insert Destination 1.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Session In Day\Insert Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      refId="Package\Session In Day\Insert Destination 1.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Session In Day\Insert Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Session In Day\Insert Destination 1.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Session In Day\OLE DB Command"
+              componentClassID="Microsoft.OLEDBCommand"
+              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
+              name="OLE DB Command"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">UPDATE [dbo].[dimSessionInDay] SET [Session_in_Day] = ? WHERE [Session_in_Day_ID] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Session In Day\OLE DB Command.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.UCA_DDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.UCA_DDS]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Session In Day\OLE DB Command.Inputs[OLE DB Command Input]"
+                  errorOrTruncationOperation="Command Execution"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Command Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Session In Day\OLE DB Command.Inputs[OLE DB Command Input].Columns[Session_in_Day_Name]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Session_in_Day_Name"
+                      externalMetadataColumnId="Package\Session In Day\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      lineageId="Package\Session In Day\OLE DB Source.Outputs[OLE DB Source Output].Columns[Session_in_Day_Name]" />
+                    <inputColumn
+                      refId="Package\Session In Day\OLE DB Command.Inputs[OLE DB Command Input].Columns[Session_in_Day_ID]"
+                      cachedDataType="i4"
+                      cachedName="Session_in_Day_ID"
+                      externalMetadataColumnId="Package\Session In Day\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      lineageId="Package\Session In Day\OLE DB Source.Outputs[OLE DB Source Output].Columns[Session_in_Day_ID]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Session In Day\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      dataType="wstr"
+                      length="255"
+                      name="Param_0">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Session In Day\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      dataType="i4"
+                      name="Param_1">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Session In Day\OLE DB Command.Outputs[OLE DB Command Output]"
+                  exclusionGroup="1"
+                  name="OLE DB Command Output"
+                  synchronousInputId="Package\Session In Day\OLE DB Command.Inputs[OLE DB Command Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Session In Day\OLE DB Command.Outputs[OLE DB Command Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Command Error Output"
+                  synchronousInputId="Package\Session In Day\OLE DB Command.Inputs[OLE DB Command Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Session In Day\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Session In Day\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Session In Day\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Session In Day\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Session In Day\OLE DB Command 1"
+              componentClassID="Microsoft.OLEDBCommand"
+              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
+              name="OLE DB Command 1"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">UPDATE [dbo].[dimSessionInDay] SET [Session_in_Day] = ? WHERE [Session_in_Day_ID] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Session In Day\OLE DB Command 1.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.UCA_DDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.UCA_DDS]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Session In Day\OLE DB Command 1.Inputs[OLE DB Command Input]"
+                  errorOrTruncationOperation="Command Execution"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Command Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Session In Day\OLE DB Command 1.Inputs[OLE DB Command Input].Columns[Session_in_Day_Name]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Session_in_Day_Name"
+                      externalMetadataColumnId="Package\Session In Day\OLE DB Command 1.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      lineageId="Package\Session In Day\OLE DB Source.Outputs[OLE DB Source Output].Columns[Session_in_Day_Name]" />
+                    <inputColumn
+                      refId="Package\Session In Day\OLE DB Command 1.Inputs[OLE DB Command Input].Columns[Session_in_Day_ID]"
+                      cachedDataType="i4"
+                      cachedName="Session_in_Day_ID"
+                      externalMetadataColumnId="Package\Session In Day\OLE DB Command 1.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      lineageId="Package\Session In Day\OLE DB Source.Outputs[OLE DB Source Output].Columns[Session_in_Day_ID]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Session In Day\OLE DB Command 1.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      dataType="wstr"
+                      length="255"
+                      name="Param_0">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Session In Day\OLE DB Command 1.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      dataType="i4"
+                      name="Param_1">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Session In Day\OLE DB Command 1.Outputs[OLE DB Command Output]"
+                  exclusionGroup="1"
+                  name="OLE DB Command Output"
+                  synchronousInputId="Package\Session In Day\OLE DB Command 1.Inputs[OLE DB Command Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Session In Day\OLE DB Command 1.Outputs[OLE DB Command Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Command Error Output"
+                  synchronousInputId="Package\Session In Day\OLE DB Command 1.Inputs[OLE DB Command Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Session In Day\OLE DB Command 1.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Session In Day\OLE DB Command 1.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Session In Day\OLE DB Command 1.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Session In Day\OLE DB Command 1.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -7290,11 +8380,179 @@
                 </output>
               </outputs>
             </component>
+            <component
+              refId="Package\Session In Day\Slowly Changing Dimension"
+              componentClassID="Microsoft.SCD"
+              contactInfo="Slowly Changing Dimension;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;3"
+              description="Updates a SQL Server Analysis Services data warehouse dimension. Update dimension records that are already present and  insert dimension records that aren't. For example, update the DimProduct table of the AdventureWorksDW OLAP database with data from the Products table in the AdventureWorks OLTP database."
+              name="Slowly Changing Dimension"
+              version="3">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SELECT statement used to create a schema rowset."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT [Session_in_Day], [Session_in_Day_ID] FROM [dbo].[dimSessionInDay]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the WHERE clause in the SELECT statement that selects the current row among rows with identical business keys."
+                  name="CurrentRowWhere"></property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether historical attribute updates are directed to the transformation output for changing attribute updates."
+                  name="UpdateChangingAttributeHistory">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the transformation fails when columns with fixed attributes contain changes."
+                  name="FailOnFixedAttributeChange">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the column name for the inferred member."
+                  name="InferredMemberIndicator"></property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether inferred member updates are detected."
+                  name="EnableInferredMember">true</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the transformation fails when a lookup of an existing record fails."
+                  name="FailOnLookupFailure">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies that all rows in the input are new or the transformation detects the change type."
+                  name="IncomingRowChangeType"
+                  typeConverter="IncomingRowChangeType">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Session In Day\Slowly Changing Dimension.Connections[LookupConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.UCA_DDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.UCA_DDS]"
+                  description="Defines the connection to use for lookups in the dimension table"
+                  name="LookupConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Session In Day\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]"
+                  name="Slowly Changing Dimension Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Session In Day\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].Columns[Session_in_Day_Name]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Session_in_Day_Name"
+                      externalMetadataColumnId="Package\Session In Day\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[Session_in_Day]"
+                      lineageId="Package\Session In Day\OLE DB Source.Outputs[OLE DB Source Output].Columns[Session_in_Day_Name]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          name="ColumnType"
+                          typeConverter="ColumnType">2</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Session In Day\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].Columns[Session_in_Day_ID]"
+                      cachedDataType="i4"
+                      cachedName="Session_in_Day_ID"
+                      externalMetadataColumnId="Package\Session In Day\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[Session_in_Day_ID]"
+                      lineageId="Package\Session In Day\OLE DB Source.Outputs[OLE DB Source Output].Columns[Session_in_Day_ID]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          name="ColumnType"
+                          typeConverter="ColumnType">1</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Session In Day\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[Session_in_Day]"
+                      dataType="wstr"
+                      length="255"
+                      name="Session_in_Day" />
+                    <externalMetadataColumn
+                      refId="Package\Session In Day\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[Session_in_Day_ID]"
+                      dataType="i4"
+                      name="Session_in_Day_ID" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Session In Day\Slowly Changing Dimension.Outputs[Unchanged Output]"
+                  description="Unchanged rows"
+                  exclusionGroup="1"
+                  name="Unchanged Output"
+                  synchronousInputId="Package\Session In Day\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Session In Day\Slowly Changing Dimension.Outputs[New Output]"
+                  description="New rows"
+                  exclusionGroup="1"
+                  name="New Output"
+                  synchronousInputId="Package\Session In Day\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Session In Day\Slowly Changing Dimension.Outputs[Fixed Attribute Output]"
+                  description="Rows with changes in columns tagged FixedAttribute"
+                  exclusionGroup="1"
+                  name="Fixed Attribute Output"
+                  synchronousInputId="Package\Session In Day\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Session In Day\Slowly Changing Dimension.Outputs[Changing Attribute Updates Output]"
+                  description="These rows contain new information for ChangingAttribute (Type 1) column changes"
+                  exclusionGroup="1"
+                  name="Changing Attribute Updates Output"
+                  synchronousInputId="Package\Session In Day\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Session In Day\Slowly Changing Dimension.Outputs[Historical Attribute Inserts Output]"
+                  description="HistoricalAttribute (Type 2) changes result in these new rows"
+                  exclusionGroup="2"
+                  name="Historical Attribute Inserts Output"
+                  synchronousInputId="Package\Session In Day\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Session In Day\Slowly Changing Dimension.Outputs[Inferred Member Updates Output]"
+                  description="Information to update unpopulated initial dimension row"
+                  exclusionGroup="1"
+                  name="Inferred Member Updates Output"
+                  synchronousInputId="Package\Session In Day\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
           </components>
           <paths>
             <path
+              refId="Package\Session In Day.Paths[Changing Attribute Updates Output]"
+              endId="Package\Session In Day\OLE DB Command 1.Inputs[OLE DB Command Input]"
+              name="Changing Attribute Updates Output"
+              startId="Package\Session In Day\Slowly Changing Dimension.Outputs[Changing Attribute Updates Output]" />
+            <path
+              refId="Package\Session In Day.Paths[Inferred Member Updates Output]"
+              endId="Package\Session In Day\OLE DB Command.Inputs[OLE DB Command Input]"
+              name="Inferred Member Updates Output"
+              startId="Package\Session In Day\Slowly Changing Dimension.Outputs[Inferred Member Updates Output]" />
+            <path
+              refId="Package\Session In Day.Paths[New Output]"
+              endId="Package\Session In Day\Insert Destination 1.Inputs[OLE DB Destination Input]"
+              name="New Output"
+              startId="Package\Session In Day\Slowly Changing Dimension.Outputs[New Output]" />
+            <path
               refId="Package\Session In Day.Paths[OLE DB Source Output]"
-              endId="Package\Session In Day\Insert Destination.Inputs[OLE DB Destination Input]"
+              endId="Package\Session In Day\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]"
               name="OLE DB Source Output"
               startId="Package\Session In Day\OLE DB Source.Outputs[OLE DB Source Output]" />
           </paths>
@@ -11495,55 +12753,55 @@
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="165,41"
+          Size="164.8,40.8"
           Id="Package\Build up road type"
           TopLeft="269.857148355368,45.8823535846591" />
         <NodeLayout
-          Size="143,41"
+          Size="143.2,40.8"
           Id="Package\Casualty type"
           TopLeft="281.285719978567,123.117648785502" />
         <NodeLayout
-          Size="123,44"
+          Size="123.2,44"
           Id="Package\dimAge"
           TopLeft="47,258.411767740976" />
         <NodeLayout
-          Size="119,41"
+          Size="119.2,40.8"
           Id="Package\dimDate"
           TopLeft="43.1428615219741,182.411767740976" />
         <NodeLayout
-          Size="156,41"
+          Size="156,40.8"
           Id="Package\Journey purpose"
           TopLeft="279.857148525667,211.294120596355" />
         <NodeLayout
-          Size="97,41"
+          Size="96.8,40.8"
           Id="Package\LDA"
           TopLeft="482.714294837446,210.294120596355" />
         <NodeLayout
-          Size="141,41"
+          Size="140.8,40.8"
           Id="Package\Location"
           TopLeft="37.8571442681917,32.4117640945737" />
         <NodeLayout
-          Size="127,41"
+          Size="127.2,40.8"
           Id="Package\RoadType"
           TopLeft="469.142866034898,126.941178250891" />
         <NodeLayout
-          Size="149,41"
+          Size="148.8,40.8"
           Id="Package\Session In Day"
           TopLeft="41,105.411767740976" />
         <NodeLayout
-          Size="116,41"
+          Size="116,40.8"
           Id="Package\Severity"
           TopLeft="476.285723299397,49.7058830500474" />
         <NodeLayout
-          Size="143,41"
+          Size="143.2,40.8"
           Id="Package\Sex of person"
           TopLeft="650.571440553179,49.7058830500474" />
         <NodeLayout
-          Size="147,41"
+          Size="147.2,40.8"
           Id="Package\Urban or Rural"
           TopLeft="652.000012006078,129.235295930123" />
         <NodeLayout
-          Size="135,41"
+          Size="135.2,40.8"
           Id="Package\Vehicle type"
           TopLeft="657.000012091229,209.529414703277" />
       </GraphLayout>
@@ -11805,7 +13063,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -11827,7 +13087,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -11849,7 +13111,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -11907,7 +13171,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -11953,29 +13219,29 @@
     design-time-name="Package\dimAge">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="150,42"
+          Size="150.4,41.6"
           Id="Package\dimAge\OLE DB Source"
-          TopLeft="235.9,30.4999999999998" />
+          TopLeft="244.9,5.49999999999984" />
         <NodeLayout
-          Size="163,42"
-          Id="Package\dimAge\Insert Destination"
-          TopLeft="233.5,147.7" />
+          Size="208,41.6"
+          Id="Package\dimAge\Slowly Changing Dimension"
+          TopLeft="216.1,107.1" />
         <EdgeLayout
           Id="Package\dimAge.Paths[OLE DB Source Output]"
-          TopLeft="312.95,72.4999999999998">
+          TopLeft="320.1,47.0999999999998">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,75.2000000000002"
+              EndConnector="0,60"
               Start="0,0"
-              End="0,67.7000000000002">
+              End="0,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,67.7000000000002" />
+                    End="0,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -11984,49 +13250,144 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="171.2,41.6"
+          Id="Package\dimAge\Insert Destination 1"
+          TopLeft="5.50000000000003,208.7" />
+        <EdgeLayout
+          Id="Package\dimAge.Paths[New Output]"
+          TopLeft="270.1,148.7">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-179,60.0000000000001"
+              Start="0,0"
+              End="-179,52.5000000000001">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.5063291139241" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16.5063291139241"
+                    Point2="0,20.5063291139241"
+                    Point3="-4,20.5063291139241" />
+                  <mssgle:LineSegment
+                    End="-175,20.5063291139241" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-175,20.5063291139241"
+                    Point2="-179,20.5063291139241"
+                    Point3="-179,24.5063291139241" />
+                  <mssgle:LineSegment
+                    End="-179,52.5000000000001" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-116.59138671875,25.5063291139241,54.1827734375,11.43359375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="164.8,41.6"
+          Id="Package\dimAge\OLE DB Command"
+          TopLeft="237.7,208.7" />
+        <EdgeLayout
+          Id="Package\dimAge.Paths[Inferred Member Updates Output]"
+          TopLeft="320.1,148.7">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-74.40298828125,20.4208984375,148.8059765625,11.658203125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="174.4,41.6"
+          Id="Package\dimAge\OLE DB Command 1"
+          TopLeft="462.9,208.7" />
+        <EdgeLayout
+          Id="Package\dimAge.Paths[Changing Attribute Updates Output]"
+          TopLeft="370.1,148.7">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="180,60"
+              Start="0,0"
+              End="180,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.5063291139241" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16.5063291139241"
+                    Point2="0,20.5063291139241"
+                    Point3="4,20.5063291139241" />
+                  <mssgle:LineSegment
+                    End="176,20.5063291139241" />
+                  <mssgle:CubicBezierSegment
+                    Point1="176,20.5063291139241"
+                    Point2="180,20.5063291139241"
+                    Point3="180,24.5063291139241" />
+                  <mssgle:LineSegment
+                    End="180,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="11.46609375,25.5063291139241,157.0678125,11.6630859375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\dimAge\Insert Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\dimDate">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="150,42"
+          Size="150.4,41.6"
           Id="Package\dimDate\OLE DB Source"
-          TopLeft="235.9,30.4999999999998" />
+          TopLeft="244.9,5.49999999999984" />
         <NodeLayout
-          Size="163,42"
-          Id="Package\dimDate\Insert Destination"
-          TopLeft="233.5,144.7" />
+          Size="208,41.6"
+          Id="Package\dimDate\Slowly Changing Dimension"
+          TopLeft="216.1,107.1" />
         <EdgeLayout
           Id="Package\dimDate.Paths[OLE DB Source Output]"
-          TopLeft="312.95,72.4999999999998">
+          TopLeft="320.1,47.0999999999998">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,72.2000000000001"
+              EndConnector="0,60"
               Start="0,0"
-              End="0,64.7000000000001">
+              End="0,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,64.7000000000001" />
+                    End="0,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -12035,22 +13396,89 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="171.2,41.6"
+          Id="Package\dimDate\Insert Destination 1"
+          TopLeft="84.785715635942,206.405882320767" />
+        <EdgeLayout
+          Id="Package\dimDate.Paths[New Output]"
+          TopLeft="286.766666666667,148.7">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-116.380951030725,57.705882320767"
+              Start="0,0"
+              End="-116.380951030725,50.205882320767">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19.3466546793943" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,19.3466546793943"
+                    Point2="0,23.3466546793943"
+                    Point3="-4,23.3466546793943" />
+                  <mssgle:LineSegment
+                    End="-112.380951030725,23.3466546793943" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-112.380951030725,23.3466546793943"
+                    Point2="-116.380951030725,23.3466546793943"
+                    Point3="-116.380951030725,27.3466546793943" />
+                  <mssgle:LineSegment
+                    End="-116.380951030725,50.205882320767" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-85.2818622341123,28.3466546793943,54.1827734375,11.43359375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="164.8,41.6"
+          Id="Package\dimDate\OLE DB Command"
+          TopLeft="286.985715125045,204.111764641534" />
+        <EdgeLayout
+          Id="Package\dimDate.Paths[Inferred Member Updates Output]"
+          TopLeft="353.433333333333,148.7">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="15.9523817917117,55.4117646415341"
+              Start="0,0"
+              End="15.9523817917117,47.9117646415341">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.4185001984833" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,18.4185001984833"
+                    Point2="0,22.4185001984833"
+                    Point3="4,22.4185001984833" />
+                  <mssgle:LineSegment
+                    End="11.9523817917117,22.4185001984833" />
+                  <mssgle:CubicBezierSegment
+                    Point1="11.9523817917117,22.4185001984833"
+                    Point2="15.9523817917117,22.4185001984833"
+                    Point3="15.9523817917117,26.4185001984833" />
+                  <mssgle:LineSegment
+                    End="15.9523817917117,47.9117646415341" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-66.4267973853941,27.4185001984833,148.8059765625,11.658203125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\dimDate\Insert Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\dimDate\OLE DB Source">
     <Properties>
@@ -12615,7 +14043,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -12637,7 +14067,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -12659,7 +14091,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -12717,7 +14151,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -13019,29 +14455,29 @@
     design-time-name="Package\Session In Day">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="150,42"
+          Size="150.4,41.6"
           Id="Package\Session In Day\OLE DB Source"
-          TopLeft="249.9,48.4999999999998" />
+          TopLeft="244.9,5.49999999999984" />
         <NodeLayout
-          Size="164,43"
-          Id="Package\Session In Day\Insert Destination"
-          TopLeft="239.5,186.7" />
+          Size="208,41.6"
+          Id="Package\Session In Day\Slowly Changing Dimension"
+          TopLeft="216.1,107.1" />
         <EdgeLayout
           Id="Package\Session In Day.Paths[OLE DB Source Output]"
-          TopLeft="323.2,90.4999999999998">
+          TopLeft="320.1,47.0999999999998">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,96.2000000000002"
+              EndConnector="0,60"
               Start="0,0"
-              End="0,88.7000000000002">
+              End="0,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,88.7000000000002" />
+                    End="0,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -13050,22 +14486,117 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="171.2,41.6"
+          Id="Package\Session In Day\Insert Destination 1"
+          TopLeft="5.50000000000003,209.5" />
+        <EdgeLayout
+          Id="Package\Session In Day.Paths[New Output]"
+          TopLeft="270.1,148.7">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-179,60.8000000000002"
+              Start="0,0"
+              End="-179,53.3000000000002">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.7797468354431" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16.7797468354431"
+                    Point2="0,20.7797468354431"
+                    Point3="-4,20.7797468354431" />
+                  <mssgle:LineSegment
+                    End="-175,20.7797468354431" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-175,20.7797468354431"
+                    Point2="-179,20.7797468354431"
+                    Point3="-179,24.7797468354431" />
+                  <mssgle:LineSegment
+                    End="-179,53.3000000000002" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-116.59138671875,25.7797468354431,54.1827734375,11.43359375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="164.8,41.6"
+          Id="Package\Session In Day\OLE DB Command"
+          TopLeft="237.7,209.5" />
+        <EdgeLayout
+          Id="Package\Session In Day.Paths[Inferred Member Updates Output]"
+          TopLeft="320.1,148.7">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60.8000000000001"
+              Start="0,0"
+              End="0,53.3000000000001">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,53.3000000000001" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-74.40298828125,20.8208984375,148.8059765625,11.658203125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="174.4,41.6"
+          Id="Package\Session In Day\OLE DB Command 1"
+          TopLeft="462.9,209.5" />
+        <EdgeLayout
+          Id="Package\Session In Day.Paths[Changing Attribute Updates Output]"
+          TopLeft="370.1,148.7">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="180,60.8000000000001"
+              Start="0,0"
+              End="180,53.3000000000001">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.7797468354431" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16.7797468354431"
+                    Point2="0,20.7797468354431"
+                    Point3="4,20.7797468354431" />
+                  <mssgle:LineSegment
+                    End="176,20.7797468354431" />
+                  <mssgle:CubicBezierSegment
+                    Point1="176,20.7797468354431"
+                    Point2="180,20.7797468354431"
+                    Point3="180,24.7797468354431" />
+                  <mssgle:LineSegment
+                    End="180,53.3000000000001" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="11.46609375,25.7797468354431,157.0678125,11.6630859375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Session In Day\Insert Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Session In Day\OLE DB Source">
     <Properties>
@@ -14031,5 +15562,192 @@
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\dimDate\Slowly Changing Dimension">
+    <Properties>
+      <Property>
+        <Name>SCDMetadata</Name>
+        <Value
+          type="q2:string">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SCDWizardMetadata xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionID&gt;{F09AA282-60B2-4BE7-AB9A-52305BA7CB45}&lt;/ConnectionID&gt;
+  &lt;TableName&gt;[dbo].[dimDate]&lt;/TableName&gt;
+  &lt;InputToColumnsCollection&gt;
+    &lt;InputColumnToDBColumn&gt;
+      &lt;IdentificationString&gt;OLE DB Source.Outputs[OLE DB Source Output].Columns[Date]&lt;/IdentificationString&gt;
+      &lt;ColumnName&gt;Date&lt;/ColumnName&gt;
+      &lt;KeyType&gt;BusinessKey&lt;/KeyType&gt;
+      &lt;ChangeType&gt;None&lt;/ChangeType&gt;
+    &lt;/InputColumnToDBColumn&gt;
+    &lt;InputColumnToDBColumn&gt;
+      &lt;IdentificationString&gt;OLE DB Source.Outputs[OLE DB Source Output].Columns[Day]&lt;/IdentificationString&gt;
+      &lt;ColumnName&gt;Day&lt;/ColumnName&gt;
+      &lt;KeyType&gt;None&lt;/KeyType&gt;
+      &lt;ChangeType&gt;FixedAttribute&lt;/ChangeType&gt;
+    &lt;/InputColumnToDBColumn&gt;
+    &lt;InputColumnToDBColumn&gt;
+      &lt;IdentificationString&gt;OLE DB Source.Outputs[OLE DB Source Output].Columns[DayOfWeek]&lt;/IdentificationString&gt;
+      &lt;ColumnName&gt;DayOfWeek&lt;/ColumnName&gt;
+      &lt;KeyType&gt;None&lt;/KeyType&gt;
+      &lt;ChangeType&gt;FixedAttribute&lt;/ChangeType&gt;
+    &lt;/InputColumnToDBColumn&gt;
+    &lt;InputColumnToDBColumn&gt;
+      &lt;IdentificationString&gt;OLE DB Source.Outputs[OLE DB Source Output].Columns[Month]&lt;/IdentificationString&gt;
+      &lt;ColumnName&gt;Month&lt;/ColumnName&gt;
+      &lt;KeyType&gt;None&lt;/KeyType&gt;
+      &lt;ChangeType&gt;FixedAttribute&lt;/ChangeType&gt;
+    &lt;/InputColumnToDBColumn&gt;
+    &lt;InputColumnToDBColumn&gt;
+      &lt;IdentificationString&gt;OLE DB Source.Outputs[OLE DB Source Output].Columns[Quarter]&lt;/IdentificationString&gt;
+      &lt;ColumnName&gt;Quarter&lt;/ColumnName&gt;
+      &lt;KeyType&gt;None&lt;/KeyType&gt;
+      &lt;ChangeType&gt;FixedAttribute&lt;/ChangeType&gt;
+    &lt;/InputColumnToDBColumn&gt;
+    &lt;InputColumnToDBColumn&gt;
+      &lt;IdentificationString&gt;OLE DB Source.Outputs[OLE DB Source Output].Columns[Year]&lt;/IdentificationString&gt;
+      &lt;ColumnName&gt;Year&lt;/ColumnName&gt;
+      &lt;KeyType&gt;None&lt;/KeyType&gt;
+      &lt;ChangeType&gt;FixedAttribute&lt;/ChangeType&gt;
+    &lt;/InputColumnToDBColumn&gt;
+  &lt;/InputToColumnsCollection&gt;
+  &lt;GeneratedComponentsIdentificationStrings&gt;
+    &lt;anyType xsi:type="xsd:string"&gt;Insert Destination 1&lt;/anyType&gt;
+    &lt;anyType xsi:type="xsd:string"&gt;OLE DB Command&lt;/anyType&gt;
+  &lt;/GeneratedComponentsIdentificationStrings&gt;
+  &lt;FailFixedAttribute&gt;true&lt;/FailFixedAttribute&gt;
+  &lt;FailChangeAttribute&gt;false&lt;/FailChangeAttribute&gt;
+  &lt;UseStartEndDate&gt;false&lt;/UseStartEndDate&gt;
+  &lt;CurrentIndicatorColumn /&gt;
+  &lt;InferredIndicatorColumn /&gt;
+  &lt;ValueCurrent /&gt;
+  &lt;ValueExpired /&gt;
+  &lt;StartDateColumn /&gt;
+  &lt;EndDateColumn /&gt;
+  &lt;DateVariable /&gt;
+  &lt;EnableInferredSupport&gt;true&lt;/EnableInferredSupport&gt;
+&lt;/SCDWizardMetadata&gt;</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\dimDate\Insert Destination 1">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\dimAge\Slowly Changing Dimension">
+    <Properties>
+      <Property>
+        <Name>SCDMetadata</Name>
+        <Value
+          type="q2:string">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SCDWizardMetadata xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionID&gt;{F09AA282-60B2-4BE7-AB9A-52305BA7CB45}&lt;/ConnectionID&gt;
+  &lt;TableName&gt;[dbo].[dimAge]&lt;/TableName&gt;
+  &lt;InputToColumnsCollection&gt;
+    &lt;InputColumnToDBColumn&gt;
+      &lt;IdentificationString&gt;OLE DB Source.Outputs[OLE DB Source Output].Columns[Age_of_Casualty]&lt;/IdentificationString&gt;
+      &lt;ColumnName&gt;Age&lt;/ColumnName&gt;
+      &lt;KeyType&gt;BusinessKey&lt;/KeyType&gt;
+      &lt;ChangeType&gt;None&lt;/ChangeType&gt;
+    &lt;/InputColumnToDBColumn&gt;
+    &lt;InputColumnToDBColumn&gt;
+      &lt;IdentificationString&gt;OLE DB Source.Outputs[OLE DB Source Output].Columns[Age_Band_of_Casualty]&lt;/IdentificationString&gt;
+      &lt;ColumnName&gt;Age_Band&lt;/ColumnName&gt;
+      &lt;KeyType&gt;None&lt;/KeyType&gt;
+      &lt;ChangeType&gt;ChangingAttribute&lt;/ChangeType&gt;
+    &lt;/InputColumnToDBColumn&gt;
+    &lt;InputColumnToDBColumn&gt;
+      &lt;IdentificationString&gt;OLE DB Source.Outputs[OLE DB Source Output].Columns[Age_Group]&lt;/IdentificationString&gt;
+      &lt;ColumnName&gt;Age_Group&lt;/ColumnName&gt;
+      &lt;KeyType&gt;None&lt;/KeyType&gt;
+      &lt;ChangeType&gt;ChangingAttribute&lt;/ChangeType&gt;
+    &lt;/InputColumnToDBColumn&gt;
+  &lt;/InputToColumnsCollection&gt;
+  &lt;GeneratedComponentsIdentificationStrings&gt;
+    &lt;anyType xsi:type="xsd:string"&gt;Insert Destination 1&lt;/anyType&gt;
+    &lt;anyType xsi:type="xsd:string"&gt;OLE DB Command&lt;/anyType&gt;
+    &lt;anyType xsi:type="xsd:string"&gt;OLE DB Command 1&lt;/anyType&gt;
+  &lt;/GeneratedComponentsIdentificationStrings&gt;
+  &lt;FailFixedAttribute&gt;false&lt;/FailFixedAttribute&gt;
+  &lt;FailChangeAttribute&gt;true&lt;/FailChangeAttribute&gt;
+  &lt;UseStartEndDate&gt;false&lt;/UseStartEndDate&gt;
+  &lt;CurrentIndicatorColumn /&gt;
+  &lt;InferredIndicatorColumn /&gt;
+  &lt;ValueCurrent /&gt;
+  &lt;ValueExpired /&gt;
+  &lt;StartDateColumn /&gt;
+  &lt;EndDateColumn /&gt;
+  &lt;DateVariable /&gt;
+  &lt;EnableInferredSupport&gt;true&lt;/EnableInferredSupport&gt;
+&lt;/SCDWizardMetadata&gt;</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\dimAge\Insert Destination 1">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Session In Day\Slowly Changing Dimension">
+    <Properties>
+      <Property>
+        <Name>SCDMetadata</Name>
+        <Value
+          type="q2:string">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SCDWizardMetadata xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionID&gt;{F09AA282-60B2-4BE7-AB9A-52305BA7CB45}&lt;/ConnectionID&gt;
+  &lt;TableName&gt;[dbo].[dimSessionInDay]&lt;/TableName&gt;
+  &lt;InputToColumnsCollection&gt;
+    &lt;InputColumnToDBColumn&gt;
+      &lt;IdentificationString&gt;OLE DB Source.Outputs[OLE DB Source Output].Columns[Session_in_Day_Name]&lt;/IdentificationString&gt;
+      &lt;ColumnName&gt;Session_in_Day&lt;/ColumnName&gt;
+      &lt;KeyType&gt;None&lt;/KeyType&gt;
+      &lt;ChangeType&gt;ChangingAttribute&lt;/ChangeType&gt;
+    &lt;/InputColumnToDBColumn&gt;
+    &lt;InputColumnToDBColumn&gt;
+      &lt;IdentificationString&gt;OLE DB Source.Outputs[OLE DB Source Output].Columns[Session_in_Day_ID]&lt;/IdentificationString&gt;
+      &lt;ColumnName&gt;Session_in_Day_ID&lt;/ColumnName&gt;
+      &lt;KeyType&gt;BusinessKey&lt;/KeyType&gt;
+      &lt;ChangeType&gt;None&lt;/ChangeType&gt;
+    &lt;/InputColumnToDBColumn&gt;
+  &lt;/InputToColumnsCollection&gt;
+  &lt;GeneratedComponentsIdentificationStrings&gt;
+    &lt;anyType xsi:type="xsd:string"&gt;Insert Destination 1&lt;/anyType&gt;
+    &lt;anyType xsi:type="xsd:string"&gt;OLE DB Command&lt;/anyType&gt;
+    &lt;anyType xsi:type="xsd:string"&gt;OLE DB Command 1&lt;/anyType&gt;
+  &lt;/GeneratedComponentsIdentificationStrings&gt;
+  &lt;FailFixedAttribute&gt;false&lt;/FailFixedAttribute&gt;
+  &lt;FailChangeAttribute&gt;false&lt;/FailChangeAttribute&gt;
+  &lt;UseStartEndDate&gt;false&lt;/UseStartEndDate&gt;
+  &lt;CurrentIndicatorColumn /&gt;
+  &lt;InferredIndicatorColumn /&gt;
+  &lt;ValueCurrent /&gt;
+  &lt;ValueExpired /&gt;
+  &lt;StartDateColumn /&gt;
+  &lt;EndDateColumn /&gt;
+  &lt;DateVariable /&gt;
+  &lt;EnableInferredSupport&gt;true&lt;/EnableInferredSupport&gt;
+&lt;/SCDWizardMetadata&gt;</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
 </Objects>]]></DTS:DesignTimeProperties>
 </DTS:Executable>
