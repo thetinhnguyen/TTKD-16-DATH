@@ -2,7 +2,8 @@
 ----1.Thống kê số lượng nạn nhân theo Mức Độ Nghiêm Trọng (Fatal, Serious, Slight) ở các Địa phương (Local_Authority_(District)) trong tất cả các năm.
 select non empty ([Dim Date].[Hierarchy].[Year],
 {[Dim Severity].[Severity Name].[Severity Name],[Dim Severity].[Severity Name]}) on columns,
-non empty {[Dim Local Authority District].[Local Authority District Name].[Local Authority District Name],[Dim Local Authority District].[Local Authority District Name]} on rows
+non empty {[Dim Local Authority District].[Local Authority District Name].[Local Authority District Name],
+[Dim Local Authority District].[Local Authority District Name]} on rows
 from [UCA DDS]
 where [Measures].[Num Of Cas] 
 
@@ -15,7 +16,8 @@ where [Measures].[Num Of Cas]
 ----2.Thống kê số lượng nạn nhân theo Mức Độ Nghiêm Trọng ở các Địa Phương (Local_Authority_(District)) theo các Quý trong từng năm.
 select non empty ([Dim Date].[Hierarchy].[Year],[Dim Date].[Quarter].[Quarter],
 {[Dim Severity].[Severity Name].[Severity Name],[Dim Severity].[Severity Name]}) on columns,
-non empty ({[Dim Local Authority District].[Local Authority District Name].[Local Authority District Name],[Dim Local Authority District].[Local Authority District Name]}) on rows
+non empty ({[Dim Local Authority District].[Local Authority District Name].[Local Authority District Name],
+[Dim Local Authority District].[Local Authority District Name]}) on rows
 from [UCA DDS]
 where [Measures].[Num Of Cas] 
 
@@ -36,3 +38,24 @@ non empty ({[Dim Casualty Type].[Casualty Type Name].[Casualty Type Name],[Dim C
 {[Dim Age].[Age Group].[Age Group],[Dim Age].[Age Group]})on rows
 from [UCA DDS]
 where [Measures].[Num Of Cas] 
+
+-- Thống kê số lượng nạn nhân của nước england va wales theo quý của từng năm
+select non empty ({[Dim Location].[Country Name].&[England],[Dim Location].[Country Name].&[Wales]})on columns,
+non empty ([Dim Date].[Year].[Year],{[Dim Date].[Hierarchy].[Quarter],[Dim Date].[Hierarchy]}) on rows
+from [UCA DDS]
+where [Measures].[Num Of Cas] 
+
+-- Thống kê số lượng nạn nhân của region  , nhom tuoi la audult va chidren, trong quy 2 nam 2012
+select non empty ({[Dim Age].[Age Group].&[Children],[Dim Age].[Age Group].&[Adult]})on columns,
+non empty ([Dim Location].[Region Name].&[South East]&[England],[Dim Date].[Quarter].&[2]&[2012])  on rows
+from [UCA DDS]
+where [Measures].[Num Of Cas] 
+
+
+-- nhung Region o England co số lượng nạn nhân > 1000
+select non empty [Dim Location].[Country Name].&[England] on columns,
+filter ([Dim Location].[Region Name].[Region Name],
+[Measures].[Num Of Cas]  > 70000) on rows
+from [UCA DDS]
+
+

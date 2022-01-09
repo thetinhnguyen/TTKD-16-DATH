@@ -1,0 +1,131 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="93407535-f626-4320-8ad3-0c27f788bc30" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Fact_Variance</ID>
+  <Name>Fact_Variance</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+      <Value></Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout />
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>0</DiagramViewPortLeft>
+            <DiagramViewPortTop>0</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>100</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>UCA DDS</DataSourceID>
+  <Schema>
+    <xs:schema id="Fact_Variance" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="Fact_Variance" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="b149e08c-9b19-4271-8c16-79f2a00a6fdd">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="dbo_Fact_Variance" msprop:design-time-name="0cb0c7f4-5bd0-425e-bd6f-e102331125b5" msprop:DbTableName="Fact_Variance" msprop:FriendlyName="Fact_Variance" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Date" msprop:design-time-name="64f56f89-5506-4327-8d51-8b3ca9203982" msprop:DbColumnName="Date" msprop:FriendlyName="Date" type="xs:dateTime" />
+                  <xs:element name="Location_NK" msprop:design-time-name="9c852fc9-4b94-451d-a08e-2fd4ad399550" msprop:DbColumnName="Location_NK" msprop:FriendlyName="Location_NK" type="xs:int" />
+                  <xs:element name="Total" msprop:design-time-name="86b8c5de-c810-44e7-9967-809a3aa341a1" msprop:DbColumnName="Total" msprop:FriendlyName="Total" type="xs:int" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_dimLocation" msprop:design-time-name="da5fdd93-7e38-4fd7-924e-d1315b1fe51b" msprop:DbTableName="dimLocation" msprop:FriendlyName="dimLocation" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Location_NK" msprop:design-time-name="bb818d6a-8515-4e09-880b-918255177bd0" msprop:DbColumnName="Location_NK" msprop:FriendlyName="Location_NK" type="xs:int" />
+                  <xs:element name="city" msprop:design-time-name="550229dc-f8f3-484c-ba0e-08b915dc45d8" msprop:DbColumnName="city" msprop:FriendlyName="city" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="county" msprop:design-time-name="dd95843f-bb34-4d71-ae18-ffa72b8b9aa7" msprop:DbColumnName="county" msprop:FriendlyName="county" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="country_name" msprop:design-time-name="330cfeb3-8272-4025-8ab4-9d8038560a34" msprop:DbColumnName="country_name" msprop:FriendlyName="country_name" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="region_name" msprop:design-time-name="2f98d28e-7ffe-453c-98af-276ca4edfb57" msprop:DbColumnName="region_name" msprop:FriendlyName="region_name" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_dimDate" msprop:design-time-name="eb8a6f7a-3a51-487b-9ec2-ed1e2d9566fc" msprop:DbTableName="dimDate" msprop:FriendlyName="dimDate" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Date" msprop:design-time-name="5cc12957-be37-4007-8129-efdfc519a428" msprop:DbColumnName="Date" msprop:FriendlyName="Date" type="xs:dateTime" />
+                  <xs:element name="Day" msprop:design-time-name="f7fa3c10-38d8-4af4-8a24-c82c0a05cc4f" msprop:DbColumnName="Day" msprop:FriendlyName="Day" type="xs:int" minOccurs="0" />
+                  <xs:element name="DayOfWeek" msprop:design-time-name="5bab66c6-58c7-4933-b579-895de55ef2fa" msprop:DbColumnName="DayOfWeek" msprop:FriendlyName="DayOfWeek" type="xs:int" minOccurs="0" />
+                  <xs:element name="Month" msprop:design-time-name="8c39e6ca-dae8-497a-ba2f-c88ebd26bb7b" msprop:DbColumnName="Month" msprop:FriendlyName="Month" type="xs:int" minOccurs="0" />
+                  <xs:element name="Quarter" msprop:design-time-name="b9341ee2-d1ba-4990-9e84-efa27848b5aa" msprop:DbColumnName="Quarter" msprop:FriendlyName="Quarter" type="xs:int" minOccurs="0" />
+                  <xs:element name="Year" msprop:design-time-name="bed721b5-beb1-4fb8-9167-94415a44b25e" msprop:DbColumnName="Year" msprop:FriendlyName="Year" type="xs:int" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Fact_Variance" />
+          <xs:field xpath="Date" />
+          <xs:field xpath="Location_NK" />
+        </xs:unique>
+        <xs:unique name="dbo_dimLocation_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_dimLocation" />
+          <xs:field xpath="Location_NK" />
+        </xs:unique>
+        <xs:unique name="dbo_dimDate_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_dimDate" />
+          <xs:field xpath="Date" />
+        </xs:unique>
+        <xs:keyref name="FK__Fact_Vari__Locat__6D0D32F4" refer="dbo_dimLocation_Constraint1">
+          <xs:selector xpath=".//dbo_Fact_Variance" />
+          <xs:field xpath="Location_NK" />
+        </xs:keyref>
+        <xs:keyref name="FK__Fact_Varia__Date__6C190EBB" refer="dbo_dimDate_Constraint1">
+          <xs:selector xpath=".//dbo_Fact_Variance" />
+          <xs:field xpath="Date" />
+        </xs:keyref>
+      </xs:element>
+    </xs:schema>
+    <Fact_Variance xmlns="" />
+  </Schema>
+</DataSourceView>

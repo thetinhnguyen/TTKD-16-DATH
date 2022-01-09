@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="1/2/2022 1:53:00 PM"
@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="27"
-  DTS:VersionGUID="{2574DE51-D66F-48AF-8BBF-A3979EB03C47}">
+  DTS:VersionBuild="28"
+  DTS:VersionGUID="{65D5CDD6-7990-4931-A689-427AE47BB1AD}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -25,7 +25,7 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="0"
           DTS:ConnectRetryInterval="0"
-          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.16.0;Data Source=C:\Users\Admin\Desktop\BI\Đồ án thực hành\Github\TTKD-16-DATH\Data\UK Accidents - Codebook.xls;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\TTKD-16-DATH\Data\UK Accidents - Codebook.xls;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -3378,53 +3378,53 @@
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="145.6,41.6"
+          Size="146,42"
           Id="Package\GET LSET,CET"
           TopLeft="105,151" />
         <NodeLayout
-          Size="238.4,41.6"
+          Size="238,42"
           Id="Package\Load Data Age_Band_of_Casualty"
-          TopLeft="101.249999534339,397.483341109057" />
+          TopLeft="97.249999534339,364.483341109057" />
         <NodeLayout
-          Size="198.4,41.6"
+          Size="198,42"
           Id="Package\Load Data Casualty_Type"
           TopLeft="998,245" />
         <NodeLayout
-          Size="260,41.6"
+          Size="260,42"
           Id="Package\Load Data Journey_Purpose_of_Driver"
-          TopLeft="671.624999841676,400.650004405081" />
+          TopLeft="667.624999841676,367.650004405081" />
         <NodeLayout
-          Size="249.6,41.6"
+          Size="250,42"
           Id="Package\Load Data Local_Authority_(District)"
           TopLeft="58,246" />
         <NodeLayout
-          Size="200.8,41.6"
+          Size="201,42"
           Id="Package\Load Data Road_Type"
-          TopLeft="411.62499976717,397.050004451573" />
+          TopLeft="407.62499976717,364.050004451573" />
         <NodeLayout
-          Size="168,41.6"
+          Size="168,42"
           Id="Package\Load Data Severity"
           TopLeft="412,242" />
         <NodeLayout
-          Size="208,41.6"
+          Size="208,42"
           Id="Package\Load Data Sex_of_Casualty"
           TopLeft="679,242" />
         <NodeLayout
-          Size="232,41.6"
+          Size="232,42"
           Id="Package\Load Data Urban_or_Rural_Area"
-          TopLeft="103,491.40000027895" />
+          TopLeft="99,458.40000027895" />
         <NodeLayout
-          Size="192,41.6"
+          Size="192,42"
           Id="Package\Load Data Vehicle_Type"
-          TopLeft="996.00000037253,399.750004474819" />
+          TopLeft="1004.00000037253,368.750004474819" />
         <NodeLayout
-          Size="166.4,41.6"
+          Size="166,42"
           Id="Package\TRUNCATE STAGE"
           TopLeft="97,58" />
         <NodeLayout
-          Size="145.6,41.6"
+          Size="146,42"
           Id="Package\UPDATE LSET"
-          TopLeft="472.624999469146,497.40000027895" />
+          TopLeft="468.624999469146,464.40000027895" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="179.25,100">
@@ -3471,7 +3471,7 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 10]"
-          TopLeft="335,515.15000027895">
+          TopLeft="331,482.15000027895">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -3559,18 +3559,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 5]"
-          TopLeft="1094.66666685293,287">
+          TopLeft="1098.50000018626,287">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,112.750004474819"
+              EndConnector="0,81.750004474819"
               Start="0,0"
-              End="0,105.250004474819">
+              End="0,74.250004474819">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,105.250004474819" />
+                    End="0,74.250004474819" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3581,18 +3581,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 6]"
-          TopLeft="996.00000037253,421.366671106617">
+          TopLeft="1004.00000037253,389.20000443995">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-64.3750005308541,0"
+              EndConnector="-76.375000530854,0"
               Start="0,0"
-              End="-56.8750005308541,0">
+              End="-68.875000530854,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-56.8750005308541,0" />
+                    End="-68.875000530854,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3603,7 +3603,7 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 7]"
-          TopLeft="671.624999841676,419.850004428327">
+          TopLeft="667.624999841676,386.850004428327">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -3625,7 +3625,7 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 8]"
-          TopLeft="411.62499976717,418.266672780315">
+          TopLeft="407.62499976717,385.266672780315">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -3647,7 +3647,7 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 9]"
-          TopLeft="219.62499976717,439.483341109057">
+          TopLeft="215.62499976717,406.483341109057">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -3946,15 +3946,15 @@
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="262.4,41.6"
+          Size="262,42"
           Id="Package\Load Data Local_Authority_(District)\Excel Local_Authority_(District) Source"
           TopLeft="222,57" />
         <NodeLayout
-          Size="232,41.6"
+          Size="232,42"
           Id="Package\Load Data Local_Authority_(District)\Local_Authority_(District)_Stage"
           TopLeft="235,310" />
         <NodeLayout
-          Size="156,41.6"
+          Size="156,42"
           Id="Package\Load Data Local_Authority_(District)\Data Conversion"
           TopLeft="275,179" />
         <EdgeLayout

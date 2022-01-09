@@ -6,7 +6,7 @@ from [UCA DDS]
 where[Measures].[Num Of Acc]
 
 ---- Thong ke so luong TNGT theo Mức Độ Nghiêm Trọng, Vùng (Urban_or_Rural_Area), và Kiểu Đường (Road Type) trong các năm
-select  ({[Dim Date].[Hierarchy].[Year],[Dim Date].[Hierarchy]},
+select ({[Dim Date].[Hierarchy].[Year],[Dim Date].[Hierarchy]},
 {[Dim Severity].[Severity Name].[Severity Name],[Dim Severity].[Severity Name]}) on columns,
 ({[Dim Urban Or Rural].[Urban Rural Name].[Urban Rural Name],[Dim Urban Or Rural].[Urban Rural Name]},
 {[Dim Road Type].[Road Type Name].[Road Type Name],[Dim Road Type].[Road Type Name]}) on rows
@@ -14,7 +14,8 @@ from [UCA DDS]
 where[Measures].[Num Of Acc]
 
 ---- Thong ke so luong TNGT theo Mục Đích Hành Trình (Journey Purpose) và Loại Phương Tiện (Vehicle_Type)
-select {[Dim Journey Purpose].[Journey Purpose Name].[Journey Purpose Name],[Dim Journey Purpose].[Journey Purpose Name]} on columns,
+select {[Dim Journey Purpose].[Journey Purpose Name].[Journey Purpose Name],
+[Dim Journey Purpose].[Journey Purpose Name]} on columns,
 {[Dim Vehicle Type].[Vehicle Type Name].[Vehicle Type Name],[Dim Vehicle Type].[Vehicle Type Name]} on rows
 from [UCA DDS]
 where[Measures].[Num Of Acc]
