@@ -131,14 +131,14 @@
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.MiningStructure</Type>
-        <TimeStamp>TOK1AJGnhfyTZx7FSHad9NHqBwY=1/9/2022 12:14:54 AM1/9/2022 12:14:54 AM</TimeStamp>
+        <TimeStamp>jrY2sk7d4mnqL+WfQoAowuS5ycw=1/9/2022 10:19:18 AM1/9/2022 10:19:18 AM</TimeStamp>
         <ID>
           <String>Fact Accidents</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.MiningStructure</Type>
-        <TimeStamp>dgk8V1wpGZ06VLUptauhe9WporA=1/9/2022 12:14:54 AM1/9/2022 12:14:54 AM</TimeStamp>
+        <TimeStamp>TIdeFsTnnPA9+AAAxTnM6tQl+QA=1/9/2022 10:21:26 AM1/9/2022 10:21:26 AM</TimeStamp>
         <ID>
           <String>Fact Casualities</String>
         </ID>
@@ -155,5 +155,5 @@
   </Snapshot>
   <AssemblyLocations />
   <ProcessingComplete>true</ProcessingComplete>
-  <LastDeployed>2022-01-08T17:18:56.2Z</LastDeployed>
+  <LastDeployed>2022-01-09T03:21:37.56Z</LastDeployed>
 </DeploymentSnapshot>

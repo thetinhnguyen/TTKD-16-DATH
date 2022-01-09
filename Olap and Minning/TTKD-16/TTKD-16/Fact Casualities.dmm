@@ -1,4 +1,4 @@
-﻿<MiningStructure xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="2e73ad20-95e4-472d-b6f5-05434e697ed1" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+﻿<MiningStructure xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="2c040c3f-67a1-47a0-8024-4dbf212ddb88" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
   <ID>Fact Casualities</ID>
   <Name>Fact Casualities</Name>
   <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
@@ -46,94 +46,46 @@
   </Annotations>
   <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
   <State>Unprocessed</State>
-  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="2208a779-22ea-476c-adf8-a2f437ad3edb">
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="cd5b1dfb-503f-4423-8bab-a7e3071dfabf">
     <DataSourceViewID>UCA DDS</DataSourceViewID>
   </Source>
   <Columns>
-    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="78afa17f-5001-40d8-a331-8b30b4969b16">
-      <ID>Age</ID>
-      <Name>Age</Name>
-      <Type>Long</Type>
-      <Content>Continuous</Content>
-      <KeyColumns>
-        <KeyColumn dwd:design-time-name="8b5c7e89-3cb8-4b61-bc76-80e0555ae55f">
-          <DataType>Integer</DataType>
-          <DataSize>-1</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="9e0f8251-83d6-4ec9-97ce-2f4d9cd09dda">
-            <TableID>dbo_Fact_Casualities</TableID>
-            <ColumnID>Age</ColumnID>
-          </Source>
-        </KeyColumn>
-      </KeyColumns>
-    </Column>
-    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="b00ccb1c-d443-41e8-a9a3-ba464bf72985">
-      <ID>Casualty Type NK</ID>
-      <Name>Casualty Type NK</Name>
-      <Type>Long</Type>
-      <Content>Continuous</Content>
-      <KeyColumns>
-        <KeyColumn dwd:design-time-name="841fcb77-7726-4fa3-ada3-05c7f95e281b">
-          <DataType>Integer</DataType>
-          <DataSize>-1</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="c7626d07-f492-4287-8d21-f14b3cf3e824">
-            <TableID>dbo_Fact_Casualities</TableID>
-            <ColumnID>Casualty_Type_NK</ColumnID>
-          </Source>
-        </KeyColumn>
-      </KeyColumns>
-    </Column>
-    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="87469331-e9c6-485b-a447-519efd14ff09">
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="e99a1e93-d0ca-44df-ac40-87122ad179b7">
       <ID>Date</ID>
       <Name>Date</Name>
       <IsKey>true</IsKey>
       <Type>Date</Type>
       <Content>Key Time</Content>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="7da8f8de-c6f0-45e9-93d5-fb9975539050">
+        <KeyColumn dwd:design-time-name="a8f983bb-22fa-45da-8fc7-67b3a81e8dbb">
           <DataType>Date</DataType>
           <DataSize>-1</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="ff754cd3-13f8-467a-8372-82d92adb10c8">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="3a2352ad-2d45-45d2-8be8-6fa24de8f142">
             <TableID>dbo_Fact_Casualities</TableID>
             <ColumnID>Date</ColumnID>
           </Source>
         </KeyColumn>
       </KeyColumns>
     </Column>
-    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="64488cff-654a-4e10-aa78-b0914d9cdf15">
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="68b92c8c-45d7-4929-b72f-8cc6f8dc0ebb">
       <ID>Num Of Cas</ID>
       <Name>Num Of Cas</Name>
       <Type>Long</Type>
       <Content>Continuous</Content>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="bfbeb2c6-626c-4e02-beb6-efcf9aef545f">
+        <KeyColumn dwd:design-time-name="ce69b36c-9d97-4c8e-bbe6-0e7347bf00f8">
           <DataType>Integer</DataType>
           <DataSize>-1</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="24d66ead-2f39-4b12-950c-1ad67be7dfa4">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="7f47bfd0-af3e-43a6-b980-bae09dc5a853">
             <TableID>dbo_Fact_Casualities</TableID>
             <ColumnID>NumOfCas</ColumnID>
           </Source>
         </KeyColumn>
       </KeyColumns>
     </Column>
-    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="47eaf436-137e-41bf-912e-3a7b14e7dc2c">
-      <ID>Sex Of Person NK</ID>
-      <Name>Sex Of Person NK</Name>
-      <Type>Long</Type>
-      <Content>Continuous</Content>
-      <KeyColumns>
-        <KeyColumn dwd:design-time-name="8cb8f9d0-ccab-4bdd-9703-73d2cf8cfc6e">
-          <DataType>Integer</DataType>
-          <DataSize>-1</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="e44f2acb-60b5-452b-b559-c8ad9c0bd307">
-            <TableID>dbo_Fact_Casualities</TableID>
-            <ColumnID>Sex_of_Person_NK</ColumnID>
-          </Source>
-        </KeyColumn>
-      </KeyColumns>
-    </Column>
   </Columns>
   <MiningModels>
-    <MiningModel dwd:design-time-name="4605e1e9-bffc-4853-9b63-7726bc72dfeb">
+    <MiningModel dwd:design-time-name="4569dcec-c748-416c-99d7-8b6639c551ac">
       <ID>Fact Casualities</ID>
       <Name>Fact Casualities</Name>
       <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
@@ -142,41 +94,17 @@
       <State>Unprocessed</State>
       <Algorithm>Microsoft_Time_Series</Algorithm>
       <Columns>
-        <Column dwd:design-time-name="352795fb-64ae-41a2-935e-0f2e7ea8eb42">
-          <ID>Age</ID>
-          <Name>Age</Name>
-          <SourceColumnID>Age</SourceColumnID>
-          <ModelingFlags>
-            <ModelingFlag>REGRESSOR</ModelingFlag>
-          </ModelingFlags>
-        </Column>
-        <Column dwd:design-time-name="c0aaf611-3111-4665-882f-5dea1438cc4c">
-          <ID>Casualty Type NK</ID>
-          <Name>Casualty Type NK</Name>
-          <SourceColumnID>Casualty Type NK</SourceColumnID>
-          <ModelingFlags>
-            <ModelingFlag>REGRESSOR</ModelingFlag>
-          </ModelingFlags>
-        </Column>
-        <Column dwd:design-time-name="3b1b03a2-dec9-4636-bfbb-2704806428bd">
+        <Column dwd:design-time-name="aed1b949-6294-49af-ae95-7934e6efb3ea">
           <ID>Date</ID>
           <Name>Date</Name>
           <SourceColumnID>Date</SourceColumnID>
           <Usage>Key</Usage>
         </Column>
-        <Column dwd:design-time-name="9004bd00-e82a-4721-b69a-4079d3e8d6b8">
+        <Column dwd:design-time-name="6ca13c25-0c62-4446-b06b-4a57ad4e851a">
           <ID>Num Of Cas</ID>
           <Name>Num Of Cas</Name>
           <SourceColumnID>Num Of Cas</SourceColumnID>
-          <Usage>PredictOnly</Usage>
-          <ModelingFlags>
-            <ModelingFlag>REGRESSOR</ModelingFlag>
-          </ModelingFlags>
-        </Column>
-        <Column dwd:design-time-name="86af8d33-28e8-43c1-a802-01969b9e5000">
-          <ID>Sex Of Person NK</ID>
-          <Name>Sex Of Person NK</Name>
-          <SourceColumnID>Sex Of Person NK</SourceColumnID>
+          <Usage>Predict</Usage>
           <ModelingFlags>
             <ModelingFlag>REGRESSOR</ModelingFlag>
           </ModelingFlags>
